@@ -1,193 +1,204 @@
-// v0.1 "baby step" PWA vocab game
+// Kat's Vocab Garden — v0.2 (adds audio support)
+//
+// How audio works:
+// - Each vocab item MAY include:  "audio": "audio/filename.wav"
+// - iPhone requires audio playback to be triggered after a user gesture.
+//   (Tapping Start/Play/Check counts.)
 
-const $ = (id) => document.getElementById(id);
+const $ = (sel) => document.querySelector(sel);
 
-const screenHome = $('screen-home');
-const screenGame = $('screen-game');
-const btnStart = $('btn-start');
-const btnNext = $('btn-next');
-const btnQuit = $('btn-quit');
+const screens = {
+  home: $("#screen-home"),
+  game: $("#screen-game"),
+};
 
-const promptEl = $('prompt');
-const hintEl = $('hint');
-const feedbackEl = $('feedback');
-const answerForm = $('answer-form');
-const answerInput = $('answer');
+const btnStart = $("#btn-start");
+const btnQuit = $("#btn-quit");
+const btnNext = $("#btn-next");
+const form = $("#answer-form");
+const input = $("#answer");
+const feedback = $("#feedback");
+const promptEl = $("#prompt");
+const hintEl = $("#hint");
+const progressPill = $("#progress-pill");
+const modePill = $("#mode-pill");
 
-const modePill = $('mode-pill');
-const progressPill = $('progress-pill');
+const playAudioBtn = $("#playAudioBtn");
 
-let deck = [];        // array of cards
+// Data
+let vocab = [];
 let idx = 0;
-let revealed = false;
+let total = 0;
+let current = null;
 
-// --- smart-ish grading (matches your "ignore punctuation/parentheses" vibe) ---
-function normalizeSpaces(s) {
-  return String(s ?? '').replace(/\s+/g, ' ').trim();
-}
+// Audio
+let audioObj = null;
 
-function normalizeEn(s) {
-  s = normalizeSpaces(s).toLowerCase();
-  // keep letters/numbers/spaces + basic apostrophes/hyphens
-  s = s.replace(/[^a-z0-9\s\-']/g, '');
-  s = s.replace(/\s+/g, ' ').trim();
-  return s;
-}
+// ---------- helpers ----------
+function show(el) { el.classList.remove("hidden"); }
+function hide(el) { el.classList.add("hidden"); }
 
-function enVariants(answer) {
-  if (answer == null) return new Set();
-  let s = String(answer);
-
-  // drop parentheticals
-  s = s.replace(/\([^)]*\)/g, '');
-
-  // split common multi-answer delimiters
-  let parts = [s];
-  if (/[;,/]|\sor\s/i.test(s)) {
-    const tmp = s.replace(/\sor\s/gi, ';').replace(/[,/]/g, ';');
-    parts = tmp.split(';').map(p => p.trim()).filter(Boolean);
-  }
-
-  const out = new Set();
-  for (const p of parts) {
-    let base = normalizeEn(p).replace(/[.!?]+$/g, '').trim();
-    if (!base) continue;
-
-    // optional apostrophes
-    base = base.replace(/i'm/g, 'im').replace(/you're/g, 'youre').replace(/it's/g, 'its').replace(/that's/g, 'thats');
-    base = base.replace(/'/g, '');
-
-    const space = base.replace(/-/g, ' ').trim();
-    const nospace = space.replace(/\s+/g, '');
-
-    out.add(space);
-    out.add(nospace);
-
-    // tiny alias set
-    if (nospace === 'usa' || nospace === 'us' || nospace === 'unitedstates' || nospace === 'unitedstate') {
-      out.add('usa'); out.add('us'); out.add('united states'); out.add('unitedstates'); out.add('america');
-    }
-  }
-  return out;
-}
-
-function isCorrectEn(user, acceptedList) {
-  const u = normalizeEn(user).replace(/'/g,'');
-  const uSpace = u.replace(/-/g,' ').trim();
-  const uNo = uSpace.replace(/\s+/g,'');
-
-  for (const acc of acceptedList) {
-    const vars = enVariants(acc);
-    if (vars.has(uSpace) || vars.has(uNo)) return true;
-  }
-  return false;
-}
-
-async function loadDeck() {
-  // For now: N5 lesson 1 only (we'll expand later)
-  const res = await fetch('./data/N5_vocab.json');
-  const json = await res.json();
-
-  const lesson1 = json.lessons?.['1'] ?? [];
-  deck = lesson1.map((c) => ({
-    kana: c.kana,
-    kanji: c.kanji,
-    en: Array.isArray(c.en) ? c.en : [c.en]
-  }));
-
-  // shuffle
-  deck.sort(() => Math.random() - 0.5);
-
-  idx = 0;
-}
-
-function showScreen(which) {
-  if (which === 'home') {
-    screenHome.classList.remove('hidden');
-    screenGame.classList.add('hidden');
+function setScreen(name) {
+  if (name === "home") {
+    show(screens.home);
+    hide(screens.game);
   } else {
-    screenHome.classList.add('hidden');
-    screenGame.classList.remove('hidden');
+    hide(screens.home);
+    show(screens.game);
   }
 }
 
-function setFeedback(text, ok) {
-  feedbackEl.textContent = text;
-  feedbackEl.className = 'feedback ' + (ok ? 'good' : 'bad');
+function normalizeAnswer(s) {
+  // simple smart grading baseline: trim, lower, remove extra spaces
+  // (we can expand later to match your Python version)
+  return (s ?? "")
+    .toString()
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, " ");
 }
 
-function showCard() {
-  const card = deck[idx];
-  revealed = false;
-  btnNext.classList.add('hidden');
-  feedbackEl.textContent = '';
-  feedbackEl.className = 'feedback';
-  answerInput.value = '';
-  answerInput.focus();
-
-  // Mode for v0.1: JP -> EN
-  modePill.textContent = 'JP → EN';
-  progressPill.textContent = `${idx + 1} / ${deck.length}`;
-
-  // Display preference for now: kana + (kanji)
-  const jp = card.kanji ? `${card.kana}（${card.kanji}）` : card.kana;
-  promptEl.textContent = jp;
-  hintEl.textContent = '';
+function pickModeLabel() {
+  // starter app is JP → EN
+  modePill.textContent = "JP → EN";
 }
 
-function endGame() {
-  promptEl.textContent = 'Done! 🎉';
-  hintEl.textContent = 'Baby step complete. Next we add: settings, more lessons, audio, streaks.';
-  answerInput.value = '';
-  btnNext.classList.add('hidden');
+function updateProgress() {
+  progressPill.textContent = `${Math.min(idx + 1, total)} / ${total}`;
 }
 
-answerForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  if (!deck.length) return;
+function getPromptText(item) {
+  // Prefer kanji if present; otherwise kana
+  const jp = (item.kanji && item.kanji.trim()) ? item.kanji : item.kana;
+  return jp || "…";
+}
 
-  const card = deck[idx];
-  const user = answerInput.value;
+function getExpectedAnswers(item) {
+  // In your JSON, "en" is an array.
+  // We'll accept ANY of the English answers.
+  const en = Array.isArray(item.en) ? item.en : [];
+  return en.map(normalizeAnswer).filter(Boolean);
+}
 
-  const ok = isCorrectEn(user, card.en);
-  if (ok) {
-    setFeedback('✅ Correct!', true);
-    btnNext.classList.remove('hidden');
-    revealed = true;
+function setPlayButtonEnabled(enabled) {
+  playAudioBtn.disabled = !enabled;
+  // Optional: visually hint
+  playAudioBtn.style.opacity = enabled ? "1" : "0.5";
+}
+
+function loadCurrentAudio(item) {
+  // Kill previous audio reference
+  audioObj = null;
+
+  if (item && typeof item.audio === "string" && item.audio.trim()) {
+    // Create new audio object
+    audioObj = new Audio(item.audio);
+    setPlayButtonEnabled(true);
   } else {
-    setFeedback('❌ Not quite. Try again.', false);
-    // tiny hint after wrong attempt
-    hintEl.textContent = `Hint: one answer is “${card.en[0]}”`;
+    setPlayButtonEnabled(false);
   }
-});
+}
 
-btnNext.addEventListener('click', () => {
-  if (!revealed) return;
-  idx += 1;
-  if (idx >= deck.length) {
-    endGame();
+function renderCard() {
+  current = vocab[idx];
+  if (!current) return;
+
+  promptEl.textContent = getPromptText(current);
+
+  // Hint line (optional). We'll show kana if kanji is shown.
+  const showingKanji = current.kanji && current.kanji.trim();
+  hintEl.textContent = showingKanji ? `(${current.kana || ""})` : "";
+
+  feedback.textContent = "";
+  input.value = "";
+  input.focus();
+
+  hide(btnNext);
+
+  updateProgress();
+  pickModeLabel();
+
+  loadCurrentAudio(current);
+}
+
+// ---------- audio ----------
+async function playCurrentAudio() {
+  if (!audioObj) return;
+  try {
+    // Reset to start each time
+    audioObj.currentTime = 0;
+    await audioObj.play();
+  } catch (err) {
+    // iOS sometimes blocks if no gesture; here user clicked Play so it should work.
+    console.warn("Audio play failed:", err);
+    feedback.textContent = "Audio couldn’t play (Safari restriction). Tap Start/Play again.";
+  }
+}
+
+// ---------- game flow ----------
+async function startGame() {
+  // Load vocab JSON
+  // (This matches the starter: data/N5_vocab.json)
+  const res = await fetch("data/N5_vocab.json");
+  vocab = await res.json();
+
+  // Basic safety
+  if (!Array.isArray(vocab) || vocab.length === 0) {
+    alert("No vocab loaded. Check data/N5_vocab.json");
     return;
   }
-  showCard();
-});
 
-btnQuit.addEventListener('click', () => {
-  showScreen('home');
-});
+  idx = 0;
+  total = vocab.length;
 
-btnStart.addEventListener('click', async () => {
-  btnStart.disabled = true;
-  btnStart.textContent = 'Loading…';
-  await loadDeck();
-  showScreen('game');
-  showCard();
-  btnStart.disabled = false;
-  btnStart.textContent = 'Start';
-});
-
-// Register service worker (offline support)
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./service-worker.js').catch(() => {});
-  });
+  setScreen("game");
+  renderCard();
 }
+
+function quitGame() {
+  setScreen("home");
+}
+
+// ---------- events ----------
+btnStart.addEventListener("click", startGame);
+btnQuit.addEventListener("click", quitGame);
+
+btnNext.addEventListener("click", () => {
+  idx++;
+  if (idx >= total) {
+    feedback.textContent = "Done! 🎉";
+    hide(btnNext);
+    setPlayButtonEnabled(false);
+    return;
+  }
+  renderCard();
+});
+
+playAudioBtn.addEventListener("click", playCurrentAudio);
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!current) return;
+
+  const user = normalizeAnswer(input.value);
+  const expected = getExpectedAnswers(current);
+
+  if (!user) {
+    feedback.textContent = "Type an answer first 🙂";
+    return;
+  }
+
+  const correct = expected.includes(user);
+
+  if (correct) {
+    feedback.textContent = "✅ Correct!";
+  } else {
+    // Show all accepted answers
+    feedback.textContent = `❌ Not quite. Accepted: ${expected.join(", ")}`;
+  }
+
+  show(btnNext);
+});
+
+// Start on home screen
+setScreen("home");
