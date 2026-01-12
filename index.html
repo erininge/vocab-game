@@ -35,7 +35,10 @@
 
         <form id="answer-form" autocomplete="off">
           <input id="answer" type="text" inputmode="text" placeholder="Type your answer" />
-          <button class="primary" type="submit">Check</button>
+          <div class="row">
+            <button class="primary" type="submit">Check</button>
+            <button id="playAudioBtn" class="secondary" type="button" disabled>🔊 Play</button>
+          </div>
         </form>
 
         <div id="feedback" class="feedback"></div>
@@ -48,10 +51,11 @@
     </main>
 
     <footer>
-      <div class="tiny">v0.1 — baby-step build</div>
+      <div class="tiny">v0.2 — audio button added</div>
     </footer>
   </div>
 
   <script src="app.js"></script>
 </body>
 </html>
+
