@@ -130,4 +130,70 @@ async function startGame() {
 
     const data = await res.json();
 
-    if (!Array.isArray(data) || data
+    if (!Array.isArray(data) || data.length === 0) {
+      throw new Error("Vocab JSON loaded, but it’s empty or not a list.");
+    }
+
+    vocab = data;
+    idx = 0;
+    total = vocab.length;
+
+    setScreen("game");
+    renderCard();
+  } catch (e) {
+    homeError.textContent = `Start failed: ${e && e.message ? e.message : e}`;
+    btnStart.textContent = "Start";
+    btnStart.disabled = false;
+  }
+}
+
+function quitGame() {
+  setScreen("home");
+  btnStart.textContent = "Start";
+  btnStart.disabled = false;
+}
+
+btnStart.addEventListener("click", () => {
+  // This confirms the click is wired.
+  startGame();
+});
+
+btnQuit.addEventListener("click", quitGame);
+
+btnNext.addEventListener("click", () => {
+  idx++;
+  if (idx >= total) {
+    feedback.textContent = "Done! 🎉";
+    hide(btnNext);
+    setPlayButtonEnabled(false);
+    return;
+  }
+  renderCard();
+});
+
+playAudioBtn.addEventListener("click", playCurrentAudio);
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!current) return;
+
+  const user = normalizeAnswer(input.value);
+  const expected = getExpectedAnswers(current);
+
+  if (!user) {
+    feedback.textContent = "Type an answer first 🙂";
+    return;
+  }
+
+  const correct = expected.includes(user);
+
+  if (correct) {
+    feedback.textContent = "✅ Correct!";
+  } else {
+    feedback.textContent = `❌ Not quite. Accepted: ${expected.join(", ")}`;
+  }
+
+  show(btnNext);
+});
+
+setScreen("home");
