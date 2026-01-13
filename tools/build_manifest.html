@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Audio Manifest Builder</title>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:900px;margin:24px auto;padding:0 16px;line-height:1.4}
+  code,pre{background:#f3f4f6;padding:2px 6px;border-radius:6px}
+  pre{padding:12px;overflow:auto}
+  button{padding:10px 14px;border-radius:10px;border:1px solid #ddd;background:#111;color:#fff;cursor:pointer}
+  button:disabled{opacity:.5;cursor:not-allowed}
+  .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .card{border:1px solid #e5e7eb;border-radius:14px;padding:14px;margin:14px 0}
+</style>
+</head>
+<body>
+<h1>Audio Manifest Builder</h1>
+<p>This creates <code>Audio/audio-manifest.json</code> so your PWA can find audio files with names like <code>001_..._こんにちは.wav</code>.</p>
+
+<div class="card">
+  <div class="row">
+    <input id="picker" type="file" webkitdirectory directory multiple />
+    <button id="build" disabled>Build manifest</button>
+    <button id="download" disabled>Download audio-manifest.json</button>
+  </div>
+  <p id="status">Choose your <code>Audio</code> folder (the one that contains <code>Female option 1</code>, etc.).</p>
+</div>
+
+<div class="card">
+  <h3>Next steps</h3>
+  <ol>
+    <li>Save the downloaded file as <code>audio-manifest.json</code></li>
+    <li>Put it in your repo at <code>Audio/audio-manifest.json</code></li>
+    <li>Commit + Push in GitHub Desktop</li>
+  </ol>
+</div>
+
+<h3>Preview</h3>
+<pre id="out">{}</pre>
+
+<script>
+const picker = document.getElementById('picker');
+const buildBtn = document.getElementById('build');
+const dlBtn = document.getElementById('download');
+const out = document.getElementById('out');
+const statusEl = document.getElementById('status');
+
+let blobUrl = null;
+let manifestObj = null;
+
+function keyFromFilename(filename){
+  // 001_東北きりたん（ノーマル）_こんにちは.wav -> こんにちは
+  const base = filename.replace(/\.wav$/i, '');
+  const parts = base.split('_');
+  return (parts.length ? parts[parts.length-1] : base).trim();
+}
+
+picker.addEventListener('change', () => {
+  buildBtn.disabled = !(picker.files && picker.files.length);
+  statusEl.textContent = picker.files.length ? `Selected ${picker.files.length} file(s). Click Build manifest.` : 'Choose your Audio folder.';
+});
+
+buildBtn.addEventListener('click', () => {
+  const files = Array.from(picker.files || []);
+  const manifest = {};
+  let wavCount = 0;
+
+  for (const f of files){
+    if (!/\.wav$/i.test(f.name)) continue;
+    wavCount++;
+
+    // f.webkitRelativePath like: Audio/Female option 1/001_..._こんにちは.wav
+    const rel = f.webkitRelativePath || f.name;
+    const parts = rel.split('/');
+
+    // Expect: [Audio, VoiceFolder, Filename]
+    if (parts.length < 3) continue;
+    const voiceFolder = parts[1];
+    const key = keyFromFilename(parts[parts.length-1]);
+
+    if (!manifest[key]) manifest[key] = {};
+    manifest[key][voiceFolder] = rel;
+  }
+
+  manifestObj = manifest;
+  out.textContent = JSON.stringify(manifest, null, 2);
+  statusEl.textContent = `Built manifest with ${Object.keys(manifest).length} keys from ${wavCount} wav file(s).`;
+  dlBtn.disabled = false;
+
+  if (blobUrl) URL.revokeObjectURL(blobUrl);
+  const blob = new Blob([out.textContent], {type:'application/json'});
+  blobUrl = URL.createObjectURL(blob);
+});
+
+dlBtn.addEventListener('click', () => {
+  if (!blobUrl) return;
+  const a = document.createElement('a');
+  a.href = blobUrl;
+  a.download = 'audio-manifest.json';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+});
+</script>
+</body>
+</html>

@@ -82,6 +82,30 @@ function normalizeJapanese(s) {
     .trim();
 }
 
+
+let AUDIO_MANIFEST = null;
+async function loadAudioManifest() {
+  if (AUDIO_MANIFEST) return AUDIO_MANIFEST;
+  try {
+    const res = await fetch("./Audio/audio-manifest.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("missing");
+    AUDIO_MANIFEST = await res.json();
+  } catch (e) {
+    AUDIO_MANIFEST = {}; // graceful fallback
+  }
+  return AUDIO_MANIFEST;
+}
+
+function manifestLookup(manifest, key, voiceFolder) {
+  if (!manifest) return null;
+  const entry = manifest[key];
+  if (!entry) return null;
+  const rel = entry[voiceFolder];
+  if (!rel) return null;
+  return rel.startsWith("./") ? rel : ("./" + rel.replace(/^\/+/, ""));
+}
+
+
 function pickOne(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
@@ -440,15 +464,20 @@ async function tryPlayAudio(question) {
   const norm = (s) => normalizeJapanese(s);
 
   const tried = new Set();
+  const manifest = await loadAudioManifest();
   for (const c of candidates) {
     const n = norm(c);
     if (!n || tried.has(n)) continue;
     tried.add(n);
 
     // Official pack
-    const official = `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(n)}.wav`;
-    // User recordings for USER level
+    // Prefer User recordings (optional), then manifest-mapped official audio, then legacy guessed path
     const user = `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(n)}.wav`;
+
+    const byRaw = manifestLookup(manifest, c, voiceFolder);
+    const byNorm = manifestLookup(manifest, n, voiceFolder);
+    const legacy = `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(n)}.wav`;
+    const official = byRaw || byNorm || legacy;
 
     for (const url of [user, official]) {
       try {

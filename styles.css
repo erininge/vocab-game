@@ -1,15 +1,15 @@
 :root{
-  --bg:#f7f7f7;
-  --card:#ffffff;
-  --ink:#111;
-  --muted:#666;
-  --border:#e6e6e6;
-  --shadow:0 10px 30px rgba(0,0,0,.06);
+  --bg:#0b1020;
+  --card:#121a33;
+  --ink:#f3f4f6;
+  --muted:#aab0c0;
+  --border:#243055;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
   --radius:18px;
   --pad:18px;
   --max:980px;
-  --btn:#111;
-  --btnInk:#fff;
+  --btn:#f3f4f6;
+  --btnInk:#0b1020;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
