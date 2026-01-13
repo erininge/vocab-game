@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Kat's Vocab Garden (PWA)</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">🌸</div>
+      <div>
+        <div class="title">Kat's Vocab Garden</div>
+        <div class="subtitle" id="versionLine">PWA</div>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn ghost" id="installBtn" hidden>Install</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="screenHome">
+      <h1>Study setup</h1>
+
+      <div class="grid">
+        <label class="field">
+          <span class="label">Category (JSON file)</span>
+          <select id="levelSelect"></select>
+          <span class="hint">Categories are discovered from <code>Vocabulary/</code>. File name becomes the category.</span>
+        </label>
+
+        <label class="field">
+          <span class="label">Question mode</span>
+          <select id="questionMode">
+            <option value="mixed">Mixed (JP→EN and EN→JP)</option>
+            <option value="jp2en">JP → English</option>
+            <option value="en2jp">English → JP (kana/kanji accepted)</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="label">Answer mode</span>
+          <select id="answerMode">
+            <option value="typing">Typing</option>
+            <option value="multiple_choice">Multiple choice</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="label">Display mode (when prompt is JP)</span>
+          <select id="displayMode">
+            <option value="both">Kana + Kanji</option>
+            <option value="kana">Kana only</option>
+            <option value="kanji">Kanji only</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="label">Questions per quiz</span>
+          <input id="qCount" type="number" min="5" max="200" step="1" value="20" />
+        </label>
+
+        <label class="field">
+          <span class="label">Audio voice</span>
+          <select id="voiceSelect">
+            <option value="Female 1">Female 1</option>
+            <option value="Female 2">Female 2</option>
+            <option value="Male 1">Male 1</option>
+            <option value="Male 2">Male 2</option>
+          </select>
+          <div class="row">
+            <label class="checkbox">
+              <input id="audioEnabled" type="checkbox" checked />
+              <span>Audio enabled</span>
+            </label>
+          </div>
+          <span class="hint">Put your audio pack in <code>Audio/</code> (and optional user recordings in <code>UserAudio/</code>) next to <code>index.html</code>.</span>
+        </label>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2>Lessons</h2>
+      <p class="muted" id="lessonHelp">Loading lessons…</p>
+      <div class="lessonBox" id="lessonBox" aria-label="Lesson selection"></div>
+
+      <div class="actions">
+        <button class="btn" id="startBtn">Start</button>
+      </div>
+
+      <details class="card-lite">
+        <summary>How to add more vocab later</summary>
+        <ol>
+          <li>Drop a new JSON file into <code>Vocabulary/</code>.</li>
+          <li>Name it however you want (e.g. <code>MyFood_vocab.json</code>). That file name becomes the category.</li>
+          <li>Make sure it follows the same structure as the existing files (see <code>Vocabulary/N5_vocab.json</code>).</li>
+          <li>Push to GitHub Pages. The app will auto-detect the new file via the GitHub API (public repos). If the API is blocked, update <code>Vocabulary/vocab-manifest.json</code>.</li>
+        </ol>
+      </details>
+    </section>
+
+    <section class="card" id="screenQuiz" hidden>
+      <div class="quizHeader">
+        <div>
+          <div class="kicker" id="quizMeta"></div>
+          <h1 id="promptLine">…</h1>
+          <div class="subprompt" id="subpromptLine"></div>
+        </div>
+        <div class="quizControls">
+          <button class="btn ghost" id="playBtn" title="Play audio">🔊</button>
+          <button class="btn ghost" id="quitBtn">Quit</button>
+        </div>
+      </div>
+
+      <div class="answerArea" id="answerArea"></div>
+
+      <div class="feedback" id="feedback" hidden></div>
+
+      <div class="actions">
+        <button class="btn" id="submitBtn">Check</button>
+        <button class="btn ghost" id="nextBtn" disabled>Next</button>
+      </div>
+    </section>
+
+    <section class="card" id="screenDone" hidden>
+      <h1>Done!</h1>
+      <p id="scoreLine"></p>
+      <div class="actions">
+        <button class="btn" id="backHomeBtn">Back to setup</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span id="footerLine">—</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

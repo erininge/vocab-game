@@ -1,0 +1,1425 @@
+{
+  "level": "JPN 101",
+  "lessons": {
+    "1": [
+      {
+        "kana": "～さん",
+        "kanji": "",
+        "en": [
+          "Mr./Ms..."
+        ]
+      },
+      {
+        "kana": "はい",
+        "kanji": "",
+        "en": [
+          "yes"
+        ]
+      },
+      {
+        "kana": "おはよう",
+        "kanji": "",
+        "en": [
+          "Good morning."
+        ]
+      },
+      {
+        "kana": "おはようございます",
+        "kanji": "",
+        "en": [
+          "Good morning."
+        ]
+      },
+      {
+        "kana": "こんにちは",
+        "kanji": "",
+        "en": [
+          "Good afternoon."
+        ]
+      },
+      {
+        "kana": "こんばんは",
+        "kanji": "",
+        "en": [
+          "Good evening."
+        ]
+      },
+      {
+        "kana": "おやすみなさい",
+        "kanji": "",
+        "en": [
+          "Good night."
+        ]
+      },
+      {
+        "kana": "ありがとう",
+        "kanji": "",
+        "en": [
+          "Thank you."
+        ]
+      },
+      {
+        "kana": "ありがとうございます",
+        "kanji": "",
+        "en": [
+          "Thank you."
+        ]
+      },
+      {
+        "kana": "どうぞ",
+        "kanji": "",
+        "en": [
+          "Please (offering). / Here you are."
+        ]
+      },
+      {
+        "kana": "じゃあまた",
+        "kanji": "",
+        "en": [
+          "Good-bye. / See you again."
+        ]
+      },
+      {
+        "kana": "しつれいします",
+        "kanji": "",
+        "en": [
+          "Excuse me. / Good-bye."
+        ]
+      },
+      {
+        "kana": "はじめまして",
+        "kanji": "",
+        "en": [
+          "How do you do?"
+        ]
+      },
+      {
+        "kana": "わたし",
+        "kanji": "私",
+        "en": [
+          "I"
+        ]
+      },
+      {
+        "kana": "（わたしは）～です",
+        "kanji": "（私は）～です",
+        "en": [
+          "I am ~."
+        ]
+      },
+      {
+        "kana": "よろしくおねがいします",
+        "kanji": "",
+        "en": [
+          "Nice to meet you."
+        ]
+      },
+      {
+        "kana": "いただきます",
+        "kanji": "",
+        "en": [
+          "Thank you for the meal. (before eating)"
+        ]
+      },
+      {
+        "kana": "ごちそうさま",
+        "kanji": "",
+        "en": [
+          "Thank you for the meal. (after eating)"
+        ]
+      },
+      {
+        "kana": "いってきます",
+        "kanji": "",
+        "en": [
+          "I'll go and come back."
+        ]
+      },
+      {
+        "kana": "いってらっしゃい",
+        "kanji": "",
+        "en": [
+          "Please go and come back."
+        ]
+      },
+      {
+        "kana": "ただいま",
+        "kanji": "",
+        "en": [
+          "I'm home."
+        ]
+      },
+      {
+        "kana": "おかえりなさい",
+        "kanji": "",
+        "en": [
+          "Welcome home."
+        ]
+      },
+      {
+        "kana": "いち",
+        "kanji": "一",
+        "en": [
+          "one"
+        ]
+      },
+      {
+        "kana": "に",
+        "kanji": "二",
+        "en": [
+          "two"
+        ]
+      },
+      {
+        "kana": "さん",
+        "kanji": "三",
+        "en": [
+          "three"
+        ]
+      },
+      {
+        "kana": "よん",
+        "kanji": "四",
+        "en": [
+          "four"
+        ]
+      },
+      {
+        "kana": "ご",
+        "kanji": "五",
+        "en": [
+          "five"
+        ]
+      },
+      {
+        "kana": "ろく",
+        "kanji": "六",
+        "en": [
+          "six"
+        ]
+      },
+      {
+        "kana": "なな",
+        "kanji": "七",
+        "en": [
+          "seven"
+        ]
+      },
+      {
+        "kana": "はち",
+        "kanji": "八",
+        "en": [
+          "eight"
+        ]
+      },
+      {
+        "kana": "きゅう",
+        "kanji": "九",
+        "en": [
+          "nine"
+        ]
+      },
+      {
+        "kana": "じゅう",
+        "kanji": "十",
+        "en": [
+          "ten"
+        ]
+      },
+      {
+        "kana": "でんわ",
+        "kanji": "電話",
+        "en": [
+          "telephone"
+        ]
+      },
+      {
+        "kana": "ばんごう",
+        "kanji": "番号",
+        "en": [
+          "number"
+        ]
+      },
+      {
+        "kana": "なに",
+        "kanji": "何",
+        "en": [
+          "what"
+        ]
+      },
+      {
+        "kana": "～ばん",
+        "kanji": "",
+        "en": [
+          "number..."
+        ]
+      },
+      {
+        "kana": "すみません",
+        "kanji": "",
+        "en": [
+          "Excuse me.; I'm sorry."
+        ]
+      },
+      {
+        "kana": "いいえ",
+        "kanji": "",
+        "en": [
+          "no"
+        ]
+      },
+      {
+        "kana": "いま",
+        "kanji": "今",
+        "en": [
+          "now"
+        ]
+      },
+      {
+        "kana": "～じ",
+        "kanji": "～時",
+        "en": [
+          "o'clock"
+        ]
+      },
+      {
+        "kana": "よじ",
+        "kanji": "4時",
+        "en": [
+          "four o'clock"
+        ]
+      },
+      {
+        "kana": "しちじ",
+        "kanji": "7時",
+        "en": [
+          "seven o'clock"
+        ]
+      },
+      {
+        "kana": "くじ",
+        "kanji": "9時",
+        "en": [
+          "nine o'clock"
+        ]
+      },
+      {
+        "kana": "はん",
+        "kanji": "半",
+        "en": [
+          "half"
+        ]
+      },
+      {
+        "kana": "ごぜん",
+        "kanji": "午前",
+        "en": [
+          "A.M."
+        ]
+      },
+      {
+        "kana": "ごご",
+        "kanji": "午後",
+        "en": [
+          "P.M."
+        ]
+      },
+      {
+        "kana": "ごふん",
+        "kanji": "5分",
+        "en": [
+          "five minutes"
+        ]
+      },
+      {
+        "kana": "じゅっぷん",
+        "kanji": "10分",
+        "en": [
+          "ten minutes"
+        ]
+      },
+      {
+        "kana": "とうきょう",
+        "kanji": "",
+        "en": [
+          "Tokyo"
+        ]
+      },
+      {
+        "kana": "～ね",
+        "kanji": "",
+        "en": [
+          "..., right?"
+        ]
+      },
+      {
+        "kana": "そうです",
+        "kanji": "",
+        "en": [
+          "That's right"
+        ]
+      },
+      {
+        "kana": "おねがいします",
+        "kanji": "お願いします",
+        "en": [
+          "Please (requesting)"
+        ]
+      },
+      {
+        "kana": "～さい",
+        "kanji": "",
+        "en": [
+          "...years old"
+        ]
+      },
+      {
+        "kana": "～じん",
+        "kanji": "",
+        "en": [
+          "...people"
+        ]
+      },
+      {
+        "kana": "～ご",
+        "kanji": "",
+        "en": [
+          "... language"
+        ]
+      },
+      {
+        "kana": "えいご",
+        "kanji": "英語",
+        "en": [
+          "English language"
+        ]
+      },
+      {
+        "kana": "にほん",
+        "kanji": "日本",
+        "en": [
+          "Japan"
+        ]
+      },
+      {
+        "kana": "あめりか",
+        "kanji": "アメリカ",
+        "en": [
+          "U.S.A."
+        ]
+      },
+      {
+        "kana": "いぎりす",
+        "kanji": "",
+        "en": [
+          "England; Great Britain"
+        ]
+      },
+      {
+        "kana": "かんこく",
+        "kanji": "韓国",
+        "en": [
+          "South Korea"
+        ]
+      },
+      {
+        "kana": "ちゅうごく",
+        "kanji": "中国",
+        "en": [
+          "China"
+        ]
+      },
+      {
+        "kana": "～ねんせい",
+        "kanji": "",
+        "en": [
+          "...year student"
+        ]
+      },
+      {
+        "kana": "だいがく",
+        "kanji": "大学",
+        "en": [
+          "college; university"
+        ]
+      },
+      {
+        "kana": "だいがくせい",
+        "kanji": "大学生",
+        "en": [
+          "college student"
+        ]
+      },
+      {
+        "kana": "せんせい",
+        "kanji": "先生",
+        "en": [
+          "teacher; professor"
+        ]
+      },
+      {
+        "kana": "かいしゃいん",
+        "kanji": "会社員",
+        "en": [
+          "office worker"
+        ]
+      },
+      {
+        "kana": "こうこう",
+        "kanji": "高校",
+        "en": [
+          "high school"
+        ]
+      },
+      {
+        "kana": "こうこうせい",
+        "kanji": "高校生",
+        "en": [
+          "high school student"
+        ]
+      },
+      {
+        "kana": "そうですか",
+        "kanji": "",
+        "en": [
+          "I see.; Is that so?"
+        ]
+      },
+      {
+        "kana": "がくせい",
+        "kanji": "学生",
+        "en": [
+          "student"
+        ]
+      },
+      {
+        "kana": "せんこう",
+        "kanji": "専攻",
+        "en": [
+          "major"
+        ]
+      },
+      {
+        "kana": "ともだち",
+        "kanji": "友達",
+        "en": [
+          "friend"
+        ]
+      },
+      {
+        "kana": "なまえ",
+        "kanji": "名前",
+        "en": [
+          "name"
+        ]
+      },
+      {
+        "kana": "しごと",
+        "kanji": "仕事",
+        "en": [
+          "job, work, occupation"
+        ]
+      },
+      {
+        "kana": "りゅうがくせい",
+        "kanji": "留学生",
+        "en": [
+          "international student"
+        ]
+      },
+      {
+        "kana": "あのう",
+        "kanji": "",
+        "en": [
+          "um..."
+        ]
+      }
+    ],
+    "2": [
+      {
+        "kana": "かさ",
+        "kanji": "傘",
+        "en": [
+          "umbrella"
+        ]
+      },
+      {
+        "kana": "かばん",
+        "kanji": "鞄",
+        "en": [
+          "bag"
+        ]
+      },
+      {
+        "kana": "くつ",
+        "kanji": "靴",
+        "en": [
+          "shoes"
+        ]
+      },
+      {
+        "kana": "さいふ",
+        "kanji": "財布",
+        "en": [
+          "wallet"
+        ]
+      },
+      {
+        "kana": "ジーンズ",
+        "kanji": "",
+        "en": [
+          "jeans"
+        ]
+      },
+      {
+        "kana": "じてんしゃ",
+        "kanji": "自転車",
+        "en": [
+          "bicycle"
+        ]
+      },
+      {
+        "kana": "しんぶん",
+        "kanji": "新聞",
+        "en": [
+          "newspaper"
+        ]
+      },
+      {
+        "kana": "スマホ",
+        "kanji": "",
+        "en": [
+          "smartphone; mobile"
+        ]
+      },
+      {
+        "kana": "ティーシャツ",
+        "kanji": "",
+        "en": [
+          "T-shirt"
+        ]
+      },
+      {
+        "kana": "とけい",
+        "kanji": "時計",
+        "en": [
+          "watch; clock"
+        ]
+      },
+      {
+        "kana": "のうと",
+        "kanji": "",
+        "en": [
+          "notebook"
+        ]
+      },
+      {
+        "kana": "ペン",
+        "kanji": "",
+        "en": [
+          "pen"
+        ]
+      },
+      {
+        "kana": "ぼうし",
+        "kanji": "帽子",
+        "en": [
+          "hat; cap"
+        ]
+      },
+      {
+        "kana": "ほん",
+        "kanji": "本",
+        "en": [
+          "book"
+        ]
+      },
+      {
+        "kana": "いくら",
+        "kanji": "",
+        "en": [
+          "how much"
+        ]
+      },
+      {
+        "kana": "～えん",
+        "kanji": "",
+        "en": [
+          "...yen"
+        ]
+      },
+      {
+        "kana": "ひゃく",
+        "kanji": "",
+        "en": [
+          "100"
+        ]
+      },
+      {
+        "kana": "さんびゃく",
+        "kanji": "",
+        "en": [
+          "300"
+        ]
+      },
+      {
+        "kana": "ろっぴゃく",
+        "kanji": "",
+        "en": [
+          "600"
+        ]
+      },
+      {
+        "kana": "はっぴゃく",
+        "kanji": "",
+        "en": [
+          "800"
+        ]
+      },
+      {
+        "kana": "せん",
+        "kanji": "",
+        "en": [
+          "1000"
+        ]
+      },
+      {
+        "kana": "さんぜん",
+        "kanji": "",
+        "en": [
+          "3000"
+        ]
+      },
+      {
+        "kana": "はっせん",
+        "kanji": "",
+        "en": [
+          "8000"
+        ]
+      },
+      {
+        "kana": "いちまん",
+        "kanji": "",
+        "en": [
+          "10000"
+        ]
+      },
+      {
+        "kana": "これ",
+        "kanji": "",
+        "en": [
+          "this one"
+        ]
+      },
+      {
+        "kana": "それ",
+        "kanji": "",
+        "en": [
+          "that one"
+        ]
+      },
+      {
+        "kana": "あれ",
+        "kanji": "",
+        "en": [
+          "that one (over there)"
+        ]
+      },
+      {
+        "kana": "どれ",
+        "kanji": "",
+        "en": [
+          "which one"
+        ]
+      },
+      {
+        "kana": "ぎんこう",
+        "kanji": "",
+        "en": [
+          "bank"
+        ]
+      },
+      {
+        "kana": "コンビニ",
+        "kanji": "",
+        "en": [
+          "convenience store"
+        ]
+      },
+      {
+        "kana": "としょかん",
+        "kanji": "図書館",
+        "en": [
+          "library"
+        ]
+      },
+      {
+        "kana": "ゆうびんきょく",
+        "kanji": "郵便局",
+        "en": [
+          "post office"
+        ]
+      },
+      {
+        "kana": "だれ",
+        "kanji": "誰",
+        "en": [
+          "who"
+        ]
+      },
+      {
+        "kana": "だれの",
+        "kanji": "",
+        "en": [
+          "whose"
+        ]
+      },
+      {
+        "kana": "この",
+        "kanji": "",
+        "en": [
+          "this ..."
+        ]
+      },
+      {
+        "kana": "その",
+        "kanji": "",
+        "en": [
+          "that ..."
+        ]
+      },
+      {
+        "kana": "あの",
+        "kanji": "",
+        "en": [
+          "that ... (over there)"
+        ]
+      },
+      {
+        "kana": "どの",
+        "kanji": "",
+        "en": [
+          "which ..."
+        ]
+      },
+      {
+        "kana": "いらっしゃいませ",
+        "kanji": "",
+        "en": [
+          "Welcome (to our store)"
+        ]
+      },
+      {
+        "kana": "（～を）おねがいします",
+        "kanji": "（～を）お願いします",
+        "en": [
+          "..., please."
+        ]
+      },
+      {
+        "kana": "（～を）ください",
+        "kanji": "（～を）下さい",
+        "en": [
+          "Please give me ..."
+        ]
+      },
+      {
+        "kana": "じゃあ",
+        "kanji": "",
+        "en": [
+          "then...; if that's the case, ..."
+        ]
+      },
+      {
+        "kana": "どうぞ",
+        "kanji": "",
+        "en": [
+          "Please.; Here it is."
+        ]
+      },
+      {
+        "kana": "どうも",
+        "kanji": "",
+        "en": [
+          "Thank you."
+        ]
+      },
+      {
+        "kana": "おかあさん",
+        "kanji": "お母さん",
+        "en": [
+          "mother"
+        ]
+      },
+      {
+        "kana": "おとうさん",
+        "kanji": "お父さん",
+        "en": [
+          "father"
+        ]
+      },
+      {
+        "kana": "やさい",
+        "kanji": "野菜",
+        "en": [
+          "vegetable"
+        ]
+      },
+      {
+        "kana": "けいざい",
+        "kanji": "経済",
+        "en": [
+          "economics"
+        ]
+      },
+      {
+        "kana": "コンピューター",
+        "kanji": "",
+        "en": [
+          "computer"
+        ]
+      },
+      {
+        "kana": "ビジネス",
+        "kanji": "",
+        "en": [
+          "business"
+        ]
+      },
+      {
+        "kana": "れきし",
+        "kanji": "歴史",
+        "en": [
+          "history"
+        ]
+      },
+      {
+        "kana": "ここ",
+        "kanji": "",
+        "en": [
+          "here"
+        ]
+      },
+      {
+        "kana": "そこ",
+        "kanji": "",
+        "en": [
+          "there"
+        ]
+      },
+      {
+        "kana": "あそこ",
+        "kanji": "",
+        "en": [
+          "over there"
+        ]
+      },
+      {
+        "kana": "どこ",
+        "kanji": "",
+        "en": [
+          "where"
+        ]
+      },
+      {
+        "kana": "トイレ",
+        "kanji": "",
+        "en": [
+          "toilet; restroom"
+        ]
+      },
+      {
+        "kana": "おてあらい",
+        "kanji": "お手洗い",
+        "en": [
+          "restroom"
+        ]
+      },
+      {
+        "kana": "おいしい",
+        "kanji": "美味しい",
+        "en": [
+          "delicious; tasty"
+        ]
+      },
+      {
+        "kana": "たかい",
+        "kanji": "高い",
+        "en": [
+          "expensive"
+        ]
+      },
+      {
+        "kana": "さかな",
+        "kanji": "魚",
+        "en": [
+          "fish"
+        ]
+      },
+      {
+        "kana": "とんかつ",
+        "kanji": "",
+        "en": [
+          "pork cutlet"
+        ]
+      },
+      {
+        "kana": "にく",
+        "kanji": "肉",
+        "en": [
+          "meat"
+        ]
+      },
+      {
+        "kana": "メニュー",
+        "kanji": "",
+        "en": [
+          "menu"
+        ]
+      },
+      {
+        "kana": "（めいし）と（めいし）",
+        "kanji": "",
+        "en": [
+          "... and ..."
+        ]
+      },
+      {
+        "kana": "にほんごで",
+        "kanji": "日本語で",
+        "en": [
+          "in Japanese"
+        ]
+      }
+    ],
+    "3": [
+      {
+        "kana": "おんがく",
+        "kanji": "音楽",
+        "en": [
+          "music"
+        ]
+      },
+      {
+        "kana": "ざっし",
+        "kanji": "雑誌",
+        "en": [
+          "magazine"
+        ]
+      },
+      {
+        "kana": "スポーツ",
+        "kanji": "",
+        "en": [
+          "sports"
+        ]
+      },
+      {
+        "kana": "テニス",
+        "kanji": "",
+        "en": [
+          "tennis"
+        ]
+      },
+      {
+        "kana": "テレビ",
+        "kanji": "",
+        "en": [
+          "TV"
+        ]
+      },
+      {
+        "kana": "ハンバーガー",
+        "kanji": "",
+        "en": [
+          "hamburger"
+        ]
+      },
+      {
+        "kana": "おさけ",
+        "kanji": "お酒",
+        "en": [
+          "sake; alcoholic drink"
+        ]
+      },
+      {
+        "kana": "おちゃ",
+        "kanji": "お茶",
+        "en": [
+          "green tea"
+        ]
+      },
+      {
+        "kana": "コーヒー",
+        "kanji": "",
+        "en": [
+          "coffee"
+        ]
+      },
+      {
+        "kana": "みず",
+        "kanji": "水",
+        "en": [
+          "water"
+        ]
+      },
+      {
+        "kana": "きく",
+        "kanji": "聞く",
+        "en": [
+          "to listen; to hear"
+        ]
+      },
+      {
+        "kana": "のむ",
+        "kanji": "飲む",
+        "en": [
+          "to drink"
+        ]
+      },
+      {
+        "kana": "はなす",
+        "kanji": "話す",
+        "en": [
+          "to speak; to talk"
+        ]
+      },
+      {
+        "kana": "よむ",
+        "kanji": "読む",
+        "en": [
+          "to read"
+        ]
+      },
+      {
+        "kana": "たべる",
+        "kanji": "食べる",
+        "en": [
+          "to eat"
+        ]
+      },
+      {
+        "kana": "みる",
+        "kanji": "見る",
+        "en": [
+          "to see; to look at; to watch"
+        ]
+      },
+      {
+        "kana": "する",
+        "kanji": "",
+        "en": [
+          "to do"
+        ]
+      },
+      {
+        "kana": "べんきょうする",
+        "kanji": "勉強する",
+        "en": [
+          "to study"
+        ]
+      },
+      {
+        "kana": "デート",
+        "kanji": "",
+        "en": [
+          "date (romantic)"
+        ]
+      },
+      {
+        "kana": "いえ",
+        "kanji": "家",
+        "en": [
+          "home; house"
+        ]
+      },
+      {
+        "kana": "うち",
+        "kanji": "",
+        "en": [
+          "home; house; my place"
+        ]
+      },
+      {
+        "kana": "がっこう",
+        "kanji": "学校",
+        "en": [
+          "school"
+        ]
+      },
+      {
+        "kana": "カフェ",
+        "kanji": "",
+        "en": [
+          "cafe"
+        ]
+      },
+      {
+        "kana": "ええ",
+        "kanji": "",
+        "en": [
+          "yes"
+        ]
+      },
+      {
+        "kana": "くるま",
+        "kanji": "車",
+        "en": [
+          "car"
+        ]
+      },
+      {
+        "kana": "えいが",
+        "kanji": "映画",
+        "en": [
+          "movie"
+        ]
+      },
+      {
+        "kana": "アイスクリーム",
+        "kanji": "アイスクリーム",
+        "en": [
+          "ice cream"
+        ]
+      },
+      {
+        "kana": "いく",
+        "kanji": "行く",
+        "en": [
+          "to go"
+        ]
+      },
+      {
+        "kana": "かえる",
+        "kanji": "帰る",
+        "en": [
+          "to go back; to return"
+        ]
+      },
+      {
+        "kana": "くる",
+        "kanji": "来る",
+        "en": [
+          "to come"
+        ]
+      },
+      {
+        "kana": "あさごはん",
+        "kanji": "",
+        "en": [
+          "breakfast"
+        ]
+      },
+      {
+        "kana": "ひるごはん",
+        "kanji": "",
+        "en": [
+          "lunch"
+        ]
+      },
+      {
+        "kana": "ばんごはん",
+        "kanji": "",
+        "en": [
+          "dinner"
+        ]
+      },
+      {
+        "kana": "ごろ",
+        "kanji": "",
+        "en": [
+          "at about"
+        ]
+      },
+      {
+        "kana": "おきる",
+        "kanji": "",
+        "en": [
+          "to get up"
+        ]
+      },
+      {
+        "kana": "ねる",
+        "kanji": "",
+        "en": [
+          "to sleep; to go to bed"
+        ]
+      },
+      {
+        "kana": "あした",
+        "kanji": "明日",
+        "en": [
+          "tomorrow"
+        ]
+      },
+      {
+        "kana": "きょう",
+        "kanji": "今日",
+        "en": [
+          "today"
+        ]
+      },
+      {
+        "kana": "あさ",
+        "kanji": "朝",
+        "en": [
+          "morning"
+        ]
+      },
+      {
+        "kana": "ばん",
+        "kanji": "",
+        "en": [
+          "evening"
+        ]
+      },
+      {
+        "kana": "こんばん",
+        "kanji": "",
+        "en": [
+          "tonight"
+        ]
+      },
+      {
+        "kana": "いつ",
+        "kanji": "",
+        "en": [
+          "when"
+        ]
+      },
+      {
+        "kana": "しゅうまつ",
+        "kanji": "",
+        "en": [
+          "weekend"
+        ]
+      },
+      {
+        "kana": "どようび",
+        "kanji": "",
+        "en": [
+          "Saturday"
+        ]
+      },
+      {
+        "kana": "にちようび",
+        "kanji": "",
+        "en": [
+          "Sunday"
+        ]
+      },
+      {
+        "kana": "いい",
+        "kanji": "良い",
+        "en": [
+          "good"
+        ]
+      },
+      {
+        "kana": "ちょっと",
+        "kanji": "",
+        "en": [
+          "a little"
+        ]
+      },
+      {
+        "kana": "えいがかん",
+        "kanji": "映画館",
+        "en": [
+          "movie theater"
+        ]
+      },
+      {
+        "kana": "まいにち",
+        "kanji": "毎日",
+        "en": [
+          "every day"
+        ]
+      },
+      {
+        "kana": "まいばん",
+        "kanji": "毎晩",
+        "en": [
+          "every night"
+        ]
+      },
+      {
+        "kana": "まいあさ",
+        "kanji": "毎朝",
+        "en": [
+          "every morning"
+        ]
+      },
+      {
+        "kana": "あまり",
+        "kanji": "",
+        "en": [
+          "(not) much"
+        ]
+      },
+      {
+        "kana": "ぜんぜん",
+        "kanji": "",
+        "en": [
+          "(not) at all"
+        ]
+      },
+      {
+        "kana": "たいてい",
+        "kanji": "",
+        "en": [
+          "usually"
+        ]
+      },
+      {
+        "kana": "ときどき",
+        "kanji": "",
+        "en": [
+          "sometimes"
+        ]
+      },
+      {
+        "kana": "よく",
+        "kanji": "",
+        "en": [
+          "often"
+        ]
+      },
+      {
+        "kana": "そうですね",
+        "kanji": "",
+        "en": [
+          "That's right.; Let me see."
+        ]
+      },
+      {
+        "kana": "でも",
+        "kanji": "",
+        "en": [
+          "but"
+        ]
+      },
+      {
+        "kana": "どうですか",
+        "kanji": "",
+        "en": [
+          "How about ...? How is ...?"
+        ]
+      },
+      {
+        "kana": "はやい",
+        "kanji": "早い",
+        "en": [
+          "early"
+        ]
+      },
+      {
+        "kana": "パーティーをする",
+        "kanji": "",
+        "en": [
+          "to throw a party"
+        ]
+      }
+    ]
+  }
+}

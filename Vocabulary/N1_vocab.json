@@ -1,0 +1,710 @@
+{
+  "level": "N1",
+  "lessons": {
+    "1": [
+      {
+        "kana": "はんだん",
+        "kanji": "判断",
+        "en": [
+          "judgment"
+        ]
+      },
+      {
+        "kana": "しゅちょう",
+        "kanji": "主張",
+        "en": [
+          "claim",
+          "assertion"
+        ]
+      },
+      {
+        "kana": "ぶんせき",
+        "kanji": "分析",
+        "en": [
+          "analysis"
+        ]
+      },
+      {
+        "kana": "たちば",
+        "kanji": "立場",
+        "en": [
+          "standpoint",
+          "position"
+        ]
+      }
+    ],
+    "2": [
+      {
+        "kana": "ぎゃく",
+        "kanji": "逆",
+        "en": [
+          "reverse",
+          "opposite"
+        ]
+      },
+      {
+        "kana": "げんじつ",
+        "kanji": "現実",
+        "en": [
+          "reality"
+        ]
+      },
+      {
+        "kana": "りそう",
+        "kanji": "理想",
+        "en": [
+          "ideal"
+        ]
+      },
+      {
+        "kana": "じょうきょう",
+        "kanji": "状況",
+        "en": [
+          "situation"
+        ]
+      }
+    ],
+    "3": [
+      {
+        "kana": "かくしん",
+        "kanji": "確信",
+        "en": [
+          "conviction",
+          "firm belief"
+        ]
+      },
+      {
+        "kana": "しんじつ",
+        "kanji": "真実",
+        "en": [
+          "truth"
+        ]
+      },
+      {
+        "kana": "とうぜん",
+        "kanji": "当然",
+        "en": [
+          "natural",
+          "of course"
+        ]
+      }
+    ],
+    "4": [
+      {
+        "kana": "ひょうか",
+        "kanji": "評価",
+        "en": [
+          "evaluation"
+        ]
+      },
+      {
+        "kana": "けいけん",
+        "kanji": "経験",
+        "en": [
+          "experience"
+        ]
+      },
+      {
+        "kana": "じつりょく",
+        "kanji": "実力",
+        "en": [
+          "real ability",
+          "competence"
+        ]
+      }
+    ],
+    "5": [
+      {
+        "kana": "けっか",
+        "kanji": "結果",
+        "en": [
+          "result"
+        ]
+      },
+      {
+        "kana": "じょうきょう",
+        "kanji": "状況",
+        "en": [
+          "situation"
+        ]
+      },
+      {
+        "kana": "いがい",
+        "kanji": "意外",
+        "en": [
+          "unexpected"
+        ]
+      }
+    ],
+    "6": [
+      {
+        "kana": "かんどう",
+        "kanji": "感動",
+        "en": [
+          "being moved"
+        ]
+      },
+      {
+        "kana": "くろう",
+        "kanji": "苦労",
+        "en": [
+          "hardship"
+        ]
+      },
+      {
+        "kana": "けんきゅう",
+        "kanji": "研究",
+        "en": [
+          "research"
+        ]
+      }
+    ],
+    "7": [
+      {
+        "kana": "げんいん",
+        "kanji": "原因",
+        "en": [
+          "cause"
+        ]
+      },
+      {
+        "kana": "りゆう",
+        "kanji": "理由",
+        "en": [
+          "reason"
+        ]
+      },
+      {
+        "kana": "けっか",
+        "kanji": "結果",
+        "en": [
+          "result"
+        ]
+      }
+    ],
+    "8": [
+      {
+        "kana": "かてい",
+        "kanji": "仮定",
+        "en": [
+          "assumption",
+          "hypothesis"
+        ]
+      },
+      {
+        "kana": "じょうけん",
+        "kanji": "条件",
+        "en": [
+          "condition"
+        ]
+      },
+      {
+        "kana": "ばあい",
+        "kanji": "場合",
+        "en": [
+          "case",
+          "situation"
+        ]
+      }
+    ],
+    "9": [
+      {
+        "kana": "はんい",
+        "kanji": "範囲",
+        "en": [
+          "range",
+          "scope"
+        ]
+      },
+      {
+        "kana": "じょうきょう",
+        "kanji": "状況",
+        "en": [
+          "situation"
+        ]
+      },
+      {
+        "kana": "じょうほう",
+        "kanji": "情報",
+        "en": [
+          "information"
+        ]
+      }
+    ],
+    "10": [
+      {
+        "kana": "ちょうしょ",
+        "kanji": "長所",
+        "en": [
+          "strength",
+          "merit"
+        ]
+      },
+      {
+        "kana": "たんしょ",
+        "kanji": "短所",
+        "en": [
+          "weakness",
+          "flaw"
+        ]
+      },
+      {
+        "kana": "ひかく",
+        "kanji": "比較",
+        "en": [
+          "comparison"
+        ]
+      }
+    ],
+    "11": [
+      {
+        "kana": "たいけん",
+        "kanji": "体験",
+        "en": [
+          "experience (personal)"
+        ]
+      },
+      {
+        "kana": "おどろき",
+        "kanji": "驚き",
+        "en": [
+          "surprise"
+        ]
+      },
+      {
+        "kana": "できごと",
+        "kanji": "出来事",
+        "en": [
+          "event",
+          "incident"
+        ]
+      }
+    ],
+    "12": [
+      {
+        "kana": "かんかく",
+        "kanji": "感覚",
+        "en": [
+          "sensation",
+          "sense"
+        ]
+      },
+      {
+        "kana": "そうぞう",
+        "kanji": "想像",
+        "en": [
+          "imagination"
+        ]
+      },
+      {
+        "kana": "げんそう",
+        "kanji": "幻想",
+        "en": [
+          "illusion",
+          "fantasy"
+        ]
+      }
+    ],
+    "13": [
+      {
+        "kana": "じょうきょう",
+        "kanji": "状況",
+        "en": [
+          "situation"
+        ]
+      },
+      {
+        "kana": "きぼう",
+        "kanji": "希望",
+        "en": [
+          "hope"
+        ]
+      },
+      {
+        "kana": "かのうせい",
+        "kanji": "可能性",
+        "en": [
+          "possibility"
+        ]
+      }
+    ],
+    "14": [
+      {
+        "kana": "はんだん",
+        "kanji": "判断",
+        "en": [
+          "judgment"
+        ]
+      },
+      {
+        "kana": "りゆう",
+        "kanji": "理由",
+        "en": [
+          "reason"
+        ]
+      },
+      {
+        "kana": "ぜんてい",
+        "kanji": "前提",
+        "en": [
+          "premise",
+          "assumption"
+        ]
+      }
+    ],
+    "15": [
+      {
+        "kana": "いけん",
+        "kanji": "意見",
+        "en": [
+          "opinion"
+        ]
+      },
+      {
+        "kana": "たちば",
+        "kanji": "立場",
+        "en": [
+          "standpoint"
+        ]
+      },
+      {
+        "kana": "ぎろん",
+        "kanji": "議論",
+        "en": [
+          "debate",
+          "discussion"
+        ]
+      }
+    ],
+    "16": [
+      {
+        "kana": "じょうきょう",
+        "kanji": "状況",
+        "en": [
+          "situation"
+        ]
+      },
+      {
+        "kana": "けいけん",
+        "kanji": "経験",
+        "en": [
+          "experience"
+        ]
+      },
+      {
+        "kana": "きおく",
+        "kanji": "記憶",
+        "en": [
+          "memory"
+        ]
+      }
+    ],
+    "17": [
+      {
+        "kana": "けっか",
+        "kanji": "結果",
+        "en": [
+          "result"
+        ]
+      },
+      {
+        "kana": "せいかく",
+        "kanji": "性格",
+        "en": [
+          "personality"
+        ]
+      },
+      {
+        "kana": "とくちょう",
+        "kanji": "特徴",
+        "en": [
+          "feature",
+          "characteristic"
+        ]
+      }
+    ],
+    "18": [
+      {
+        "kana": "けつろん",
+        "kanji": "結論",
+        "en": [
+          "conclusion"
+        ]
+      },
+      {
+        "kana": "とうたつ",
+        "kanji": "到達",
+        "en": [
+          "reaching",
+          "attainment"
+        ]
+      },
+      {
+        "kana": "けいか",
+        "kanji": "経過",
+        "en": [
+          "progress",
+          "course (of events)"
+        ]
+      }
+    ],
+    "19": [
+      {
+        "kana": "かんそう",
+        "kanji": "感想",
+        "en": [
+          "impression",
+          "thoughts"
+        ]
+      },
+      {
+        "kana": "おどろき",
+        "kanji": "驚き",
+        "en": [
+          "surprise"
+        ]
+      },
+      {
+        "kana": "ひはん",
+        "kanji": "批判",
+        "en": [
+          "criticism"
+        ]
+      }
+    ],
+    "20": [
+      {
+        "kana": "じょうきょう",
+        "kanji": "状況",
+        "en": [
+          "situation"
+        ]
+      },
+      {
+        "kana": "しゃかい",
+        "kanji": "社会",
+        "en": [
+          "society"
+        ]
+      },
+      {
+        "kana": "ねんれい",
+        "kanji": "年齢",
+        "en": [
+          "age"
+        ]
+      }
+    ],
+    "21": [
+      {
+        "kana": "げんかい",
+        "kanji": "限界",
+        "en": [
+          "limit"
+        ]
+      },
+      {
+        "kana": "どりょく",
+        "kanji": "努力",
+        "en": [
+          "effort"
+        ]
+      },
+      {
+        "kana": "けっか",
+        "kanji": "結果",
+        "en": [
+          "result"
+        ]
+      }
+    ],
+    "22": [
+      {
+        "kana": "かんしゃ",
+        "kanji": "感謝",
+        "en": [
+          "gratitude"
+        ]
+      },
+      {
+        "kana": "りゆう",
+        "kanji": "理由",
+        "en": [
+          "reason"
+        ]
+      },
+      {
+        "kana": "けいけん",
+        "kanji": "経験",
+        "en": [
+          "experience"
+        ]
+      }
+    ],
+    "23": [
+      {
+        "kana": "ぜんたい",
+        "kanji": "全体",
+        "en": [
+          "whole",
+          "total"
+        ]
+      },
+      {
+        "kana": "ぶぶん",
+        "kanji": "部分",
+        "en": [
+          "part"
+        ]
+      },
+      {
+        "kana": "しゃかい",
+        "kanji": "社会",
+        "en": [
+          "society"
+        ]
+      }
+    ],
+    "24": [
+      {
+        "kana": "もんだい",
+        "kanji": "問題",
+        "en": [
+          "problem",
+          "issue"
+        ]
+      },
+      {
+        "kana": "わだい",
+        "kanji": "話題",
+        "en": [
+          "topic"
+        ]
+      },
+      {
+        "kana": "ぎろん",
+        "kanji": "議論",
+        "en": [
+          "debate"
+        ]
+      }
+    ],
+    "25": [
+      {
+        "kana": "ぞうか",
+        "kanji": "増加",
+        "en": [
+          "increase"
+        ]
+      },
+      {
+        "kana": "げんしょう",
+        "kanji": "減少",
+        "en": [
+          "decrease"
+        ]
+      },
+      {
+        "kana": "けいざい",
+        "kanji": "経済",
+        "en": [
+          "economy"
+        ]
+      }
+    ],
+    "26": [
+      {
+        "kana": "はってん",
+        "kanji": "発展",
+        "en": [
+          "development"
+        ]
+      },
+      {
+        "kana": "しんこう",
+        "kanji": "進行",
+        "en": [
+          "progress",
+          "advancement"
+        ]
+      },
+      {
+        "kana": "じょうきょう",
+        "kanji": "状況",
+        "en": [
+          "situation"
+        ]
+      }
+    ],
+    "27": [
+      {
+        "kana": "じゅんび",
+        "kanji": "準備",
+        "en": [
+          "preparation"
+        ]
+      },
+      {
+        "kana": "かいし",
+        "kanji": "開始",
+        "en": [
+          "start"
+        ]
+      },
+      {
+        "kana": "しゅうりょう",
+        "kanji": "終了",
+        "en": [
+          "end",
+          "completion"
+        ]
+      }
+    ],
+    "28": [
+      {
+        "kana": "けつい",
+        "kanji": "決意",
+        "en": [
+          "determination"
+        ]
+      },
+      {
+        "kana": "もくひょう",
+        "kanji": "目標",
+        "en": [
+          "goal"
+        ]
+      },
+      {
+        "kana": "せきにん",
+        "kanji": "責任",
+        "en": [
+          "responsibility"
+        ]
+      }
+    ],
+    "29": [
+      {
+        "kana": "かせつ",
+        "kanji": "仮説",
+        "en": [
+          "hypothesis"
+        ]
+      },
+      {
+        "kana": "ろんり",
+        "kanji": "論理",
+        "en": [
+          "logic"
+        ]
+      },
+      {
+        "kana": "はんだん",
+        "kanji": "判断",
+        "en": [
+          "judgment"
+        ]
+      }
+    ]
+  }
+}

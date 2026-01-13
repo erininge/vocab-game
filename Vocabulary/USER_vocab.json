@@ -1,0 +1,15 @@
+{
+  "level": "USER",
+  "lessons": {
+    "1": [
+      {
+        "kana": "かわいいこ",
+        "kanji": "可愛い子",
+        "en": [
+          "Cutie"
+        ],
+        "active": false
+      }
+    ]
+  }
+}

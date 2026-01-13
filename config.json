@@ -1,0 +1,8 @@
+{
+  "audioEnabled": true,
+  "audioVoice": "Female 1",
+  "displayMode": "kana",
+  "questionMode": "mixed",
+  "answerMode": "typing",
+  "questionsPerQuiz": 20
+}

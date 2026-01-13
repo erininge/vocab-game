@@ -1,0 +1,721 @@
+{
+  "level": "N3",
+  "lessons": {
+    "1": [
+      {
+        "kana": "おもいだす",
+        "kanji": "思い出す",
+        "en": [
+          "to remember",
+          "recall"
+        ]
+      },
+      {
+        "kana": "つづける",
+        "kanji": "続ける",
+        "en": [
+          "to continue"
+        ]
+      },
+      {
+        "kana": "かんがえる",
+        "kanji": "考える",
+        "en": [
+          "to think",
+          "consider"
+        ]
+      },
+      {
+        "kana": "はじめる",
+        "kanji": "始める",
+        "en": [
+          "to start",
+          "begin"
+        ]
+      }
+    ],
+    "2": [
+      {
+        "kana": "せいこう",
+        "kanji": "成功",
+        "en": [
+          "success"
+        ]
+      },
+      {
+        "kana": "げんいん",
+        "kanji": "原因",
+        "en": [
+          "cause"
+        ]
+      },
+      {
+        "kana": "どりょく",
+        "kanji": "努力",
+        "en": [
+          "effort"
+        ]
+      },
+      {
+        "kana": "けっか",
+        "kanji": "結果",
+        "en": [
+          "result"
+        ]
+      }
+    ],
+    "3": [
+      {
+        "kana": "けんこう",
+        "kanji": "健康",
+        "en": [
+          "health"
+        ]
+      },
+      {
+        "kana": "しゅうかん",
+        "kanji": "習慣",
+        "en": [
+          "habit"
+        ]
+      },
+      {
+        "kana": "れんしゅう",
+        "kanji": "練習",
+        "en": [
+          "practice"
+        ]
+      },
+      {
+        "kana": "どりょく",
+        "kanji": "努力",
+        "en": [
+          "effort"
+        ]
+      }
+    ],
+    "4": [
+      {
+        "kana": "てんき",
+        "kanji": "天気",
+        "en": [
+          "weather"
+        ]
+      },
+      {
+        "kana": "うわさ",
+        "kanji": "噂",
+        "en": [
+          "rumor"
+        ]
+      },
+      {
+        "kana": "こえ",
+        "kanji": "声",
+        "en": [
+          "voice"
+        ]
+      },
+      {
+        "kana": "ようす",
+        "kanji": "様子",
+        "en": [
+          "appearance",
+          "situation"
+        ]
+      }
+    ],
+    "5": [
+      {
+        "kana": "まにあう",
+        "kanji": "間に合う",
+        "en": [
+          "to make it",
+          "be on time"
+        ]
+      },
+      {
+        "kana": "あめがふったら",
+        "kanji": "雨が降ったら",
+        "en": [
+          "if it rains"
+        ]
+      },
+      {
+        "kana": "こまる",
+        "kanji": "困る",
+        "en": [
+          "to be troubled"
+        ]
+      }
+    ],
+    "6": [
+      {
+        "kana": "ざんねん",
+        "kanji": "残念",
+        "en": [
+          "regrettable",
+          "too bad"
+        ]
+      },
+      {
+        "kana": "がんばる",
+        "kanji": "頑張る",
+        "en": [
+          "to do one's best"
+        ]
+      },
+      {
+        "kana": "くやしい",
+        "kanji": "悔しい",
+        "en": [
+          "frustrating",
+          "mortifying"
+        ]
+      },
+      {
+        "kana": "ふまん",
+        "kanji": "不満",
+        "en": [
+          "dissatisfaction"
+        ]
+      }
+    ],
+    "7": [
+      {
+        "kana": "ねがう",
+        "kanji": "願う",
+        "en": [
+          "to wish",
+          "hope"
+        ]
+      },
+      {
+        "kana": "いのる",
+        "kanji": "祈る",
+        "en": [
+          "to pray"
+        ]
+      },
+      {
+        "kana": "しあわせ",
+        "kanji": "幸せ",
+        "en": [
+          "happiness"
+        ]
+      },
+      {
+        "kana": "せいこう",
+        "kanji": "成功",
+        "en": [
+          "success"
+        ]
+      }
+    ],
+    "8": [
+      {
+        "kana": "わすれる",
+        "kanji": "忘れる",
+        "en": [
+          "to forget"
+        ]
+      },
+      {
+        "kana": "しっぱいする",
+        "kanji": "失敗する",
+        "en": [
+          "to fail",
+          "make a mistake"
+        ]
+      },
+      {
+        "kana": "こうかいする",
+        "kanji": "後悔する",
+        "en": [
+          "to regret"
+        ]
+      }
+    ],
+    "9": [
+      {
+        "kana": "かれ",
+        "kanji": "彼",
+        "en": [
+          "he",
+          "boyfriend"
+        ]
+      },
+      {
+        "kana": "かのじょ",
+        "kanji": "彼女",
+        "en": [
+          "she",
+          "girlfriend"
+        ]
+      },
+      {
+        "kana": "よてい",
+        "kanji": "予定",
+        "en": [
+          "plan",
+          "schedule"
+        ]
+      },
+      {
+        "kana": "じじつ",
+        "kanji": "事実",
+        "en": [
+          "fact"
+        ]
+      }
+    ],
+    "10": [
+      {
+        "kana": "ひつよう",
+        "kanji": "必要",
+        "en": [
+          "necessary"
+        ]
+      },
+      {
+        "kana": "きんし",
+        "kanji": "禁止",
+        "en": [
+          "prohibited"
+        ]
+      },
+      {
+        "kana": "じゆう",
+        "kanji": "自由",
+        "en": [
+          "freedom"
+        ]
+      },
+      {
+        "kana": "ぎむ",
+        "kanji": "義務",
+        "en": [
+          "duty",
+          "obligation"
+        ]
+      }
+    ],
+    "11": [
+      {
+        "kana": "しかる",
+        "kanji": "叱られる",
+        "en": [
+          "to be scolded"
+        ]
+      },
+      {
+        "kana": "ほめる",
+        "kanji": "褒められる",
+        "en": [
+          "to be praised"
+        ]
+      },
+      {
+        "kana": "いかせられる",
+        "kanji": "行かせられる",
+        "en": [
+          "to be made to go"
+        ]
+      }
+    ],
+    "12": [
+      {
+        "kana": "よみつづける",
+        "kanji": "読み続ける",
+        "en": [
+          "to keep reading"
+        ]
+      },
+      {
+        "kana": "わらいだす",
+        "kanji": "笑い出す",
+        "en": [
+          "to burst out laughing"
+        ]
+      }
+    ],
+    "13": [
+      {
+        "kana": "わかいうちに",
+        "kanji": "若いうちに",
+        "en": [
+          "while (you're) still young"
+        ]
+      },
+      {
+        "kana": "いるあいだに",
+        "kanji": "いる間に",
+        "en": [
+          "while (someone) is here",
+          "during the time"
+        ]
+      }
+    ],
+    "14": [
+      {
+        "kana": "かわる",
+        "kanji": "変わる",
+        "en": [
+          "to change"
+        ]
+      },
+      {
+        "kana": "なれる",
+        "kanji": "慣れる",
+        "en": [
+          "to get used to"
+        ]
+      },
+      {
+        "kana": "せいちょうする",
+        "kanji": "成長する",
+        "en": [
+          "to grow",
+          "develop"
+        ]
+      }
+    ],
+    "15": [
+      {
+        "kana": "いけん",
+        "kanji": "意見",
+        "en": [
+          "opinion"
+        ]
+      },
+      {
+        "kana": "かんそう",
+        "kanji": "感想",
+        "en": [
+          "impression",
+          "thoughts"
+        ]
+      },
+      {
+        "kana": "ひはん",
+        "kanji": "批判",
+        "en": [
+          "criticism"
+        ]
+      },
+      {
+        "kana": "さんせい",
+        "kanji": "賛成",
+        "en": [
+          "agreement",
+          "approval"
+        ]
+      }
+    ],
+    "16": [
+      {
+        "kana": "すくない",
+        "kanji": "少ない",
+        "en": [
+          "few",
+          "little"
+        ]
+      },
+      {
+        "kana": "おおい",
+        "kanji": "多い",
+        "en": [
+          "many",
+          "much"
+        ]
+      },
+      {
+        "kana": "いがい",
+        "kanji": "意外",
+        "en": [
+          "unexpected",
+          "surprising"
+        ]
+      }
+    ],
+    "17": [
+      {
+        "kana": "ゴミだらけ",
+        "kanji": null,
+        "en": [
+          "full of trash"
+        ]
+      },
+      {
+        "kana": "いそがしいばかり",
+        "kanji": "忙しいばかり",
+        "en": [
+          "nothing but busy",
+          "always busy"
+        ]
+      }
+    ],
+    "18": [
+      {
+        "kana": "りゆう",
+        "kanji": "理由",
+        "en": [
+          "reason"
+        ]
+      },
+      {
+        "kana": "けっか",
+        "kanji": "結果",
+        "en": [
+          "result"
+        ]
+      },
+      {
+        "kana": "いみ",
+        "kanji": "意味",
+        "en": [
+          "meaning"
+        ]
+      }
+    ],
+    "19": [
+      {
+        "kana": "つくとたん",
+        "kanji": "着くとたん",
+        "en": [
+          "the moment (I) arrive"
+        ]
+      },
+      {
+        "kana": "おわりしだい",
+        "kanji": "終わり次第",
+        "en": [
+          "as soon as (it) finishes"
+        ]
+      }
+    ],
+    "20": [
+      {
+        "kana": "べんり",
+        "kanji": "便利",
+        "en": [
+          "convenient"
+        ]
+      },
+      {
+        "kana": "きけん",
+        "kanji": "危険",
+        "en": [
+          "dangerous"
+        ]
+      },
+      {
+        "kana": "ふくざつ",
+        "kanji": "複雑",
+        "en": [
+          "complicated"
+        ]
+      }
+    ],
+    "21": [
+      {
+        "kana": "こどもらしい",
+        "kanji": "子供らしい",
+        "en": [
+          "childlike"
+        ]
+      },
+      {
+        "kana": "せんせいみたい",
+        "kanji": "先生みたい",
+        "en": [
+          "like a teacher"
+        ]
+      }
+    ],
+    "22": [
+      {
+        "kana": "わかるかどうか",
+        "kanji": "分かるかどうか",
+        "en": [
+          "whether (I) understand or not"
+        ]
+      },
+      {
+        "kana": "むずかしいかな",
+        "kanji": "難しいかな",
+        "en": [
+          "I wonder if it's difficult"
+        ]
+      }
+    ],
+    "23": [
+      {
+        "kana": "どりょくする",
+        "kanji": "努力する",
+        "en": [
+          "to make an effort"
+        ]
+      },
+      {
+        "kana": "こころみる",
+        "kanji": "試みる",
+        "en": [
+          "to attempt",
+          "try"
+        ]
+      },
+      {
+        "kana": "あきらめる",
+        "kanji": "諦める",
+        "en": [
+          "to give up"
+        ]
+      }
+    ],
+    "24": [
+      {
+        "kana": "うれしい",
+        "kanji": "嬉しい",
+        "en": [
+          "happy",
+          "glad"
+        ]
+      },
+      {
+        "kana": "くやしい",
+        "kanji": "悔しい",
+        "en": [
+          "frustrating"
+        ]
+      },
+      {
+        "kana": "たのしい",
+        "kanji": "楽しい",
+        "en": [
+          "fun"
+        ]
+      },
+      {
+        "kana": "さびしい",
+        "kanji": "寂しい",
+        "en": [
+          "lonely"
+        ]
+      }
+    ],
+    "25": [
+      {
+        "kana": "あけっぱなし",
+        "kanji": "開けっぱなし",
+        "en": [
+          "left open"
+        ]
+      },
+      {
+        "kana": "すわったまま",
+        "kanji": "座ったまま",
+        "en": [
+          "staying seated",
+          "as (one) sits"
+        ]
+      }
+    ],
+    "26": [
+      {
+        "kana": "わたしこそ",
+        "kanji": "私こそ",
+        "en": [
+          "it's me (emphatic)",
+          "I'm the one"
+        ]
+      },
+      {
+        "kana": "あなたさえ",
+        "kanji": null,
+        "en": [
+          "even you",
+          "if only you"
+        ]
+      }
+    ],
+    "27": [
+      {
+        "kana": "そうだん",
+        "kanji": "相談",
+        "en": [
+          "consultation",
+          "advice talk"
+        ]
+      },
+      {
+        "kana": "ていあん",
+        "kanji": "提案",
+        "en": [
+          "proposal",
+          "suggestion"
+        ]
+      },
+      {
+        "kana": "じょげん",
+        "kanji": "助言",
+        "en": [
+          "advice"
+        ]
+      }
+    ],
+    "28": [
+      {
+        "kana": "じこ",
+        "kanji": "事故",
+        "en": [
+          "accident"
+        ]
+      },
+      {
+        "kana": "りゆう",
+        "kanji": "理由",
+        "en": [
+          "reason"
+        ]
+      },
+      {
+        "kana": "ほうほう",
+        "kanji": "方法",
+        "en": [
+          "method"
+        ]
+      },
+      {
+        "kana": "せつめい",
+        "kanji": "説明",
+        "en": [
+          "explanation"
+        ]
+      }
+    ],
+    "29": [
+      {
+        "kana": "ふえる",
+        "kanji": "増える",
+        "en": [
+          "to increase"
+        ]
+      },
+      {
+        "kana": "へる",
+        "kanji": "減る",
+        "en": [
+          "to decrease"
+        ]
+      },
+      {
+        "kana": "へんか",
+        "kanji": "変化",
+        "en": [
+          "change"
+        ]
+      }
+    ]
+  }
+}

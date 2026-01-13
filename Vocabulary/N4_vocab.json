@@ -1,0 +1,706 @@
+{
+  "level": "N4",
+  "lessons": {
+    "1": [
+      {
+        "kana": "つかれる",
+        "kanji": "疲れる",
+        "en": [
+          "to get tired"
+        ]
+      },
+      {
+        "kana": "おぼえる",
+        "kanji": "覚える",
+        "en": [
+          "to remember",
+          "memorize"
+        ]
+      },
+      {
+        "kana": "わすれる",
+        "kanji": "忘れる",
+        "en": [
+          "to forget"
+        ]
+      },
+      {
+        "kana": "いる",
+        "kanji": null,
+        "en": [
+          "to exist (animate)",
+          "to be (for living things)"
+        ]
+      },
+      {
+        "kana": "ある",
+        "kanji": null,
+        "en": [
+          "to exist (inanimate)",
+          "to be (for objects)"
+        ]
+      }
+    ],
+    "2": [
+      {
+        "kana": "りょうり",
+        "kanji": "料理",
+        "en": [
+          "cooking",
+          "cuisine"
+        ]
+      },
+      {
+        "kana": "てつだう",
+        "kanji": "手伝う",
+        "en": [
+          "to help"
+        ]
+      },
+      {
+        "kana": "れんしゅうする",
+        "kanji": "練習する",
+        "en": [
+          "to practice"
+        ]
+      },
+      {
+        "kana": "ためす",
+        "kanji": "試す",
+        "en": [
+          "to try",
+          "test"
+        ]
+      }
+    ],
+    "3": [
+      {
+        "kana": "みせる",
+        "kanji": "見せる",
+        "en": [
+          "to show"
+        ]
+      },
+      {
+        "kana": "おしえる",
+        "kanji": "教える",
+        "en": [
+          "to teach",
+          "tell"
+        ]
+      },
+      {
+        "kana": "かりる",
+        "kanji": "借りる",
+        "en": [
+          "to borrow"
+        ]
+      },
+      {
+        "kana": "かす",
+        "kanji": "貸す",
+        "en": [
+          "to lend"
+        ]
+      }
+    ],
+    "4": [
+      {
+        "kana": "はなせる",
+        "kanji": "話せる",
+        "en": [
+          "can speak"
+        ]
+      },
+      {
+        "kana": "いける",
+        "kanji": "行ける",
+        "en": [
+          "can go"
+        ]
+      },
+      {
+        "kana": "こられる",
+        "kanji": "来られる",
+        "en": [
+          "can come"
+        ]
+      },
+      {
+        "kana": "できる",
+        "kanji": null,
+        "en": [
+          "can do",
+          "be able to"
+        ]
+      }
+    ],
+    "5": [
+      {
+        "kana": "いこう",
+        "kanji": "行こう",
+        "en": [
+          "let's go"
+        ]
+      },
+      {
+        "kana": "たべよう",
+        "kanji": "食べよう",
+        "en": [
+          "let's eat"
+        ]
+      },
+      {
+        "kana": "しよう",
+        "kanji": null,
+        "en": [
+          "let's do (it)"
+        ]
+      }
+    ],
+    "6": [
+      {
+        "kana": "いう",
+        "kanji": "言う",
+        "en": [
+          "to say"
+        ]
+      },
+      {
+        "kana": "おもう",
+        "kanji": "思う",
+        "en": [
+          "to think"
+        ]
+      },
+      {
+        "kana": "きく",
+        "kanji": "聞く",
+        "en": [
+          "to hear",
+          "listen",
+          "ask"
+        ]
+      },
+      {
+        "kana": "こたえる",
+        "kanji": "答える",
+        "en": [
+          "to answer"
+        ]
+      }
+    ],
+    "7": [
+      {
+        "kana": "しゅくだい",
+        "kanji": "宿題",
+        "en": [
+          "homework"
+        ]
+      },
+      {
+        "kana": "そうじ",
+        "kanji": "掃除",
+        "en": [
+          "cleaning"
+        ]
+      },
+      {
+        "kana": "やくそく",
+        "kanji": "約束",
+        "en": [
+          "promise",
+          "appointment"
+        ]
+      },
+      {
+        "kana": "きんし",
+        "kanji": "禁止",
+        "en": [
+          "prohibition"
+        ]
+      }
+    ],
+    "8": [
+      {
+        "kana": "びょうき",
+        "kanji": "病気",
+        "en": [
+          "illness"
+        ]
+      },
+      {
+        "kana": "げんき",
+        "kanji": "元気",
+        "en": [
+          "healthy",
+          "energetic"
+        ]
+      },
+      {
+        "kana": "りゆう",
+        "kanji": "理由",
+        "en": [
+          "reason"
+        ]
+      },
+      {
+        "kana": "じこ",
+        "kanji": "事故",
+        "en": [
+          "accident"
+        ]
+      }
+    ],
+    "9": [
+      {
+        "kana": "りょこう",
+        "kanji": "旅行",
+        "en": [
+          "trip",
+          "travel"
+        ]
+      },
+      {
+        "kana": "よてい",
+        "kanji": "予定",
+        "en": [
+          "schedule",
+          "plan"
+        ]
+      },
+      {
+        "kana": "けいかく",
+        "kanji": "計画",
+        "en": [
+          "plan",
+          "project"
+        ]
+      },
+      {
+        "kana": "みらい",
+        "kanji": "未来",
+        "en": [
+          "future"
+        ]
+      }
+    ],
+    "10": [
+      {
+        "kana": "あさ",
+        "kanji": "朝",
+        "en": [
+          "morning"
+        ]
+      },
+      {
+        "kana": "ひる",
+        "kanji": "昼",
+        "en": [
+          "daytime",
+          "noon"
+        ]
+      },
+      {
+        "kana": "よる",
+        "kanji": "夜",
+        "en": [
+          "night"
+        ]
+      },
+      {
+        "kana": "しょくじ",
+        "kanji": "食事",
+        "en": [
+          "meal"
+        ]
+      },
+      {
+        "kana": "べんきょう",
+        "kanji": "勉強",
+        "en": [
+          "study"
+        ]
+      }
+    ],
+    "11": [
+      {
+        "kana": "ききながら",
+        "kanji": "聞きながら",
+        "en": [
+          "while listening"
+        ]
+      },
+      {
+        "kana": "べんきょうしながら",
+        "kanji": "勉強しながら",
+        "en": [
+          "while studying"
+        ]
+      }
+    ],
+    "12": [
+      {
+        "kana": "いったり",
+        "kanji": "行ったり",
+        "en": [
+          "do things like going…"
+        ]
+      },
+      {
+        "kana": "たべたり",
+        "kanji": "食べたり",
+        "en": [
+          "do things like eating…"
+        ]
+      },
+      {
+        "kana": "ねたり",
+        "kanji": "寝たり",
+        "en": [
+          "do things like sleeping…"
+        ]
+      }
+    ],
+    "13": [
+      {
+        "kana": "あめ",
+        "kanji": "雨",
+        "en": [
+          "rain"
+        ]
+      },
+      {
+        "kana": "てんき",
+        "kanji": "天気",
+        "en": [
+          "weather"
+        ]
+      },
+      {
+        "kana": "しけん",
+        "kanji": "試験",
+        "en": [
+          "exam"
+        ]
+      },
+      {
+        "kana": "ごうかく",
+        "kanji": "合格",
+        "en": [
+          "passing (an exam)"
+        ]
+      }
+    ],
+    "14": [
+      {
+        "kana": "たかい",
+        "kanji": "高い",
+        "en": [
+          "expensive",
+          "high"
+        ]
+      },
+      {
+        "kana": "やすい",
+        "kanji": "安い",
+        "en": [
+          "cheap"
+        ]
+      },
+      {
+        "kana": "おおきい",
+        "kanji": "大きい",
+        "en": [
+          "big"
+        ]
+      },
+      {
+        "kana": "ちいさい",
+        "kanji": "小さい",
+        "en": [
+          "small"
+        ]
+      },
+      {
+        "kana": "いちばん",
+        "kanji": "一番",
+        "en": [
+          "the most",
+          "number one"
+        ]
+      }
+    ],
+    "15": [
+      {
+        "kana": "いったら",
+        "kanji": "行ったら",
+        "en": [
+          "if",
+          "when (someone) goes"
+        ]
+      },
+      {
+        "kana": "あめがふったら",
+        "kanji": "雨が降ったら",
+        "en": [
+          "if it rains"
+        ]
+      }
+    ],
+    "16": [
+      {
+        "kana": "いわれる",
+        "kanji": "言われる",
+        "en": [
+          "to be told",
+          "be said to (passive)"
+        ]
+      },
+      {
+        "kana": "される",
+        "kanji": null,
+        "en": [
+          "to be done (passive of する)"
+        ]
+      },
+      {
+        "kana": "つくられる",
+        "kanji": "作られる",
+        "en": [
+          "to be made (passive)"
+        ]
+      }
+    ],
+    "17": [
+      {
+        "kana": "とまる",
+        "kanji": "止まる",
+        "en": [
+          "to stop"
+        ]
+      },
+      {
+        "kana": "あける",
+        "kanji": "開ける",
+        "en": [
+          "to open"
+        ]
+      },
+      {
+        "kana": "しめる",
+        "kanji": "閉める",
+        "en": [
+          "to close"
+        ]
+      },
+      {
+        "kana": "まつ",
+        "kanji": "待つ",
+        "en": [
+          "to wait"
+        ]
+      }
+    ],
+    "18": [
+      {
+        "kana": "たべてみる",
+        "kanji": "食べてみる",
+        "en": [
+          "to try eating"
+        ]
+      },
+      {
+        "kana": "いったことがある",
+        "kanji": "行ったことがある",
+        "en": [
+          "have been (have gone before)"
+        ]
+      }
+    ],
+    "19": [
+      {
+        "kana": "べんきょうするために",
+        "kanji": "勉強するために",
+        "en": [
+          "in order to study"
+        ]
+      },
+      {
+        "kana": "いくようにする",
+        "kanji": "行くようにする",
+        "en": [
+          "make an effort to go",
+          "try to go"
+        ]
+      }
+    ],
+    "20": [
+      {
+        "kana": "さしあげる",
+        "kanji": "差し上げる",
+        "en": [
+          "to give (humble)"
+        ]
+      },
+      {
+        "kana": "いただく",
+        "kanji": null,
+        "en": [
+          "to receive (humble)"
+        ]
+      },
+      {
+        "kana": "くださる",
+        "kanji": null,
+        "en": [
+          "to give (honorific)"
+        ]
+      }
+    ],
+    "21": [
+      {
+        "kana": "やすみたい",
+        "kanji": "休みたい",
+        "en": [
+          "want to rest",
+          "take a break"
+        ]
+      },
+      {
+        "kana": "みずがほしい",
+        "kanji": "水がほしい",
+        "en": [
+          "want water"
+        ]
+      }
+    ],
+    "22": [
+      {
+        "kana": "てつだってくださいませんか",
+        "kanji": "手伝ってくださいませんか",
+        "en": [
+          "could you please help me?"
+        ]
+      }
+    ],
+    "23": [
+      {
+        "kana": "どうしたんですか",
+        "kanji": null,
+        "en": [
+          "what's wrong?",
+          "what happened?"
+        ]
+      },
+      {
+        "kana": "そうなんです",
+        "kanji": null,
+        "en": [
+          "that's how it is",
+          "yes, that's right (explanatory tone)"
+        ]
+      }
+    ],
+    "24": [
+      {
+        "kana": "ニュースによると",
+        "kanji": null,
+        "en": [
+          "according to the news"
+        ]
+      },
+      {
+        "kana": "あめがふるそうです",
+        "kanji": "雨が降るそうです",
+        "en": [
+          "I heard it will rain"
+        ]
+      }
+    ],
+    "25": [
+      {
+        "kana": "しかる",
+        "kanji": "叱られる",
+        "en": [
+          "to be scolded"
+        ]
+      },
+      {
+        "kana": "おどろかれる",
+        "kanji": "驚かれる",
+        "en": [
+          "to be surprised at",
+          "(someone) is surprised (passive nuance)"
+        ]
+      },
+      {
+        "kana": "こまられる",
+        "kanji": "困られる",
+        "en": [
+          "(someone) is troubled",
+          "inconvenienced (passive nuance)"
+        ]
+      }
+    ],
+    "26": [
+      {
+        "kana": "たべたひと",
+        "kanji": "食べた人",
+        "en": [
+          "the person who ate"
+        ]
+      },
+      {
+        "kana": "いくところ",
+        "kanji": "行くところ",
+        "en": [
+          "the place (I'm) going to"
+        ]
+      },
+      {
+        "kana": "みたえいが",
+        "kanji": "見た映画",
+        "en": [
+          "the movie (I) watched"
+        ]
+      }
+    ],
+    "27": [
+      {
+        "kana": "あめならいきません",
+        "kanji": "雨なら行きません",
+        "en": [
+          "if it's raining",
+          "I won't go"
+        ]
+      }
+    ],
+    "28": [
+      {
+        "kana": "しかし",
+        "kanji": null,
+        "en": [
+          "however",
+          "but (formal)"
+        ]
+      },
+      {
+        "kana": "そのため",
+        "kanji": null,
+        "en": [
+          "therefore",
+          "for that reason"
+        ]
+      },
+      {
+        "kana": "ということ",
+        "kanji": null,
+        "en": [
+          "the fact that…",
+          "meaning…"
+        ]
+      }
+    ]
+  }
+}
