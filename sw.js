@@ -1,4 +1,4 @@
-const CACHE_NAME = "vocab-garden-cache-v1";
+const CACHE_NAME = "vocab-garden-cache-v0.3.0";
 const CORE_ASSETS = [
   "./",
   "./index.html",
@@ -7,6 +7,7 @@ const CORE_ASSETS = [
   "./config.json",
   "./manifest.webmanifest",
   "./Vocabulary/vocab-manifest.json",
+"./Audio/audio-manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
 ];
