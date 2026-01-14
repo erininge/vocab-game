@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.4";
+const APP_VERSION = "v0.3.5";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
   "Female 2": "Female option 2",
@@ -28,6 +28,8 @@ const els = {
   qCount: document.getElementById("qCount"),
   voiceSelect: document.getElementById("voiceSelect"),
   audioEnabled: document.getElementById("audioEnabled"),
+  audioVolume: document.getElementById("audioVolume"),
+  audioVolumeValue: document.getElementById("audioVolumeValue"),
 
   lessonHelp: document.getElementById("lessonHelp"),
   lessonBox: document.getElementById("lessonBox"),
@@ -82,6 +84,7 @@ function normalizeJapanese(s) {
     .trim();
 }
 
+const DEFAULT_AUDIO_VOLUME = 80;
 
 let AUDIO_MANIFEST = null;
 let audioSessionConfigured = false;
@@ -473,6 +476,8 @@ async function tryPlayAudio(question) {
   const { card } = question;
   const voice = state.settings.voice || "Female 1";
   const voiceFolder = AUDIO_VOICE_FOLDERS[voice] || AUDIO_VOICE_FOLDERS["Female 1"];
+  const volume = typeof state.settings.audioVolume === "number" ? state.settings.audioVolume : 1;
+  const normalizedVolume = Math.max(0, Math.min(1, volume));
 
   // mimic python resolver: try kana, kanji, variants
   const candidates = [];
@@ -502,6 +507,7 @@ async function tryPlayAudio(question) {
       try {
         const audio = new Audio(url);
         audio.playsInline = true;
+        audio.volume = normalizedVolume;
         audio.setAttribute("playsinline", "");
         audio.setAttribute("webkit-playsinline", "");
         audio.preload = "auto";
@@ -573,6 +579,17 @@ async function bootstrap() {
   await registerSW();
   wireInstall();
 
+  const updateAudioVolumeLabel = () => {
+    const value = Number(els.audioVolume.value || 0);
+    els.audioVolumeValue.textContent = `${value}%`;
+  };
+
+  const syncAudioControls = () => {
+    const enabled = els.audioEnabled.checked;
+    els.audioVolume.disabled = !enabled;
+    els.audioVolumeValue.classList.toggle("muted", !enabled);
+  };
+
   // Load default config (optional)
   try {
     const res = await fetch("./config.json");
@@ -584,8 +601,18 @@ async function bootstrap() {
       if (typeof cfg.questionsPerQuiz === "number") els.qCount.value = String(cfg.questionsPerQuiz);
       if (cfg.audioVoice) els.voiceSelect.value = cfg.audioVoice;
       if (typeof cfg.audioEnabled === "boolean") els.audioEnabled.checked = cfg.audioEnabled;
+      if (typeof cfg.audioVolume === "number") {
+        const volumePercent = cfg.audioVolume <= 1 ? Math.round(cfg.audioVolume * 100) : cfg.audioVolume;
+        els.audioVolume.value = String(Math.max(0, Math.min(100, volumePercent)));
+      }
     }
   } catch (e) {}
+
+  if (!els.audioVolume.value) {
+    els.audioVolume.value = String(DEFAULT_AUDIO_VOLUME);
+  }
+  updateAudioVolumeLabel();
+  syncAudioControls();
 
   // Discover vocab files
   els.levelSelect.innerHTML = "";
@@ -635,6 +662,7 @@ async function bootstrap() {
       qCount,
       audioEnabled: els.audioEnabled.checked,
       voice: els.voiceSelect.value,
+      audioVolume: Number(els.audioVolume.value || DEFAULT_AUDIO_VOLUME) / 100,
     };
 
     state.currentFile = file;
@@ -668,6 +696,9 @@ async function bootstrap() {
       await tryPlayAudio(q);
     } catch (e) {}
   });
+
+  els.audioEnabled.addEventListener("change", syncAudioControls);
+  els.audioVolume.addEventListener("input", updateAudioVolumeLabel);
 }
 
 async function onCategoryChange() {
