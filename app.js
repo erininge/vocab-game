@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.17";
+const APP_VERSION = "v0.3.18";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -97,6 +97,7 @@ function normalizeJapanese(s) {
 
 const DEFAULT_AUDIO_VOLUME = 120;
 const MAX_AUDIO_BOOST = 3;
+const AUDIO_FADE_IN_SECONDS = 0.05;
 
 let AUDIO_MANIFEST = null;
 let audioSessionConfigured = false;
@@ -144,6 +145,15 @@ async function getAudioContext() {
   return audioContext;
 }
 
+async function suspendAudioContextIfIdle() {
+  if (!audioContext || activeAudio) return;
+  if (audioContext.state === "running") {
+    try {
+      await audioContext.suspend();
+    } catch (e) {}
+  }
+}
+
 function clearActiveAudio(audio) {
   if (audio && audio === activeAudio) {
     activeAudio = null;
@@ -164,6 +174,7 @@ function stopActiveAudio() {
   try {
     audio.currentTime = 0;
   } catch (e) {}
+  void suspendAudioContextIfIdle();
 }
 
 async function playAudioFromUrl(url, normalizedVolume) {
@@ -176,19 +187,25 @@ async function playAudioFromUrl(url, normalizedVolume) {
   audio.setAttribute("webkit-playsinline", "");
   audio.preload = "auto";
   audio.load();
-  const ctx = await getAudioContext();
+  const shouldUseContext = normalizedVolume > 1;
+  const ctx = shouldUseContext ? await getAudioContext() : null;
   let source;
   let gainNode;
   const handleEnded = () => {
     if (activeAudioCleanup) activeAudioCleanup();
     clearActiveAudio(audio);
+    void suspendAudioContextIfIdle();
   };
   if (ctx) {
     audio.volume = 1;
     source = ctx.createMediaElementSource(audio);
     gainNode = ctx.createGain();
     const targetGain = Math.max(0, normalizedVolume);
-    gainNode.gain.setValueAtTime(targetGain, ctx.currentTime);
+    gainNode.gain.setValueAtTime(0, ctx.currentTime);
+    gainNode.gain.linearRampToValueAtTime(
+      targetGain,
+      ctx.currentTime + AUDIO_FADE_IN_SECONDS
+    );
     source.connect(gainNode);
     gainNode.connect(ctx.destination);
     const cleanup = () => {
