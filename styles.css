@@ -1,6 +1,11 @@
+/* Kat's Vocab Garden — clean dark theme + iOS friendly */
+/* Replace your ENTIRE styles.css with this file */
+
+/* ===== Theme ===== */
 :root{
   --bg:#0b1020;
   --card:#121a33;
+  --card2:#0f1730;
   --ink:#f3f4f6;
   --muted:#aab0c0;
   --border:#243055;
@@ -8,72 +13,179 @@
   --radius:18px;
   --pad:18px;
   --max:980px;
+
+  --inputBg: rgba(255,255,255,0.92);
+  --inputInk: #0b1020;
+
   --btn:#f3f4f6;
   --btnInk:#0b1020;
+
+  --accent:#58a6ff;
 }
+
 *{box-sizing:border-box}
 html,body{height:100%}
+
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  background:var(--bg);
+  background:
+    radial-gradient(1200px 800px at 20% 0%, rgba(255,255,255,0.06), transparent 60%),
+    radial-gradient(900px 700px at 80% 20%, rgba(255,255,255,0.05), transparent 55%),
+    var(--bg);
   color:var(--ink);
+  -webkit-text-size-adjust: 100%;
 }
-code{background:#f1f1f1; padding:2px 6px; border-radius:8px}
+
+code{
+  background: rgba(255,255,255,0.12);
+  color: var(--ink);
+  padding:2px 6px;
+  border-radius:8px;
+}
+
+/* ===== Layout + Safe Area ===== */
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:
+    max(16px, env(safe-area-inset-top))
+    16px
+    max(80px, env(safe-area-inset-bottom))
+    16px;
+}
+
+/* ===== Top Bar ===== */
 .topbar{
-  position:sticky; top:0; z-index:10;
+  position:sticky;
+  top:0;
+  z-index:10;
+
+  background: rgba(9, 16, 32, 0.92);
   backdrop-filter:saturate(180%) blur(10px);
-  background:rgba(247,247,247,.85);
+  -webkit-backdrop-filter:saturate(180%) blur(10px);
+
   border-bottom:1px solid var(--border);
-  padding:12px 16px;
-  display:flex; align-items:center; justify-content:space-between;
+  padding:
+    calc(10px + env(safe-area-inset-top))
+    16px
+    10px
+    16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
 }
+
 .brand{display:flex; gap:12px; align-items:center}
-.logo{width:38px; height:38px; display:grid; place-items:center; font-size:22px; border:1px solid var(--border); border-radius:12px; background:#fff}
+.logo{
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  font-size:22px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background: rgba(255,255,255,0.10);
+}
 .title{font-weight:800; letter-spacing:.2px}
 .subtitle{color:var(--muted); font-size:13px}
-.container{max-width:var(--max); margin:0 auto; padding:18px 16px 60px}
+
+/* ===== Cards ===== */
 .card{
-  background:var(--card);
+  background: var(--card);
   border:1px solid var(--border);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
   padding:var(--pad);
 }
 .card + .card{margin-top:16px}
+
 .card-lite{
   margin-top:16px;
-  background:#fcfcfc;
+  background: rgba(255,255,255,0.06);
   border:1px dashed var(--border);
   border-radius:14px;
   padding:12px 14px;
   color:var(--muted);
 }
+
+/* ===== Text ===== */
 h1{margin:0 0 12px; font-size:26px}
 h2{margin:0 0 8px; font-size:18px}
 p{margin:8px 0}
 .muted{color:var(--muted)}
+
+/* ===== Grid / Fields ===== */
 .grid{
   display:grid;
   grid-template-columns: repeat(2, minmax(0,1fr));
   gap:12px;
 }
 @media (max-width:860px){ .grid{grid-template-columns:1fr} }
+
 .field{display:flex; flex-direction:column; gap:6px}
 .label{font-size:13px; color:var(--muted)}
 .hint{font-size:12px; color:var(--muted)}
-.row{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
-select,input{
+
+.row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+/* ===== Inputs (iOS friendly) ===== */
+/* 16px font prevents iOS zoom */
+select,input,textarea{
   width:100%;
-  padding:10px 12px;
+  padding:12px 12px;
   border-radius:12px;
   border:1px solid var(--border);
-  background:#fff;
-  font-size:15px;
+  background: var(--inputBg);
+  color: var(--inputInk);
+  font-size:16px;
+  outline:none;
 }
-.checkbox{display:flex; gap:8px; align-items:center; user-select:none}
-.checkbox input{width:auto}
+
+/* nicer selects on iOS */
+select{
+  appearance:none;
+  -webkit-appearance:none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(11,18,32,0.80) 50%),
+    linear-gradient(135deg, rgba(11,18,32,0.80) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(1em + 2px),
+    calc(100% - 13px) calc(1em + 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat:no-repeat;
+}
+
+option{
+  background:#ffffff;
+  color:#0b1020;
+}
+
+/* ===== Checkbox / toggles ===== */
+.checkbox{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  user-select:none;
+}
+
+.checkbox input{
+  width:18px;
+  height:18px;
+  accent-color: var(--accent);
+}
+
 .divider{height:1px; background:var(--border); margin:16px 0}
+
+/* ===== Lessons (the part that looked like ass) ===== */
+/* container */
 .lessonBox{
   display:flex;
   flex-wrap:wrap;
@@ -81,23 +193,41 @@ select,input{
   padding:10px;
   border-radius:14px;
   border:1px solid var(--border);
-  background:#fff;
+  background: rgba(255,255,255,0.06); /* DARK so text is readable */
   min-height:54px;
 }
+
+/* pill items */
 .pill{
   display:inline-flex;
   align-items:center;
   gap:8px;
   padding:8px 10px;
   border-radius:999px;
-  border:1px solid var(--border);
-  background:#fafafa;
+  border:1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.10);
+  color: var(--ink);
   cursor:pointer;
   user-select:none;
   font-size:14px;
 }
-.pill input{margin:0}
-.actions{display:flex; gap:10px; margin-top:16px; justify-content:flex-end; flex-wrap:wrap}
+
+.pill input{
+  margin:0;
+  width:18px;
+  height:18px;
+  accent-color: var(--accent);
+}
+
+/* ===== Buttons ===== */
+.actions{
+  display:flex;
+  gap:10px;
+  margin-top:16px;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+}
+
 .btn{
   border:1px solid var(--btn);
   background:var(--btn);
@@ -107,21 +237,27 @@ select,input{
   font-size:15px;
   cursor:pointer;
 }
+
 .btn.ghost{
   background:transparent;
   color:var(--ink);
   border:1px solid var(--border);
 }
+
 .btn:disabled{opacity:.45; cursor:not-allowed}
+
+/* ===== Quiz ===== */
 .quizHeader{
   display:flex;
   justify-content:space-between;
   gap:12px;
   align-items:flex-start;
 }
+
 .kicker{color:var(--muted); font-size:13px; margin-bottom:6px}
 .subprompt{color:var(--muted); margin-top:6px}
 .quizControls{display:flex; gap:8px}
+
 .answerArea{margin-top:14px}
 .answerInput{
   width:100%;
@@ -129,30 +265,49 @@ select,input{
   padding:12px 14px;
   border-radius:14px;
   border:1px solid var(--border);
+  background: var(--inputBg);
+  color: var(--inputInk);
 }
+
 .choiceList{display:grid; gap:10px}
 .choiceBtn{
   text-align:left;
   padding:12px 14px;
   border-radius:14px;
   border:1px solid var(--border);
-  background:#fff;
+  background: var(--inputBg);
+  color: var(--inputInk);
   cursor:pointer;
   font-size:16px;
 }
-.choiceBtn.selected{border-color:#111}
+
+.choiceBtn.selected{
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(88,166,255,0.25);
+}
+
 .feedback{
   margin-top:12px;
   padding:12px 14px;
   border-radius:14px;
   border:1px solid var(--border);
-  background:#fafafa;
+  background: rgba(255,255,255,0.08);
+  color: var(--ink);
 }
+
+/* ===== Footer ===== */
 .footer{
-  position:fixed; left:0; right:0; bottom:0;
-  padding:10px 16px;
+  position:fixed;
+  left:0; right:0; bottom:0;
+  padding:
+    10px
+    16px
+    calc(10px + env(safe-area-inset-bottom))
+    16px;
+
   border-top:1px solid var(--border);
-  background:rgba(247,247,247,.9);
+  background: rgba(9, 16, 32, 0.90);
   color:var(--muted);
   font-size:12px;
 }
+
