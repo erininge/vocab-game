@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.16";
+const APP_VERSION = "v0.3.17";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -123,9 +123,6 @@ async function configureAudioSession() {
   try {
     if ("type" in session) {
       session.type = "ambient";
-    }
-    if (typeof session.setActive === "function") {
-      await session.setActive(true);
     }
     audioSessionConfigured = true;
   } catch (e) {
