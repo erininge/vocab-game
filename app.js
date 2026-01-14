@@ -191,8 +191,7 @@ async function playAudioFromUrl(url, normalizedVolume) {
     source = ctx.createMediaElementSource(audio);
     gainNode = ctx.createGain();
     const targetGain = Math.max(0, normalizedVolume);
-    gainNode.gain.setValueAtTime(0, ctx.currentTime);
-    gainNode.gain.linearRampToValueAtTime(targetGain, ctx.currentTime + 0.02);
+    gainNode.gain.setValueAtTime(targetGain, ctx.currentTime);
     source.connect(gainNode);
     gainNode.connect(ctx.destination);
     const cleanup = () => {
@@ -216,6 +215,10 @@ async function playAudioFromUrl(url, normalizedVolume) {
     audio.addEventListener("error", () => { clearTimeout(t); reject(new Error("error")); }, { once: true });
   });
   if (token !== audioPlayToken) return;
+  try {
+    audio.currentTime = 0;
+  } catch (e) {}
+  await new Promise((resolve) => requestAnimationFrame(resolve));
   await audio.play();
 }
 
