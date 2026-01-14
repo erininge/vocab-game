@@ -1,6 +1,7 @@
 {
   "files": [
     "JPN101_vocab.json",
+    "JLPN1200_vocab.json",
     "N5_vocab.json",
     "N4_vocab.json",
     "N3_vocab.json",
