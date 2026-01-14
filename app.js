@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.7";
+const APP_VERSION = "v0.3.8";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -286,9 +286,11 @@ function cardKey(card, file) {
 
 function resolveStarKey(card, file) {
   if (!card) return "";
-  if (card._starKey) return card._starKey;
-  const key = cardKey(card, file || state.currentFile);
+  const keyFile = file || state.currentFile || "";
+  if (card._starKey && card._starKeyFile === keyFile) return card._starKey;
+  const key = cardKey(card, keyFile);
   card._starKey = key;
+  card._starKeyFile = keyFile;
   return key;
 }
 
@@ -307,13 +309,13 @@ function saveStarred(set) {
   } catch (e) {}
 }
 
-function isStarred(card) {
-  const key = resolveStarKey(card);
+function isStarred(card, file) {
+  const key = resolveStarKey(card, file);
   return state.starred.has(key);
 }
 
-function setStarred(card, shouldStar) {
-  const key = resolveStarKey(card);
+function setStarred(card, shouldStar, file) {
+  const key = resolveStarKey(card, file);
   if (shouldStar) {
     state.starred.add(key);
   } else {
@@ -322,9 +324,9 @@ function setStarred(card, shouldStar) {
   saveStarred(state.starred);
 }
 
-function updateStarButton(card) {
+function updateStarButton(card, file) {
   if (!els.starBtn) return;
-  const starred = isStarred(card);
+  const starred = isStarred(card, file);
   els.starBtn.textContent = starred ? "⭐" : "☆";
   els.starBtn.classList.toggle("starred", starred);
   els.starBtn.setAttribute("aria-pressed", starred ? "true" : "false");
@@ -515,11 +517,15 @@ function renderQuestion() {
     input.className = "answerInput";
     input.placeholder = dir === "jp2en" ? "English…" : "Japanese…";
     input.autocomplete = "off";
+    input.setAttribute("autocomplete", "off");
     input.autocapitalize = "off";
     input.autocorrect = "off";
     input.inputMode = "text";
     input.spellcheck = false;
+    input.name = `vocab-answer-${state.idx}-${dir}`;
     input.value = "";
+    input.defaultValue = "";
+    input.setAttribute("value", "");
     input.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
@@ -532,7 +538,7 @@ function renderQuestion() {
 
   // audio availability
   els.playBtn.disabled = !state.settings.audioEnabled;
-  updateStarButton(card);
+  updateStarButton(card, state.currentFile);
 }
 
 function currentAnswerValue() {
@@ -787,8 +793,8 @@ async function bootstrap() {
     const q = state.questions[state.idx];
     if (!q) return;
     const card = q.card;
-    setStarred(card, !isStarred(card));
-    updateStarButton(card);
+    setStarred(card, !isStarred(card, state.currentFile), state.currentFile);
+    updateStarButton(card, state.currentFile);
   });
 
   els.audioEnabled.addEventListener("change", syncAudioControls);
