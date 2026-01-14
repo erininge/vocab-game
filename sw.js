@@ -1,9 +1,9 @@
-const CACHE_NAME = "vocab-garden-cache-v0.3.10";
+const CACHE_NAME = "vocab-garden-cache-v0.3.11";
 const CORE_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css",
-  "./app.js",
+  "./styles.css?v=036",
+  "./app.js?v=036",
   "./config.json",
   "./manifest.webmanifest",
   "./Vocabulary/vocab-manifest.json",
@@ -13,7 +13,7 @@ const CORE_ASSETS = [
 ];
 
 const CORE_PATHS = new Set(
-  CORE_ASSETS.map((asset) => new URL(asset, self.location.origin).pathname),
+  CORE_ASSETS.map((asset) => new URL(asset, self.registration.scope).pathname),
 );
 
 self.addEventListener("install", (event) => {
