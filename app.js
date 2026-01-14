@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.6";
+const APP_VERSION = "v0.3.7";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
