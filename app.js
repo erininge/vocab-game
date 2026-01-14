@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.18";
+const APP_VERSION = "v0.3.20";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -97,13 +97,9 @@ function normalizeJapanese(s) {
 
 const DEFAULT_AUDIO_VOLUME = 120;
 const MAX_AUDIO_BOOST = 3;
-const AUDIO_FADE_IN_SECONDS = 0.05;
-
 let AUDIO_MANIFEST = null;
 let audioSessionConfigured = false;
-let audioContext = null;
 let activeAudio = null;
-let activeAudioCleanup = null;
 let audioPlayToken = 0;
 async function loadAudioManifest() {
   if (AUDIO_MANIFEST) return AUDIO_MANIFEST;
@@ -131,50 +127,33 @@ async function configureAudioSession() {
   }
 }
 
-async function getAudioContext() {
-  if (!audioContext) {
-    const AudioCtx = window.AudioContext || window.webkitAudioContext;
-    if (!AudioCtx) return null;
-    audioContext = new AudioCtx();
-  }
-  if (audioContext.state === "suspended") {
-    try {
-      await audioContext.resume();
-    } catch (e) {}
-  }
-  return audioContext;
-}
-
-async function suspendAudioContextIfIdle() {
-  if (!audioContext || activeAudio) return;
-  if (audioContext.state === "running") {
-    try {
-      await audioContext.suspend();
-    } catch (e) {}
-  }
-}
-
 function clearActiveAudio(audio) {
   if (audio && audio === activeAudio) {
     activeAudio = null;
-    activeAudioCleanup = null;
   }
 }
 
 function stopActiveAudio() {
   if (!activeAudio) return;
   const audio = activeAudio;
-  const cleanup = activeAudioCleanup;
   activeAudio = null;
-  activeAudioCleanup = null;
-  if (cleanup) cleanup();
   if (!audio.paused) {
     audio.pause();
   }
   try {
     audio.currentTime = 0;
   } catch (e) {}
-  void suspendAudioContextIfIdle();
+}
+
+function waitForPlayableAudio(audio) {
+  if (audio.readyState >= 2) return Promise.resolve();
+  return new Promise((resolve, reject) => {
+    const onReady = () => resolve();
+    const onError = () => reject(new Error("error"));
+    audio.addEventListener("canplay", onReady, { once: true });
+    audio.addEventListener("loadeddata", onReady, { once: true });
+    audio.addEventListener("error", onError, { once: true });
+  });
 }
 
 async function playAudioFromUrl(url, normalizedVolume) {
@@ -187,58 +166,21 @@ async function playAudioFromUrl(url, normalizedVolume) {
   audio.setAttribute("webkit-playsinline", "");
   audio.preload = "auto";
   audio.load();
-  const shouldUseContext = normalizedVolume > 1;
-  const ctx = shouldUseContext ? await getAudioContext() : null;
-  let source;
-  let gainNode;
   const handleEnded = () => {
-    if (activeAudioCleanup) activeAudioCleanup();
     clearActiveAudio(audio);
-    void suspendAudioContextIfIdle();
   };
-  if (ctx) {
-    audio.volume = 1;
-    source = ctx.createMediaElementSource(audio);
-    gainNode = ctx.createGain();
-    const targetGain = Math.max(0, normalizedVolume);
-    gainNode.gain.setValueAtTime(0, ctx.currentTime);
-    gainNode.gain.linearRampToValueAtTime(
-      targetGain,
-      ctx.currentTime + AUDIO_FADE_IN_SECONDS
-    );
-    source.connect(gainNode);
-    gainNode.connect(ctx.destination);
-    const cleanup = () => {
-      source.disconnect();
-      gainNode.disconnect();
-    };
-    activeAudioCleanup = cleanup;
-    audio.addEventListener("ended", handleEnded, { once: true });
-    audio.addEventListener("pause", handleEnded, { once: true });
-  }
   activeAudio = audio;
-  if (!ctx) {
-    audio.volume = Math.min(1, normalizedVolume);
-    audio.addEventListener("ended", handleEnded, { once: true });
-    audio.addEventListener("pause", handleEnded, { once: true });
-  }
-  await new Promise((resolve, reject) => {
-    const t = setTimeout(() => reject(new Error("timeout")), 2500);
-    audio.addEventListener("loadedmetadata", () => { audio.currentTime = 0; }, { once: true });
-    audio.addEventListener("canplaythrough", () => {
-      clearTimeout(t);
-      try {
-        audio.currentTime = 0;
-      } catch (e) {}
-      resolve(true);
-    }, { once: true });
-    audio.addEventListener("error", () => { clearTimeout(t); reject(new Error("error")); }, { once: true });
-  });
+  audio.volume = Math.min(1, normalizedVolume);
+  audio.addEventListener("ended", handleEnded, { once: true });
+  audio.addEventListener("pause", handleEnded, { once: true });
+  await Promise.race([
+    waitForPlayableAudio(audio),
+    new Promise((resolve) => setTimeout(resolve, 8000)),
+  ]);
   if (token !== audioPlayToken) return;
   try {
     audio.currentTime = 0;
   } catch (e) {}
-  await new Promise((resolve) => setTimeout(resolve, 30));
   await audio.play();
 }
 
