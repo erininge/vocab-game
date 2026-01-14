@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.10";
+const APP_VERSION = "v0.3.11";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -727,7 +727,9 @@ async function bootstrap() {
     const enabled = els.audioEnabled.checked;
     els.audioVolume.disabled = !enabled;
     els.audioVolumeValue.classList.toggle("muted", !enabled);
-    els.testAudioBtn.disabled = !enabled;
+    if (els.testAudioBtn) {
+      els.testAudioBtn.disabled = !enabled;
+    }
   };
 
   // Load default config (optional)
@@ -859,12 +861,14 @@ async function bootstrap() {
 
   els.audioEnabled.addEventListener("change", syncAudioControls);
   els.audioVolume.addEventListener("input", updateAudioVolumeLabel);
-  els.testAudioBtn.addEventListener("click", async () => {
-    if (!els.audioEnabled.checked) return;
-    try {
-      await playRandomSampleAudio();
-    } catch (e) {}
-  });
+  if (els.testAudioBtn) {
+    els.testAudioBtn.addEventListener("click", async () => {
+      if (!els.audioEnabled.checked) return;
+      try {
+        await playRandomSampleAudio();
+      } catch (e) {}
+    });
+  }
 }
 
 async function onCategoryChange() {
