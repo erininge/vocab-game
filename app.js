@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.13";
+const APP_VERSION = "v0.3.14";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -130,32 +130,38 @@ async function configureAudioSession() {
   }
 }
 
-function getAudioContext() {
+async function getAudioContext() {
   if (!audioContext) {
     const AudioCtx = window.AudioContext || window.webkitAudioContext;
     if (!AudioCtx) return null;
     audioContext = new AudioCtx();
   }
   if (audioContext.state === "suspended") {
-    audioContext.resume().catch(() => {});
+    try {
+      await audioContext.resume();
+    } catch (e) {}
   }
   return audioContext;
 }
 
 async function playAudioFromUrl(url, normalizedVolume) {
-  const audio = new Audio(url);
+  const audio = new Audio();
+  audio.src = url;
   audio.playsInline = true;
-  audio.volume = Math.min(1, normalizedVolume);
   audio.setAttribute("playsinline", "");
   audio.setAttribute("webkit-playsinline", "");
   audio.preload = "auto";
-  const ctx = getAudioContext();
+  audio.load();
+  const ctx = await getAudioContext();
   let source;
   let gainNode;
-  if (ctx && normalizedVolume > 1) {
+  if (ctx) {
+    audio.volume = 1;
     source = ctx.createMediaElementSource(audio);
     gainNode = ctx.createGain();
-    gainNode.gain.value = normalizedVolume;
+    const targetGain = Math.max(0, normalizedVolume);
+    gainNode.gain.setValueAtTime(0, ctx.currentTime);
+    gainNode.gain.linearRampToValueAtTime(targetGain, ctx.currentTime + 0.02);
     source.connect(gainNode);
     gainNode.connect(ctx.destination);
     const cleanup = () => {
@@ -165,8 +171,12 @@ async function playAudioFromUrl(url, normalizedVolume) {
     audio.addEventListener("ended", cleanup, { once: true });
     audio.addEventListener("pause", cleanup, { once: true });
   }
+  if (!ctx) {
+    audio.volume = Math.min(1, normalizedVolume);
+  }
   await new Promise((resolve, reject) => {
     const t = setTimeout(() => reject(new Error("timeout")), 2500);
+    audio.addEventListener("loadedmetadata", () => { audio.currentTime = 0; }, { once: true });
     audio.addEventListener("canplaythrough", () => { clearTimeout(t); resolve(true); }, { once: true });
     audio.addEventListener("error", () => { clearTimeout(t); reject(new Error("error")); }, { once: true });
   });
