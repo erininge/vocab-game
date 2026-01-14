@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.15";
+const APP_VERSION = "v0.3.16";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -191,8 +191,7 @@ async function playAudioFromUrl(url, normalizedVolume) {
     source = ctx.createMediaElementSource(audio);
     gainNode = ctx.createGain();
     const targetGain = Math.max(0, normalizedVolume);
-    gainNode.gain.setValueAtTime(0, ctx.currentTime);
-    gainNode.gain.linearRampToValueAtTime(targetGain, ctx.currentTime + 0.02);
+    gainNode.gain.setValueAtTime(targetGain, ctx.currentTime);
     source.connect(gainNode);
     gainNode.connect(ctx.destination);
     const cleanup = () => {
@@ -212,10 +211,20 @@ async function playAudioFromUrl(url, normalizedVolume) {
   await new Promise((resolve, reject) => {
     const t = setTimeout(() => reject(new Error("timeout")), 2500);
     audio.addEventListener("loadedmetadata", () => { audio.currentTime = 0; }, { once: true });
-    audio.addEventListener("canplaythrough", () => { clearTimeout(t); resolve(true); }, { once: true });
+    audio.addEventListener("canplaythrough", () => {
+      clearTimeout(t);
+      try {
+        audio.currentTime = 0;
+      } catch (e) {}
+      resolve(true);
+    }, { once: true });
     audio.addEventListener("error", () => { clearTimeout(t); reject(new Error("error")); }, { once: true });
   });
   if (token !== audioPlayToken) return;
+  try {
+    audio.currentTime = 0;
+  } catch (e) {}
+  await new Promise((resolve) => setTimeout(resolve, 30));
   await audio.play();
 }
 
