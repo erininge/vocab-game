@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.14";
+const APP_VERSION = "v0.3.15";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -101,6 +101,9 @@ const MAX_AUDIO_BOOST = 3;
 let AUDIO_MANIFEST = null;
 let audioSessionConfigured = false;
 let audioContext = null;
+let activeAudio = null;
+let activeAudioCleanup = null;
+let audioPlayToken = 0;
 async function loadAudioManifest() {
   if (AUDIO_MANIFEST) return AUDIO_MANIFEST;
   try {
@@ -144,7 +147,31 @@ async function getAudioContext() {
   return audioContext;
 }
 
+function clearActiveAudio(audio) {
+  if (audio && audio === activeAudio) {
+    activeAudio = null;
+    activeAudioCleanup = null;
+  }
+}
+
+function stopActiveAudio() {
+  if (!activeAudio) return;
+  const audio = activeAudio;
+  const cleanup = activeAudioCleanup;
+  activeAudio = null;
+  activeAudioCleanup = null;
+  if (cleanup) cleanup();
+  if (!audio.paused) {
+    audio.pause();
+  }
+  try {
+    audio.currentTime = 0;
+  } catch (e) {}
+}
+
 async function playAudioFromUrl(url, normalizedVolume) {
+  const token = ++audioPlayToken;
+  stopActiveAudio();
   const audio = new Audio();
   audio.src = url;
   audio.playsInline = true;
@@ -155,6 +182,10 @@ async function playAudioFromUrl(url, normalizedVolume) {
   const ctx = await getAudioContext();
   let source;
   let gainNode;
+  const handleEnded = () => {
+    if (activeAudioCleanup) activeAudioCleanup();
+    clearActiveAudio(audio);
+  };
   if (ctx) {
     audio.volume = 1;
     source = ctx.createMediaElementSource(audio);
@@ -168,11 +199,15 @@ async function playAudioFromUrl(url, normalizedVolume) {
       source.disconnect();
       gainNode.disconnect();
     };
-    audio.addEventListener("ended", cleanup, { once: true });
-    audio.addEventListener("pause", cleanup, { once: true });
+    activeAudioCleanup = cleanup;
+    audio.addEventListener("ended", handleEnded, { once: true });
+    audio.addEventListener("pause", handleEnded, { once: true });
   }
+  activeAudio = audio;
   if (!ctx) {
     audio.volume = Math.min(1, normalizedVolume);
+    audio.addEventListener("ended", handleEnded, { once: true });
+    audio.addEventListener("pause", handleEnded, { once: true });
   }
   await new Promise((resolve, reject) => {
     const t = setTimeout(() => reject(new Error("timeout")), 2500);
@@ -180,6 +215,7 @@ async function playAudioFromUrl(url, normalizedVolume) {
     audio.addEventListener("canplaythrough", () => { clearTimeout(t); resolve(true); }, { once: true });
     audio.addEventListener("error", () => { clearTimeout(t); reject(new Error("error")); }, { once: true });
   });
+  if (token !== audioPlayToken) return;
   await audio.play();
 }
 
