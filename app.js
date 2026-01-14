@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.6";
+const APP_VERSION = "v0.3.7";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -367,7 +367,13 @@ function buildQuestions(pool, settings) {
     let dir = mode;
     if (mode === "mixed") dir = Math.random() < 0.5 ? "jp2en" : "en2jp";
 
-    out.push({ dir, card });
+    const question = { dir, card };
+    if (settings.answerMode === "multiple_choice") {
+      const { choices, correctText } = makeChoices(question, pool);
+      question.choices = choices;
+      question.correctText = correctText;
+    }
+    out.push(question);
   }
   return out;
 }
@@ -486,7 +492,7 @@ function renderQuestion() {
   state.lastAnswer = { mode: settings.answerMode, value: null };
 
   if (settings.answerMode === "multiple_choice") {
-    const { choices } = makeChoices(q, state.pool);
+    const choices = q.choices || makeChoices(q, state.pool).choices;
     const wrap = document.createElement("div");
     wrap.className = "choiceList";
 
@@ -509,7 +515,11 @@ function renderQuestion() {
     input.className = "answerInput";
     input.placeholder = dir === "jp2en" ? "English…" : "Japanese…";
     input.autocomplete = "off";
+    input.autocapitalize = "off";
+    input.autocorrect = "off";
+    input.inputMode = "text";
     input.spellcheck = false;
+    input.value = "";
     input.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
@@ -606,7 +616,7 @@ function checkAnswer() {
   els.submitBtn.disabled = true;
 
   if (state.settings.answerMode === "multiple_choice") {
-    const { correctText } = makeChoices(q, state.pool);
+    const correctText = q.correctText || makeChoices(q, state.pool).correctText;
     const ok = String(userRaw) === String(correctText);
 
     if (ok) state.correct += 1;
