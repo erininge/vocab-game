@@ -7,7 +7,7 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icons/icon-192.png" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="styles.css?v=032">
+  <link rel="stylesheet" href="styles.css?v=033">
   <title>Kat's Vocab Garden (PWA)</title>
 </head>
 <body>
@@ -79,6 +79,11 @@
               <input id="audioEnabled" type="checkbox" checked />
               <span>Audio enabled</span>
             </label>
+          </div>
+          <div class="row volumeRow">
+            <label class="label" for="audioVolume">Volume</label>
+            <input id="audioVolume" type="range" min="0" max="100" step="5" value="80" />
+            <span class="rangeValue" id="audioVolumeValue">80%</span>
           </div>
           <span class="hint">Put your audio pack in <code>Audio/</code> (and optional user recordings in <code>UserAudio/</code>) next to <code>index.html</code>.</span>
         </label>
