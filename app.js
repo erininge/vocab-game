@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.15";
+const APP_VERSION = "v0.3.16";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -211,14 +211,20 @@ async function playAudioFromUrl(url, normalizedVolume) {
   await new Promise((resolve, reject) => {
     const t = setTimeout(() => reject(new Error("timeout")), 2500);
     audio.addEventListener("loadedmetadata", () => { audio.currentTime = 0; }, { once: true });
-    audio.addEventListener("canplaythrough", () => { clearTimeout(t); resolve(true); }, { once: true });
+    audio.addEventListener("canplaythrough", () => {
+      clearTimeout(t);
+      try {
+        audio.currentTime = 0;
+      } catch (e) {}
+      resolve(true);
+    }, { once: true });
     audio.addEventListener("error", () => { clearTimeout(t); reject(new Error("error")); }, { once: true });
   });
   if (token !== audioPlayToken) return;
   try {
     audio.currentTime = 0;
   } catch (e) {}
-  await new Promise((resolve) => requestAnimationFrame(resolve));
+  await new Promise((resolve) => setTimeout(resolve, 30));
   await audio.play();
 }
 
