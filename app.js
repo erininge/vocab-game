@@ -284,6 +284,14 @@ function cardKey(card, file) {
   return [file || "", card._lesson || "", card.kana || "", card.kanji || "", en].join("::");
 }
 
+function resolveStarKey(card, file) {
+  if (!card) return "";
+  if (card._starKey) return card._starKey;
+  const key = cardKey(card, file || state.currentFile);
+  card._starKey = key;
+  return key;
+}
+
 function loadStarred() {
   try {
     const raw = localStorage.getItem(STAR_STORAGE_KEY);
@@ -300,12 +308,12 @@ function saveStarred(set) {
 }
 
 function isStarred(card) {
-  const key = card._starKey || cardKey(card, state.currentFile);
+  const key = resolveStarKey(card);
   return state.starred.has(key);
 }
 
 function setStarred(card, shouldStar) {
-  const key = card._starKey || cardKey(card, state.currentFile);
+  const key = resolveStarKey(card);
   if (shouldStar) {
     state.starred.add(key);
   } else {
@@ -334,7 +342,7 @@ function buildPool(vocabData, lessonList, file) {
         _lesson: String(lk),
         level: vocabData.level || categoryLabel(file || state.currentFile),
       };
-      card._starKey = cardKey(card, file || state.currentFile);
+      card._starKey = resolveStarKey(card, file);
       pool.push(card);
     }
   }
@@ -715,7 +723,7 @@ async function bootstrap() {
 
     const practiceMode = els.practiceMode.value;
     if (practiceMode === "starred") {
-      pool = pool.filter((card) => state.starred.has(card._starKey));
+      pool = pool.filter((card) => state.starred.has(resolveStarKey(card, file)));
       if (!pool.length) {
         els.practiceHelp.textContent = "No starred items yet. Star some cards to practice them here.";
         return;
