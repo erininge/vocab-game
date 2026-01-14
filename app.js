@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.3";
+const APP_VERSION = "v0.3.4";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
   "Female 2": "Female option 2",
@@ -84,6 +84,7 @@ function normalizeJapanese(s) {
 
 
 let AUDIO_MANIFEST = null;
+let audioSessionConfigured = false;
 async function loadAudioManifest() {
   if (AUDIO_MANIFEST) return AUDIO_MANIFEST;
   try {
@@ -94,6 +95,23 @@ async function loadAudioManifest() {
     AUDIO_MANIFEST = {}; // graceful fallback
   }
   return AUDIO_MANIFEST;
+}
+
+async function configureAudioSession() {
+  if (audioSessionConfigured) return;
+  const session = navigator.audioSession;
+  if (!session) return;
+  try {
+    if ("type" in session) {
+      session.type = "ambient";
+    }
+    if (typeof session.setActive === "function") {
+      await session.setActive(true);
+    }
+    audioSessionConfigured = true;
+  } catch (e) {
+    // Ignore unsupported audio session configuration.
+  }
 }
 
 function manifestLookup(manifest, key, voiceFolder) {
@@ -450,6 +468,7 @@ function currentAnswerValue() {
 
 async function tryPlayAudio(question) {
   if (!state.settings.audioEnabled) return;
+  await configureAudioSession();
 
   const { card } = question;
   const voice = state.settings.voice || "Female 1";
@@ -482,6 +501,9 @@ async function tryPlayAudio(question) {
     for (const url of [user, official]) {
       try {
         const audio = new Audio(url);
+        audio.playsInline = true;
+        audio.setAttribute("playsinline", "");
+        audio.setAttribute("webkit-playsinline", "");
         audio.preload = "auto";
         // Wait for load; if it errors, try next
         await new Promise((resolve, reject) => {
