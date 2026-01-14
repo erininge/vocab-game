@@ -1,7 +1,5 @@
 {
   "audioEnabled": true,
-  "audioVolume": 120,
-  "audioVoice": "Female 1",
   "displayMode": "kana",
   "questionMode": "mixed",
   "answerMode": "typing",

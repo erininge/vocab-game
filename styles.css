@@ -149,27 +149,6 @@ select,input,textarea{
   outline:none;
 }
 
-input[type="range"]{
-  padding:0;
-  height:6px;
-  accent-color: var(--accent);
-}
-
-.volumeRow{
-  align-items:center;
-}
-
-.volumeRow input[type="range"]{
-  flex:1;
-}
-
-.rangeValue{
-  min-width:3ch;
-  text-align:right;
-  color:var(--muted);
-  font-size:13px;
-}
-
 /* nicer selects on iOS */
 select{
   appearance:none;

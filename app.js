@@ -6,12 +6,8 @@
 
 const APP_VERSION = "v0.3.20";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
-const AUDIO_VOICE_FOLDERS = {
-  "Female 1": "Female option 1",
-  "Female 2": "Female option 2",
-  "Male 1": "Male option 1",
-  "Male 2": "Male option 2",
-};
+const AUDIO_VOICE_FOLDER = "Female option 1";
+const FIXED_AUDIO_VOLUME = 2.5;
 
 const els = {
   versionLine: document.getElementById("versionLine"),
@@ -29,10 +25,7 @@ const els = {
   practiceMode: document.getElementById("practiceMode"),
   displayMode: document.getElementById("displayMode"),
   qCount: document.getElementById("qCount"),
-  voiceSelect: document.getElementById("voiceSelect"),
   audioEnabled: document.getElementById("audioEnabled"),
-  audioVolume: document.getElementById("audioVolume"),
-  audioVolumeValue: document.getElementById("audioVolumeValue"),
   testAudioBtn: document.getElementById("testAudioBtn"),
   practiceHelp: document.getElementById("practiceHelp"),
 
@@ -95,11 +88,11 @@ function normalizeJapanese(s) {
     .trim();
 }
 
-const DEFAULT_AUDIO_VOLUME = 120;
-const MAX_AUDIO_BOOST = 3;
 let AUDIO_MANIFEST = null;
 let audioSessionConfigured = false;
 let activeAudio = null;
+let activeAudioCleanup = null;
+let audioContext = null;
 let audioPlayToken = 0;
 async function loadAudioManifest() {
   if (AUDIO_MANIFEST) return AUDIO_MANIFEST;
@@ -130,13 +123,17 @@ async function configureAudioSession() {
 function clearActiveAudio(audio) {
   if (audio && audio === activeAudio) {
     activeAudio = null;
+    if (activeAudioCleanup) {
+      activeAudioCleanup();
+      activeAudioCleanup = null;
+    }
   }
 }
 
 function stopActiveAudio() {
   if (!activeAudio) return;
   const audio = activeAudio;
-  activeAudio = null;
+  clearActiveAudio(audio);
   if (!audio.paused) {
     audio.pause();
   }
@@ -156,6 +153,21 @@ function waitForPlayableAudio(audio) {
   });
 }
 
+async function ensureAudioContext() {
+  if (!window.AudioContext && !window.webkitAudioContext) return null;
+  if (!audioContext) {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  if (audioContext.state === "suspended") {
+    try {
+      await audioContext.resume();
+    } catch (e) {
+      // ignore resume failures
+    }
+  }
+  return audioContext;
+}
+
 async function playAudioFromUrl(url, normalizedVolume) {
   const token = ++audioPlayToken;
   stopActiveAudio();
@@ -166,11 +178,35 @@ async function playAudioFromUrl(url, normalizedVolume) {
   audio.setAttribute("webkit-playsinline", "");
   audio.preload = "auto";
   audio.load();
+  const volume = Math.max(0, Number(normalizedVolume) || 0);
+  let cleanupNodes = null;
+  if (volume > 1) {
+    const context = await ensureAudioContext();
+    if (context) {
+      const source = context.createMediaElementSource(audio);
+      const gainNode = context.createGain();
+      gainNode.gain.value = volume;
+      source.connect(gainNode);
+      gainNode.connect(context.destination);
+      cleanupNodes = () => {
+        try {
+          source.disconnect();
+        } catch (e) {}
+        try {
+          gainNode.disconnect();
+        } catch (e) {}
+      };
+    } else {
+      audio.volume = 1;
+    }
+  } else {
+    audio.volume = Math.min(1, volume);
+  }
   const handleEnded = () => {
     clearActiveAudio(audio);
   };
   activeAudio = audio;
-  audio.volume = Math.min(1, normalizedVolume);
+  activeAudioCleanup = cleanupNodes;
   audio.addEventListener("ended", handleEnded, { once: true });
   audio.addEventListener("pause", handleEnded, { once: true });
   await Promise.race([
@@ -652,10 +688,8 @@ async function tryPlayAudio(question) {
   await configureAudioSession();
 
   const { card } = question;
-  const voice = state.settings.voice || "Female 1";
-  const voiceFolder = AUDIO_VOICE_FOLDERS[voice] || AUDIO_VOICE_FOLDERS["Female 1"];
-  const volume = typeof state.settings.audioVolume === "number" ? state.settings.audioVolume : 1;
-  const normalizedVolume = Math.max(0, Math.min(MAX_AUDIO_BOOST, volume));
+  const voiceFolder = AUDIO_VOICE_FOLDER;
+  const normalizedVolume = Math.max(0, FIXED_AUDIO_VOLUME);
   if (normalizedVolume === 0) return;
 
   // mimic python resolver: try kana, kanji, variants
@@ -694,12 +728,10 @@ async function tryPlayAudio(question) {
 }
 
 async function playRandomSampleAudio() {
-  const voice = els.voiceSelect.value || "Female 1";
-  const voiceFolder = AUDIO_VOICE_FOLDERS[voice] || AUDIO_VOICE_FOLDERS["Female 1"];
-  const volume = Number(els.audioVolume.value || DEFAULT_AUDIO_VOLUME) / 100;
-  const normalizedVolume = Math.max(0, Math.min(MAX_AUDIO_BOOST, volume));
+  const voiceFolder = AUDIO_VOICE_FOLDER;
+  const normalizedVolume = Math.max(0, FIXED_AUDIO_VOLUME);
   if (normalizedVolume === 0) {
-    setFooter("Volume is 0%. Increase it to hear audio.");
+    setFooter("Audio is muted.");
     return;
   }
   const manifest = await loadAudioManifest();
@@ -776,15 +808,8 @@ async function bootstrap() {
   wireInstall();
   state.starred = loadStarred();
 
-  const updateAudioVolumeLabel = () => {
-    const value = Number(els.audioVolume.value || 0);
-    els.audioVolumeValue.textContent = `${value}%`;
-  };
-
   const syncAudioControls = () => {
     const enabled = els.audioEnabled.checked;
-    els.audioVolume.disabled = !enabled;
-    els.audioVolumeValue.classList.toggle("muted", !enabled);
     if (els.testAudioBtn) {
       els.testAudioBtn.disabled = !enabled;
     }
@@ -799,20 +824,10 @@ async function bootstrap() {
       if (cfg.answerMode) els.answerMode.value = cfg.answerMode;
       if (cfg.displayMode) els.displayMode.value = cfg.displayMode;
       if (typeof cfg.questionsPerQuiz === "number") els.qCount.value = String(cfg.questionsPerQuiz);
-      if (cfg.audioVoice) els.voiceSelect.value = cfg.audioVoice;
       if (typeof cfg.audioEnabled === "boolean") els.audioEnabled.checked = cfg.audioEnabled;
-      if (typeof cfg.audioVolume === "number") {
-        const volumePercent = cfg.audioVolume <= 1 ? Math.round(cfg.audioVolume * 100) : cfg.audioVolume;
-        els.audioVolume.value = String(Math.max(0, Math.min(MAX_AUDIO_BOOST * 100, volumePercent)));
-      }
     }
   } catch (e) {}
 
-  if (!els.audioVolume.value) {
-    els.audioVolume.value = String(DEFAULT_AUDIO_VOLUME);
-  }
-  els.audioVolume.max = String(MAX_AUDIO_BOOST * 100);
-  updateAudioVolumeLabel();
   syncAudioControls();
 
   // Discover vocab files
@@ -874,8 +889,6 @@ async function bootstrap() {
       displayMode: els.displayMode.value,
       qCount,
       audioEnabled: els.audioEnabled.checked,
-      voice: els.voiceSelect.value,
-      audioVolume: Number(els.audioVolume.value || DEFAULT_AUDIO_VOLUME) / 100,
     };
 
     state.currentFile = file;
@@ -919,7 +932,6 @@ async function bootstrap() {
   });
 
   els.audioEnabled.addEventListener("change", syncAudioControls);
-  els.audioVolume.addEventListener("input", updateAudioVolumeLabel);
   if (els.testAudioBtn) {
     els.testAudioBtn.addEventListener("click", async () => {
       if (!els.audioEnabled.checked) return;
