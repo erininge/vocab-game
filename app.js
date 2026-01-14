@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.11";
+const APP_VERSION = "v0.3.13";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -16,6 +16,7 @@ const AUDIO_VOICE_FOLDERS = {
 const els = {
   versionLine: document.getElementById("versionLine"),
   footerLine: document.getElementById("footerLine"),
+  selectionCount: document.getElementById("selectionCount"),
   installBtn: document.getElementById("installBtn"),
 
   screenHome: document.getElementById("screenHome"),
@@ -61,6 +62,11 @@ function setFooter(text) {
   els.footerLine.textContent = text;
 }
 
+function setSelectionCount(text) {
+  if (!els.selectionCount) return;
+  els.selectionCount.textContent = text;
+}
+
 function show(screen) {
   els.screenHome.hidden = screen !== "home";
   els.screenQuiz.hidden = screen !== "quiz";
@@ -90,7 +96,7 @@ function normalizeJapanese(s) {
 }
 
 const DEFAULT_AUDIO_VOLUME = 120;
-const MAX_AUDIO_BOOST = 2;
+const MAX_AUDIO_BOOST = 3;
 
 let AUDIO_MANIFEST = null;
 let audioSessionConfigured = false;
@@ -295,6 +301,22 @@ function renderLessonPills(lessonKeys) {
   }
 }
 
+function countSelectedWords(vocabData, lessonList) {
+  if (!vocabData || !lessonList) return 0;
+  const lessons = vocabData.lessons || {};
+  return lessonList.reduce((sum, lk) => {
+    const words = lessons[String(lk)] || [];
+    return sum + words.length;
+  }, 0);
+}
+
+function updateSelectionFooter() {
+  const lessonList = selectedLessons();
+  const totalWords = countSelectedWords(state.vocabData, lessonList);
+  const label = totalWords === 1 ? "word" : "words";
+  setSelectionCount(`Selected: ${totalWords} ${label}`);
+}
+
 function selectedLessons() {
   const cbs = [...els.lessonBox.querySelectorAll("input[type=checkbox]")];
   return cbs.filter(c => c.checked).map(c => c.value);
@@ -413,10 +435,16 @@ function buildQuestions(pool, settings) {
 
     const mode = settings.questionMode;
     let dir = mode;
+    const listening = mode === "listening";
     if (mode === "mixed") dir = Math.random() < 0.5 ? "jp2en" : "en2jp";
+    if (listening) dir = "jp2en";
 
-    const question = { dir, card };
-    if (settings.answerMode === "multiple_choice") {
+    const answerMode = settings.answerMode === "mixed"
+      ? (Math.random() < 0.5 ? "typing" : "multiple_choice")
+      : settings.answerMode;
+
+    const question = { dir, card, answerMode, listening };
+    if (answerMode === "multiple_choice") {
       const { choices, correctText } = makeChoices(question, pool);
       question.choices = choices;
       question.correctText = correctText;
@@ -513,6 +541,7 @@ function escapeHtml(str) {
 function renderQuestion() {
   const q = state.questions[state.idx];
   const { dir, card } = q;
+  const answerMode = q.answerMode || state.settings.answerMode;
 
   const settings = state.settings;
   const dispMode = settings.displayMode;
@@ -527,8 +556,15 @@ function renderQuestion() {
 
   // prompt + subprompt
   if (dir === "jp2en") {
-    els.promptLine.textContent = getDisplayJP(card, dispMode);
-    els.subpromptLine.textContent = "Type the English meaning (or pick one).";
+    if (q.listening) {
+      els.promptLine.textContent = "🔊";
+      els.subpromptLine.textContent = state.settings.audioEnabled
+        ? "Listen to the audio and answer in English."
+        : "Enable audio to hear the prompt.";
+    } else {
+      els.promptLine.textContent = getDisplayJP(card, dispMode);
+      els.subpromptLine.textContent = "Type the English meaning (or pick one).";
+    }
   } else {
     // pick an English prompt (first meaning)
     els.promptLine.textContent = (card.en || [])[0] || "(no English provided)";
@@ -537,9 +573,9 @@ function renderQuestion() {
 
   // answer UI
   els.answerArea.innerHTML = "";
-  state.lastAnswer = { mode: settings.answerMode, value: null };
+  state.lastAnswer = { mode: answerMode, value: null };
 
-  if (settings.answerMode === "multiple_choice") {
+  if (answerMode === "multiple_choice") {
     const choices = q.choices || makeChoices(q, state.pool).choices;
     const wrap = document.createElement("div");
     wrap.className = "choiceList";
@@ -585,10 +621,15 @@ function renderQuestion() {
   // audio availability
   els.playBtn.disabled = !state.settings.audioEnabled;
   updateStarButton(card, state.currentFile);
+
+  if (q.listening && state.settings.audioEnabled) {
+    setTimeout(() => { tryPlayAudio(q).catch(() => {}); }, 0);
+  }
 }
 
-function currentAnswerValue() {
-  if (state.settings.answerMode === "multiple_choice") {
+function currentAnswerValue(question) {
+  const answerMode = question.answerMode || state.settings.answerMode;
+  if (answerMode === "multiple_choice") {
     return state.lastAnswer.value || "";
   }
   const input = els.answerArea.querySelector("input");
@@ -604,6 +645,7 @@ async function tryPlayAudio(question) {
   const voiceFolder = AUDIO_VOICE_FOLDERS[voice] || AUDIO_VOICE_FOLDERS["Female 1"];
   const volume = typeof state.settings.audioVolume === "number" ? state.settings.audioVolume : 1;
   const normalizedVolume = Math.max(0, Math.min(MAX_AUDIO_BOOST, volume));
+  if (normalizedVolume === 0) return;
 
   // mimic python resolver: try kana, kanji, variants
   const candidates = [];
@@ -645,6 +687,10 @@ async function playRandomSampleAudio() {
   const voiceFolder = AUDIO_VOICE_FOLDERS[voice] || AUDIO_VOICE_FOLDERS["Female 1"];
   const volume = Number(els.audioVolume.value || DEFAULT_AUDIO_VOLUME) / 100;
   const normalizedVolume = Math.max(0, Math.min(MAX_AUDIO_BOOST, volume));
+  if (normalizedVolume === 0) {
+    setFooter("Volume is 0%. Increase it to hear audio.");
+    return;
+  }
   const manifest = await loadAudioManifest();
   const keys = manifest ? Object.keys(manifest) : [];
   if (!keys.length) {
@@ -672,14 +718,14 @@ function finishQuiz() {
 
 function checkAnswer() {
   const q = state.questions[state.idx];
-  const userRaw = currentAnswerValue();
+  const userRaw = currentAnswerValue(q);
 
   // no blank submissions
   if (!String(userRaw || "").trim()) return;
 
   els.submitBtn.disabled = true;
 
-  if (state.settings.answerMode === "multiple_choice") {
+  if ((q.answerMode || state.settings.answerMode) === "multiple_choice") {
     const correctText = q.correctText || makeChoices(q, state.pool).correctText;
     const ok = String(userRaw) === String(correctText);
 
@@ -713,6 +759,7 @@ function nextQuestion() {
 async function bootstrap() {
   els.versionLine.textContent = `PWA • ${APP_VERSION}`;
   setFooter(`Ready • ${APP_VERSION}`);
+  setSelectionCount("Selected: 0 words");
 
   await registerSW();
   wireInstall();
@@ -782,6 +829,7 @@ async function bootstrap() {
   await onCategoryChange();
 
   els.levelSelect.addEventListener("change", onCategoryChange);
+  els.lessonBox.addEventListener("change", updateSelectionFooter);
 
   els.startBtn.addEventListener("click", async () => {
     const file = els.levelSelect.value;
@@ -886,15 +934,18 @@ async function onCategoryChange() {
     if (!lessonKeys.length) {
       els.lessonHelp.textContent = "No lessons found in this file.";
       els.lessonBox.innerHTML = "";
+      setSelectionCount("Selected: 0 words");
       return;
     }
 
     renderLessonPills(lessonKeys);
     els.lessonHelp.textContent = "Select lessons (default: all).";
     els.startBtn.disabled = false;
+    updateSelectionFooter();
   } catch (e) {
     els.lessonHelp.textContent = "Could not load that vocab file.";
     els.lessonBox.innerHTML = "";
+    setSelectionCount("Selected: 0 words");
   }
 }
 

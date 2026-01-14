@@ -7,7 +7,7 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icons/icon-192.png" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="styles.css?v=036">
+  <link rel="stylesheet" href="styles.css?v=038">
   <title>Kat's Vocab Garden (PWA)</title>
 </head>
 <body>
@@ -41,6 +41,7 @@
             <option value="mixed">Mixed (JP→EN and EN→JP)</option>
             <option value="jp2en">JP → English</option>
             <option value="en2jp">English → JP (kana/kanji accepted)</option>
+            <option value="listening">Listening practice (JP → EN)</option>
           </select>
         </label>
 
@@ -49,6 +50,7 @@
           <select id="answerMode">
             <option value="typing">Typing</option>
             <option value="multiple_choice">Multiple choice</option>
+            <option value="mixed">Mixed (typing + multiple choice)</option>
           </select>
         </label>
 
@@ -90,7 +92,7 @@
           </div>
           <div class="row volumeRow">
             <label class="label" for="audioVolume">Volume</label>
-            <input id="audioVolume" type="range" min="0" max="200" step="5" value="120" />
+            <input id="audioVolume" type="range" min="0" max="300" step="5" value="120" />
             <span class="rangeValue" id="audioVolumeValue">120%</span>
           </div>
           <div class="row">
@@ -157,8 +159,9 @@
 
   <footer class="footer">
     <span id="footerLine">—</span>
+    <span id="selectionCount" class="footerMeta"></span>
   </footer>
 
-  <script src="app.js?v=036"></script>
+  <script src="app.js?v=038"></script>
 </body>
 </html>
