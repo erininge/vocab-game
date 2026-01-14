@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.12";
+const APP_VERSION = "v0.3.13";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -645,6 +645,7 @@ async function tryPlayAudio(question) {
   const voiceFolder = AUDIO_VOICE_FOLDERS[voice] || AUDIO_VOICE_FOLDERS["Female 1"];
   const volume = typeof state.settings.audioVolume === "number" ? state.settings.audioVolume : 1;
   const normalizedVolume = Math.max(0, Math.min(MAX_AUDIO_BOOST, volume));
+  if (normalizedVolume === 0) return;
 
   // mimic python resolver: try kana, kanji, variants
   const candidates = [];
@@ -686,6 +687,10 @@ async function playRandomSampleAudio() {
   const voiceFolder = AUDIO_VOICE_FOLDERS[voice] || AUDIO_VOICE_FOLDERS["Female 1"];
   const volume = Number(els.audioVolume.value || DEFAULT_AUDIO_VOLUME) / 100;
   const normalizedVolume = Math.max(0, Math.min(MAX_AUDIO_BOOST, volume));
+  if (normalizedVolume === 0) {
+    setFooter("Volume is 0%. Increase it to hear audio.");
+    return;
+  }
   const manifest = await loadAudioManifest();
   const keys = manifest ? Object.keys(manifest) : [];
   if (!keys.length) {
