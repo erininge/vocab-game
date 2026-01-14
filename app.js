@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.0";
+const APP_VERSION = "v0.3.2";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
   "Female 2": "Female option 2",
