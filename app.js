@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.21";
+const APP_VERSION = "v0.3.22";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDER = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
@@ -91,7 +91,8 @@ function normalizeJapanese(s) {
 let AUDIO_MANIFEST = null;
 let audioSessionConfigured = false;
 let activeAudio = null;
-let activeAudioCleanup = null;
+let audioPlayer = null;
+let audioNodes = null;
 let audioContext = null;
 let audioPlayToken = 0;
 async function loadAudioManifest() {
@@ -123,10 +124,6 @@ async function configureAudioSession() {
 function clearActiveAudio(audio) {
   if (audio && audio === activeAudio) {
     activeAudio = null;
-    if (activeAudioCleanup) {
-      activeAudioCleanup();
-      activeAudioCleanup = null;
-    }
   }
 }
 
@@ -168,37 +165,65 @@ async function ensureAudioContext() {
   return audioContext;
 }
 
+async function primeAudioPlayback() {
+  if (!els.audioEnabled || !els.audioEnabled.checked) return;
+  const volume = Math.max(0, FIXED_AUDIO_VOLUME);
+  if (volume <= 0) return;
+  await configureAudioSession();
+  if (volume > 1) {
+    await ensureAudioNodes();
+  } else {
+    await ensureAudioContext();
+  }
+}
+
+function getAudioPlayer() {
+  if (!audioPlayer) {
+    audioPlayer = new Audio();
+    audioPlayer.playsInline = true;
+    audioPlayer.setAttribute("playsinline", "");
+    audioPlayer.setAttribute("webkit-playsinline", "");
+    audioPlayer.preload = "auto";
+  }
+  return audioPlayer;
+}
+
+async function ensureAudioNodes() {
+  const context = await ensureAudioContext();
+  if (!context) return null;
+  if (!audioNodes) {
+    const player = getAudioPlayer();
+    const source = context.createMediaElementSource(player);
+    const gainNode = context.createGain();
+    source.connect(gainNode);
+    gainNode.connect(context.destination);
+    audioNodes = { source, gainNode };
+  }
+  return audioNodes;
+}
+
 async function playAudioFromUrl(url, normalizedVolume) {
   const token = ++audioPlayToken;
   stopActiveAudio();
-  const audio = new Audio();
+  const audio = getAudioPlayer();
+  audio.pause();
+  try {
+    audio.currentTime = 0;
+  } catch (e) {}
   audio.src = url;
-  audio.playsInline = true;
-  audio.setAttribute("playsinline", "");
-  audio.setAttribute("webkit-playsinline", "");
-  audio.preload = "auto";
   audio.load();
   const volume = Math.max(0, Number(normalizedVolume) || 0);
-  let cleanupNodes = null;
   if (volume > 1) {
-    const context = await ensureAudioContext();
-    if (context) {
-      const source = context.createMediaElementSource(audio);
-      const gainNode = context.createGain();
-      gainNode.gain.value = volume;
-      source.connect(gainNode);
-      gainNode.connect(context.destination);
-      cleanupNodes = () => {
-        try {
-          source.disconnect();
-        } catch (e) {}
-        try {
-          gainNode.disconnect();
-        } catch (e) {}
-      };
+    const nodes = await ensureAudioNodes();
+    if (nodes) {
+      nodes.gainNode.gain.value = volume;
+      audio.volume = 1;
     } else {
       audio.volume = 1;
     }
+  } else if (audioNodes) {
+    audioNodes.gainNode.gain.value = Math.min(1, volume);
+    audio.volume = 1;
   } else {
     audio.volume = Math.min(1, volume);
   }
@@ -206,7 +231,6 @@ async function playAudioFromUrl(url, normalizedVolume) {
     clearActiveAudio(audio);
   };
   activeAudio = audio;
-  activeAudioCleanup = cleanupNodes;
   audio.addEventListener("ended", handleEnded, { once: true });
   audio.addEventListener("pause", handleEnded, { once: true });
   await Promise.race([
@@ -858,6 +882,7 @@ async function bootstrap() {
   els.lessonBox.addEventListener("change", updateSelectionFooter);
 
   els.startBtn.addEventListener("click", async () => {
+    await primeAudioPlayback();
     const file = els.levelSelect.value;
     const qCount = Number(els.qCount.value || 20);
     els.practiceHelp.textContent = "";
@@ -918,6 +943,7 @@ async function bootstrap() {
 
   els.playBtn.addEventListener("click", async () => {
     try {
+      await primeAudioPlayback();
       const q = state.questions[state.idx];
       await tryPlayAudio(q);
     } catch (e) {}
@@ -936,6 +962,7 @@ async function bootstrap() {
     els.testAudioBtn.addEventListener("click", async () => {
       if (!els.audioEnabled.checked) return;
       try {
+        await primeAudioPlayback();
         await playRandomSampleAudio();
       } catch (e) {}
     });
