@@ -267,6 +267,18 @@ option{
 
 .btn:disabled{opacity:.45; cursor:not-allowed}
 
+.starBtn{
+  font-size:20px;
+  line-height:1;
+  padding:8px 12px;
+}
+
+.starBtn.starred{
+  color:#f6c453;
+  border-color:#f6c453;
+  background:rgba(246,196,83,0.18);
+}
+
 /* ===== Quiz ===== */
 .quizHeader{
   display:flex;

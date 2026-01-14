@@ -4,7 +4,8 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.5";
+const APP_VERSION = "v0.3.6";
+const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
   "Female 2": "Female option 2",
@@ -24,12 +25,14 @@ const els = {
   levelSelect: document.getElementById("levelSelect"),
   questionMode: document.getElementById("questionMode"),
   answerMode: document.getElementById("answerMode"),
+  practiceMode: document.getElementById("practiceMode"),
   displayMode: document.getElementById("displayMode"),
   qCount: document.getElementById("qCount"),
   voiceSelect: document.getElementById("voiceSelect"),
   audioEnabled: document.getElementById("audioEnabled"),
   audioVolume: document.getElementById("audioVolume"),
   audioVolumeValue: document.getElementById("audioVolumeValue"),
+  practiceHelp: document.getElementById("practiceHelp"),
 
   lessonHelp: document.getElementById("lessonHelp"),
   lessonBox: document.getElementById("lessonBox"),
@@ -44,6 +47,7 @@ const els = {
   submitBtn: document.getElementById("submitBtn"),
   nextBtn: document.getElementById("nextBtn"),
   playBtn: document.getElementById("playBtn"),
+  starBtn: document.getElementById("starBtn"),
   quitBtn: document.getElementById("quitBtn"),
 
   scoreLine: document.getElementById("scoreLine"),
@@ -272,15 +276,66 @@ let state = {
   wrong: 0,
   lastAnswer: null,
   settings: null,
+  starred: new Set(),
 };
 
-function buildPool(vocabData, lessonList) {
+function cardKey(card, file) {
+  const en = Array.isArray(card.en) ? card.en.join("|") : "";
+  return [file || "", card._lesson || "", card.kana || "", card.kanji || "", en].join("::");
+}
+
+function loadStarred() {
+  try {
+    const raw = localStorage.getItem(STAR_STORAGE_KEY);
+    const data = raw ? JSON.parse(raw) : [];
+    if (Array.isArray(data)) return new Set(data.filter(Boolean));
+  } catch (e) {}
+  return new Set();
+}
+
+function saveStarred(set) {
+  try {
+    localStorage.setItem(STAR_STORAGE_KEY, JSON.stringify([...set]));
+  } catch (e) {}
+}
+
+function isStarred(card) {
+  const key = card._starKey || cardKey(card, state.currentFile);
+  return state.starred.has(key);
+}
+
+function setStarred(card, shouldStar) {
+  const key = card._starKey || cardKey(card, state.currentFile);
+  if (shouldStar) {
+    state.starred.add(key);
+  } else {
+    state.starred.delete(key);
+  }
+  saveStarred(state.starred);
+}
+
+function updateStarButton(card) {
+  if (!els.starBtn) return;
+  const starred = isStarred(card);
+  els.starBtn.textContent = starred ? "⭐" : "☆";
+  els.starBtn.classList.toggle("starred", starred);
+  els.starBtn.setAttribute("aria-pressed", starred ? "true" : "false");
+  els.starBtn.title = starred ? "Starred for review" : "Mark for review";
+}
+
+function buildPool(vocabData, lessonList, file) {
   const pool = [];
   const lessons = vocabData.lessons || {};
   for (const lk of lessonList) {
     const words = lessons[String(lk)] || [];
     for (const w of words) {
-      pool.push({ ...w, _lesson: String(lk), level: vocabData.level || categoryLabel(state.currentFile) });
+      const card = {
+        ...w,
+        _lesson: String(lk),
+        level: vocabData.level || categoryLabel(file || state.currentFile),
+      };
+      card._starKey = cardKey(card, file || state.currentFile);
+      pool.push(card);
     }
   }
   return pool;
@@ -459,6 +514,7 @@ function renderQuestion() {
 
   // audio availability
   els.playBtn.disabled = !state.settings.audioEnabled;
+  updateStarButton(card);
 }
 
 function currentAnswerValue() {
@@ -578,6 +634,7 @@ async function bootstrap() {
 
   await registerSW();
   wireInstall();
+  state.starred = loadStarred();
 
   const updateAudioVolumeLabel = () => {
     const value = Number(els.audioVolume.value || 0);
@@ -643,6 +700,7 @@ async function bootstrap() {
   els.startBtn.addEventListener("click", async () => {
     const file = els.levelSelect.value;
     const qCount = Number(els.qCount.value || 20);
+    els.practiceHelp.textContent = "";
 
     const lessonList = selectedLessons();
     if (!lessonList.length) return;
@@ -652,12 +710,22 @@ async function bootstrap() {
       vocabData = await loadVocabFile(file);
     }
 
-    const pool = buildPool(vocabData, lessonList);
+    let pool = buildPool(vocabData, lessonList, file);
     if (!pool.length) return;
+
+    const practiceMode = els.practiceMode.value;
+    if (practiceMode === "starred") {
+      pool = pool.filter((card) => state.starred.has(card._starKey));
+      if (!pool.length) {
+        els.practiceHelp.textContent = "No starred items yet. Star some cards to practice them here.";
+        return;
+      }
+    }
 
     const settings = {
       questionMode: els.questionMode.value,
       answerMode: els.answerMode.value,
+      practiceMode,
       displayMode: els.displayMode.value,
       qCount,
       audioEnabled: els.audioEnabled.checked,
@@ -697,6 +765,14 @@ async function bootstrap() {
     } catch (e) {}
   });
 
+  els.starBtn.addEventListener("click", () => {
+    const q = state.questions[state.idx];
+    if (!q) return;
+    const card = q.card;
+    setStarred(card, !isStarred(card));
+    updateStarButton(card);
+  });
+
   els.audioEnabled.addEventListener("change", syncAudioControls);
   els.audioVolume.addEventListener("input", updateAudioVolumeLabel);
 }
@@ -705,6 +781,7 @@ async function onCategoryChange() {
   const file = els.levelSelect.value;
   els.lessonHelp.textContent = "Loading lessons…";
   els.startBtn.disabled = true;
+  els.practiceHelp.textContent = "";
 
   try {
     const vocabData = await loadVocabFile(file);
