@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.8";
+const APP_VERSION = "v0.3.10";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -32,6 +32,7 @@ const els = {
   audioEnabled: document.getElementById("audioEnabled"),
   audioVolume: document.getElementById("audioVolume"),
   audioVolumeValue: document.getElementById("audioVolumeValue"),
+  testAudioBtn: document.getElementById("testAudioBtn"),
   practiceHelp: document.getElementById("practiceHelp"),
 
   lessonHelp: document.getElementById("lessonHelp"),
@@ -88,10 +89,12 @@ function normalizeJapanese(s) {
     .trim();
 }
 
-const DEFAULT_AUDIO_VOLUME = 80;
+const DEFAULT_AUDIO_VOLUME = 120;
+const MAX_AUDIO_BOOST = 2;
 
 let AUDIO_MANIFEST = null;
 let audioSessionConfigured = false;
+let audioContext = null;
 async function loadAudioManifest() {
   if (AUDIO_MANIFEST) return AUDIO_MANIFEST;
   try {
@@ -119,6 +122,49 @@ async function configureAudioSession() {
   } catch (e) {
     // Ignore unsupported audio session configuration.
   }
+}
+
+function getAudioContext() {
+  if (!audioContext) {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return null;
+    audioContext = new AudioCtx();
+  }
+  if (audioContext.state === "suspended") {
+    audioContext.resume().catch(() => {});
+  }
+  return audioContext;
+}
+
+async function playAudioFromUrl(url, normalizedVolume) {
+  const audio = new Audio(url);
+  audio.playsInline = true;
+  audio.volume = Math.min(1, normalizedVolume);
+  audio.setAttribute("playsinline", "");
+  audio.setAttribute("webkit-playsinline", "");
+  audio.preload = "auto";
+  const ctx = getAudioContext();
+  let source;
+  let gainNode;
+  if (ctx && normalizedVolume > 1) {
+    source = ctx.createMediaElementSource(audio);
+    gainNode = ctx.createGain();
+    gainNode.gain.value = normalizedVolume;
+    source.connect(gainNode);
+    gainNode.connect(ctx.destination);
+    const cleanup = () => {
+      source.disconnect();
+      gainNode.disconnect();
+    };
+    audio.addEventListener("ended", cleanup, { once: true });
+    audio.addEventListener("pause", cleanup, { once: true });
+  }
+  await new Promise((resolve, reject) => {
+    const t = setTimeout(() => reject(new Error("timeout")), 2500);
+    audio.addEventListener("canplaythrough", () => { clearTimeout(t); resolve(true); }, { once: true });
+    audio.addEventListener("error", () => { clearTimeout(t); reject(new Error("error")); }, { once: true });
+  });
+  await audio.play();
 }
 
 function manifestLookup(manifest, key, voiceFolder) {
@@ -557,7 +603,7 @@ async function tryPlayAudio(question) {
   const voice = state.settings.voice || "Female 1";
   const voiceFolder = AUDIO_VOICE_FOLDERS[voice] || AUDIO_VOICE_FOLDERS["Female 1"];
   const volume = typeof state.settings.audioVolume === "number" ? state.settings.audioVolume : 1;
-  const normalizedVolume = Math.max(0, Math.min(1, volume));
+  const normalizedVolume = Math.max(0, Math.min(MAX_AUDIO_BOOST, volume));
 
   // mimic python resolver: try kana, kanji, variants
   const candidates = [];
@@ -585,24 +631,36 @@ async function tryPlayAudio(question) {
 
     for (const url of [user, official]) {
       try {
-        const audio = new Audio(url);
-        audio.playsInline = true;
-        audio.volume = normalizedVolume;
-        audio.setAttribute("playsinline", "");
-        audio.setAttribute("webkit-playsinline", "");
-        audio.preload = "auto";
-        // Wait for load; if it errors, try next
-        await new Promise((resolve, reject) => {
-          const t = setTimeout(() => reject(new Error("timeout")), 2500);
-          audio.addEventListener("canplaythrough", () => { clearTimeout(t); resolve(true); }, { once: true });
-          audio.addEventListener("error", () => { clearTimeout(t); reject(new Error("error")); }, { once: true });
-        });
-        await audio.play();
+        await playAudioFromUrl(url, normalizedVolume);
         return;
       } catch (e) {
         // try next candidate
       }
     }
+  }
+}
+
+async function playRandomSampleAudio() {
+  const voice = els.voiceSelect.value || "Female 1";
+  const voiceFolder = AUDIO_VOICE_FOLDERS[voice] || AUDIO_VOICE_FOLDERS["Female 1"];
+  const volume = Number(els.audioVolume.value || DEFAULT_AUDIO_VOLUME) / 100;
+  const normalizedVolume = Math.max(0, Math.min(MAX_AUDIO_BOOST, volume));
+  const manifest = await loadAudioManifest();
+  const keys = manifest ? Object.keys(manifest) : [];
+  if (!keys.length) {
+    setFooter("No audio samples found.");
+    return;
+  }
+  const key = pickOne(keys);
+  const url = manifestLookup(manifest, key, voiceFolder);
+  if (!url) {
+    setFooter("No audio sample found for this voice.");
+    return;
+  }
+  try {
+    await playAudioFromUrl(url, normalizedVolume);
+  } catch (e) {
+    setFooter("Audio sample failed to play.");
   }
 }
 
@@ -669,6 +727,7 @@ async function bootstrap() {
     const enabled = els.audioEnabled.checked;
     els.audioVolume.disabled = !enabled;
     els.audioVolumeValue.classList.toggle("muted", !enabled);
+    els.testAudioBtn.disabled = !enabled;
   };
 
   // Load default config (optional)
@@ -684,7 +743,7 @@ async function bootstrap() {
       if (typeof cfg.audioEnabled === "boolean") els.audioEnabled.checked = cfg.audioEnabled;
       if (typeof cfg.audioVolume === "number") {
         const volumePercent = cfg.audioVolume <= 1 ? Math.round(cfg.audioVolume * 100) : cfg.audioVolume;
-        els.audioVolume.value = String(Math.max(0, Math.min(100, volumePercent)));
+        els.audioVolume.value = String(Math.max(0, Math.min(MAX_AUDIO_BOOST * 100, volumePercent)));
       }
     }
   } catch (e) {}
@@ -692,6 +751,7 @@ async function bootstrap() {
   if (!els.audioVolume.value) {
     els.audioVolume.value = String(DEFAULT_AUDIO_VOLUME);
   }
+  els.audioVolume.max = String(MAX_AUDIO_BOOST * 100);
   updateAudioVolumeLabel();
   syncAudioControls();
 
@@ -799,6 +859,12 @@ async function bootstrap() {
 
   els.audioEnabled.addEventListener("change", syncAudioControls);
   els.audioVolume.addEventListener("input", updateAudioVolumeLabel);
+  els.testAudioBtn.addEventListener("click", async () => {
+    if (!els.audioEnabled.checked) return;
+    try {
+      await playRandomSampleAudio();
+    } catch (e) {}
+  });
 }
 
 async function onCategoryChange() {
