@@ -342,4 +342,12 @@ option{
   background: rgba(9, 16, 32, 0.90);
   color:var(--muted);
   font-size:12px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.footerMeta{
+  font-size:11px;
+  color:var(--muted);
 }
