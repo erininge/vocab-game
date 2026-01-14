@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.8";
+const APP_VERSION = "v0.3.9";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDERS = {
   "Female 1": "Female option 1",
@@ -88,10 +88,12 @@ function normalizeJapanese(s) {
     .trim();
 }
 
-const DEFAULT_AUDIO_VOLUME = 80;
+const DEFAULT_AUDIO_VOLUME = 120;
+const MAX_AUDIO_BOOST = 2;
 
 let AUDIO_MANIFEST = null;
 let audioSessionConfigured = false;
+let audioContext = null;
 async function loadAudioManifest() {
   if (AUDIO_MANIFEST) return AUDIO_MANIFEST;
   try {
@@ -119,6 +121,18 @@ async function configureAudioSession() {
   } catch (e) {
     // Ignore unsupported audio session configuration.
   }
+}
+
+function getAudioContext() {
+  if (!audioContext) {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return null;
+    audioContext = new AudioCtx();
+  }
+  if (audioContext.state === "suspended") {
+    audioContext.resume().catch(() => {});
+  }
+  return audioContext;
 }
 
 function manifestLookup(manifest, key, voiceFolder) {
@@ -557,7 +571,7 @@ async function tryPlayAudio(question) {
   const voice = state.settings.voice || "Female 1";
   const voiceFolder = AUDIO_VOICE_FOLDERS[voice] || AUDIO_VOICE_FOLDERS["Female 1"];
   const volume = typeof state.settings.audioVolume === "number" ? state.settings.audioVolume : 1;
-  const normalizedVolume = Math.max(0, Math.min(1, volume));
+  const normalizedVolume = Math.max(0, Math.min(MAX_AUDIO_BOOST, volume));
 
   // mimic python resolver: try kana, kanji, variants
   const candidates = [];
@@ -587,10 +601,26 @@ async function tryPlayAudio(question) {
       try {
         const audio = new Audio(url);
         audio.playsInline = true;
-        audio.volume = normalizedVolume;
+        audio.volume = Math.min(1, normalizedVolume);
         audio.setAttribute("playsinline", "");
         audio.setAttribute("webkit-playsinline", "");
         audio.preload = "auto";
+        const ctx = getAudioContext();
+        let source;
+        let gainNode;
+        if (ctx && normalizedVolume > 1) {
+          source = ctx.createMediaElementSource(audio);
+          gainNode = ctx.createGain();
+          gainNode.gain.value = normalizedVolume;
+          source.connect(gainNode);
+          gainNode.connect(ctx.destination);
+          const cleanup = () => {
+            source.disconnect();
+            gainNode.disconnect();
+          };
+          audio.addEventListener("ended", cleanup, { once: true });
+          audio.addEventListener("pause", cleanup, { once: true });
+        }
         // Wait for load; if it errors, try next
         await new Promise((resolve, reject) => {
           const t = setTimeout(() => reject(new Error("timeout")), 2500);
@@ -684,7 +714,7 @@ async function bootstrap() {
       if (typeof cfg.audioEnabled === "boolean") els.audioEnabled.checked = cfg.audioEnabled;
       if (typeof cfg.audioVolume === "number") {
         const volumePercent = cfg.audioVolume <= 1 ? Math.round(cfg.audioVolume * 100) : cfg.audioVolume;
-        els.audioVolume.value = String(Math.max(0, Math.min(100, volumePercent)));
+        els.audioVolume.value = String(Math.max(0, Math.min(MAX_AUDIO_BOOST * 100, volumePercent)));
       }
     }
   } catch (e) {}
