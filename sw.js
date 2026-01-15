@@ -1,9 +1,9 @@
-const CACHE_NAME = "vocab-garden-cache-v0.3.23";
+const CACHE_NAME = "vocab-garden-cache-v0.3.26";
 const CORE_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=043",
-  "./app.js?v=043",
+  "./styles.css?v=046",
+  "./app.js?v=046",
   "./config.json",
   "./manifest.webmanifest",
   "./Vocabulary/vocab-manifest.json",
@@ -45,7 +45,12 @@ self.addEventListener("fetch", (event) => {
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_NAME);
     try {
-      const fetchReq = isCoreAsset || req.mode === "navigate"
+      const shouldBypassCache = isCoreAsset
+        || req.mode === "navigate"
+        || url.pathname.includes("/Vocabulary/")
+        || url.pathname.includes("/Audio/")
+        || url.pathname.includes("/UserAudio/");
+      const fetchReq = shouldBypassCache
         ? new Request(req.url, { cache: "no-store" })
         : req;
       const res = await fetch(fetchReq);
