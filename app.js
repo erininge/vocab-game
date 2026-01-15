@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.23";
+const APP_VERSION = "v0.3.26";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDER = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
@@ -105,6 +105,26 @@ async function loadAudioManifest() {
     AUDIO_MANIFEST = {}; // graceful fallback
   }
   return AUDIO_MANIFEST;
+}
+
+function resolveVoiceFolder(manifest, preferred) {
+  if (!manifest || !preferred) return preferred;
+  const entries = Object.values(manifest);
+  for (const entry of entries) {
+    if (entry && entry[preferred]) return preferred;
+  }
+  const available = new Set();
+  for (const entry of entries) {
+    if (!entry || typeof entry !== "object") continue;
+    for (const key of Object.keys(entry)) {
+      if (key) available.add(key);
+    }
+  }
+  const fallback = [...available][0];
+  if (fallback && fallback !== preferred) {
+    console.warn(`Audio voice "${preferred}" not found, using "${fallback}" instead.`);
+  }
+  return fallback || preferred;
 }
 
 async function configureAudioSession() {
@@ -718,7 +738,6 @@ async function tryPlayAudio(question) {
   await configureAudioSession();
 
   const { card } = question;
-  const voiceFolder = AUDIO_VOICE_FOLDER;
   const normalizedVolume = Math.max(0, FIXED_AUDIO_VOLUME);
   if (normalizedVolume === 0) return;
 
@@ -732,6 +751,7 @@ async function tryPlayAudio(question) {
 
   const tried = new Set();
   const manifest = await loadAudioManifest();
+  const voiceFolder = resolveVoiceFolder(manifest, AUDIO_VOICE_FOLDER);
   for (const c of candidates) {
     const n = norm(c);
     if (!n || tried.has(n)) continue;
@@ -762,13 +782,13 @@ async function tryPlayAudio(question) {
 }
 
 async function playRandomSampleAudio() {
-  const voiceFolder = AUDIO_VOICE_FOLDER;
   const normalizedVolume = Math.max(0, FIXED_AUDIO_VOLUME);
   if (normalizedVolume === 0) {
     setFooter("Audio is muted.");
     return;
   }
   const manifest = await loadAudioManifest();
+  const voiceFolder = resolveVoiceFolder(manifest, AUDIO_VOICE_FOLDER);
   const keys = manifest ? Object.keys(manifest) : [];
   if (!keys.length) {
     setFooter("No audio samples found.");
