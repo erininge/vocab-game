@@ -3,5 +3,6 @@
   "displayMode": "kana",
   "questionMode": "mixed",
   "answerMode": "typing",
-  "questionsPerQuiz": 20
+  "questionsPerQuiz": 20,
+  "audioVoice": "Female option 1"
 }

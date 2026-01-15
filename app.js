@@ -4,9 +4,9 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.26";
+const APP_VERSION = "v0.3.27";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
-const AUDIO_VOICE_FOLDER = "Female option 1";
+const AUDIO_VOICE_DEFAULT = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
 
 const els = {
@@ -26,6 +26,7 @@ const els = {
   displayMode: document.getElementById("displayMode"),
   qCount: document.getElementById("qCount"),
   audioEnabled: document.getElementById("audioEnabled"),
+  audioVoice: document.getElementById("audioVoice"),
   testAudioBtn: document.getElementById("testAudioBtn"),
   practiceHelp: document.getElementById("practiceHelp"),
 
@@ -125,6 +126,24 @@ function resolveVoiceFolder(manifest, preferred) {
     console.warn(`Audio voice "${preferred}" not found, using "${fallback}" instead.`);
   }
   return fallback || preferred;
+}
+
+function getPreferredAudioVoice() {
+  if (state.settings && state.settings.audioVoice) return state.settings.audioVoice;
+  if (els.audioVoice && els.audioVoice.value) return els.audioVoice.value;
+  return AUDIO_VOICE_DEFAULT;
+}
+
+function listAvailableVoices(manifest) {
+  const available = new Set();
+  if (!manifest) return [];
+  for (const entry of Object.values(manifest)) {
+    if (!entry || typeof entry !== "object") continue;
+    for (const key of Object.keys(entry)) {
+      if (key) available.add(key);
+    }
+  }
+  return [...available].sort((a, b) => a.localeCompare(b));
 }
 
 async function configureAudioSession() {
@@ -751,7 +770,7 @@ async function tryPlayAudio(question) {
 
   const tried = new Set();
   const manifest = await loadAudioManifest();
-  const voiceFolder = resolveVoiceFolder(manifest, AUDIO_VOICE_FOLDER);
+  const voiceFolder = resolveVoiceFolder(manifest, getPreferredAudioVoice());
   for (const c of candidates) {
     const n = norm(c);
     if (!n || tried.has(n)) continue;
@@ -788,8 +807,10 @@ async function playRandomSampleAudio() {
     return;
   }
   const manifest = await loadAudioManifest();
-  const voiceFolder = resolveVoiceFolder(manifest, AUDIO_VOICE_FOLDER);
-  const keys = manifest ? Object.keys(manifest) : [];
+  const voiceFolder = resolveVoiceFolder(manifest, getPreferredAudioVoice());
+  const keys = manifest
+    ? Object.keys(manifest).filter((key) => manifest[key] && manifest[key][voiceFolder])
+    : [];
   if (!keys.length) {
     setFooter("No audio samples found.");
     return;
@@ -804,6 +825,28 @@ async function playRandomSampleAudio() {
     await playAudioFromUrl(url, normalizedVolume);
   } catch (e) {
     setFooter("Audio sample failed to play.");
+  }
+}
+
+async function populateAudioVoices(preferred) {
+  if (!els.audioVoice) return;
+  const manifest = await loadAudioManifest();
+  const voices = listAvailableVoices(manifest);
+  if (!voices.length) {
+    voices.push(AUDIO_VOICE_DEFAULT);
+  }
+  els.audioVoice.innerHTML = "";
+  for (const voice of voices) {
+    const option = document.createElement("option");
+    option.value = voice;
+    option.textContent = voice;
+    els.audioVoice.appendChild(option);
+  }
+  const resolved = resolveVoiceFolder(manifest, preferred || AUDIO_VOICE_DEFAULT);
+  if (resolved && voices.includes(resolved)) {
+    els.audioVoice.value = resolved;
+  } else {
+    els.audioVoice.value = voices[0];
   }
 }
 
@@ -861,11 +904,15 @@ async function bootstrap() {
   await registerSW();
   wireInstall();
   state.starred = loadStarred();
+  let preferredAudioVoice = AUDIO_VOICE_DEFAULT;
 
   const syncAudioControls = () => {
     const enabled = els.audioEnabled.checked;
     if (els.testAudioBtn) {
       els.testAudioBtn.disabled = !enabled;
+    }
+    if (els.audioVoice) {
+      els.audioVoice.disabled = !enabled;
     }
   };
 
@@ -879,9 +926,11 @@ async function bootstrap() {
       if (cfg.displayMode) els.displayMode.value = cfg.displayMode;
       if (typeof cfg.questionsPerQuiz === "number") els.qCount.value = String(cfg.questionsPerQuiz);
       if (typeof cfg.audioEnabled === "boolean") els.audioEnabled.checked = cfg.audioEnabled;
+      if (cfg.audioVoice) preferredAudioVoice = cfg.audioVoice;
     }
   } catch (e) {}
 
+  await populateAudioVoices(preferredAudioVoice);
   syncAudioControls();
 
   // Discover vocab files
@@ -944,6 +993,7 @@ async function bootstrap() {
       displayMode: els.displayMode.value,
       qCount,
       audioEnabled: els.audioEnabled.checked,
+      audioVoice: els.audioVoice ? els.audioVoice.value : AUDIO_VOICE_DEFAULT,
     };
 
     state.currentFile = file;
