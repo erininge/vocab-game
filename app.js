@@ -4,10 +4,11 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.27";
+const APP_VERSION = "v0.3.29";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_DEFAULT = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
+const SILENT_AUDIO_URI = "data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQIAAAAAAA==";
 
 const els = {
   versionLine: document.getElementById("versionLine"),
@@ -96,6 +97,7 @@ let audioPlayer = null;
 let audioNodes = null;
 let audioContext = null;
 let audioPlayToken = 0;
+let audioPrimed = false;
 async function loadAudioManifest() {
   if (AUDIO_MANIFEST) return AUDIO_MANIFEST;
   try {
@@ -152,7 +154,7 @@ async function configureAudioSession() {
   if (!session) return;
   try {
     if ("type" in session) {
-      session.type = "ambient";
+      session.type = "playback";
     }
     audioSessionConfigured = true;
   } catch (e) {
@@ -213,6 +215,43 @@ async function primeAudioPlayback() {
     await ensureAudioNodes();
   } else {
     await ensureAudioContext();
+  }
+  await warmAudioPlayer();
+}
+
+async function warmAudioPlayer() {
+  if (audioPrimed) return;
+  const player = getAudioPlayer();
+  const previousSrc = player.src;
+  const previousMuted = player.muted;
+  const previousVolume = player.volume;
+  player.muted = true;
+  player.volume = 0;
+  player.src = SILENT_AUDIO_URI;
+  player.load();
+  let played = false;
+  try {
+    await player.play();
+    played = true;
+  } catch (e) {
+    // Some platforms still block; we'll try again on next gesture.
+  }
+  try {
+    player.pause();
+  } catch (e) {}
+  try {
+    player.currentTime = 0;
+  } catch (e) {}
+  player.muted = previousMuted;
+  player.volume = previousVolume;
+  if (previousSrc) {
+    player.src = previousSrc;
+    player.load();
+  } else {
+    player.removeAttribute("src");
+  }
+  if (played) {
+    audioPrimed = true;
   }
 }
 
