@@ -1,4 +1,4 @@
-const CACHE_NAME = "vocab-garden-cache-v0.3.26";
+const CACHE_NAME = "vocab-garden-cache-v0.3.27";
 const CORE_ASSETS = [
   "./",
   "./index.html",
