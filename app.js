@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.22";
+const APP_VERSION = "v0.3.23";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_FOLDER = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
@@ -244,13 +244,19 @@ async function playAudioFromUrl(url, normalizedVolume) {
   await audio.play();
 }
 
+function normalizeAudioUrl(rel) {
+  if (!rel) return null;
+  const normalized = rel.startsWith("./") ? rel : ("./" + rel.replace(/^\/+/, ""));
+  return encodeURI(normalized);
+}
+
 function manifestLookup(manifest, key, voiceFolder) {
   if (!manifest) return null;
   const entry = manifest[key];
   if (!entry) return null;
   const rel = entry[voiceFolder];
   if (!rel) return null;
-  return rel.startsWith("./") ? rel : ("./" + rel.replace(/^\/+/, ""));
+  return normalizeAudioUrl(rel);
 }
 
 
@@ -733,11 +739,15 @@ async function tryPlayAudio(question) {
 
     // Official pack
     // Prefer User recordings (optional), then manifest-mapped official audio, then legacy guessed path
-    const user = `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(n)}.wav`;
+    const user = normalizeAudioUrl(
+      `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(n)}.wav`,
+    );
 
     const byRaw = manifestLookup(manifest, c, voiceFolder);
     const byNorm = manifestLookup(manifest, n, voiceFolder);
-    const legacy = `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(n)}.wav`;
+    const legacy = normalizeAudioUrl(
+      `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(n)}.wav`,
+    );
     const official = byRaw || byNorm || legacy;
 
     for (const url of [user, official]) {
