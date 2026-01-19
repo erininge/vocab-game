@@ -2,7 +2,8 @@
   "level": "JLPN1200",
   "lessonNames": {
     "1": "Lesson 2",
-    "2": "pre course words"
+    "2": "pre course words",
+    "3": "Lesson 1"
   },
   "lessons": {
     "1": [
@@ -540,6 +541,210 @@
         "kanji": "間",
         "en": [
           "between (A と B の)"
+        ]
+      }
+    ],
+    "3": [
+      {
+        "kana": "じゃありません",
+        "kanji": "",
+        "en": [
+          "is not",
+          "are not"
+        ]
+      },
+      {
+        "kana": "でした",
+        "kanji": "",
+        "en": [
+          "was",
+          "were"
+        ]
+      },
+      {
+        "kana": "じゃありませんでした",
+        "kanji": "",
+        "en": [
+          "was not",
+          "were not"
+        ]
+      },
+      {
+        "kana": "みぎ",
+        "kanji": "右",
+        "en": [
+          "right"
+        ]
+      },
+      {
+        "kana": "ひだり",
+        "kanji": "左",
+        "en": [
+          "left"
+        ]
+      },
+      {
+        "kana": "まえ",
+        "kanji": "前",
+        "en": [
+          "front"
+        ]
+      },
+      {
+        "kana": "うしろ",
+        "kanji": "後ろ",
+        "en": [
+          "back"
+        ]
+      },
+      {
+        "kana": "うえ",
+        "kanji": "上",
+        "en": [
+          "on",
+          "above"
+        ]
+      },
+      {
+        "kana": "した",
+        "kanji": "下",
+        "en": [
+          "under",
+          "below"
+        ]
+      },
+      {
+        "kana": "なか",
+        "kanji": "中",
+        "en": [
+          "inside"
+        ]
+      },
+      {
+        "kana": "ちかく",
+        "kanji": "近く",
+        "en": [
+          "near"
+        ]
+      },
+      {
+        "kana": "となり",
+        "kanji": "隣",
+        "en": [
+          "next to"
+        ]
+      },
+      {
+        "kana": "むかい",
+        "kanji": "向かい",
+        "en": [
+          "across from"
+        ]
+      },
+      {
+        "kana": "あいだ",
+        "kanji": "間",
+        "en": [
+          "between"
+        ]
+      },
+      {
+        "kana": "つくえ",
+        "kanji": "机",
+        "en": [
+          "desk"
+        ]
+      },
+      {
+        "kana": "ほん",
+        "kanji": "本",
+        "en": [
+          "book"
+        ]
+      },
+      {
+        "kana": "えんぴつ",
+        "kanji": "鉛筆",
+        "en": [
+          "pencil"
+        ]
+      },
+      {
+        "kana": "くるま",
+        "kanji": "車",
+        "en": [
+          "car"
+        ]
+      },
+      {
+        "kana": "うち",
+        "kanji": "家",
+        "en": [
+          "home",
+          "house"
+        ]
+      },
+      {
+        "kana": "へや",
+        "kanji": "部屋",
+        "en": [
+          "room"
+        ]
+      },
+      {
+        "kana": "きょうしつ",
+        "kanji": "教室",
+        "en": [
+          "classroom"
+        ]
+      },
+      {
+        "kana": "がっこう",
+        "kanji": "学校",
+        "en": [
+          "school"
+        ]
+      },
+      {
+        "kana": "だいがく",
+        "kanji": "大学",
+        "en": [
+          "university"
+        ]
+      },
+      {
+        "kana": "ぎんこう",
+        "kanji": "銀行",
+        "en": [
+          "bank"
+        ]
+      },
+      {
+        "kana": "としょかん",
+        "kanji": "図書館",
+        "en": [
+          "library"
+        ]
+      },
+      {
+        "kana": "いつ",
+        "kanji": "",
+        "en": [
+          "when"
+        ]
+      },
+      {
+        "kana": "なんじ",
+        "kanji": "何時",
+        "en": [
+          "what time"
+        ]
+      },
+      {
+        "kana": "どこ",
+        "kanji": "",
+        "en": [
+          "where"
         ]
       }
     ]
