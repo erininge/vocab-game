@@ -1,7 +1,83 @@
 {
   "level": "JLPN1200",
+  "lessonNames": {
+    "1": "pre course words",
+    "2": "Lesson 2"
+  },
   "lessons": {
     "1": [
+      {
+        "kana": "あるばいと",
+        "kanji": "",
+        "en": [
+          "part-time job"
+        ]
+      },
+      {
+        "kana": "くらす",
+        "kanji": "",
+        "en": [
+          "class"
+        ]
+      },
+      {
+        "kana": "さーくる",
+        "kanji": "",
+        "en": [
+          "club activity"
+        ]
+      },
+      {
+        "kana": "ぱーてぃー",
+        "kanji": "",
+        "en": [
+          "party"
+        ]
+      },
+      {
+        "kana": "てすと",
+        "kanji": "",
+        "en": [
+          "test"
+        ]
+      },
+      {
+        "kana": "げつようび",
+        "kanji": "",
+        "en": [
+          "Monday"
+        ]
+      },
+      {
+        "kana": "かようび",
+        "kanji": "",
+        "en": [
+          "Tuesday"
+        ]
+      },
+      {
+        "kana": "すいようび",
+        "kanji": "",
+        "en": [
+          "Wednesday"
+        ]
+      },
+      {
+        "kana": "もくようび",
+        "kanji": "",
+        "en": [
+          "Thursday"
+        ]
+      },
+      {
+        "kana": "きんようび",
+        "kanji": "",
+        "en": [
+          "Friday"
+        ]
+      }
+    ],
+    "2": [
       {
         "kana": "ゲーム",
         "kanji": "",

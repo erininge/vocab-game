@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.30";
+const APP_VERSION = "v0.3.31";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_DEFAULT = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
@@ -435,7 +435,12 @@ function categoryLabel(filename) {
   return filename.replace(/\.json$/i, "");
 }
 
-function renderLessonPills(lessonKeys) {
+function lessonLabel(vocabData, key) {
+  const names = vocabData?.lessonNames || {};
+  return names[String(key)] || `Lesson ${key}`;
+}
+
+function renderLessonPills(vocabData, lessonKeys) {
   els.lessonBox.innerHTML = "";
   const sorted = [...lessonKeys].sort((a,b) => Number(a) - Number(b));
   for (const k of sorted) {
@@ -449,7 +454,7 @@ function renderLessonPills(lessonKeys) {
     cb.value = k;
     cb.checked = true;
     const span = document.createElement("span");
-    span.textContent = `Lesson ${k}`;
+    span.textContent = lessonLabel(vocabData, k);
     label.appendChild(cb);
     label.appendChild(span);
     els.lessonBox.appendChild(label);
@@ -703,7 +708,8 @@ function renderQuestion() {
 
   // header meta
   const cat = categoryLabel(state.currentFile);
-  els.quizMeta.textContent = `${cat} • Lesson ${card._lesson} • ${state.idx + 1}/${state.questions.length}`;
+  const lessonName = lessonLabel(state.vocabData, card._lesson);
+  els.quizMeta.textContent = `${cat} • ${lessonName} • ${state.idx + 1}/${state.questions.length}`;
 
   clearFeedback();
   els.nextBtn.disabled = true;
@@ -1107,7 +1113,7 @@ async function onCategoryChange() {
       return;
     }
 
-    renderLessonPills(lessonKeys);
+    renderLessonPills(vocabData, lessonKeys);
     els.lessonHelp.textContent = "Select lessons (default: all).";
     els.startBtn.disabled = false;
     updateSelectionFooter();
