@@ -219,6 +219,64 @@ option{
   accent-color: var(--accent);
 }
 
+/* ===== Vocab Preview ===== */
+.vocabList{
+  display:grid;
+  gap:10px;
+  margin-top:12px;
+}
+
+.vocabRow{
+  display:grid;
+  grid-template-columns: auto 1fr auto;
+  gap:12px;
+  align-items:center;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,0.06);
+}
+
+.vocabStar{
+  font-size:18px;
+  line-height:1;
+}
+
+.vocabInfo{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.vocabTerm{
+  font-size:17px;
+  font-weight:600;
+}
+
+.vocabMeaning{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.vocabLesson{
+  color:var(--muted);
+  font-size:12px;
+  text-align:right;
+}
+
+@media (max-width:680px){
+  .vocabRow{
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "star info"
+      ". lesson";
+  }
+
+  .vocabStar{grid-area:star}
+  .vocabInfo{grid-area:info}
+  .vocabLesson{grid-area:lesson; text-align:left}
+}
+
 /* ===== Buttons ===== */
 .actions{
   display:flex;

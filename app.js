@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.32";
+const APP_VERSION = "v0.3.33";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_DEFAULT = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
@@ -17,6 +17,7 @@ const els = {
   installBtn: document.getElementById("installBtn"),
 
   screenHome: document.getElementById("screenHome"),
+  screenVocab: document.getElementById("screenVocab"),
   screenQuiz: document.getElementById("screenQuiz"),
   screenDone: document.getElementById("screenDone"),
 
@@ -35,6 +36,7 @@ const els = {
   lessonBox: document.getElementById("lessonBox"),
 
   startBtn: document.getElementById("startBtn"),
+  viewVocabBtn: document.getElementById("viewVocabBtn"),
 
   quizMeta: document.getElementById("quizMeta"),
   promptLine: document.getElementById("promptLine"),
@@ -49,6 +51,11 @@ const els = {
 
   scoreLine: document.getElementById("scoreLine"),
   backHomeBtn: document.getElementById("backHomeBtn"),
+
+  vocabMeta: document.getElementById("vocabMeta"),
+  vocabList: document.getElementById("vocabList"),
+  vocabHelp: document.getElementById("vocabHelp"),
+  backFromVocabBtn: document.getElementById("backFromVocabBtn"),
 };
 
 let deferredInstallPrompt = null;
@@ -64,6 +71,7 @@ function setSelectionCount(text) {
 
 function show(screen) {
   els.screenHome.hidden = screen !== "home";
+  els.screenVocab.hidden = screen !== "vocab";
   els.screenQuiz.hidden = screen !== "quiz";
   els.screenDone.hidden = screen !== "done";
 }
@@ -490,6 +498,102 @@ function getDisplayJP(card, mode) {
   // both
   if (kana && kanji && kana !== kanji) return `${kana}  (${kanji})`;
   return kana || kanji || "";
+}
+
+function getDisplayEN(card) {
+  const enList = Array.isArray(card.en) ? card.en.filter(Boolean) : [];
+  return enList.length ? enList.join(", ") : "(no English provided)";
+}
+
+function renderVocabList(pool, file, vocabData) {
+  if (!els.vocabList) return;
+  els.vocabList.innerHTML = "";
+  const sorted = [...pool].sort((a, b) => {
+    const lessonDiff = Number(a._lesson) - Number(b._lesson);
+    if (lessonDiff !== 0) return lessonDiff;
+    const jpA = `${a.kana || ""}${a.kanji || ""}`;
+    const jpB = `${b.kana || ""}${b.kanji || ""}`;
+    const jpDiff = jpA.localeCompare(jpB, "ja");
+    if (jpDiff !== 0) return jpDiff;
+    return getDisplayEN(a).localeCompare(getDisplayEN(b));
+  });
+
+  for (const card of sorted) {
+    const row = document.createElement("div");
+    row.className = "vocabRow";
+
+    const star = document.createElement("span");
+    const starred = isStarred(card, file);
+    star.className = "vocabStar";
+    star.textContent = starred ? "⭐" : "☆";
+    star.title = starred ? "Starred" : "Not starred";
+
+    const info = document.createElement("div");
+    info.className = "vocabInfo";
+
+    const term = document.createElement("div");
+    term.className = "vocabTerm";
+    term.textContent = getDisplayJP(card, "both") || "(no JP provided)";
+
+    const meaning = document.createElement("div");
+    meaning.className = "vocabMeaning";
+    meaning.textContent = getDisplayEN(card);
+
+    info.appendChild(term);
+    info.appendChild(meaning);
+
+    const lesson = document.createElement("div");
+    lesson.className = "vocabLesson";
+    lesson.textContent = lessonLabel(vocabData, card._lesson);
+
+    row.appendChild(star);
+    row.appendChild(info);
+    row.appendChild(lesson);
+    els.vocabList.appendChild(row);
+  }
+}
+
+async function openVocabPreview() {
+  if (!els.vocabMeta || !els.vocabHelp) return;
+  els.vocabHelp.textContent = "";
+  els.vocabMeta.textContent = "";
+  if (els.vocabList) {
+    els.vocabList.innerHTML = "";
+  }
+
+  const file = els.levelSelect.value;
+  const lessonList = selectedLessons();
+  if (!lessonList.length) {
+    els.vocabHelp.textContent = "Select at least one lesson to view vocab.";
+    show("vocab");
+    return;
+  }
+
+  try {
+    let vocabData = state.vocabData;
+    if (!vocabData || file !== state.currentFile) {
+      vocabData = await loadVocabFile(file);
+    }
+    state.currentFile = file;
+    state.vocabData = vocabData;
+
+    const pool = buildPool(vocabData, lessonList, file);
+    const lessonLabelCount = lessonList.length === 1 ? "lesson" : "lessons";
+    const wordLabel = pool.length === 1 ? "word" : "words";
+    els.vocabMeta.textContent = `${categoryLabel(file)} • ${lessonList.length} ${lessonLabelCount} • ${pool.length} ${wordLabel}`;
+
+    if (!pool.length) {
+      els.vocabHelp.textContent = "No vocab found for the selected lessons.";
+      show("vocab");
+      return;
+    }
+
+    renderVocabList(pool, file, vocabData);
+    show("vocab");
+  } catch (e) {
+    els.vocabHelp.textContent = "Could not load vocab for that category.";
+    show("vocab");
+  }
 }
 
 // --- Quiz engine ---
@@ -1004,6 +1108,9 @@ async function bootstrap() {
 
   els.levelSelect.addEventListener("change", onCategoryChange);
   els.lessonBox.addEventListener("change", updateSelectionFooter);
+  if (els.viewVocabBtn) {
+    els.viewVocabBtn.addEventListener("click", openVocabPreview);
+  }
 
   els.startBtn.addEventListener("click", async () => {
     await primeAudioPlayback();
@@ -1065,6 +1172,11 @@ async function bootstrap() {
     show("home");
     setFooter(`Ready • ${APP_VERSION}`);
   });
+  if (els.backFromVocabBtn) {
+    els.backFromVocabBtn.addEventListener("click", () => {
+      show("home");
+    });
+  }
 
   els.playBtn.addEventListener("click", async () => {
     try {
