@@ -7,7 +7,7 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icons/icon-192.png" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="styles.css?v=050">
+  <link rel="stylesheet" href="styles.css?v=051">
   <title>Kat's Vocab Garden (PWA)</title>
 </head>
 <body>
@@ -106,6 +106,7 @@
       <div class="actions">
         <button class="btn" id="startBtn">Start</button>
         <button class="btn ghost" id="viewVocabBtn" type="button">View vocab</button>
+        <button class="btn ghost" id="exportMissingAudioBtn" type="button">Export missing audio</button>
       </div>
       <p class="muted" id="practiceHelp" role="status"></p>
 
@@ -127,6 +128,28 @@
       <p class="muted" id="vocabHelp" role="status"></p>
       <div class="actions">
         <button class="btn ghost" id="backFromVocabBtn">Back to setup</button>
+      </div>
+    </section>
+
+    <section class="card" id="screenExport" hidden>
+      <h1>Missing audio export</h1>
+      <p class="muted">Generate a plain-text list of any vocab entries without audio in the selected voice. Use the download to feed VoiceBox and save the output into <code>Audio/&lt;voice&gt;</code>.</p>
+      <div class="grid">
+        <label class="field">
+          <span class="label">Voice</span>
+          <select id="exportVoice" aria-label="Export voice"></select>
+        </label>
+        <label class="field full">
+          <span class="label">Export list</span>
+          <textarea id="exportList" rows="10" readonly></textarea>
+          <span class="hint">One term per line. Missing audio is checked against the selected lessons.</span>
+        </label>
+      </div>
+      <p class="muted" id="exportMeta"></p>
+      <p class="muted" id="exportHelp" role="status"></p>
+      <div class="actions">
+        <button class="btn" id="downloadExportBtn" type="button">Download .txt</button>
+        <button class="btn ghost" id="backFromExportBtn" type="button">Back to setup</button>
       </div>
     </section>
 
@@ -168,6 +191,6 @@
     <span id="selectionCount" class="footerMeta"></span>
   </footer>
 
-  <script src="app.js?v=050"></script>
+  <script src="app.js?v=051"></script>
 </body>
 </html>

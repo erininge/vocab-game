@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.36";
+const APP_VERSION = "v0.3.37";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_DEFAULT = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
@@ -18,6 +18,7 @@ const els = {
 
   screenHome: document.getElementById("screenHome"),
   screenVocab: document.getElementById("screenVocab"),
+  screenExport: document.getElementById("screenExport"),
   screenQuiz: document.getElementById("screenQuiz"),
   screenDone: document.getElementById("screenDone"),
 
@@ -56,6 +57,14 @@ const els = {
   vocabList: document.getElementById("vocabList"),
   vocabHelp: document.getElementById("vocabHelp"),
   backFromVocabBtn: document.getElementById("backFromVocabBtn"),
+
+  exportMissingAudioBtn: document.getElementById("exportMissingAudioBtn"),
+  exportVoice: document.getElementById("exportVoice"),
+  exportList: document.getElementById("exportList"),
+  exportMeta: document.getElementById("exportMeta"),
+  exportHelp: document.getElementById("exportHelp"),
+  downloadExportBtn: document.getElementById("downloadExportBtn"),
+  backFromExportBtn: document.getElementById("backFromExportBtn"),
 };
 
 let deferredInstallPrompt = null;
@@ -72,6 +81,7 @@ function setSelectionCount(text) {
 function show(screen) {
   els.screenHome.hidden = screen !== "home";
   els.screenVocab.hidden = screen !== "vocab";
+  if (els.screenExport) els.screenExport.hidden = screen !== "export";
   els.screenQuiz.hidden = screen !== "quiz";
   els.screenDone.hidden = screen !== "done";
 }
@@ -979,24 +989,130 @@ async function playRandomSampleAudio() {
 
 async function populateAudioVoices(preferred) {
   if (!els.audioVoice) return;
+  await populateVoiceSelect(els.audioVoice, preferred);
+}
+
+async function populateVoiceSelect(select, preferred) {
+  if (!select) return;
   const manifest = await loadAudioManifest();
   const voices = listAvailableVoices(manifest);
   if (!voices.length) {
     voices.push(AUDIO_VOICE_DEFAULT);
   }
-  els.audioVoice.innerHTML = "";
+  select.innerHTML = "";
   for (const voice of voices) {
     const option = document.createElement("option");
     option.value = voice;
     option.textContent = voice;
-    els.audioVoice.appendChild(option);
+    select.appendChild(option);
   }
   const resolved = resolveVoiceFolder(manifest, preferred || AUDIO_VOICE_DEFAULT);
   if (resolved && voices.includes(resolved)) {
-    els.audioVoice.value = resolved;
+    select.value = resolved;
   } else {
-    els.audioVoice.value = voices[0];
+    select.value = voices[0];
   }
+}
+
+async function populateExportVoices(preferred) {
+  if (!els.exportVoice) return;
+  await populateVoiceSelect(els.exportVoice, preferred);
+}
+
+function getAudioCandidates(card) {
+  const terms = new Set();
+  if (card.kana) terms.add(card.kana);
+  if (Array.isArray(card.kana_variants)) {
+    for (const variant of card.kana_variants) {
+      if (variant) terms.add(variant);
+    }
+  }
+  if (!terms.size && card.kanji) terms.add(card.kanji);
+  return [...terms].map(t => String(t).trim()).filter(Boolean);
+}
+
+function listMissingAudioTerms(pool, manifest, voiceFolder) {
+  const missing = new Set();
+  if (!Array.isArray(pool)) return [];
+  for (const card of pool) {
+    const terms = getAudioCandidates(card);
+    for (const term of terms) {
+      if (!manifest || !manifest[term] || !manifest[term][voiceFolder]) {
+        missing.add(term);
+      }
+    }
+  }
+  return [...missing].sort((a, b) => a.localeCompare(b, "ja"));
+}
+
+async function updateMissingAudioExport() {
+  if (!els.exportList || !els.exportHelp || !els.exportMeta) return;
+  els.exportHelp.textContent = "";
+  els.exportMeta.textContent = "";
+  els.exportList.value = "";
+
+  const file = els.levelSelect.value;
+  const lessonList = selectedLessons();
+  if (!lessonList.length) {
+    els.exportHelp.textContent = "Select at least one lesson to export missing audio.";
+    return;
+  }
+
+  try {
+    let vocabData = state.vocabData;
+    if (!vocabData || file !== state.currentFile) {
+      vocabData = await loadVocabFile(file);
+    }
+    state.currentFile = file;
+    state.vocabData = vocabData;
+
+    const manifest = await loadAudioManifest();
+    const voice = resolveVoiceFolder(manifest, els.exportVoice?.value || getPreferredAudioVoice());
+    if (els.exportVoice) els.exportVoice.value = voice;
+
+    const pool = buildPool(vocabData, lessonList, file);
+    const missing = listMissingAudioTerms(pool, manifest, voice);
+
+    const lessonLabelCount = lessonList.length === 1 ? "lesson" : "lessons";
+    const itemLabel = missing.length === 1 ? "item" : "items";
+    els.exportMeta.textContent = `${categoryLabel(file)} • ${lessonList.length} ${lessonLabelCount} • ${missing.length} ${itemLabel} missing (${voice})`;
+
+    if (!missing.length) {
+      els.exportHelp.textContent = "Nice! No missing audio found for the selected voice.";
+    }
+
+    els.exportList.value = missing.join("\n");
+  } catch (e) {
+    els.exportHelp.textContent = "Could not load vocab or audio manifest.";
+  }
+}
+
+async function openMissingAudioExport() {
+  await updateMissingAudioExport();
+  show("export");
+}
+
+function downloadMissingAudioList() {
+  if (!els.exportList) return;
+  const text = els.exportList.value || "";
+  if (!text.trim()) {
+    setFooter("No missing audio to download.");
+    return;
+  }
+  const file = els.levelSelect.value || "vocab";
+  const voice = els.exportVoice ? els.exportVoice.value : "voice";
+  const safeCategory = categoryLabel(file).replace(/[^\w.-]+/g, "-");
+  const safeVoice = String(voice).replace(/[^\w.-]+/g, "-");
+  const filename = `missing-audio-${safeCategory}-${safeVoice}.txt`;
+  const blob = new Blob([text.trim() + "\n"], { type: "text/plain;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 function finishQuiz() {
@@ -1080,6 +1196,7 @@ async function bootstrap() {
   } catch (e) {}
 
   await populateAudioVoices(preferredAudioVoice);
+  await populateExportVoices(preferredAudioVoice);
   syncAudioControls();
 
   // Discover vocab files
@@ -1107,9 +1224,17 @@ async function bootstrap() {
   await onCategoryChange();
 
   els.levelSelect.addEventListener("change", onCategoryChange);
-  els.lessonBox.addEventListener("change", updateSelectionFooter);
+  els.lessonBox.addEventListener("change", () => {
+    updateSelectionFooter();
+    if (els.screenExport && !els.screenExport.hidden) {
+      updateMissingAudioExport();
+    }
+  });
   if (els.viewVocabBtn) {
     els.viewVocabBtn.addEventListener("click", openVocabPreview);
+  }
+  if (els.exportMissingAudioBtn) {
+    els.exportMissingAudioBtn.addEventListener("click", openMissingAudioExport);
   }
 
   els.startBtn.addEventListener("click", async () => {
@@ -1177,6 +1302,21 @@ async function bootstrap() {
       show("home");
     });
   }
+  if (els.backFromExportBtn) {
+    els.backFromExportBtn.addEventListener("click", () => {
+      show("home");
+    });
+  }
+  if (els.downloadExportBtn) {
+    els.downloadExportBtn.addEventListener("click", downloadMissingAudioList);
+  }
+  if (els.exportVoice) {
+    els.exportVoice.addEventListener("change", () => {
+      if (els.screenExport && !els.screenExport.hidden) {
+        updateMissingAudioExport();
+      }
+    });
+  }
 
   els.playBtn.addEventListener("click", async () => {
     try {
@@ -1229,10 +1369,16 @@ async function onCategoryChange() {
     els.lessonHelp.textContent = "Select lessons (default: all).";
     els.startBtn.disabled = false;
     updateSelectionFooter();
+    if (els.screenExport && !els.screenExport.hidden) {
+      updateMissingAudioExport();
+    }
   } catch (e) {
     els.lessonHelp.textContent = "Could not load that vocab file.";
     els.lessonBox.innerHTML = "";
     setSelectionCount("Selected: 0 words");
+    if (els.screenExport && !els.screenExport.hidden) {
+      updateMissingAudioExport();
+    }
   }
 }
 
