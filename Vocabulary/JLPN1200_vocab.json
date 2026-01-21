@@ -3,7 +3,9 @@
   "lessonNames": {
     "1": "Lesson 2",
     "2": "pre course words",
-    "3": "Lesson 1"
+    "3": "Lesson 1",
+    "4": "Lesson 3",
+    "5": "Lesson 3.5"
   },
   "lessons": {
     "1": [
@@ -745,6 +747,562 @@
         "kanji": "",
         "en": [
           "where"
+        ]
+      }
+    ],
+    "4": [
+      {
+        "kana": "こうえん",
+        "kanji": "公園",
+        "en": [
+          "park"
+        ]
+      },
+      {
+        "kana": "スーパー",
+        "kanji": "",
+        "en": [
+          "supermarket"
+        ]
+      },
+      {
+        "kana": "ばすてい",
+        "kanji": "バス停",
+        "en": [
+          "bus stop"
+        ]
+      },
+      {
+        "kana": "びょういん",
+        "kanji": "病院",
+        "en": [
+          "hospital",
+          "clinic"
+        ]
+      },
+      {
+        "kana": "ホテル",
+        "kanji": "",
+        "en": [
+          "hotel"
+        ]
+      },
+      {
+        "kana": "ほんや",
+        "kanji": "本屋",
+        "en": [
+          "bookstore"
+        ]
+      },
+      {
+        "kana": "としょかん",
+        "kanji": "図書館",
+        "en": [
+          "library"
+        ]
+      },
+      {
+        "kana": "ぎんこう",
+        "kanji": "銀行",
+        "en": [
+          "bank"
+        ]
+      },
+      {
+        "kana": "コンビニ",
+        "kanji": "",
+        "en": [
+          "convenience store"
+        ]
+      },
+      {
+        "kana": "カフェ",
+        "kanji": "",
+        "en": [
+          "cafe"
+        ]
+      },
+      {
+        "kana": "レストラン",
+        "kanji": "",
+        "en": [
+          "restaurant"
+        ]
+      },
+      {
+        "kana": "だいがく",
+        "kanji": "大学",
+        "en": [
+          "university"
+        ]
+      },
+      {
+        "kana": "こうこう",
+        "kanji": "高校",
+        "en": [
+          "high school"
+        ]
+      },
+      {
+        "kana": "ゆうびんきょく",
+        "kanji": "郵便局",
+        "en": [
+          "post office"
+        ]
+      },
+      {
+        "kana": "みぎ",
+        "kanji": "右",
+        "en": [
+          "right"
+        ]
+      },
+      {
+        "kana": "ひだり",
+        "kanji": "左",
+        "en": [
+          "left"
+        ]
+      },
+      {
+        "kana": "まえ",
+        "kanji": "前",
+        "en": [
+          "front"
+        ]
+      },
+      {
+        "kana": "うしろ",
+        "kanji": "後ろ",
+        "en": [
+          "back"
+        ]
+      },
+      {
+        "kana": "なか",
+        "kanji": "中",
+        "en": [
+          "inside"
+        ]
+      },
+      {
+        "kana": "ちかく",
+        "kanji": "近く",
+        "en": [
+          "near"
+        ]
+      },
+      {
+        "kana": "となり",
+        "kanji": "隣",
+        "en": [
+          "next to"
+        ]
+      },
+      {
+        "kana": "あいだ",
+        "kanji": "間",
+        "en": [
+          "between"
+        ]
+      },
+      {
+        "kana": "むかい",
+        "kanji": "向かい",
+        "en": [
+          "across (the street)"
+        ]
+      }
+    ],
+    "5": [
+      {
+        "kana": "ひ",
+        "kana_variants": [
+          "ひ",
+          "にち"
+        ],
+        "kanji": "日",
+        "en": [
+          "day"
+        ]
+      },
+      {
+        "kana": "しゅう",
+        "kanji": "週",
+        "en": [
+          "week"
+        ]
+      },
+      {
+        "kana": "つき",
+        "kana_variants": [
+          "つき",
+          "げつ"
+        ],
+        "kanji": "月",
+        "en": [
+          "month"
+        ]
+      },
+      {
+        "kana": "とし",
+        "kana_variants": [
+          "とし",
+          "ねん"
+        ],
+        "kanji": "年",
+        "en": [
+          "year"
+        ]
+      },
+      {
+        "kana": "にちようび",
+        "kanji": "日曜日",
+        "en": [
+          "Sunday"
+        ]
+      },
+      {
+        "kana": "げつようび",
+        "kanji": "月曜日",
+        "en": [
+          "Monday"
+        ]
+      },
+      {
+        "kana": "かようび",
+        "kanji": "火曜日",
+        "en": [
+          "Tuesday"
+        ]
+      },
+      {
+        "kana": "すいようび",
+        "kanji": "水曜日",
+        "en": [
+          "Wednesday"
+        ]
+      },
+      {
+        "kana": "もくようび",
+        "kanji": "木曜日",
+        "en": [
+          "Thursday"
+        ]
+      },
+      {
+        "kana": "きんようび",
+        "kanji": "金曜日",
+        "en": [
+          "Friday"
+        ]
+      },
+      {
+        "kana": "どようび",
+        "kanji": "土曜日",
+        "en": [
+          "Saturday"
+        ]
+      },
+      {
+        "kana": "いちがつ",
+        "kanji": "一月",
+        "en": [
+          "January"
+        ]
+      },
+      {
+        "kana": "にがつ",
+        "kanji": "二月",
+        "en": [
+          "February"
+        ]
+      },
+      {
+        "kana": "さんがつ",
+        "kanji": "三月",
+        "en": [
+          "March"
+        ]
+      },
+      {
+        "kana": "しがつ",
+        "kanji": "四月",
+        "en": [
+          "April"
+        ]
+      },
+      {
+        "kana": "ごがつ",
+        "kanji": "五月",
+        "en": [
+          "May"
+        ]
+      },
+      {
+        "kana": "ろくがつ",
+        "kanji": "六月",
+        "en": [
+          "June"
+        ]
+      },
+      {
+        "kana": "しちがつ",
+        "kanji": "七月",
+        "en": [
+          "July"
+        ]
+      },
+      {
+        "kana": "はちがつ",
+        "kanji": "八月",
+        "en": [
+          "August"
+        ]
+      },
+      {
+        "kana": "くがつ",
+        "kanji": "九月",
+        "en": [
+          "September"
+        ]
+      },
+      {
+        "kana": "じゅうがつ",
+        "kanji": "十月",
+        "en": [
+          "October"
+        ]
+      },
+      {
+        "kana": "じゅういちがつ",
+        "kanji": "十一月",
+        "en": [
+          "November"
+        ]
+      },
+      {
+        "kana": "じゅうにがつ",
+        "kanji": "十二月",
+        "en": [
+          "December"
+        ]
+      },
+      {
+        "kana": "ついたち",
+        "kanji": "一日",
+        "en": [
+          "1st"
+        ]
+      },
+      {
+        "kana": "ふつか",
+        "kanji": "二日",
+        "en": [
+          "2nd"
+        ]
+      },
+      {
+        "kana": "みっか",
+        "kanji": "三日",
+        "en": [
+          "3rd"
+        ]
+      },
+      {
+        "kana": "よっか",
+        "kanji": "四日",
+        "en": [
+          "4th"
+        ]
+      },
+      {
+        "kana": "いつか",
+        "kanji": "五日",
+        "en": [
+          "5th"
+        ]
+      },
+      {
+        "kana": "むいか",
+        "kanji": "六日",
+        "en": [
+          "6th"
+        ]
+      },
+      {
+        "kana": "なのか",
+        "kanji": "七日",
+        "en": [
+          "7th"
+        ]
+      },
+      {
+        "kana": "ようか",
+        "kanji": "八日",
+        "en": [
+          "8th"
+        ]
+      },
+      {
+        "kana": "ここのか",
+        "kanji": "九日",
+        "en": [
+          "9th"
+        ]
+      },
+      {
+        "kana": "とおか",
+        "kanji": "十日",
+        "en": [
+          "10th"
+        ]
+      },
+      {
+        "kana": "じゅういちにち",
+        "kanji": "十一日",
+        "en": [
+          "11th"
+        ]
+      },
+      {
+        "kana": "じゅうににち",
+        "kanji": "十二日",
+        "en": [
+          "12th"
+        ]
+      },
+      {
+        "kana": "じゅうさんにち",
+        "kanji": "十三日",
+        "en": [
+          "13th"
+        ]
+      },
+      {
+        "kana": "じゅうよっか",
+        "kanji": "十四日",
+        "en": [
+          "14th"
+        ]
+      },
+      {
+        "kana": "じゅうごにち",
+        "kanji": "十五日",
+        "en": [
+          "15th"
+        ]
+      },
+      {
+        "kana": "じゅうろくにち",
+        "kanji": "十六日",
+        "en": [
+          "16th"
+        ]
+      },
+      {
+        "kana": "じゅうしちにち",
+        "kanji": "十七日",
+        "en": [
+          "17th"
+        ]
+      },
+      {
+        "kana": "じゅうはちにち",
+        "kanji": "十八日",
+        "en": [
+          "18th"
+        ]
+      },
+      {
+        "kana": "じゅうくにち",
+        "kanji": "十九日",
+        "en": [
+          "19th"
+        ]
+      },
+      {
+        "kana": "はつか",
+        "kanji": "二十日",
+        "en": [
+          "20th"
+        ]
+      },
+      {
+        "kana": "にじゅういちにち",
+        "kanji": "二十一日",
+        "en": [
+          "21st"
+        ]
+      },
+      {
+        "kana": "にじゅうににち",
+        "kanji": "二十二日",
+        "en": [
+          "22nd"
+        ]
+      },
+      {
+        "kana": "にじゅうさんにち",
+        "kanji": "二十三日",
+        "en": [
+          "23rd"
+        ]
+      },
+      {
+        "kana": "にじゅうよっか",
+        "kanji": "二十四日",
+        "en": [
+          "24th"
+        ]
+      },
+      {
+        "kana": "にじゅうごにち",
+        "kanji": "二十五日",
+        "en": [
+          "25th"
+        ]
+      },
+      {
+        "kana": "にじゅうろくにち",
+        "kanji": "二十六日",
+        "en": [
+          "26th"
+        ]
+      },
+      {
+        "kana": "にじゅうしちにち",
+        "kanji": "二十七日",
+        "en": [
+          "27th"
+        ]
+      },
+      {
+        "kana": "にじゅうはちにち",
+        "kanji": "二十八日",
+        "en": [
+          "28th"
+        ]
+      },
+      {
+        "kana": "にじゅうくにち",
+        "kanji": "二十九日",
+        "en": [
+          "29th"
+        ]
+      },
+      {
+        "kana": "さんじゅうにち",
+        "kanji": "三十日",
+        "en": [
+          "30th"
+        ]
+      },
+      {
+        "kana": "さんじゅういちにち",
+        "kanji": "三十一日",
+        "en": [
+          "31st"
         ]
       }
     ]
