@@ -1,19 +1,19 @@
 {
   "手伝う": {
     "Male option 2": "Audio/Male option 2/129_離途（ノーマル）_手伝う.wav",
-    "Female option 2": "Audio/Female option 2/129_東北ずん子（ノーマル）_手伝う.wav",
+    "Female option 2": "Audio/Female option 2/129_東北ずん子（ノーマル）_手伝う.wav",
     "Male option 1": "Audio/Male option 1/129_雀松朱司（ノーマル）_手伝う.wav",
     "Female option 1": "Audio/Female option 1/129_東北きりたん（ノーマル）_手伝う.wav"
   },
   "あなたさえ": {
     "Male option 2": "Audio/Male option 2/280_離途（ノーマル）_あなたさえ.wav",
-    "Female option 2": "Audio/Female option 2/280_東北ずん子（ノーマル）_あなたさえ.wav",
+    "Female option 2": "Audio/Female option 2/280_東北ずん子（ノーマル）_あなたさえ.wav",
     "Male option 1": "Audio/Male option 1/280_雀松朱司（ノーマル）_あなたさえ.wav",
     "Female option 1": "Audio/Female option 1/280_東北きりたん（ノーマル）_あなたさえ.wav"
   },
   "可能性": {
     "Male option 2": "Audio/Male option 2/363_離途（ノーマル）_可能性.wav",
-    "Female option 2": "Audio/Female option 2/363_東北ずん子（ノーマル）_可能性.wav",
+    "Female option 2": "Audio/Female option 2/363_東北ずん子（ノーマル）_可能性.wav",
     "Male option 1": "Audio/Male option 1/363_雀松朱司（ノーマル）_可能性.wav",
     "Female option 1": "Audio/Female option 1/363_東北きりたん（ノーマル）_可能性.wav"
   },
@@ -31,19 +31,19 @@
   },
   "英語": {
     "Male option 2": "Audio/Male option 2/078_離途（ノーマル）_英語.wav",
-    "Female option 2": "Audio/Female option 2/078_東北ずん子（ノーマル）_英語.wav",
+    "Female option 2": "Audio/Female option 2/078_東北ずん子（ノーマル）_英語.wav",
     "Male option 1": "Audio/Male option 1/078_雀松朱司（ノーマル）_英語.wav",
     "Female option 1": "Audio/Female option 1/078_東北きりたん（ノーマル）_英語.wav"
   },
   "行ったことがある": {
-    "Male option 2": "Audio/Male option 2/188_離途（ノーマル）_行ったことがある.wav",
-    "Female option 2": "Audio/Female option 2/188_東北ずん子（ノーマル）_行ったことがある.wav",
-    "Male option 1": "Audio/Male option 1/188_雀松朱司（ノーマル）_行ったことがある.wav",
-    "Female option 1": "Audio/Female option 1/188_東北きりたん（ノーマル）_行ったことがある.wav"
+    "Male option 2": "Audio/Male option 2/188_離途（ノーマル）_行ったことがある.wav",
+    "Female option 2": "Audio/Female option 2/188_東北ずん子（ノーマル）_行ったことがある.wav",
+    "Male option 1": "Audio/Male option 1/188_雀松朱司（ノーマル）_行ったことがある.wav",
+    "Female option 1": "Audio/Female option 1/188_東北きりたん（ノーマル）_行ったことがある.wav"
   },
   "義務": {
     "Male option 2": "Audio/Male option 2/242_離途（ノーマル）_義務.wav",
-    "Female option 2": "Audio/Female option 2/242_東北ずん子（ノーマル）_義務.wav",
+    "Female option 2": "Audio/Female option 2/242_東北ずん子（ノーマル）_義務.wav",
     "Male option 1": "Audio/Male option 1/242_雀松朱司（ノーマル）_義務.wav",
     "Female option 1": "Audio/Female option 1/242_東北きりたん（ノーマル）_義務.wav"
   },
@@ -55,61 +55,61 @@
   },
   "願う": {
     "Male option 2": "Audio/Male option 2/231_離途（ノーマル）_願う.wav",
-    "Female option 2": "Audio/Female option 2/231_東北ずん子（ノーマル）_願う.wav",
+    "Female option 2": "Audio/Female option 2/231_東北ずん子（ノーマル）_願う.wav",
     "Male option 1": "Audio/Male option 1/231_雀松朱司（ノーマル）_願う.wav",
     "Female option 1": "Audio/Female option 1/231_東北きりたん（ノーマル）_願う.wav"
   },
   "ご飯": {
-    "Male option 2": "Audio/Male option 2/033_離途（ノーマル）_ご飯.wav",
-    "Female option 2": "Audio/Female option 2/033_東北ずん子（ノーマル）_ご飯.wav",
-    "Male option 1": "Audio/Male option 1/033_雀松朱司（ノーマル）_ご飯.wav",
-    "Female option 1": "Audio/Female option 1/033_東北きりたん（ノーマル）_ご飯.wav"
+    "Male option 2": "Audio/Male option 2/033_離途（ノーマル）_ご飯.wav",
+    "Female option 2": "Audio/Female option 2/033_東北ずん子（ノーマル）_ご飯.wav",
+    "Male option 1": "Audio/Male option 1/033_雀松朱司（ノーマル）_ご飯.wav",
+    "Female option 1": "Audio/Female option 1/033_東北きりたん（ノーマル）_ご飯.wav"
   },
   "数字": {
     "Male option 2": "Audio/Male option 2/329_離途（ノーマル）_数字.wav",
-    "Female option 2": "Audio/Female option 2/329_東北ずん子（ノーマル）_数字.wav",
+    "Female option 2": "Audio/Female option 2/329_東北ずん子（ノーマル）_数字.wav",
     "Male option 1": "Audio/Male option 1/329_雀松朱司（ノーマル）_数字.wav",
     "Female option 1": "Audio/Female option 1/329_東北きりたん（ノーマル）_数字.wav"
   },
   "公園": {
     "Male option 2": "Audio/Male option 2/034_離途（ノーマル）_公園.wav",
-    "Female option 2": "Audio/Female option 2/034_東北ずん子（ノーマル）_公園.wav",
+    "Female option 2": "Audio/Female option 2/034_東北ずん子（ノーマル）_公園.wav",
     "Male option 1": "Audio/Male option 1/034_雀松朱司（ノーマル）_公園.wav",
     "Female option 1": "Audio/Female option 1/034_東北きりたん（ノーマル）_公園.wav"
   },
   "行くようにする": {
     "Male option 2": "Audio/Male option 2/190_離途（ノーマル）_行くようにする.wav",
-    "Female option 2": "Audio/Female option 2/190_東北ずん子（ノーマル）_行くようにする.wav",
+    "Female option 2": "Audio/Female option 2/190_東北ずん子（ノーマル）_行くようにする.wav",
     "Male option 1": "Audio/Male option 1/190_雀松朱司（ノーマル）_行くようにする.wav",
     "Female option 1": "Audio/Female option 1/190_東北きりたん（ノーマル）_行くようにする.wav"
   },
   "方針": {
     "Male option 2": "Audio/Male option 2/334_離途（ノーマル）_方針.wav",
-    "Female option 2": "Audio/Female option 2/334_東北ずん子（ノーマル）_方針.wav",
+    "Female option 2": "Audio/Female option 2/334_東北ずん子（ノーマル）_方針.wav",
     "Male option 1": "Audio/Male option 1/334_雀松朱司（ノーマル）_方針.wav",
     "Female option 1": "Audio/Female option 1/334_東北きりたん（ノーマル）_方針.wav"
   },
   "経過": {
     "Male option 2": "Audio/Male option 2/370_離途（ノーマル）_経過.wav",
-    "Female option 2": "Audio/Female option 2/370_東北ずん子（ノーマル）_経過.wav",
+    "Female option 2": "Audio/Female option 2/370_東北ずん子（ノーマル）_経過.wav",
     "Male option 1": "Audio/Male option 1/370_雀松朱司（ノーマル）_経過.wav",
     "Female option 1": "Audio/Female option 1/370_東北きりたん（ノーマル）_経過.wav"
   },
   "いつ": {
     "Male option 2": "Audio/Male option 2/022_離途（ノーマル）_いつ.wav",
-    "Female option 2": "Audio/Female option 2/022_東北ずん子（ノーマル）_いつ.wav",
+    "Female option 2": "Audio/Female option 2/022_東北ずん子（ノーマル）_いつ.wav",
     "Male option 1": "Audio/Male option 1/022_雀松朱司（ノーマル）_いつ.wav",
     "Female option 1": "Audio/Female option 1/022_東北きりたん（ノーマル）_いつ.wav"
   },
   "感想": {
     "Male option 2": "Audio/Male option 2/253_離途（ノーマル）_感想.wav",
-    "Female option 2": "Audio/Female option 2/253_東北ずん子（ノーマル）_感想.wav",
+    "Female option 2": "Audio/Female option 2/253_東北ずん子（ノーマル）_感想.wav",
     "Male option 1": "Audio/Male option 1/253_雀松朱司（ノーマル）_感想.wav",
     "Female option 1": "Audio/Female option 1/253_東北きりたん（ノーマル）_感想.wav"
   },
   "比較": {
     "Male option 2": "Audio/Male option 2/289_離途（ノーマル）_比較.wav",
-    "Female option 2": "Audio/Female option 2/289_東北ずん子（ノーマル）_比較.wav",
+    "Female option 2": "Audio/Female option 2/289_東北ずん子（ノーマル）_比較.wav",
     "Male option 1": "Audio/Male option 1/289_雀松朱司（ノーマル）_比較.wav",
     "Female option 1": "Audio/Female option 1/289_東北きりたん（ノーマル）_比較.wav"
   },
@@ -121,13 +121,13 @@
   },
   "五": {
     "Male option 2": "Audio/Male option 2/065_離途（ノーマル）_五.wav",
-    "Female option 2": "Audio/Female option 2/065_東北ずん子（ノーマル）_五.wav",
+    "Female option 2": "Audio/Female option 2/065_東北ずん子（ノーマル）_五.wav",
     "Male option 1": "Audio/Male option 1/065_雀松朱司（ノーマル）_五.wav",
     "Female option 1": "Audio/Female option 1/065_東北きりたん（ノーマル）_五.wav"
   },
   "理想": {
     "Male option 2": "Audio/Male option 2/345_離途（ノーマル）_理想.wav",
-    "Female option 2": "Audio/Female option 2/345_東北ずん子（ノーマル）_理想.wav",
+    "Female option 2": "Audio/Female option 2/345_東北ずん子（ノーマル）_理想.wav",
     "Male option 1": "Audio/Male option 1/345_雀松朱司（ノーマル）_理想.wav",
     "Female option 1": "Audio/Female option 1/345_東北きりたん（ノーマル）_理想.wav"
   },
@@ -138,26 +138,26 @@
     "Female option 1": "Audio/Female option 1/037_東北きりたん（ノーマル）_そうです.wav"
   },
   "パン": {
-    "Male option 2": "Audio/Male option 2/031_離途（ノーマル）_パン.wav",
-    "Female option 2": "Audio/Female option 2/031_東北ずん子（ノーマル）_パン.wav",
-    "Male option 1": "Audio/Male option 1/031_雀松朱司（ノーマル）_パン.wav",
-    "Female option 1": "Audio/Female option 1/031_東北きりたん（ノーマル）_パン.wav"
+    "Male option 2": "Audio/Male option 2/031_離途（ノーマル）_パン.wav",
+    "Female option 2": "Audio/Female option 2/031_東北ずん子（ノーマル）_パン.wav",
+    "Male option 1": "Audio/Male option 1/031_雀松朱司（ノーマル）_パン.wav",
+    "Female option 1": "Audio/Female option 1/031_東北きりたん（ノーマル）_パン.wav"
   },
   "彼女": {
     "Male option 2": "Audio/Male option 2/238_離途（ノーマル）_彼女.wav",
-    "Female option 2": "Audio/Female option 2/238_東北ずん子（ノーマル）_彼女.wav",
+    "Female option 2": "Audio/Female option 2/238_東北ずん子（ノーマル）_彼女.wav",
     "Male option 1": "Audio/Male option 1/238_雀松朱司（ノーマル）_彼女.wav",
     "Female option 1": "Audio/Female option 1/238_東北きりたん（ノーマル）_彼女.wav"
   },
   "感動": {
     "Male option 2": "Audio/Male option 2/330_離途（ノーマル）_感動.wav",
-    "Female option 2": "Audio/Female option 2/330_東北ずん子（ノーマル）_感動.wav",
+    "Female option 2": "Audio/Female option 2/330_東北ずん子（ノーマル）_感動.wav",
     "Male option 1": "Audio/Male option 1/330_雀松朱司（ノーマル）_感動.wav",
     "Female option 1": "Audio/Female option 1/330_東北きりたん（ノーマル）_感動.wav"
   },
   "主張": {
     "Male option 2": "Audio/Male option 2/341_離途（ノーマル）_主張.wav",
-    "Female option 2": "Audio/Female option 2/341_東北ずん子（ノーマル）_主張.wav",
+    "Female option 2": "Audio/Female option 2/341_東北ずん子（ノーマル）_主張.wav",
     "Male option 1": "Audio/Male option 1/341_雀松朱司（ノーマル）_主張.wav",
     "Female option 1": "Audio/Female option 1/341_東北きりたん（ノーマル）_主張.wav"
   },
@@ -175,55 +175,55 @@
   },
   "真実": {
     "Male option 2": "Audio/Male option 2/347_離途（ノーマル）_真実.wav",
-    "Female option 2": "Audio/Female option 2/347_東北ずん子（ノーマル）_真実.wav",
+    "Female option 2": "Audio/Female option 2/347_東北ずん子（ノーマル）_真実.wav",
     "Male option 1": "Audio/Male option 1/347_雀松朱司（ノーマル）_真実.wav",
     "Female option 1": "Audio/Female option 1/347_東北きりたん（ノーマル）_真実.wav"
   },
   "これ": {
     "Male option 2": "Audio/Male option 2/015_離途（ノーマル）_これ.wav",
-    "Female option 2": "Audio/Female option 2/015_東北ずん子（ノーマル）_これ.wav",
+    "Female option 2": "Audio/Female option 2/015_東北ずん子（ノーマル）_これ.wav",
     "Male option 1": "Audio/Male option 1/015_雀松朱司（ノーマル）_これ.wav",
     "Female option 1": "Audio/Female option 1/015_東北きりたん（ノーマル）_これ.wav"
   },
   "日本語を話すことが…": {
-    "Male option 2": "Audio/Male option 2/112_離途（ノーマル）_日本語を話すことが….wav",
-    "Female option 2": "Audio/Female option 2/112_東北ずん子（ノーマル）_日本語を話すことが….wav",
-    "Male option 1": "Audio/Male option 1/112_雀松朱司（ノーマル）_日本語を話すことが….wav",
-    "Female option 1": "Audio/Female option 1/112_東北きりたん（ノーマル）_日本語を話すことが….wav"
+    "Male option 2": "Audio/Male option 2/112_離途（ノーマル）_日本語を話すことが….wav",
+    "Female option 2": "Audio/Female option 2/112_東北ずん子（ノーマル）_日本語を話すことが….wav",
+    "Male option 1": "Audio/Male option 1/112_雀松朱司（ノーマル）_日本語を話すことが….wav",
+    "Female option 1": "Audio/Female option 1/112_東北きりたん（ノーマル）_日本語を話すことが….wav"
   },
   "飲む": {
     "Male option 2": "Audio/Male option 2/025_離途（ノーマル）_飲む.wav",
-    "Female option 2": "Audio/Female option 2/025_東北ずん子（ノーマル）_飲む.wav",
+    "Female option 2": "Audio/Female option 2/025_東北ずん子（ノーマル）_飲む.wav",
     "Male option 1": "Audio/Male option 1/025_雀松朱司（ノーマル）_飲む.wav",
     "Female option 1": "Audio/Female option 1/025_東北きりたん（ノーマル）_飲む.wav"
   },
   "行こう": {
     "Male option 2": "Audio/Male option 2/140_離途（ノーマル）_行こう.wav",
-    "Female option 2": "Audio/Female option 2/140_東北ずん子（ノーマル）_行こう.wav",
+    "Female option 2": "Audio/Female option 2/140_東北ずん子（ノーマル）_行こう.wav",
     "Male option 1": "Audio/Male option 1/140_雀松朱司（ノーマル）_行こう.wav",
     "Female option 1": "Audio/Female option 1/140_東北きりたん（ノーマル）_行こう.wav"
   },
   "終了": {
     "Male option 2": "Audio/Male option 2/340_離途（ノーマル）_終了.wav",
-    "Female option 2": "Audio/Female option 2/340_東北ずん子（ノーマル）_終了.wav",
+    "Female option 2": "Audio/Female option 2/340_東北ずん子（ノーマル）_終了.wav",
     "Male option 1": "Audio/Male option 1/340_雀松朱司（ノーマル）_終了.wav",
     "Female option 1": "Audio/Female option 1/340_東北きりたん（ノーマル）_終了.wav"
   },
   "つかれる": {
     "Male option 2": "Audio/Male option 2/123_離途（ノーマル）_つかれる.wav",
-    "Female option 2": "Audio/Female option 2/123_東北ずん子（ノーマル）_つかれる.wav",
+    "Female option 2": "Audio/Female option 2/123_東北ずん子（ノーマル）_つかれる.wav",
     "Male option 1": "Audio/Male option 1/123_雀松朱司（ノーマル）_つかれる.wav",
     "Female option 1": "Audio/Female option 1/123_東北きりたん（ノーマル）_つかれる.wav"
   },
   "勉強しています": {
     "Male option 2": "Audio/Male option 2/110_離途（ノーマル）_勉強しています.wav",
-    "Female option 2": "Audio/Female option 2/110_東北ずん子（ノーマル）_勉強しています.wav",
+    "Female option 2": "Audio/Female option 2/110_東北ずん子（ノーマル）_勉強しています.wav",
     "Male option 1": "Audio/Male option 1/110_雀松朱司（ノーマル）_勉強しています.wav",
     "Female option 1": "Audio/Female option 1/110_東北きりたん（ノーマル）_勉強しています.wav"
   },
   "褒められる": {
     "Male option 2": "Audio/Male option 2/243_離途（ノーマル）_褒められる.wav",
-    "Female option 2": "Audio/Female option 2/243_東北ずん子（ノーマル）_褒められる.wav",
+    "Female option 2": "Audio/Female option 2/243_東北ずん子（ノーマル）_褒められる.wav",
     "Male option 1": "Audio/Male option 1/243_雀松朱司（ノーマル）_褒められる.wav",
     "Female option 1": "Audio/Female option 1/243_東北きりたん（ノーマル）_褒められる.wav"
   },
@@ -241,25 +241,25 @@
   },
   "遅い": {
     "Male option 2": "Audio/Male option 2/053_離途（ノーマル）_遅い.wav",
-    "Female option 2": "Audio/Female option 2/053_東北ずん子（ノーマル）_遅い.wav",
+    "Female option 2": "Audio/Female option 2/053_東北ずん子（ノーマル）_遅い.wav",
     "Male option 1": "Audio/Male option 1/053_雀松朱司（ノーマル）_遅い.wav",
     "Female option 1": "Audio/Female option 1/053_東北きりたん（ノーマル）_遅い.wav"
   },
   "猫": {
     "Male option 2": "Audio/Male option 2/007_離途（ノーマル）_猫.wav",
-    "Female option 2": "Audio/Female option 2/007_東北ずん子（ノーマル）_猫.wav",
+    "Female option 2": "Audio/Female option 2/007_東北ずん子（ノーマル）_猫.wav",
     "Male option 1": "Audio/Male option 1/007_雀松朱司（ノーマル）_猫.wav",
     "Female option 1": "Audio/Female option 1/007_東北きりたん（ノーマル）_猫.wav"
   },
   "叱られる": {
     "Male option 2": "Audio/Male option 2/201_離途（ノーマル）_叱られる.wav",
-    "Female option 2": "Audio/Female option 2/201_東北ずん子（ノーマル）_叱られる.wav",
+    "Female option 2": "Audio/Female option 2/201_東北ずん子（ノーマル）_叱られる.wav",
     "Male option 1": "Audio/Male option 1/201_雀松朱司（ノーマル）_叱られる.wav",
     "Female option 1": "Audio/Female option 1/201_東北きりたん（ノーマル）_叱られる.wav"
   },
   "十": {
     "Male option 2": "Audio/Male option 2/070_離途（ノーマル）_十.wav",
-    "Female option 2": "Audio/Female option 2/070_東北ずん子（ノーマル）_十.wav",
+    "Female option 2": "Audio/Female option 2/070_東北ずん子（ノーマル）_十.wav",
     "Male option 1": "Audio/Male option 1/070_雀松朱司（ノーマル）_十.wav",
     "Female option 1": "Audio/Female option 1/070_東北きりたん（ノーマル）_十.wav"
   },
@@ -271,13 +271,13 @@
   },
   "学校": {
     "Male option 2": "Audio/Male option 2/011_離途（ノーマル）_学校.wav",
-    "Female option 2": "Audio/Female option 2/011_東北ずん子（ノーマル）_学校.wav",
+    "Female option 2": "Audio/Female option 2/011_東北ずん子（ノーマル）_学校.wav",
     "Male option 1": "Audio/Male option 1/011_雀松朱司（ノーマル）_学校.wav",
     "Female option 1": "Audio/Female option 1/011_東北きりたん（ノーマル）_学校.wav"
   },
   "椅子": {
     "Male option 2": "Audio/Male option 2/039_離途（ノーマル）_椅子.wav",
-    "Female option 2": "Audio/Female option 2/039_東北ずん子（ノーマル）_椅子.wav",
+    "Female option 2": "Audio/Female option 2/039_東北ずん子（ノーマル）_椅子.wav",
     "Male option 1": "Audio/Male option 1/039_雀松朱司（ノーマル）_椅子.wav",
     "Female option 1": "Audio/Female option 1/039_東北きりたん（ノーマル）_椅子.wav"
   },
@@ -295,31 +295,31 @@
   },
   "立場": {
     "Male option 2": "Audio/Male option 2/336_離途（ノーマル）_立場.wav",
-    "Female option 2": "Audio/Female option 2/336_東北ずん子（ノーマル）_立場.wav",
+    "Female option 2": "Audio/Female option 2/336_東北ずん子（ノーマル）_立場.wav",
     "Male option 1": "Audio/Male option 1/336_雀松朱司（ノーマル）_立場.wav",
     "Female option 1": "Audio/Female option 1/336_東北きりたん（ノーマル）_立場.wav"
   },
   "座ったまま": {
     "Male option 2": "Audio/Male option 2/278_離途（ノーマル）_座ったまま.wav",
-    "Female option 2": "Audio/Female option 2/278_東北ずん子（ノーマル）_座ったまま.wav",
+    "Female option 2": "Audio/Female option 2/278_東北ずん子（ノーマル）_座ったまま.wav",
     "Male option 1": "Audio/Male option 1/278_雀松朱司（ノーマル）_座ったまま.wav",
     "Female option 1": "Audio/Female option 1/278_東北きりたん（ノーマル）_座ったまま.wav"
   },
   "見ました": {
     "Male option 2": "Audio/Male option 2/089_離途（ノーマル）_見ました.wav",
-    "Female option 2": "Audio/Female option 2/089_東北ずん子（ノーマル）_見ました.wav",
+    "Female option 2": "Audio/Female option 2/089_東北ずん子（ノーマル）_見ました.wav",
     "Male option 1": "Audio/Male option 1/089_雀松朱司（ノーマル）_見ました.wav",
     "Female option 1": "Audio/Female option 1/089_東北きりたん（ノーマル）_見ました.wav"
   },
   "分かるかどうか": {
-    "Male option 2": "Audio/Male option 2/269_離途（ノーマル）_分かるかどうか.wav",
-    "Female option 2": "Audio/Female option 2/269_東北ずん子（ノーマル）_分かるかどうか.wav",
-    "Male option 1": "Audio/Male option 1/269_雀松朱司（ノーマル）_分かるかどうか.wav",
-    "Female option 1": "Audio/Female option 1/269_東北きりたん（ノーマル）_分かるかどうか.wav"
+    "Male option 2": "Audio/Male option 2/269_離途（ノーマル）_分かるかどうか.wav",
+    "Female option 2": "Audio/Female option 2/269_東北ずん子（ノーマル）_分かるかどうか.wav",
+    "Male option 1": "Audio/Male option 1/269_雀松朱司（ノーマル）_分かるかどうか.wav",
+    "Female option 1": "Audio/Female option 1/269_東北きりたん（ノーマル）_分かるかどうか.wav"
   },
   "事故": {
     "Male option 2": "Audio/Male option 2/154_離途（ノーマル）_事故.wav",
-    "Female option 2": "Audio/Female option 2/154_東北ずん子（ノーマル）_事故.wav",
+    "Female option 2": "Audio/Female option 2/154_東北ずん子（ノーマル）_事故.wav",
     "Male option 1": "Audio/Male option 1/154_雀松朱司（ノーマル）_事故.wav",
     "Female option 1": "Audio/Female option 1/154_東北きりたん（ノーマル）_事故.wav"
   },
@@ -331,7 +331,7 @@
   },
   "議論": {
     "Male option 2": "Audio/Male option 2/323_離途（ノーマル）_議論.wav",
-    "Female option 2": "Audio/Female option 2/323_東北ずん子（ノーマル）_議論.wav",
+    "Female option 2": "Audio/Female option 2/323_東北ずん子（ノーマル）_議論.wav",
     "Male option 1": "Audio/Male option 1/323_雀松朱司（ノーマル）_議論.wav",
     "Female option 1": "Audio/Female option 1/323_東北きりたん（ノーマル）_議論.wav"
   },
@@ -349,19 +349,19 @@
   },
   "思い出す": {
     "Male option 2": "Audio/Male option 2/211_離途（ノーマル）_思い出す.wav",
-    "Female option 2": "Audio/Female option 2/211_東北ずん子（ノーマル）_思い出す.wav",
+    "Female option 2": "Audio/Female option 2/211_東北ずん子（ノーマル）_思い出す.wav",
     "Male option 1": "Audio/Male option 1/211_雀松朱司（ノーマル）_思い出す.wav",
     "Female option 1": "Audio/Female option 1/211_東北きりたん（ノーマル）_思い出す.wav"
   },
   "減る": {
     "Male option 2": "Audio/Male option 2/287_離途（ノーマル）_減る.wav",
-    "Female option 2": "Audio/Female option 2/287_東北ずん子（ノーマル）_減る.wav",
+    "Female option 2": "Audio/Female option 2/287_東北ずん子（ノーマル）_減る.wav",
     "Male option 1": "Audio/Male option 1/287_雀松朱司（ノーマル）_減る.wav",
     "Female option 1": "Audio/Female option 1/287_東北きりたん（ノーマル）_減る.wav"
   },
   "閉める": {
     "Male option 2": "Audio/Male option 2/185_離途（ノーマル）_閉める.wav",
-    "Female option 2": "Audio/Female option 2/185_東北ずん子（ノーマル）_閉める.wav",
+    "Female option 2": "Audio/Female option 2/185_東北ずん子（ノーマル）_閉める.wav",
     "Male option 1": "Audio/Male option 1/185_雀松朱司（ノーマル）_閉める.wav",
     "Female option 1": "Audio/Female option 1/185_東北きりたん（ノーマル）_閉める.wav"
   },
@@ -385,19 +385,19 @@
   },
   "もし": {
     "Male option 2": "Audio/Male option 2/295_離途（ノーマル）_もし.wav",
-    "Female option 2": "Audio/Female option 2/295_東北ずん子（ノーマル）_もし.wav",
+    "Female option 2": "Audio/Female option 2/295_東北ずん子（ノーマル）_もし.wav",
     "Male option 1": "Audio/Male option 1/295_雀松朱司（ノーマル）_もし.wav",
     "Female option 1": "Audio/Female option 1/295_東北きりたん（ノーマル）_もし.wav"
   },
   "誰": {
     "Male option 2": "Audio/Male option 2/021_離途（ノーマル）_誰.wav",
-    "Female option 2": "Audio/Female option 2/021_東北ずん子（ノーマル）_誰.wav",
+    "Female option 2": "Audio/Female option 2/021_東北ずん子（ノーマル）_誰.wav",
     "Male option 1": "Audio/Male option 1/021_雀松朱司（ノーマル）_誰.wav",
     "Female option 1": "Audio/Female option 1/021_東北きりたん（ノーマル）_誰.wav"
   },
   "判断": {
     "Male option 2": "Audio/Male option 2/338_離途（ノーマル）_判断.wav",
-    "Female option 2": "Audio/Female option 2/338_東北ずん子（ノーマル）_判断.wav",
+    "Female option 2": "Audio/Female option 2/338_東北ずん子（ノーマル）_判断.wav",
     "Male option 1": "Audio/Male option 1/338_雀松朱司（ノーマル）_判断.wav",
     "Female option 1": "Audio/Female option 1/338_東北きりたん（ノーマル）_判断.wav"
   },
@@ -409,19 +409,19 @@
   },
   "準備": {
     "Male option 2": "Audio/Male option 2/297_離途（ノーマル）_準備.wav",
-    "Female option 2": "Audio/Female option 2/297_東北ずん子（ノーマル）_準備.wav",
+    "Female option 2": "Audio/Female option 2/297_東北ずん子（ノーマル）_準備.wav",
     "Male option 1": "Audio/Male option 1/297_雀松朱司（ノーマル）_準備.wav",
     "Female option 1": "Audio/Female option 1/297_東北きりたん（ノーマル）_準備.wav"
   },
   "たかい": {
     "Male option 2": "Audio/Male option 2/043_離途（ノーマル）_たかい.wav",
-    "Female option 2": "Audio/Female option 2/043_東北ずん子（ノーマル）_たかい.wav",
+    "Female option 2": "Audio/Female option 2/043_東北ずん子（ノーマル）_たかい.wav",
     "Male option 1": "Audio/Male option 1/043_雀松朱司（ノーマル）_たかい.wav",
     "Female option 1": "Audio/Female option 1/043_東北きりたん（ノーマル）_たかい.wav"
   },
   "行かせられる": {
     "Male option 2": "Audio/Male option 2/244_離途（ノーマル）_行かせられる.wav",
-    "Female option 2": "Audio/Female option 2/244_東北ずん子（ノーマル）_行かせられる.wav",
+    "Female option 2": "Audio/Female option 2/244_東北ずん子（ノーマル）_行かせられる.wav",
     "Male option 1": "Audio/Male option 1/244_雀松朱司（ノーマル）_行かせられる.wav",
     "Female option 1": "Audio/Female option 1/244_東北きりたん（ノーマル）_行かせられる.wav"
   },
@@ -439,31 +439,31 @@
   },
   "人": {
     "Male option 2": "Audio/Male option 2/041_離途（ノーマル）_人.wav",
-    "Female option 2": "Audio/Female option 2/041_東北ずん子（ノーマル）_人.wav",
+    "Female option 2": "Audio/Female option 2/041_東北ずん子（ノーマル）_人.wav",
     "Male option 1": "Audio/Male option 1/041_雀松朱司（ノーマル）_人.wav",
     "Female option 1": "Audio/Female option 1/041_東北きりたん（ノーマル）_人.wav"
   },
   "食べています": {
-    "Male option 2": "Audio/Male option 2/111_離途（ノーマル）_食べています.wav",
-    "Female option 2": "Audio/Female option 2/111_東北ずん子（ノーマル）_食べています.wav",
-    "Male option 1": "Audio/Male option 1/111_雀松朱司（ノーマル）_食べています.wav",
-    "Female option 1": "Audio/Female option 1/111_東北きりたん（ノーマル）_食べています.wav"
+    "Male option 2": "Audio/Male option 2/111_離途（ノーマル）_食べています.wav",
+    "Female option 2": "Audio/Female option 2/111_東北ずん子（ノーマル）_食べています.wav",
+    "Male option 1": "Audio/Male option 1/111_雀松朱司（ノーマル）_食べています.wav",
+    "Female option 1": "Audio/Female option 1/111_東北きりたん（ノーマル）_食べています.wav"
   },
   "どこ": {
-    "Male option 2": "Audio/Male option 2/014_離途（ノーマル）_どこ.wav",
-    "Female option 2": "Audio/Female option 2/014_東北ずん子（ノーマル）_どこ.wav",
-    "Male option 1": "Audio/Male option 1/014_雀松朱司（ノーマル）_どこ.wav",
-    "Female option 1": "Audio/Female option 1/014_東北きりたん（ノーマル）_どこ.wav"
+    "Male option 2": "Audio/Male option 2/014_離途（ノーマル）_どこ.wav",
+    "Female option 2": "Audio/Female option 2/014_東北ずん子（ノーマル）_どこ.wav",
+    "Male option 1": "Audio/Male option 1/014_雀松朱司（ノーマル）_どこ.wav",
+    "Female option 1": "Audio/Female option 1/014_東北きりたん（ノーマル）_どこ.wav"
   },
   "しかし": {
     "Male option 2": "Audio/Male option 2/208_離途（ノーマル）_しかし.wav",
-    "Female option 2": "Audio/Female option 2/208_東北ずん子（ノーマル）_しかし.wav",
+    "Female option 2": "Audio/Female option 2/208_東北ずん子（ノーマル）_しかし.wav",
     "Male option 1": "Audio/Male option 1/208_雀松朱司（ノーマル）_しかし.wav",
     "Female option 1": "Audio/Female option 1/208_東北きりたん（ノーマル）_しかし.wav"
   },
   "習慣": {
     "Male option 2": "Audio/Male option 2/220_離途（ノーマル）_習慣.wav",
-    "Female option 2": "Audio/Female option 2/220_東北ずん子（ノーマル）_習慣.wav",
+    "Female option 2": "Audio/Female option 2/220_東北ずん子（ノーマル）_習慣.wav",
     "Male option 1": "Audio/Male option 1/220_雀松朱司（ノーマル）_習慣.wav",
     "Female option 1": "Audio/Female option 1/220_東北きりたん（ノーマル）_習慣.wav"
   },
@@ -480,10 +480,10 @@
     "Female option 1": "Audio/Female option 1/090_東北きりたん（ノーマル）_どうも.wav"
   },
   "いただく": {
-    "Male option 2": "Audio/Male option 2/192_離途（ノーマル）_いただく.wav",
-    "Female option 2": "Audio/Female option 2/192_東北ずん子（ノーマル）_いただく.wav",
-    "Male option 1": "Audio/Male option 1/192_雀松朱司（ノーマル）_いただく.wav",
-    "Female option 1": "Audio/Female option 1/192_東北きりたん（ノーマル）_いただく.wav"
+    "Male option 2": "Audio/Male option 2/192_離途（ノーマル）_いただく.wav",
+    "Female option 2": "Audio/Female option 2/192_東北ずん子（ノーマル）_いただく.wav",
+    "Male option 1": "Audio/Male option 1/192_雀松朱司（ノーマル）_いただく.wav",
+    "Female option 1": "Audio/Female option 1/192_東北きりたん（ノーマル）_いただく.wav"
   },
   "ちゅうごく": {
     "Male option 2": "Audio/Male option 2/044_離途（ノーマル）_ちゅうごく.wav",
@@ -493,13 +493,13 @@
   },
   "見方": {
     "Male option 2": "Audio/Male option 2/337_離途（ノーマル）_見方.wav",
-    "Female option 2": "Audio/Female option 2/337_東北ずん子（ノーマル）_見方.wav",
+    "Female option 2": "Audio/Female option 2/337_東北ずん子（ノーマル）_見方.wav",
     "Male option 1": "Audio/Male option 1/337_雀松朱司（ノーマル）_見方.wav",
     "Female option 1": "Audio/Female option 1/337_東北きりたん（ノーマル）_見方.wav"
   },
   "店": {
     "Male option 2": "Audio/Male option 2/036_離途（ノーマル）_店.wav",
-    "Female option 2": "Audio/Female option 2/036_東北ずん子（ノーマル）_店.wav",
+    "Female option 2": "Audio/Female option 2/036_東北ずん子（ノーマル）_店.wav",
     "Male option 1": "Audio/Male option 1/036_雀松朱司（ノーマル）_店.wav",
     "Female option 1": "Audio/Female option 1/036_東北きりたん（ノーマル）_店.wav"
   },
@@ -510,10 +510,10 @@
     "Female option 1": "Audio/Female option 1/092_東北きりたん（ノーマル）_おとうさん.wav"
   },
   "くださる": {
-    "Male option 2": "Audio/Male option 2/193_離途（ノーマル）_くださる.wav",
-    "Female option 2": "Audio/Female option 2/193_東北ずん子（ノーマル）_くださる.wav",
-    "Male option 1": "Audio/Male option 1/193_雀松朱司（ノーマル）_くださる.wav",
-    "Female option 1": "Audio/Female option 1/193_東北きりたん（ノーマル）_くださる.wav"
+    "Male option 2": "Audio/Male option 2/193_離途（ノーマル）_くださる.wav",
+    "Female option 2": "Audio/Female option 2/193_東北ずん子（ノーマル）_くださる.wav",
+    "Male option 1": "Audio/Male option 1/193_雀松朱司（ノーマル）_くださる.wav",
+    "Female option 1": "Audio/Female option 1/193_東北きりたん（ノーマル）_くださる.wav"
   },
   "かいしゃいん": {
     "Male option 2": "Audio/Male option 2/048_離途（ノーマル）_かいしゃいん.wav",
@@ -523,37 +523,37 @@
   },
   "行くところ": {
     "Male option 2": "Audio/Male option 2/205_離途（ノーマル）_行くところ.wav",
-    "Female option 2": "Audio/Female option 2/205_東北ずん子（ノーマル）_行くところ.wav",
+    "Female option 2": "Audio/Female option 2/205_東北ずん子（ノーマル）_行くところ.wav",
     "Male option 1": "Audio/Male option 1/205_雀松朱司（ノーマル）_行くところ.wav",
     "Female option 1": "Audio/Female option 1/205_東北きりたん（ノーマル）_行くところ.wav"
   },
   "噂": {
     "Male option 2": "Audio/Male option 2/222_離途（ノーマル）_噂.wav",
-    "Female option 2": "Audio/Female option 2/222_東北ずん子（ノーマル）_噂.wav",
+    "Female option 2": "Audio/Female option 2/222_東北ずん子（ノーマル）_噂.wav",
     "Male option 1": "Audio/Male option 1/222_雀松朱司（ノーマル）_噂.wav",
     "Female option 1": "Audio/Female option 1/222_東北きりたん（ノーマル）_噂.wav"
   },
   "行く": {
     "Male option 2": "Audio/Male option 2/026_離途（ノーマル）_行く.wav",
-    "Female option 2": "Audio/Female option 2/026_東北ずん子（ノーマル）_行く.wav",
+    "Female option 2": "Audio/Female option 2/026_東北ずん子（ノーマル）_行く.wav",
     "Male option 1": "Audio/Male option 1/026_雀松朱司（ノーマル）_行く.wav",
     "Female option 1": "Audio/Female option 1/026_東北きりたん（ノーマル）_行く.wav"
   },
   "勉強": {
     "Male option 2": "Audio/Male option 2/163_離途（ノーマル）_勉強.wav",
-    "Female option 2": "Audio/Female option 2/163_東北ずん子（ノーマル）_勉強.wav",
+    "Female option 2": "Audio/Female option 2/163_東北ずん子（ノーマル）_勉強.wav",
     "Male option 1": "Audio/Male option 1/163_雀松朱司（ノーマル）_勉強.wav",
     "Female option 1": "Audio/Female option 1/163_東北きりたん（ノーマル）_勉強.wav"
   },
   "そのため": {
     "Male option 2": "Audio/Male option 2/209_離途（ノーマル）_そのため.wav",
-    "Female option 2": "Audio/Female option 2/209_東北ずん子（ノーマル）_そのため.wav",
+    "Female option 2": "Audio/Female option 2/209_東北ずん子（ノーマル）_そのため.wav",
     "Male option 1": "Audio/Male option 1/209_雀松朱司（ノーマル）_そのため.wav",
     "Female option 1": "Audio/Female option 1/209_東北きりたん（ノーマル）_そのため.wav"
   },
   "例外": {
     "Male option 2": "Audio/Male option 2/307_離途（ノーマル）_例外.wav",
-    "Female option 2": "Audio/Female option 2/307_東北ずん子（ノーマル）_例外.wav",
+    "Female option 2": "Audio/Female option 2/307_東北ずん子（ノーマル）_例外.wav",
     "Male option 1": "Audio/Male option 1/307_雀松朱司（ノーマル）_例外.wav",
     "Female option 1": "Audio/Female option 1/307_東北きりたん（ノーマル）_例外.wav"
   },
@@ -589,19 +589,19 @@
   },
   "苦労": {
     "Male option 2": "Audio/Male option 2/351_離途（ノーマル）_苦労.wav",
-    "Female option 2": "Audio/Female option 2/351_東北ずん子（ノーマル）_苦労.wav",
+    "Female option 2": "Audio/Female option 2/351_東北ずん子（ノーマル）_苦労.wav",
     "Male option 1": "Audio/Male option 1/351_雀松朱司（ノーマル）_苦労.wav",
     "Female option 1": "Audio/Female option 1/351_東北きりたん（ノーマル）_苦労.wav"
   },
   "食べた人": {
-    "Male option 2": "Audio/Male option 2/204_離途（ノーマル）_食べた人.wav",
-    "Female option 2": "Audio/Female option 2/204_東北ずん子（ノーマル）_食べた人.wav",
-    "Male option 1": "Audio/Male option 1/204_雀松朱司（ノーマル）_食べた人.wav",
-    "Female option 1": "Audio/Female option 1/204_東北きりたん（ノーマル）_食べた人.wav"
+    "Male option 2": "Audio/Male option 2/204_離途（ノーマル）_食べた人.wav",
+    "Female option 2": "Audio/Female option 2/204_東北ずん子（ノーマル）_食べた人.wav",
+    "Male option 1": "Audio/Male option 1/204_雀松朱司（ノーマル）_食べた人.wav",
+    "Female option 1": "Audio/Female option 1/204_東北きりたん（ノーマル）_食べた人.wav"
   },
   "想像": {
     "Male option 2": "Audio/Male option 2/360_離途（ノーマル）_想像.wav",
-    "Female option 2": "Audio/Female option 2/360_東北ずん子（ノーマル）_想像.wav",
+    "Female option 2": "Audio/Female option 2/360_東北ずん子（ノーマル）_想像.wav",
     "Male option 1": "Audio/Male option 1/360_雀松朱司（ノーマル）_想像.wav",
     "Female option 1": "Audio/Female option 1/360_東北きりたん（ノーマル）_想像.wav"
   },
@@ -612,10 +612,10 @@
     "Female option 1": "Audio/Female option 1/134_東北きりたん（ノーマル）_しゅうまつ.wav"
   },
   "見てください": {
-    "Male option 2": "Audio/Male option 2/108_離途（ノーマル）_見てください.wav",
-    "Female option 2": "Audio/Female option 2/108_東北ずん子（ノーマル）_見てください.wav",
-    "Male option 1": "Audio/Male option 1/108_雀松朱司（ノーマル）_見てください.wav",
-    "Female option 1": "Audio/Female option 1/108_東北きりたん（ノーマル）_見てください.wav"
+    "Male option 2": "Audio/Male option 2/108_離途（ノーマル）_見てください.wav",
+    "Female option 2": "Audio/Female option 2/108_東北ずん子（ノーマル）_見てください.wav",
+    "Male option 1": "Audio/Male option 1/108_雀松朱司（ノーマル）_見てください.wav",
+    "Female option 1": "Audio/Female option 1/108_東北きりたん（ノーマル）_見てください.wav"
   },
   "（～を）ください": {
     "Male option 2": "Audio/Male option 2/088_離途（ノーマル）_（～を）ください.wav",
@@ -631,55 +631,55 @@
   },
   "される": {
     "Male option 2": "Audio/Male option 2/181_離途（ノーマル）_される.wav",
-    "Female option 2": "Audio/Female option 2/181_東北ずん子（ノーマル）_される.wav",
+    "Female option 2": "Audio/Female option 2/181_東北ずん子（ノーマル）_される.wav",
     "Male option 1": "Audio/Male option 1/181_雀松朱司（ノーマル）_される.wav",
     "Female option 1": "Audio/Female option 1/181_東北きりたん（ノーマル）_される.wav"
   },
   "意外": {
     "Male option 2": "Audio/Male option 2/258_離途（ノーマル）_意外.wav",
-    "Female option 2": "Audio/Female option 2/258_東北ずん子（ノーマル）_意外.wav",
+    "Female option 2": "Audio/Female option 2/258_東北ずん子（ノーマル）_意外.wav",
     "Male option 1": "Audio/Male option 1/258_雀松朱司（ノーマル）_意外.wav",
     "Female option 1": "Audio/Female option 1/258_東北きりたん（ノーマル）_意外.wav"
   },
   "寂しい": {
     "Male option 2": "Audio/Male option 2/276_離途（ノーマル）_寂しい.wav",
-    "Female option 2": "Audio/Female option 2/276_東北ずん子（ノーマル）_寂しい.wav",
+    "Female option 2": "Audio/Female option 2/276_東北ずん子（ノーマル）_寂しい.wav",
     "Male option 1": "Audio/Male option 1/276_雀松朱司（ノーマル）_寂しい.wav",
     "Female option 1": "Audio/Female option 1/276_東北きりたん（ノーマル）_寂しい.wav"
   },
   "様子": {
     "Male option 2": "Audio/Male option 2/224_離途（ノーマル）_様子.wav",
-    "Female option 2": "Audio/Female option 2/224_東北ずん子（ノーマル）_様子.wav",
+    "Female option 2": "Audio/Female option 2/224_東北ずん子（ノーマル）_様子.wav",
     "Male option 1": "Audio/Male option 1/224_雀松朱司（ノーマル）_様子.wav",
     "Female option 1": "Audio/Female option 1/224_東北きりたん（ノーマル）_様子.wav"
   },
   "まっすぐ": {
-    "Male option 2": "Audio/Male option 2/122_離途（ノーマル）_まっすぐ.wav",
-    "Female option 2": "Audio/Female option 2/122_東北ずん子（ノーマル）_まっすぐ.wav",
-    "Male option 1": "Audio/Male option 1/122_雀松朱司（ノーマル）_まっすぐ.wav",
-    "Female option 1": "Audio/Female option 1/122_東北きりたん（ノーマル）_まっすぐ.wav"
+    "Male option 2": "Audio/Male option 2/122_離途（ノーマル）_まっすぐ.wav",
+    "Female option 2": "Audio/Female option 2/122_東北ずん子（ノーマル）_まっすぐ.wav",
+    "Male option 1": "Audio/Male option 1/122_雀松朱司（ノーマル）_まっすぐ.wav",
+    "Female option 1": "Audio/Female option 1/122_東北きりたん（ノーマル）_まっすぐ.wav"
   },
   "変化": {
     "Male option 2": "Audio/Male option 2/288_離途（ノーマル）_変化.wav",
-    "Female option 2": "Audio/Female option 2/288_東北ずん子（ノーマル）_変化.wav",
+    "Female option 2": "Audio/Female option 2/288_東北ずん子（ノーマル）_変化.wav",
     "Male option 1": "Audio/Male option 1/288_雀松朱司（ノーマル）_変化.wav",
     "Female option 1": "Audio/Female option 1/288_東北きりたん（ノーマル）_変化.wav"
   },
   "練習する": {
     "Male option 2": "Audio/Male option 2/130_離途（ノーマル）_練習する.wav",
-    "Female option 2": "Audio/Female option 2/130_東北ずん子（ノーマル）_練習する.wav",
+    "Female option 2": "Audio/Female option 2/130_東北ずん子（ノーマル）_練習する.wav",
     "Male option 1": "Audio/Male option 1/130_雀松朱司（ノーマル）_練習する.wav",
     "Female option 1": "Audio/Female option 1/130_東北きりたん（ノーマル）_練習する.wav"
   },
   "行事": {
     "Male option 2": "Audio/Male option 2/296_離途（ノーマル）_行事.wav",
-    "Female option 2": "Audio/Female option 2/296_東北ずん子（ノーマル）_行事.wav",
+    "Female option 2": "Audio/Female option 2/296_東北ずん子（ノーマル）_行事.wav",
     "Male option 1": "Audio/Male option 1/296_雀松朱司（ノーマル）_行事.wav",
     "Female option 1": "Audio/Female option 1/296_東北きりたん（ノーマル）_行事.wav"
   },
   "いいね": {
     "Male option 2": "Audio/Male option 2/073_離途（ノーマル）_いいね.wav",
-    "Female option 2": "Audio/Female option 2/073_東北ずん子（ノーマル）_いいね.wav",
+    "Female option 2": "Audio/Female option 2/073_東北ずん子（ノーマル）_いいね.wav",
     "Male option 1": "Audio/Male option 1/073_雀松朱司（ノーマル）_いいね.wav",
     "Female option 1": "Audio/Female option 1/073_東北きりたん（ノーマル）_いいね.wav"
   },
@@ -690,14 +690,14 @@
     "Female option 1": "Audio/Female option 1/146_東北きりたん（ノーマル）_どうですか.wav"
   },
   "でも": {
-    "Male option 2": "Audio/Male option 2/092_離途（ノーマル）_でも.wav",
-    "Female option 2": "Audio/Female option 2/092_東北ずん子（ノーマル）_でも.wav",
-    "Male option 1": "Audio/Male option 1/092_雀松朱司（ノーマル）_でも.wav",
-    "Female option 1": "Audio/Female option 1/092_東北きりたん（ノーマル）_でも.wav"
+    "Male option 2": "Audio/Male option 2/092_離途（ノーマル）_でも.wav",
+    "Female option 2": "Audio/Female option 2/092_東北ずん子（ノーマル）_でも.wav",
+    "Male option 1": "Audio/Male option 1/092_雀松朱司（ノーマル）_でも.wav",
+    "Female option 1": "Audio/Female option 1/092_東北きりたん（ノーマル）_でも.wav"
   },
   "見たい": {
     "Male option 2": "Audio/Male option 2/098_離途（ノーマル）_見たい.wav",
-    "Female option 2": "Audio/Female option 2/098_東北ずん子（ノーマル）_見たい.wav",
+    "Female option 2": "Audio/Female option 2/098_東北ずん子（ノーマル）_見たい.wav",
     "Male option 1": "Audio/Male option 1/098_雀松朱司（ノーマル）_見たい.wav",
     "Female option 1": "Audio/Female option 1/098_東北きりたん（ノーマル）_見たい.wav"
   },
@@ -709,7 +709,7 @@
   },
   "仮説": {
     "Male option 2": "Audio/Male option 2/379_離途（ノーマル）_仮説.wav",
-    "Female option 2": "Audio/Female option 2/379_東北ずん子（ノーマル）_仮説.wav",
+    "Female option 2": "Audio/Female option 2/379_東北ずん子（ノーマル）_仮説.wav",
     "Male option 1": "Audio/Male option 1/379_雀松朱司（ノーマル）_仮説.wav",
     "Female option 1": "Audio/Female option 1/379_東北きりたん（ノーマル）_仮説.wav"
   },
@@ -721,31 +721,31 @@
   },
   "行ったり": {
     "Male option 2": "Audio/Male option 2/166_離途（ノーマル）_行ったり.wav",
-    "Female option 2": "Audio/Female option 2/166_東北ずん子（ノーマル）_行ったり.wav",
+    "Female option 2": "Audio/Female option 2/166_東北ずん子（ノーマル）_行ったり.wav",
     "Male option 1": "Audio/Male option 1/166_雀松朱司（ノーマル）_行ったり.wav",
     "Female option 1": "Audio/Female option 1/166_東北きりたん（ノーマル）_行ったり.wav"
   },
   "家に帰る": {
     "Male option 2": "Audio/Male option 2/081_離途（ノーマル）_家に帰る.wav",
-    "Female option 2": "Audio/Female option 2/081_東北ずん子（ノーマル）_家に帰る.wav",
+    "Female option 2": "Audio/Female option 2/081_東北ずん子（ノーマル）_家に帰る.wav",
     "Male option 1": "Audio/Male option 1/081_雀松朱司（ノーマル）_家に帰る.wav",
     "Female option 1": "Audio/Female option 1/081_東北きりたん（ノーマル）_家に帰る.wav"
   },
   "勉強しながら": {
-    "Male option 2": "Audio/Male option 2/165_離途（ノーマル）_勉強しながら.wav",
-    "Female option 2": "Audio/Female option 2/165_東北ずん子（ノーマル）_勉強しながら.wav",
-    "Male option 1": "Audio/Male option 1/165_雀松朱司（ノーマル）_勉強しながら.wav",
-    "Female option 1": "Audio/Female option 1/165_東北きりたん（ノーマル）_勉強しながら.wav"
+    "Male option 2": "Audio/Male option 2/165_離途（ノーマル）_勉強しながら.wav",
+    "Female option 2": "Audio/Female option 2/165_東北ずん子（ノーマル）_勉強しながら.wav",
+    "Male option 1": "Audio/Male option 1/165_雀松朱司（ノーマル）_勉強しながら.wav",
+    "Female option 1": "Audio/Female option 1/165_東北きりたん（ノーマル）_勉強しながら.wav"
   },
   "九": {
     "Male option 2": "Audio/Male option 2/069_離途（ノーマル）_九.wav",
-    "Female option 2": "Audio/Female option 2/069_東北ずん子（ノーマル）_九.wav",
+    "Female option 2": "Audio/Female option 2/069_東北ずん子（ノーマル）_九.wav",
     "Male option 1": "Audio/Male option 1/069_雀松朱司（ノーマル）_九.wav",
     "Female option 1": "Audio/Female option 1/069_東北きりたん（ノーマル）_九.wav"
   },
   "行ける": {
     "Male option 2": "Audio/Male option 2/137_離途（ノーマル）_行ける.wav",
-    "Female option 2": "Audio/Female option 2/137_東北ずん子（ノーマル）_行ける.wav",
+    "Female option 2": "Audio/Female option 2/137_東北ずん子（ノーマル）_行ける.wav",
     "Male option 1": "Audio/Male option 1/137_雀松朱司（ノーマル）_行ける.wav",
     "Female option 1": "Audio/Female option 1/137_東北きりたん（ノーマル）_行ける.wav"
   },
@@ -769,19 +769,19 @@
   },
   "彼": {
     "Male option 2": "Audio/Male option 2/237_離途（ノーマル）_彼.wav",
-    "Female option 2": "Audio/Female option 2/237_東北ずん子（ノーマル）_彼.wav",
+    "Female option 2": "Audio/Female option 2/237_東北ずん子（ノーマル）_彼.wav",
     "Male option 1": "Audio/Male option 1/237_雀松朱司（ノーマル）_彼.wav",
     "Female option 1": "Audio/Female option 1/237_東北きりたん（ノーマル）_彼.wav"
   },
   "止まる": {
     "Male option 2": "Audio/Male option 2/183_離途（ノーマル）_止まる.wav",
-    "Female option 2": "Audio/Female option 2/183_東北ずん子（ノーマル）_止まる.wav",
+    "Female option 2": "Audio/Female option 2/183_東北ずん子（ノーマル）_止まる.wav",
     "Male option 1": "Audio/Male option 1/183_雀松朱司（ノーマル）_止まる.wav",
     "Female option 1": "Audio/Female option 1/183_東北きりたん（ノーマル）_止まる.wav"
   },
   "歴史": {
     "Male option 2": "Audio/Male option 2/318_離途（ノーマル）_歴史.wav",
-    "Female option 2": "Audio/Female option 2/318_東北ずん子（ノーマル）_歴史.wav",
+    "Female option 2": "Audio/Female option 2/318_東北ずん子（ノーマル）_歴史.wav",
     "Male option 1": "Audio/Male option 1/318_雀松朱司（ノーマル）_歴史.wav",
     "Female option 1": "Audio/Female option 1/318_東北きりたん（ノーマル）_歴史.wav"
   },
@@ -793,13 +793,13 @@
   },
   "試みる": {
     "Male option 2": "Audio/Male option 2/272_離途（ノーマル）_試みる.wav",
-    "Female option 2": "Audio/Female option 2/272_東北ずん子（ノーマル）_試みる.wav",
+    "Female option 2": "Audio/Female option 2/272_東北ずん子（ノーマル）_試みる.wav",
     "Male option 1": "Audio/Male option 1/272_雀松朱司（ノーマル）_試みる.wav",
     "Female option 1": "Audio/Female option 1/272_東北きりたん（ノーマル）_試みる.wav"
   },
   "試す": {
     "Male option 2": "Audio/Male option 2/131_離途（ノーマル）_試す.wav",
-    "Female option 2": "Audio/Female option 2/131_東北ずん子（ノーマル）_試す.wav",
+    "Female option 2": "Audio/Female option 2/131_東北ずん子（ノーマル）_試す.wav",
     "Male option 1": "Audio/Male option 1/131_雀松朱司（ノーマル）_試す.wav",
     "Female option 1": "Audio/Female option 1/131_東北きりたん（ノーマル）_試す.wav"
   },
@@ -811,7 +811,7 @@
   },
   "禁止": {
     "Male option 2": "Audio/Male option 2/150_離途（ノーマル）_禁止.wav",
-    "Female option 2": "Audio/Female option 2/150_東北ずん子（ノーマル）_禁止.wav",
+    "Female option 2": "Audio/Female option 2/150_東北ずん子（ノーマル）_禁止.wav",
     "Male option 1": "Audio/Male option 1/150_雀松朱司（ノーマル）_禁止.wav",
     "Female option 1": "Audio/Female option 1/150_東北きりたん（ノーマル）_禁止.wav"
   },
@@ -823,13 +823,13 @@
   },
   "左": {
     "Male option 2": "Audio/Male option 2/119_離途（ノーマル）_左.wav",
-    "Female option 2": "Audio/Female option 2/119_東北ずん子（ノーマル）_左.wav",
+    "Female option 2": "Audio/Female option 2/119_東北ずん子（ノーマル）_左.wav",
     "Male option 1": "Audio/Male option 1/119_雀松朱司（ノーマル）_左.wav",
     "Female option 1": "Audio/Female option 1/119_東北きりたん（ノーマル）_左.wav"
   },
   "改善": {
     "Male option 2": "Audio/Male option 2/291_離途（ノーマル）_改善.wav",
-    "Female option 2": "Audio/Female option 2/291_東北ずん子（ノーマル）_改善.wav",
+    "Female option 2": "Audio/Female option 2/291_東北ずん子（ノーマル）_改善.wav",
     "Male option 1": "Audio/Male option 1/291_雀松朱司（ノーマル）_改善.wav",
     "Female option 1": "Audio/Female option 1/291_東北きりたん（ノーマル）_改善.wav"
   },
@@ -841,31 +841,31 @@
   },
   "おおきい": {
     "Male option 2": "Audio/Male option 2/047_離途（ノーマル）_おおきい.wav",
-    "Female option 2": "Audio/Female option 2/047_東北ずん子（ノーマル）_おおきい.wav",
+    "Female option 2": "Audio/Female option 2/047_東北ずん子（ノーマル）_おおきい.wav",
     "Male option 1": "Audio/Male option 1/047_雀松朱司（ノーマル）_おおきい.wav",
     "Female option 1": "Audio/Female option 1/047_東北きりたん（ノーマル）_おおきい.wav"
   },
   "かな": {
     "Male option 2": "Audio/Male option 2/075_離途（ノーマル）_かな.wav",
-    "Female option 2": "Audio/Female option 2/075_東北ずん子（ノーマル）_かな.wav",
+    "Female option 2": "Audio/Female option 2/075_東北ずん子（ノーマル）_かな.wav",
     "Male option 1": "Audio/Male option 1/075_雀松朱司（ノーマル）_かな.wav",
     "Female option 1": "Audio/Female option 1/075_東北きりたん（ノーマル）_かな.wav"
   },
   "あれ": {
     "Male option 2": "Audio/Male option 2/017_離途（ノーマル）_あれ.wav",
-    "Female option 2": "Audio/Female option 2/017_東北ずん子（ノーマル）_あれ.wav",
+    "Female option 2": "Audio/Female option 2/017_東北ずん子（ノーマル）_あれ.wav",
     "Male option 1": "Audio/Male option 1/017_雀松朱司（ノーマル）_あれ.wav",
     "Female option 1": "Audio/Female option 1/017_東北きりたん（ノーマル）_あれ.wav"
   },
   "掃除": {
     "Male option 2": "Audio/Male option 2/148_離途（ノーマル）_掃除.wav",
-    "Female option 2": "Audio/Female option 2/148_東北ずん子（ノーマル）_掃除.wav",
+    "Female option 2": "Audio/Female option 2/148_東北ずん子（ノーマル）_掃除.wav",
     "Male option 1": "Audio/Male option 1/148_雀松朱司（ノーマル）_掃除.wav",
     "Female option 1": "Audio/Female option 1/148_東北きりたん（ノーマル）_掃除.wav"
   },
   "四": {
     "Male option 2": "Audio/Male option 2/064_離途（ノーマル）_四.wav",
-    "Female option 2": "Audio/Female option 2/064_東北ずん子（ノーマル）_四.wav",
+    "Female option 2": "Audio/Female option 2/064_東北ずん子（ノーマル）_四.wav",
     "Male option 1": "Audio/Male option 1/064_雀松朱司（ノーマル）_四.wav",
     "Female option 1": "Audio/Female option 1/064_東北きりたん（ノーマル）_四.wav"
   },
@@ -877,7 +877,7 @@
   },
   "仕事": {
     "Male option 2": "Audio/Male option 2/316_離途（ノーマル）_仕事.wav",
-    "Female option 2": "Audio/Female option 2/316_東北ずん子（ノーマル）_仕事.wav",
+    "Female option 2": "Audio/Female option 2/316_東北ずん子（ノーマル）_仕事.wav",
     "Male option 1": "Audio/Male option 1/316_雀松朱司（ノーマル）_仕事.wav",
     "Female option 1": "Audio/Female option 1/316_東北きりたん（ノーマル）_仕事.wav"
   },
@@ -888,16 +888,16 @@
     "Female option 1": "Audio/Female option 1/074_東北きりたん（ノーマル）_はっせん.wav"
   },
   "いそがしいので": {
-    "Male option 2": "Audio/Male option 2/114_離途（ノーマル）_いそがしいので.wav",
-    "Female option 2": "Audio/Female option 2/114_東北ずん子（ノーマル）_いそがしいので.wav",
-    "Male option 1": "Audio/Male option 1/114_雀松朱司（ノーマル）_いそがしいので.wav",
-    "Female option 1": "Audio/Female option 1/114_東北きりたん（ノーマル）_いそがしいので.wav"
+    "Male option 2": "Audio/Male option 2/114_離途（ノーマル）_いそがしいので.wav",
+    "Female option 2": "Audio/Female option 2/114_東北ずん子（ノーマル）_いそがしいので.wav",
+    "Male option 1": "Audio/Male option 1/114_雀松朱司（ノーマル）_いそがしいので.wav",
+    "Female option 1": "Audio/Female option 1/114_東北きりたん（ノーマル）_いそがしいので.wav"
   },
   "データ": {
-    "Male option 2": "Audio/Male option 2/335_離途（ノーマル）_データ.wav",
-    "Female option 2": "Audio/Female option 2/335_東北ずん子（ノーマル）_データ.wav",
-    "Male option 1": "Audio/Male option 1/335_雀松朱司（ノーマル）_データ.wav",
-    "Female option 1": "Audio/Female option 1/335_東北きりたん（ノーマル）_データ.wav"
+    "Male option 2": "Audio/Male option 2/335_離途（ノーマル）_データ.wav",
+    "Female option 2": "Audio/Female option 2/335_東北ずん子（ノーマル）_データ.wav",
+    "Male option 1": "Audio/Male option 1/335_雀松朱司（ノーマル）_データ.wav",
+    "Female option 1": "Audio/Female option 1/335_東北きりたん（ノーマル）_データ.wav"
   },
   "スポーツ": {
     "Male option 2": "Audio/Male option 2/109_離途（ノーマル）_スポーツ.wav",
@@ -907,7 +907,7 @@
   },
   "": {
     "Male option 2": "Audio/Male option 2/381_離途（ノーマル）_.wav",
-    "Female option 2": "Audio/Female option 2/381_東北ずん子（ノーマル）_.wav",
+    "Female option 2": "Audio/Female option 2/381_東北ずん子（ノーマル）_.wav",
     "Male option 1": "Audio/Male option 1/381_雀松朱司（ノーマル）_.wav",
     "Female option 1": "Audio/Female option 1/381_東北きりたん（ノーマル）_.wav"
   },
@@ -919,31 +919,31 @@
   },
   "悲しい": {
     "Male option 2": "Audio/Male option 2/333_離途（ノーマル）_悲しい.wav",
-    "Female option 2": "Audio/Female option 2/333_東北ずん子（ノーマル）_悲しい.wav",
+    "Female option 2": "Audio/Female option 2/333_東北ずん子（ノーマル）_悲しい.wav",
     "Male option 1": "Audio/Male option 1/333_雀松朱司（ノーマル）_悲しい.wav",
     "Female option 1": "Audio/Female option 1/333_東北きりたん（ノーマル）_悲しい.wav"
   },
   "驚かれる": {
     "Male option 2": "Audio/Male option 2/202_離途（ノーマル）_驚かれる.wav",
-    "Female option 2": "Audio/Female option 2/202_東北ずん子（ノーマル）_驚かれる.wav",
+    "Female option 2": "Audio/Female option 2/202_東北ずん子（ノーマル）_驚かれる.wav",
     "Male option 1": "Audio/Male option 1/202_雀松朱司（ノーマル）_驚かれる.wav",
     "Female option 1": "Audio/Female option 1/202_東北きりたん（ノーマル）_驚かれる.wav"
   },
   "後悔する": {
     "Male option 2": "Audio/Male option 2/236_離途（ノーマル）_後悔する.wav",
-    "Female option 2": "Audio/Female option 2/236_東北ずん子（ノーマル）_後悔する.wav",
+    "Female option 2": "Audio/Female option 2/236_東北ずん子（ノーマル）_後悔する.wav",
     "Male option 1": "Audio/Male option 1/236_雀松朱司（ノーマル）_後悔する.wav",
     "Female option 1": "Audio/Female option 1/236_東北きりたん（ノーマル）_後悔する.wav"
   },
   "評価": {
     "Male option 2": "Audio/Male option 2/349_離途（ノーマル）_評価.wav",
-    "Female option 2": "Audio/Female option 2/349_東北ずん子（ノーマル）_評価.wav",
+    "Female option 2": "Audio/Female option 2/349_東北ずん子（ノーマル）_評価.wav",
     "Male option 1": "Audio/Male option 1/349_雀松朱司（ノーマル）_評価.wav",
     "Female option 1": "Audio/Female option 1/349_東北きりたん（ノーマル）_評価.wav"
   },
   "前提": {
     "Male option 2": "Audio/Male option 2/364_離途（ノーマル）_前提.wav",
-    "Female option 2": "Audio/Female option 2/364_東北ずん子（ノーマル）_前提.wav",
+    "Female option 2": "Audio/Female option 2/364_東北ずん子（ノーマル）_前提.wav",
     "Male option 1": "Audio/Male option 1/364_雀松朱司（ノーマル）_前提.wav",
     "Female option 1": "Audio/Female option 1/364_東北きりたん（ノーマル）_前提.wav"
   },
@@ -955,19 +955,19 @@
   },
   "理由": {
     "Male option 2": "Audio/Male option 2/153_離途（ノーマル）_理由.wav",
-    "Female option 2": "Audio/Female option 2/153_東北ずん子（ノーマル）_理由.wav",
+    "Female option 2": "Audio/Female option 2/153_東北ずん子（ノーマル）_理由.wav",
     "Male option 1": "Audio/Male option 1/153_雀松朱司（ノーマル）_理由.wav",
     "Female option 1": "Audio/Female option 1/153_東北きりたん（ノーマル）_理由.wav"
   },
   "病気": {
     "Male option 2": "Audio/Male option 2/151_離途（ノーマル）_病気.wav",
-    "Female option 2": "Audio/Female option 2/151_東北ずん子（ノーマル）_病気.wav",
+    "Female option 2": "Audio/Female option 2/151_東北ずん子（ノーマル）_病気.wav",
     "Male option 1": "Audio/Male option 1/151_雀松朱司（ノーマル）_病気.wav",
     "Female option 1": "Audio/Female option 1/151_東北きりたん（ノーマル）_病気.wav"
   },
   "若いうちに": {
     "Male option 2": "Audio/Male option 2/247_離途（ノーマル）_若いうちに.wav",
-    "Female option 2": "Audio/Female option 2/247_東北ずん子（ノーマル）_若いうちに.wav",
+    "Female option 2": "Audio/Female option 2/247_東北ずん子（ノーマル）_若いうちに.wav",
     "Male option 1": "Audio/Male option 1/247_雀松朱司（ノーマル）_若いうちに.wav",
     "Female option 1": "Audio/Female option 1/247_東北きりたん（ノーマル）_若いうちに.wav"
   },
@@ -979,31 +979,31 @@
   },
   "頑張る": {
     "Male option 2": "Audio/Male option 2/228_離途（ノーマル）_頑張る.wav",
-    "Female option 2": "Audio/Female option 2/228_東北ずん子（ノーマル）_頑張る.wav",
+    "Female option 2": "Audio/Female option 2/228_東北ずん子（ノーマル）_頑張る.wav",
     "Male option 1": "Audio/Male option 1/228_雀松朱司（ノーマル）_頑張る.wav",
     "Female option 1": "Audio/Female option 1/228_東北きりたん（ノーマル）_頑張る.wav"
   },
   "行きたい": {
     "Male option 2": "Audio/Male option 2/096_離途（ノーマル）_行きたい.wav",
-    "Female option 2": "Audio/Female option 2/096_東北ずん子（ノーマル）_行きたい.wav",
+    "Female option 2": "Audio/Female option 2/096_東北ずん子（ノーマル）_行きたい.wav",
     "Male option 1": "Audio/Male option 1/096_雀松朱司（ノーマル）_行きたい.wav",
     "Female option 1": "Audio/Female option 1/096_東北きりたん（ノーマル）_行きたい.wav"
   },
   "日本語": {
     "Male option 2": "Audio/Male option 2/077_離途（ノーマル）_日本語.wav",
-    "Female option 2": "Audio/Female option 2/077_東北ずん子（ノーマル）_日本語.wav",
+    "Female option 2": "Audio/Female option 2/077_東北ずん子（ノーマル）_日本語.wav",
     "Male option 1": "Audio/Male option 1/077_雀松朱司（ノーマル）_日本語.wav",
     "Female option 1": "Audio/Female option 1/077_東北きりたん（ノーマル）_日本語.wav"
   },
   "勉強しました": {
     "Male option 2": "Audio/Male option 2/090_離途（ノーマル）_勉強しました.wav",
-    "Female option 2": "Audio/Female option 2/090_東北ずん子（ノーマル）_勉強しました.wav",
+    "Female option 2": "Audio/Female option 2/090_東北ずん子（ノーマル）_勉強しました.wav",
     "Male option 1": "Audio/Male option 1/090_雀松朱司（ノーマル）_勉強しました.wav",
     "Female option 1": "Audio/Female option 1/090_東北きりたん（ノーマル）_勉強しました.wav"
   },
   "変わる": {
     "Male option 2": "Audio/Male option 2/249_離途（ノーマル）_変わる.wav",
-    "Female option 2": "Audio/Female option 2/249_東北ずん子（ノーマル）_変わる.wav",
+    "Female option 2": "Audio/Female option 2/249_東北ずん子（ノーマル）_変わる.wav",
     "Male option 1": "Audio/Male option 1/249_雀松朱司（ノーマル）_変わる.wav",
     "Female option 1": "Audio/Female option 1/249_東北きりたん（ノーマル）_変わる.wav"
   },
@@ -1015,7 +1015,7 @@
   },
   "驚き": {
     "Male option 2": "Audio/Male option 2/357_離途（ノーマル）_驚き.wav",
-    "Female option 2": "Audio/Female option 2/357_東北ずん子（ノーマル）_驚き.wav",
+    "Female option 2": "Audio/Female option 2/357_東北ずん子（ノーマル）_驚き.wav",
     "Male option 1": "Audio/Male option 1/357_雀松朱司（ノーマル）_驚き.wav",
     "Female option 1": "Audio/Female option 1/357_東北きりたん（ノーマル）_驚き.wav"
   },
@@ -1026,10 +1026,10 @@
     "Female option 1": "Audio/Female option 1/145_東北きりたん（ノーマル）_そうですね.wav"
   },
   "そうだね": {
-    "Male option 2": "Audio/Male option 2/074_離途（ノーマル）_そうだね.wav",
-    "Female option 2": "Audio/Female option 2/074_東北ずん子（ノーマル）_そうだね.wav",
-    "Male option 1": "Audio/Male option 1/074_雀松朱司（ノーマル）_そうだね.wav",
-    "Female option 1": "Audio/Female option 1/074_東北きりたん（ノーマル）_そうだね.wav"
+    "Male option 2": "Audio/Male option 2/074_離途（ノーマル）_そうだね.wav",
+    "Female option 2": "Audio/Female option 2/074_東北ずん子（ノーマル）_そうだね.wav",
+    "Male option 1": "Audio/Male option 1/074_雀松朱司（ノーマル）_そうだね.wav",
+    "Female option 1": "Audio/Female option 1/074_東北きりたん（ノーマル）_そうだね.wav"
   },
   "よろしくおねがいし…": {
     "Male option 2": "Audio/Male option 2/015_離途（ノーマル）_よろしくおねがいし….wav",
@@ -1038,13 +1038,13 @@
   },
   "元気": {
     "Male option 2": "Audio/Male option 2/152_離途（ノーマル）_元気.wav",
-    "Female option 2": "Audio/Female option 2/152_東北ずん子（ノーマル）_元気.wav",
+    "Female option 2": "Audio/Female option 2/152_東北ずん子（ノーマル）_元気.wav",
     "Male option 1": "Audio/Male option 1/152_雀松朱司（ノーマル）_元気.wav",
     "Female option 1": "Audio/Female option 1/152_東北きりたん（ノーマル）_元気.wav"
   },
   "雨": {
     "Male option 2": "Audio/Male option 2/169_離途（ノーマル）_雨.wav",
-    "Female option 2": "Audio/Female option 2/169_東北ずん子（ノーマル）_雨.wav",
+    "Female option 2": "Audio/Female option 2/169_東北ずん子（ノーマル）_雨.wav",
     "Male option 1": "Audio/Male option 1/169_雀松朱司（ノーマル）_雨.wav",
     "Female option 1": "Audio/Female option 1/169_東北きりたん（ノーマル）_雨.wav"
   },
@@ -1056,79 +1056,79 @@
   },
   "三": {
     "Male option 2": "Audio/Male option 2/063_離途（ノーマル）_三.wav",
-    "Female option 2": "Audio/Female option 2/063_東北ずん子（ノーマル）_三.wav",
+    "Female option 2": "Audio/Female option 2/063_東北ずん子（ノーマル）_三.wav",
     "Male option 1": "Audio/Male option 1/063_雀松朱司（ノーマル）_三.wav",
     "Female option 1": "Audio/Female option 1/063_東北きりたん（ノーマル）_三.wav"
   },
   "感覚": {
     "Male option 2": "Audio/Male option 2/359_離途（ノーマル）_感覚.wav",
-    "Female option 2": "Audio/Female option 2/359_東北ずん子（ノーマル）_感覚.wav",
+    "Female option 2": "Audio/Female option 2/359_東北ずん子（ノーマル）_感覚.wav",
     "Male option 1": "Audio/Male option 1/359_雀松朱司（ノーマル）_感覚.wav",
     "Female option 1": "Audio/Female option 1/359_東北きりたん（ノーマル）_感覚.wav"
   },
   "幻想": {
     "Male option 2": "Audio/Male option 2/361_離途（ノーマル）_幻想.wav",
-    "Female option 2": "Audio/Female option 2/361_東北ずん子（ノーマル）_幻想.wav",
+    "Female option 2": "Audio/Female option 2/361_東北ずん子（ノーマル）_幻想.wav",
     "Male option 1": "Audio/Male option 1/361_雀松朱司（ノーマル）_幻想.wav",
     "Female option 1": "Audio/Female option 1/361_東北きりたん（ノーマル）_幻想.wav"
   },
   "考える": {
     "Male option 2": "Audio/Male option 2/213_離途（ノーマル）_考える.wav",
-    "Female option 2": "Audio/Female option 2/213_東北ずん子（ノーマル）_考える.wav",
+    "Female option 2": "Audio/Female option 2/213_東北ずん子（ノーマル）_考える.wav",
     "Male option 1": "Audio/Male option 1/213_雀松朱司（ノーマル）_考える.wav",
     "Female option 1": "Audio/Female option 1/213_東北きりたん（ノーマル）_考える.wav"
   },
   "雨が降ったら": {
-    "Male option 2": "Audio/Male option 2/179_離途（ノーマル）_雨が降ったら.wav",
-    "Female option 2": "Audio/Female option 2/179_東北ずん子（ノーマル）_雨が降ったら.wav",
-    "Male option 1": "Audio/Male option 1/179_雀松朱司（ノーマル）_雨が降ったら.wav",
-    "Female option 1": "Audio/Female option 1/179_東北きりたん（ノーマル）_雨が降ったら.wav"
+    "Male option 2": "Audio/Male option 2/179_離途（ノーマル）_雨が降ったら.wav",
+    "Female option 2": "Audio/Female option 2/179_東北ずん子（ノーマル）_雨が降ったら.wav",
+    "Male option 1": "Audio/Male option 1/179_雀松朱司（ノーマル）_雨が降ったら.wav",
+    "Female option 1": "Audio/Female option 1/179_東北きりたん（ノーマル）_雨が降ったら.wav"
   },
   "何": {
     "Male option 2": "Audio/Male option 2/013_離途（ノーマル）_何.wav",
-    "Female option 2": "Audio/Female option 2/013_東北ずん子（ノーマル）_何.wav",
+    "Female option 2": "Audio/Female option 2/013_東北ずん子（ノーマル）_何.wav",
     "Male option 1": "Audio/Male option 1/013_雀松朱司（ノーマル）_何.wav",
     "Female option 1": "Audio/Female option 1/013_東北きりたん（ノーマル）_何.wav"
   },
   "あなた": {
     "Male option 2": "Audio/Male option 2/002_離途（ノーマル）_あなた.wav",
-    "Female option 2": "Audio/Female option 2/002_東北ずん子（ノーマル）_あなた.wav",
+    "Female option 2": "Audio/Female option 2/002_東北ずん子（ノーマル）_あなた.wav",
     "Male option 1": "Audio/Male option 1/002_雀松朱司（ノーマル）_あなた.wav",
     "Female option 1": "Audio/Female option 1/009_東北きりたん（ノーマル）_あなた.wav"
   },
   "出来事": {
     "Male option 2": "Audio/Male option 2/358_離途（ノーマル）_出来事.wav",
-    "Female option 2": "Audio/Female option 2/358_東北ずん子（ノーマル）_出来事.wav",
+    "Female option 2": "Audio/Female option 2/358_東北ずん子（ノーマル）_出来事.wav",
     "Male option 1": "Audio/Male option 1/358_雀松朱司（ノーマル）_出来事.wav",
     "Female option 1": "Audio/Female option 1/358_東北きりたん（ノーマル）_出来事.wav"
   },
   "明日": {
     "Male option 2": "Audio/Male option 2/059_離途（ノーマル）_明日.wav",
-    "Female option 2": "Audio/Female option 2/059_東北ずん子（ノーマル）_明日.wav",
+    "Female option 2": "Audio/Female option 2/059_東北ずん子（ノーマル）_明日.wav",
     "Male option 1": "Audio/Male option 1/059_雀松朱司（ノーマル）_明日.wav",
     "Female option 1": "Audio/Female option 1/059_東北きりたん（ノーマル）_明日.wav"
   },
   "友達": {
     "Male option 2": "Audio/Male option 2/012_離途（ノーマル）_友達.wav",
-    "Female option 2": "Audio/Female option 2/012_東北ずん子（ノーマル）_友達.wav",
+    "Female option 2": "Audio/Female option 2/012_東北ずん子（ノーマル）_友達.wav",
     "Male option 1": "Audio/Male option 1/012_雀松朱司（ノーマル）_友達.wav",
     "Female option 1": "Audio/Female option 1/012_東北きりたん（ノーマル）_友達.wav"
   },
   "研究": {
     "Male option 2": "Audio/Male option 2/352_離途（ノーマル）_研究.wav",
-    "Female option 2": "Audio/Female option 2/352_東北ずん子（ノーマル）_研究.wav",
+    "Female option 2": "Audio/Female option 2/352_東北ずん子（ノーマル）_研究.wav",
     "Male option 1": "Audio/Male option 1/352_雀松朱司（ノーマル）_研究.wav",
     "Female option 1": "Audio/Female option 1/352_東北きりたん（ノーマル）_研究.wav"
   },
   "到達": {
     "Male option 2": "Audio/Male option 2/369_離途（ノーマル）_到達.wav",
-    "Female option 2": "Audio/Female option 2/369_東北ずん子（ノーマル）_到達.wav",
+    "Female option 2": "Audio/Female option 2/369_東北ずん子（ノーマル）_到達.wav",
     "Male option 1": "Audio/Male option 1/369_雀松朱司（ノーマル）_到達.wav",
     "Female option 1": "Audio/Female option 1/369_東北きりたん（ノーマル）_到達.wav"
   },
   "おもしろい": {
     "Male option 2": "Audio/Male option 2/050_離途（ノーマル）_おもしろい.wav",
-    "Female option 2": "Audio/Female option 2/050_東北ずん子（ノーマル）_おもしろい.wav",
+    "Female option 2": "Audio/Female option 2/050_東北ずん子（ノーマル）_おもしろい.wav",
     "Male option 1": "Audio/Male option 1/050_雀松朱司（ノーマル）_おもしろい.wav",
     "Female option 1": "Audio/Female option 1/050_東北きりたん（ノーマル）_おもしろい.wav"
   },
@@ -1140,55 +1140,55 @@
   },
   "当然": {
     "Male option 2": "Audio/Male option 2/348_離途（ノーマル）_当然.wav",
-    "Female option 2": "Audio/Female option 2/348_東北ずん子（ノーマル）_当然.wav",
+    "Female option 2": "Audio/Female option 2/348_東北ずん子（ノーマル）_当然.wav",
     "Male option 1": "Audio/Male option 1/348_雀松朱司（ノーマル）_当然.wav",
     "Female option 1": "Audio/Female option 1/348_東北きりたん（ノーマル）_当然.wav"
   },
   "駅": {
     "Male option 2": "Audio/Male option 2/035_離途（ノーマル）_駅.wav",
-    "Female option 2": "Audio/Female option 2/035_東北ずん子（ノーマル）_駅.wav",
+    "Female option 2": "Audio/Female option 2/035_東北ずん子（ノーマル）_駅.wav",
     "Male option 1": "Audio/Male option 1/035_雀松朱司（ノーマル）_駅.wav",
     "Female option 1": "Audio/Female option 1/035_東北きりたん（ノーマル）_駅.wav"
   },
   "批判": {
     "Male option 2": "Audio/Male option 2/254_離途（ノーマル）_批判.wav",
-    "Female option 2": "Audio/Female option 2/254_東北ずん子（ノーマル）_批判.wav",
+    "Female option 2": "Audio/Female option 2/254_東北ずん子（ノーマル）_批判.wav",
     "Male option 1": "Audio/Male option 1/254_雀松朱司（ノーマル）_批判.wav",
     "Female option 1": "Audio/Female option 1/254_東北きりたん（ノーマル）_批判.wav"
   },
   "水がほしい": {
-    "Male option 2": "Audio/Male option 2/195_離途（ノーマル）_水がほしい.wav",
-    "Female option 2": "Audio/Female option 2/195_東北ずん子（ノーマル）_水がほしい.wav",
-    "Male option 1": "Audio/Male option 1/195_雀松朱司（ノーマル）_水がほしい.wav",
-    "Female option 1": "Audio/Female option 1/195_東北きりたん（ノーマル）_水がほしい.wav"
+    "Male option 2": "Audio/Male option 2/195_離途（ノーマル）_水がほしい.wav",
+    "Female option 2": "Audio/Female option 2/195_東北ずん子（ノーマル）_水がほしい.wav",
+    "Male option 1": "Audio/Male option 1/195_雀松朱司（ノーマル）_水がほしい.wav",
+    "Female option 1": "Audio/Female option 1/195_東北きりたん（ノーマル）_水がほしい.wav"
   },
   "それ": {
     "Male option 2": "Audio/Male option 2/016_離途（ノーマル）_それ.wav",
-    "Female option 2": "Audio/Female option 2/016_東北ずん子（ノーマル）_それ.wav",
+    "Female option 2": "Audio/Female option 2/016_東北ずん子（ノーマル）_それ.wav",
     "Male option 1": "Audio/Male option 1/016_雀松朱司（ノーマル）_それ.wav",
     "Female option 1": "Audio/Female option 1/016_東北きりたん（ノーマル）_それ.wav"
   },
   "だから": {
-    "Male option 2": "Audio/Male option 2/093_離途（ノーマル）_だから.wav",
-    "Female option 2": "Audio/Female option 2/093_東北ずん子（ノーマル）_だから.wav",
-    "Male option 1": "Audio/Male option 1/093_雀松朱司（ノーマル）_だから.wav",
-    "Female option 1": "Audio/Female option 1/093_東北きりたん（ノーマル）_だから.wav"
+    "Male option 2": "Audio/Male option 2/093_離途（ノーマル）_だから.wav",
+    "Female option 2": "Audio/Female option 2/093_東北ずん子（ノーマル）_だから.wav",
+    "Male option 1": "Audio/Male option 1/093_雀松朱司（ノーマル）_だから.wav",
+    "Female option 1": "Audio/Female option 1/093_東北きりたん（ノーマル）_だから.wav"
   },
   "行ったら": {
     "Male option 2": "Audio/Male option 2/178_離途（ノーマル）_行ったら.wav",
-    "Female option 2": "Audio/Female option 2/178_東北ずん子（ノーマル）_行ったら.wav",
+    "Female option 2": "Audio/Female option 2/178_東北ずん子（ノーマル）_行ったら.wav",
     "Male option 1": "Audio/Male option 1/178_雀松朱司（ノーマル）_行ったら.wav",
     "Female option 1": "Audio/Female option 1/178_東北きりたん（ノーマル）_行ったら.wav"
   },
   "くれる": {
     "Male option 2": "Audio/Male option 2/086_離途（ノーマル）_くれる.wav",
-    "Female option 2": "Audio/Female option 2/086_東北ずん子（ノーマル）_くれる.wav",
+    "Female option 2": "Audio/Female option 2/086_東北ずん子（ノーマル）_くれる.wav",
     "Male option 1": "Audio/Male option 1/086_雀松朱司（ノーマル）_くれる.wav",
     "Female option 1": "Audio/Female option 1/086_東北きりたん（ノーマル）_くれる.wav"
   },
   "危険": {
     "Male option 2": "Audio/Male option 2/265_離途（ノーマル）_危険.wav",
-    "Female option 2": "Audio/Female option 2/265_東北ずん子（ノーマル）_危険.wav",
+    "Female option 2": "Audio/Female option 2/265_東北ずん子（ノーマル）_危険.wav",
     "Male option 1": "Audio/Male option 1/265_雀松朱司（ノーマル）_危険.wav",
     "Female option 1": "Audio/Female option 1/265_東北きりたん（ノーマル）_危険.wav"
   },
@@ -1200,7 +1200,7 @@
   },
   "原因": {
     "Male option 2": "Audio/Male option 2/216_離途（ノーマル）_原因.wav",
-    "Female option 2": "Audio/Female option 2/216_東北ずん子（ノーマル）_原因.wav",
+    "Female option 2": "Audio/Female option 2/216_東北ずん子（ノーマル）_原因.wav",
     "Male option 1": "Audio/Male option 1/216_雀松朱司（ノーマル）_原因.wav",
     "Female option 1": "Audio/Female option 1/216_東北きりたん（ノーマル）_原因.wav"
   },
@@ -1211,38 +1211,38 @@
     "Female option 1": "Audio/Female option 1/104_東北きりたん（ノーマル）_にく.wav"
   },
   "手伝ってくださいま…": {
-    "Male option 2": "Audio/Male option 2/196_離途（ノーマル）_手伝ってくださいま….wav",
-    "Female option 2": "Audio/Female option 2/196_東北ずん子（ノーマル）_手伝ってくださいま….wav",
-    "Male option 1": "Audio/Male option 1/196_雀松朱司（ノーマル）_手伝ってくださいま….wav",
-    "Female option 1": "Audio/Female option 1/196_東北きりたん（ノーマル）_手伝ってくださいま….wav"
+    "Male option 2": "Audio/Male option 2/196_離途（ノーマル）_手伝ってくださいま….wav",
+    "Female option 2": "Audio/Female option 2/196_東北ずん子（ノーマル）_手伝ってくださいま….wav",
+    "Male option 1": "Audio/Male option 1/196_雀松朱司（ノーマル）_手伝ってくださいま….wav",
+    "Female option 1": "Audio/Female option 1/196_東北きりたん（ノーマル）_手伝ってくださいま….wav"
   },
   "努力する": {
     "Male option 2": "Audio/Male option 2/271_離途（ノーマル）_努力する.wav",
-    "Female option 2": "Audio/Female option 2/271_東北ずん子（ノーマル）_努力する.wav",
+    "Female option 2": "Audio/Female option 2/271_東北ずん子（ノーマル）_努力する.wav",
     "Male option 1": "Audio/Male option 1/271_雀松朱司（ノーマル）_努力する.wav",
     "Female option 1": "Audio/Female option 1/271_東北きりたん（ノーマル）_努力する.wav"
   },
   "条件": {
     "Male option 2": "Audio/Male option 2/305_離途（ノーマル）_条件.wav",
-    "Female option 2": "Audio/Female option 2/305_東北ずん子（ノーマル）_条件.wav",
+    "Female option 2": "Audio/Female option 2/305_東北ずん子（ノーマル）_条件.wav",
     "Male option 1": "Audio/Male option 1/305_雀松朱司（ノーマル）_条件.wav",
     "Female option 1": "Audio/Female option 1/305_東北きりたん（ノーマル）_条件.wav"
   },
   "鞄": {
     "Male option 2": "Audio/Male option 2/019_離途（ノーマル）_鞄.wav",
-    "Female option 2": "Audio/Female option 2/019_東北ずん子（ノーマル）_鞄.wav",
+    "Female option 2": "Audio/Female option 2/019_東北ずん子（ノーマル）_鞄.wav",
     "Male option 1": "Audio/Male option 1/019_雀松朱司（ノーマル）_鞄.wav",
     "Female option 1": "Audio/Female option 1/019_東北きりたん（ノーマル）_鞄.wav"
   },
   "食べたり": {
-    "Male option 2": "Audio/Male option 2/167_離途（ノーマル）_食べたり.wav",
-    "Female option 2": "Audio/Female option 2/167_東北ずん子（ノーマル）_食べたり.wav",
-    "Male option 1": "Audio/Male option 1/167_雀松朱司（ノーマル）_食べたり.wav",
-    "Female option 1": "Audio/Female option 1/167_東北きりたん（ノーマル）_食べたり.wav"
+    "Male option 2": "Audio/Male option 2/167_離途（ノーマル）_食べたり.wav",
+    "Female option 2": "Audio/Female option 2/167_東北ずん子（ノーマル）_食べたり.wav",
+    "Male option 1": "Audio/Male option 1/167_雀松朱司（ノーマル）_食べたり.wav",
+    "Female option 1": "Audio/Female option 1/167_東北きりたん（ノーマル）_食べたり.wav"
   },
   "嬉しい": {
     "Male option 2": "Audio/Male option 2/274_離途（ノーマル）_嬉しい.wav",
-    "Female option 2": "Audio/Female option 2/274_東北ずん子（ノーマル）_嬉しい.wav",
+    "Female option 2": "Audio/Female option 2/274_東北ずん子（ノーマル）_嬉しい.wav",
     "Male option 1": "Audio/Male option 1/274_雀松朱司（ノーマル）_嬉しい.wav",
     "Female option 1": "Audio/Female option 1/274_東北きりたん（ノーマル）_嬉しい.wav"
   },
@@ -1254,7 +1254,7 @@
   },
   "経済": {
     "Male option 2": "Audio/Male option 2/374_離途（ノーマル）_経済.wav",
-    "Female option 2": "Audio/Female option 2/374_東北ずん子（ノーマル）_経済.wav",
+    "Female option 2": "Audio/Female option 2/374_東北ずん子（ノーマル）_経済.wav",
     "Male option 1": "Audio/Male option 1/374_雀松朱司（ノーマル）_経済.wav",
     "Female option 1": "Audio/Female option 1/374_東北きりたん（ノーマル）_経済.wav"
   },
@@ -1278,85 +1278,85 @@
   },
   "家族": {
     "Male option 2": "Audio/Male option 2/076_離途（ノーマル）_家族.wav",
-    "Female option 2": "Audio/Female option 2/076_東北ずん子（ノーマル）_家族.wav",
+    "Female option 2": "Audio/Female option 2/076_東北ずん子（ノーマル）_家族.wav",
     "Male option 1": "Audio/Male option 1/076_雀松朱司（ノーマル）_家族.wav",
     "Female option 1": "Audio/Female option 1/076_東北きりたん（ノーマル）_家族.wav"
   },
   "ねたり": {
     "Male option 2": "Audio/Male option 2/168_離途（ノーマル）_ねたり.wav",
-    "Female option 2": "Audio/Female option 2/168_東北ずん子（ノーマル）_ねたり.wav",
+    "Female option 2": "Audio/Female option 2/168_東北ずん子（ノーマル）_ねたり.wav",
     "Male option 1": "Audio/Male option 1/168_雀松朱司（ノーマル）_ねたり.wav",
     "Female option 1": "Audio/Female option 1/168_東北きりたん（ノーマル）_ねたり.wav"
   },
   "聞きながら": {
-    "Male option 2": "Audio/Male option 2/164_離途（ノーマル）_聞きながら.wav",
-    "Female option 2": "Audio/Female option 2/164_東北ずん子（ノーマル）_聞きながら.wav",
-    "Male option 1": "Audio/Male option 1/164_雀松朱司（ノーマル）_聞きながら.wav",
-    "Female option 1": "Audio/Female option 1/164_東北きりたん（ノーマル）_聞きながら.wav"
+    "Male option 2": "Audio/Male option 2/164_離途（ノーマル）_聞きながら.wav",
+    "Female option 2": "Audio/Female option 2/164_東北ずん子（ノーマル）_聞きながら.wav",
+    "Male option 1": "Audio/Male option 1/164_雀松朱司（ノーマル）_聞きながら.wav",
+    "Female option 1": "Audio/Female option 1/164_東北きりたん（ノーマル）_聞きながら.wav"
   },
   "会議": {
     "Male option 2": "Audio/Male option 2/298_離途（ノーマル）_会議.wav",
-    "Female option 2": "Audio/Female option 2/298_東北ずん子（ノーマル）_会議.wav",
+    "Female option 2": "Audio/Female option 2/298_東北ずん子（ノーマル）_会議.wav",
     "Male option 1": "Audio/Male option 1/298_雀松朱司（ノーマル）_会議.wav",
     "Female option 1": "Audio/Female option 1/298_東北きりたん（ノーマル）_会議.wav"
   },
   "私": {
     "Male option 2": "Audio/Male option 2/001_離途（ノーマル）_私.wav",
-    "Female option 2": "Audio/Female option 2/001_東北ずん子（ノーマル）_私.wav",
+    "Female option 2": "Audio/Female option 2/001_東北ずん子（ノーマル）_私.wav",
     "Male option 1": "Audio/Male option 1/001_雀松朱司（ノーマル）_私.wav",
     "Female option 1": "Audio/Female option 1/001_東北きりたん（ノーマル）_私.wav"
   },
   "食べる": {
-    "Male option 2": "Audio/Male option 2/024_離途（ノーマル）_食べる.wav",
-    "Female option 2": "Audio/Female option 2/024_東北ずん子（ノーマル）_食べる.wav",
-    "Male option 1": "Audio/Male option 1/024_雀松朱司（ノーマル）_食べる.wav",
-    "Female option 1": "Audio/Female option 1/024_東北きりたん（ノーマル）_食べる.wav"
+    "Male option 2": "Audio/Male option 2/024_離途（ノーマル）_食べる.wav",
+    "Female option 2": "Audio/Female option 2/024_東北ずん子（ノーマル）_食べる.wav",
+    "Male option 1": "Audio/Male option 1/024_雀松朱司（ノーマル）_食べる.wav",
+    "Female option 1": "Audio/Female option 1/024_東北きりたん（ノーマル）_食べる.wav"
   },
   "減少": {
     "Male option 2": "Audio/Male option 2/321_離途（ノーマル）_減少.wav",
-    "Female option 2": "Audio/Female option 2/321_東北ずん子（ノーマル）_減少.wav",
+    "Female option 2": "Audio/Female option 2/321_東北ずん子（ノーマル）_減少.wav",
     "Male option 1": "Audio/Male option 1/321_雀松朱司（ノーマル）_減少.wav",
     "Female option 1": "Audio/Female option 1/321_東北きりたん（ノーマル）_減少.wav"
   },
   "困る": {
     "Male option 2": "Audio/Male option 2/226_離途（ノーマル）_困る.wav",
-    "Female option 2": "Audio/Female option 2/226_東北ずん子（ノーマル）_困る.wav",
+    "Female option 2": "Audio/Female option 2/226_東北ずん子（ノーマル）_困る.wav",
     "Male option 1": "Audio/Male option 1/226_雀松朱司（ノーマル）_困る.wav",
     "Female option 1": "Audio/Female option 1/226_東北きりたん（ノーマル）_困る.wav"
   },
   "どうして": {
-    "Male option 2": "Audio/Male option 2/023_離途（ノーマル）_どうして.wav",
-    "Female option 2": "Audio/Female option 2/023_東北ずん子（ノーマル）_どうして.wav",
-    "Male option 1": "Audio/Male option 1/023_雀松朱司（ノーマル）_どうして.wav",
-    "Female option 1": "Audio/Female option 1/023_東北きりたん（ノーマル）_どうして.wav"
+    "Male option 2": "Audio/Male option 2/023_離途（ノーマル）_どうして.wav",
+    "Female option 2": "Audio/Female option 2/023_東北ずん子（ノーマル）_どうして.wav",
+    "Male option 1": "Audio/Male option 1/023_雀松朱司（ノーマル）_どうして.wav",
+    "Female option 1": "Audio/Female option 1/023_東北きりたん（ノーマル）_どうして.wav"
   },
   "作られる": {
     "Male option 2": "Audio/Male option 2/182_離途（ノーマル）_作られる.wav",
-    "Female option 2": "Audio/Female option 2/182_東北ずん子（ノーマル）_作られる.wav",
+    "Female option 2": "Audio/Female option 2/182_東北ずん子（ノーマル）_作られる.wav",
     "Male option 1": "Audio/Male option 1/182_雀松朱司（ノーマル）_作られる.wav",
     "Female option 1": "Audio/Female option 1/182_東北きりたん（ノーマル）_作られる.wav"
   },
   "映画": {
     "Male option 2": "Audio/Male option 2/029_離途（ノーマル）_映画.wav",
-    "Female option 2": "Audio/Female option 2/029_東北ずん子（ノーマル）_映画.wav",
+    "Female option 2": "Audio/Female option 2/029_東北ずん子（ノーマル）_映画.wav",
     "Male option 1": "Audio/Male option 1/029_雀松朱司（ノーマル）_映画.wav",
     "Female option 1": "Audio/Female option 1/029_東北きりたん（ノーマル）_映画.wav"
   },
   "責任": {
     "Male option 2": "Audio/Male option 2/378_離途（ノーマル）_責任.wav",
-    "Female option 2": "Audio/Female option 2/378_東北ずん子（ノーマル）_責任.wav",
+    "Female option 2": "Audio/Female option 2/378_東北ずん子（ノーマル）_責任.wav",
     "Male option 1": "Audio/Male option 1/378_雀松朱司（ノーマル）_責任.wav",
     "Female option 1": "Audio/Female option 1/378_東北きりたん（ノーマル）_責任.wav"
   },
   "開始": {
     "Male option 2": "Audio/Male option 2/299_離途（ノーマル）_開始.wav",
-    "Female option 2": "Audio/Female option 2/299_東北ずん子（ノーマル）_開始.wav",
+    "Female option 2": "Audio/Female option 2/299_東北ずん子（ノーマル）_開始.wav",
     "Male option 1": "Audio/Male option 1/299_雀松朱司（ノーマル）_開始.wav",
     "Female option 1": "Audio/Female option 1/299_東北きりたん（ノーマル）_開始.wav"
   },
   "希望": {
     "Male option 2": "Audio/Male option 2/362_離途（ノーマル）_希望.wav",
-    "Female option 2": "Audio/Female option 2/362_東北ずん子（ノーマル）_希望.wav",
+    "Female option 2": "Audio/Female option 2/362_東北ずん子（ノーマル）_希望.wav",
     "Male option 1": "Audio/Male option 1/362_雀松朱司（ノーマル）_希望.wav",
     "Female option 1": "Audio/Female option 1/362_東北きりたん（ノーマル）_希望.wav"
   },
@@ -1380,7 +1380,7 @@
   },
   "笑い出す": {
     "Male option 2": "Audio/Male option 2/246_離途（ノーマル）_笑い出す.wav",
-    "Female option 2": "Audio/Female option 2/246_東北ずん子（ノーマル）_笑い出す.wav",
+    "Female option 2": "Audio/Female option 2/246_東北ずん子（ノーマル）_笑い出す.wav",
     "Male option 1": "Audio/Male option 1/246_雀松朱司（ノーマル）_笑い出す.wav",
     "Female option 1": "Audio/Female option 1/246_東北きりたん（ノーマル）_笑い出す.wav"
   },
@@ -1392,55 +1392,55 @@
   },
   "増える": {
     "Male option 2": "Audio/Male option 2/286_離途（ノーマル）_増える.wav",
-    "Female option 2": "Audio/Female option 2/286_東北ずん子（ノーマル）_増える.wav",
+    "Female option 2": "Audio/Female option 2/286_東北ずん子（ノーマル）_増える.wav",
     "Male option 1": "Audio/Male option 1/286_雀松朱司（ノーマル）_増える.wav",
     "Female option 1": "Audio/Female option 1/286_東北きりたん（ノーマル）_増える.wav"
   },
   "音楽": {
     "Male option 2": "Audio/Male option 2/030_離途（ノーマル）_音楽.wav",
-    "Female option 2": "Audio/Female option 2/030_東北ずん子（ノーマル）_音楽.wav",
+    "Female option 2": "Audio/Female option 2/030_東北ずん子（ノーマル）_音楽.wav",
     "Male option 1": "Audio/Male option 1/030_雀松朱司（ノーマル）_音楽.wav",
     "Female option 1": "Audio/Female option 1/030_東北きりたん（ノーマル）_音楽.wav"
   },
   "成長する": {
     "Male option 2": "Audio/Male option 2/251_離途（ノーマル）_成長する.wav",
-    "Female option 2": "Audio/Female option 2/251_東北ずん子（ノーマル）_成長する.wav",
+    "Female option 2": "Audio/Female option 2/251_東北ずん子（ノーマル）_成長する.wav",
     "Male option 1": "Audio/Male option 1/251_雀松朱司（ノーマル）_成長する.wav",
     "Female option 1": "Audio/Female option 1/251_東北きりたん（ノーマル）_成長する.wav"
   },
   "結論": {
     "Male option 2": "Audio/Male option 2/368_離途（ノーマル）_結論.wav",
-    "Female option 2": "Audio/Female option 2/368_東北ずん子（ノーマル）_結論.wav",
+    "Female option 2": "Audio/Female option 2/368_東北ずん子（ノーマル）_結論.wav",
     "Male option 1": "Audio/Male option 1/368_雀松朱司（ノーマル）_結論.wav",
     "Female option 1": "Audio/Female option 1/368_東北きりたん（ノーマル）_結論.wav"
   },
   "昨日": {
     "Male option 2": "Audio/Male option 2/060_離途（ノーマル）_昨日.wav",
-    "Female option 2": "Audio/Female option 2/060_東北ずん子（ノーマル）_昨日.wav",
+    "Female option 2": "Audio/Female option 2/060_東北ずん子（ノーマル）_昨日.wav",
     "Male option 1": "Audio/Male option 1/060_雀松朱司（ノーマル）_昨日.wav",
     "Female option 1": "Audio/Female option 1/060_東北きりたん（ノーマル）_昨日.wav"
   },
   "試験": {
     "Male option 2": "Audio/Male option 2/171_離途（ノーマル）_試験.wav",
-    "Female option 2": "Audio/Female option 2/171_東北ずん子（ノーマル）_試験.wav",
+    "Female option 2": "Audio/Female option 2/171_東北ずん子（ノーマル）_試験.wav",
     "Male option 1": "Audio/Male option 1/171_雀松朱司（ノーマル）_試験.wav",
     "Female option 1": "Audio/Female option 1/171_東北きりたん（ノーマル）_試験.wav"
   },
   "時計": {
     "Male option 2": "Audio/Male option 2/018_離途（ノーマル）_時計.wav",
-    "Female option 2": "Audio/Female option 2/018_東北ずん子（ノーマル）_時計.wav",
+    "Female option 2": "Audio/Female option 2/018_東北ずん子（ノーマル）_時計.wav",
     "Male option 1": "Audio/Male option 1/018_雀松朱司（ノーマル）_時計.wav",
     "Female option 1": "Audio/Female option 1/018_東北きりたん（ノーマル）_時計.wav"
   },
   "後ろ": {
     "Male option 2": "Audio/Male option 2/121_離途（ノーマル）_後ろ.wav",
-    "Female option 2": "Audio/Female option 2/121_東北ずん子（ノーマル）_後ろ.wav",
+    "Female option 2": "Audio/Female option 2/121_東北ずん子（ノーマル）_後ろ.wav",
     "Male option 1": "Audio/Male option 1/121_雀松朱司（ノーマル）_後ろ.wav",
     "Female option 1": "Audio/Female option 1/121_東北きりたん（ノーマル）_後ろ.wav"
   },
   "忘れる": {
     "Male option 2": "Audio/Male option 2/234_離途（ノーマル）_忘れる.wav",
-    "Female option 2": "Audio/Female option 2/234_東北ずん子（ノーマル）_忘れる.wav",
+    "Female option 2": "Audio/Female option 2/234_東北ずん子（ノーマル）_忘れる.wav",
     "Male option 1": "Audio/Male option 1/234_雀松朱司（ノーマル）_忘れる.wav",
     "Female option 1": "Audio/Female option 1/234_東北きりたん（ノーマル）_忘れる.wav"
   },
@@ -1452,7 +1452,7 @@
   },
   "勉強するために": {
     "Male option 2": "Audio/Male option 2/189_離途（ノーマル）_勉強するために.wav",
-    "Female option 2": "Audio/Female option 2/189_東北ずん子（ノーマル）_勉強するために.wav",
+    "Female option 2": "Audio/Female option 2/189_東北ずん子（ノーマル）_勉強するために.wav",
     "Male option 1": "Audio/Male option 1/189_雀松朱司（ノーマル）_勉強するために.wav",
     "Female option 1": "Audio/Female option 1/189_東北きりたん（ノーマル）_勉強するために.wav"
   },
@@ -1470,13 +1470,13 @@
   },
   "特徴": {
     "Male option 2": "Audio/Male option 2/367_離途（ノーマル）_特徴.wav",
-    "Female option 2": "Audio/Female option 2/367_東北ずん子（ノーマル）_特徴.wav",
+    "Female option 2": "Audio/Female option 2/367_東北ずん子（ノーマル）_特徴.wav",
     "Male option 1": "Audio/Male option 1/367_雀松朱司（ノーマル）_特徴.wav",
     "Female option 1": "Audio/Female option 1/367_東北きりたん（ノーマル）_特徴.wav"
   },
   "本": {
     "Male option 2": "Audio/Male option 2/008_離途（ノーマル）_本.wav",
-    "Female option 2": "Audio/Female option 2/008_東北ずん子（ノーマル）_本.wav",
+    "Female option 2": "Audio/Female option 2/008_東北ずん子（ノーマル）_本.wav",
     "Male option 1": "Audio/Male option 1/008_雀松朱司（ノーマル）_本.wav",
     "Female option 1": "Audio/Female option 1/008_東北きりたん（ノーマル）_本.wav"
   },
@@ -1494,7 +1494,7 @@
   },
   "計画": {
     "Male option 2": "Audio/Male option 2/157_離途（ノーマル）_計画.wav",
-    "Female option 2": "Audio/Female option 2/157_東北ずん子（ノーマル）_計画.wav",
+    "Female option 2": "Audio/Female option 2/157_東北ずん子（ノーマル）_計画.wav",
     "Male option 1": "Audio/Male option 1/157_雀松朱司（ノーマル）_計画.wav",
     "Female option 1": "Audio/Female option 1/157_東北きりたん（ノーマル）_計画.wav"
   },
@@ -1506,37 +1506,37 @@
   },
   "よく": {
     "Male option 2": "Audio/Male option 2/099_離途（ノーマル）_よく.wav",
-    "Female option 2": "Audio/Female option 2/099_東北ずん子（ノーマル）_よく.wav",
+    "Female option 2": "Audio/Female option 2/099_東北ずん子（ノーマル）_よく.wav",
     "Male option 1": "Audio/Male option 1/099_雀松朱司（ノーマル）_よく.wav",
     "Female option 1": "Audio/Female option 1/099_東北きりたん（ノーマル）_よく.wav"
   },
   "声": {
     "Male option 2": "Audio/Male option 2/223_離途（ノーマル）_声.wav",
-    "Female option 2": "Audio/Female option 2/223_東北ずん子（ノーマル）_声.wav",
+    "Female option 2": "Audio/Female option 2/223_東北ずん子（ノーマル）_声.wav",
     "Male option 1": "Audio/Male option 1/223_雀松朱司（ノーマル）_声.wav",
     "Female option 1": "Audio/Female option 1/223_東北きりたん（ノーマル）_声.wav"
   },
   "始める": {
     "Male option 2": "Audio/Male option 2/214_離途（ノーマル）_始める.wav",
-    "Female option 2": "Audio/Female option 2/214_東北ずん子（ノーマル）_始める.wav",
+    "Female option 2": "Audio/Female option 2/214_東北ずん子（ノーマル）_始める.wav",
     "Male option 1": "Audio/Male option 1/214_雀松朱司（ノーマル）_始める.wav",
     "Female option 1": "Audio/Female option 1/214_東北きりたん（ノーマル）_始める.wav"
   },
   "学校から家まで": {
-    "Male option 2": "Audio/Male option 2/104_離途（ノーマル）_学校から家まで.wav",
-    "Female option 2": "Audio/Female option 2/104_東北ずん子（ノーマル）_学校から家まで.wav",
-    "Male option 1": "Audio/Male option 1/104_雀松朱司（ノーマル）_学校から家まで.wav",
-    "Female option 1": "Audio/Female option 1/104_東北きりたん（ノーマル）_学校から家まで.wav"
+    "Male option 2": "Audio/Male option 2/104_離途（ノーマル）_学校から家まで.wav",
+    "Female option 2": "Audio/Female option 2/104_東北ずん子（ノーマル）_学校から家まで.wav",
+    "Male option 1": "Audio/Male option 1/104_雀松朱司（ノーマル）_学校から家まで.wav",
+    "Female option 1": "Audio/Female option 1/104_東北きりたん（ノーマル）_学校から家まで.wav"
   },
   "来られる": {
     "Male option 2": "Audio/Male option 2/138_離途（ノーマル）_来られる.wav",
-    "Female option 2": "Audio/Female option 2/138_東北ずん子（ノーマル）_来られる.wav",
+    "Female option 2": "Audio/Female option 2/138_東北ずん子（ノーマル）_来られる.wav",
     "Male option 1": "Audio/Male option 1/138_雀松朱司（ノーマル）_来られる.wav",
     "Female option 1": "Audio/Female option 1/138_東北きりたん（ノーマル）_来られる.wav"
   },
   "午前": {
     "Male option 2": "Audio/Male option 2/056_離途（ノーマル）_午前.wav",
-    "Female option 2": "Audio/Female option 2/056_東北ずん子（ノーマル）_午前.wav",
+    "Female option 2": "Audio/Female option 2/056_東北ずん子（ノーマル）_午前.wav",
     "Male option 1": "Audio/Male option 1/056_雀松朱司（ノーマル）_午前.wav",
     "Female option 1": "Audio/Female option 1/056_東北きりたん（ノーマル）_午前.wav"
   },
@@ -1548,13 +1548,13 @@
   },
   "失敗する": {
     "Male option 2": "Audio/Male option 2/235_離途（ノーマル）_失敗する.wav",
-    "Female option 2": "Audio/Female option 2/235_東北ずん子（ノーマル）_失敗する.wav",
+    "Female option 2": "Audio/Female option 2/235_東北ずん子（ノーマル）_失敗する.wav",
     "Male option 1": "Audio/Male option 1/235_雀松朱司（ノーマル）_失敗する.wav",
     "Female option 1": "Audio/Female option 1/235_東北きりたん（ノーマル）_失敗する.wav"
   },
   "特に": {
     "Male option 2": "Audio/Male option 2/310_離途（ノーマル）_特に.wav",
-    "Female option 2": "Audio/Female option 2/310_東北ずん子（ノーマル）_特に.wav",
+    "Female option 2": "Audio/Female option 2/310_東北ずん子（ノーマル）_特に.wav",
     "Male option 1": "Audio/Male option 1/310_雀松朱司（ノーマル）_特に.wav",
     "Female option 1": "Audio/Female option 1/310_東北きりたん（ノーマル）_特に.wav"
   },
@@ -1566,45 +1566,45 @@
   },
   "情報": {
     "Male option 2": "Audio/Male option 2/353_離途（ノーマル）_情報.wav",
-    "Female option 2": "Audio/Female option 2/353_東北ずん子（ノーマル）_情報.wav",
+    "Female option 2": "Audio/Female option 2/353_東北ずん子（ノーマル）_情報.wav",
     "Male option 1": "Audio/Male option 1/353_雀松朱司（ノーマル）_情報.wav",
     "Female option 1": "Audio/Female option 1/353_東北きりたん（ノーマル）_情報.wav"
   },
   "九時から五時まで": {
-    "Male option 2": "Audio/Male option 2/105_離途（ノーマル）_九時から五時まで.wav",
-    "Female option 2": "Audio/Female option 2/105_東北ずん子（ノーマル）_九時から五時まで.wav",
-    "Male option 1": "Audio/Male option 1/105_雀松朱司（ノーマル）_九時から五時まで.wav",
-    "Female option 1": "Audio/Female option 1/105_東北きりたん（ノーマル）_九時から五時まで.wav"
+    "Male option 2": "Audio/Male option 2/105_離途（ノーマル）_九時から五時まで.wav",
+    "Female option 2": "Audio/Female option 2/105_東北ずん子（ノーマル）_九時から五時まで.wav",
+    "Male option 1": "Audio/Male option 1/105_雀松朱司（ノーマル）_九時から五時まで.wav",
+    "Female option 1": "Audio/Female option 1/105_東北きりたん（ノーマル）_九時から五時まで.wav"
   },
   "場合": {
     "Male option 2": "Audio/Male option 2/294_離途（ノーマル）_場合.wav",
-    "Female option 2": "Audio/Female option 2/294_東北ずん子（ノーマル）_場合.wav",
+    "Female option 2": "Audio/Female option 2/294_東北ずん子（ノーマル）_場合.wav",
     "Male option 1": "Audio/Male option 1/294_雀松朱司（ノーマル）_場合.wav",
     "Female option 1": "Audio/Female option 1/294_東北きりたん（ノーマル）_場合.wav"
   },
   "分": {
     "Male option 2": "Audio/Male option 2/055_離途（ノーマル）_分.wav",
-    "Female option 2": "Audio/Female option 2/055_東北ずん子（ノーマル）_分.wav",
+    "Female option 2": "Audio/Female option 2/055_東北ずん子（ノーマル）_分.wav",
     "Male option 1": "Audio/Male option 1/055_雀松朱司（ノーマル）_分.wav",
     "Female option 1": "Audio/Female option 1/055_東北きりたん（ノーマル）_分.wav"
   },
   "いる間に": {
     "Male option 2": "Audio/Male option 2/248_離途（ノーマル）_いる間に.wav",
-    "Female option 2": "Audio/Female option 2/248_東北ずん子（ノーマル）_いる間に.wav",
+    "Female option 2": "Audio/Female option 2/248_東北ずん子（ノーマル）_いる間に.wav",
     "Male option 1": "Audio/Male option 1/248_雀松朱司（ノーマル）_いる間に.wav",
     "Female option 1": "Audio/Female option 1/248_東北きりたん（ノーマル）_いる間に.wav"
   },
   "する": {
     "Male option 2": "Audio/Male option 2/028_離途（ノーマル）_する.wav",
-    "Female option 2": "Audio/Female option 2/028_東北ずん子（ノーマル）_する.wav",
+    "Female option 2": "Audio/Female option 2/028_東北ずん子（ノーマル）_する.wav",
     "Male option 1": "Audio/Male option 1/028_雀松朱司（ノーマル）_する.wav",
     "Female option 1": "Audio/Female option 1/028_東北きりたん（ノーマル）_する.wav"
   },
   "すごい": {
-    "Male option 2": "Audio/Male option 2/049_離途（ノーマル）_すごい.wav",
-    "Female option 2": "Audio/Female option 2/049_東北ずん子（ノーマル）_すごい.wav",
-    "Male option 1": "Audio/Male option 1/049_雀松朱司（ノーマル）_すごい.wav",
-    "Female option 1": "Audio/Female option 1/049_東北きりたん（ノーマル）_すごい.wav"
+    "Male option 2": "Audio/Male option 2/049_離途（ノーマル）_すごい.wav",
+    "Female option 2": "Audio/Female option 2/049_東北ずん子（ノーマル）_すごい.wav",
+    "Male option 1": "Audio/Male option 1/049_雀松朱司（ノーマル）_すごい.wav",
+    "Female option 1": "Audio/Female option 1/049_東北きりたん（ノーマル）_すごい.wav"
   },
   "よじ": {
     "Male option 2": "Audio/Male option 2/029_離途（ノーマル）_よじ.wav",
@@ -1613,32 +1613,32 @@
     "Female option 1": "Audio/Female option 1/029_東北きりたん（ノーマル）_よじ.wav"
   },
   "開けっぱなし": {
-    "Male option 2": "Audio/Male option 2/277_離途（ノーマル）_開けっぱなし.wav",
-    "Female option 2": "Audio/Female option 2/277_東北ずん子（ノーマル）_開けっぱなし.wav",
-    "Male option 1": "Audio/Male option 1/277_雀松朱司（ノーマル）_開けっぱなし.wav",
-    "Female option 1": "Audio/Female option 1/277_東北きりたん（ノーマル）_開けっぱなし.wav"
+    "Male option 2": "Audio/Male option 2/277_離途（ノーマル）_開けっぱなし.wav",
+    "Female option 2": "Audio/Female option 2/277_東北ずん子（ノーマル）_開けっぱなし.wav",
+    "Male option 1": "Audio/Male option 1/277_雀松朱司（ノーマル）_開けっぱなし.wav",
+    "Female option 1": "Audio/Female option 1/277_東北きりたん（ノーマル）_開けっぱなし.wav"
   },
   "意見": {
     "Male option 2": "Audio/Male option 2/252_離途（ノーマル）_意見.wav",
-    "Female option 2": "Audio/Female option 2/252_東北ずん子（ノーマル）_意見.wav",
+    "Female option 2": "Audio/Female option 2/252_東北ずん子（ノーマル）_意見.wav",
     "Male option 1": "Audio/Male option 1/252_雀松朱司（ノーマル）_意見.wav",
     "Female option 1": "Audio/Female option 1/252_東北きりたん（ノーマル）_意見.wav"
   },
   "小さい": {
     "Male option 2": "Audio/Male option 2/176_離途（ノーマル）_小さい.wav",
-    "Female option 2": "Audio/Female option 2/176_東北ずん子（ノーマル）_小さい.wav",
+    "Female option 2": "Audio/Female option 2/176_東北ずん子（ノーマル）_小さい.wav",
     "Male option 1": "Audio/Male option 1/176_雀松朱司（ノーマル）_小さい.wav",
     "Female option 1": "Audio/Female option 1/176_東北きりたん（ノーマル）_小さい.wav"
   },
   "増加": {
     "Male option 2": "Audio/Male option 2/300_離途（ノーマル）_増加.wav",
-    "Female option 2": "Audio/Female option 2/300_東北ずん子（ノーマル）_増加.wav",
+    "Female option 2": "Audio/Female option 2/300_東北ずん子（ノーマル）_増加.wav",
     "Male option 1": "Audio/Male option 1/300_雀松朱司（ノーマル）_増加.wav",
     "Female option 1": "Audio/Female option 1/300_東北きりたん（ノーマル）_増加.wav"
   },
   "決意": {
     "Male option 2": "Audio/Male option 2/376_離途（ノーマル）_決意.wav",
-    "Female option 2": "Audio/Female option 2/376_東北ずん子（ノーマル）_決意.wav",
+    "Female option 2": "Audio/Female option 2/376_東北ずん子（ノーマル）_決意.wav",
     "Male option 1": "Audio/Male option 1/376_雀松朱司（ノーマル）_決意.wav",
     "Female option 1": "Audio/Female option 1/376_東北きりたん（ノーマル）_決意.wav"
   },
@@ -1662,7 +1662,7 @@
   },
   "発展": {
     "Male option 2": "Audio/Male option 2/320_離途（ノーマル）_発展.wav",
-    "Female option 2": "Audio/Female option 2/320_東北ずん子（ノーマル）_発展.wav",
+    "Female option 2": "Audio/Female option 2/320_東北ずん子（ノーマル）_発展.wav",
     "Male option 1": "Audio/Male option 1/320_雀松朱司（ノーマル）_発展.wav",
     "Female option 1": "Audio/Female option 1/320_東北きりたん（ノーマル）_発展.wav"
   },
@@ -1674,13 +1674,13 @@
   },
   "日本から来ました": {
     "Male option 2": "Audio/Male option 2/082_離途（ノーマル）_日本から来ました.wav",
-    "Female option 2": "Audio/Female option 2/082_東北ずん子（ノーマル）_日本から来ました.wav",
+    "Female option 2": "Audio/Female option 2/082_東北ずん子（ノーマル）_日本から来ました.wav",
     "Male option 1": "Audio/Male option 1/082_雀松朱司（ノーマル）_日本から来ました.wav",
     "Female option 1": "Audio/Female option 1/082_東北きりたん（ノーマル）_日本から来ました.wav"
   },
   "慣れる": {
     "Male option 2": "Audio/Male option 2/250_離途（ノーマル）_慣れる.wav",
-    "Female option 2": "Audio/Female option 2/250_東北ずん子（ノーマル）_慣れる.wav",
+    "Female option 2": "Audio/Female option 2/250_東北ずん子（ノーマル）_慣れる.wav",
     "Male option 1": "Audio/Male option 1/250_雀松朱司（ノーマル）_慣れる.wav",
     "Female option 1": "Audio/Female option 1/250_東北きりたん（ノーマル）_慣れる.wav"
   },
@@ -1692,13 +1692,13 @@
   },
   "規則": {
     "Male option 2": "Audio/Male option 2/304_離途（ノーマル）_規則.wav",
-    "Female option 2": "Audio/Female option 2/304_東北ずん子（ノーマル）_規則.wav",
+    "Female option 2": "Audio/Female option 2/304_東北ずん子（ノーマル）_規則.wav",
     "Male option 1": "Audio/Male option 1/304_雀松朱司（ノーマル）_規則.wav",
     "Female option 1": "Audio/Female option 1/304_東北きりたん（ノーマル）_規則.wav"
   },
   "言われる": {
     "Male option 2": "Audio/Male option 2/180_離途（ノーマル）_言われる.wav",
-    "Female option 2": "Audio/Female option 2/180_東北ずん子（ノーマル）_言われる.wav",
+    "Female option 2": "Audio/Female option 2/180_東北ずん子（ノーマル）_言われる.wav",
     "Male option 1": "Audio/Male option 1/180_雀松朱司（ノーマル）_言われる.wav",
     "Female option 1": "Audio/Female option 1/180_東北きりたん（ノーマル）_言われる.wav"
   },
@@ -1710,25 +1710,25 @@
   },
   "約束": {
     "Male option 2": "Audio/Male option 2/149_離途（ノーマル）_約束.wav",
-    "Female option 2": "Audio/Female option 2/149_東北ずん子（ノーマル）_約束.wav",
+    "Female option 2": "Audio/Female option 2/149_東北ずん子（ノーマル）_約束.wav",
     "Male option 1": "Audio/Male option 1/149_雀松朱司（ノーマル）_約束.wav",
     "Female option 1": "Audio/Female option 1/149_東北きりたん（ノーマル）_約束.wav"
   },
   "終わり次第": {
     "Male option 2": "Audio/Male option 2/263_離途（ノーマル）_終わり次第.wav",
-    "Female option 2": "Audio/Female option 2/263_東北ずん子（ノーマル）_終わり次第.wav",
+    "Female option 2": "Audio/Female option 2/263_東北ずん子（ノーマル）_終わり次第.wav",
     "Male option 1": "Audio/Male option 1/263_雀松朱司（ノーマル）_終わり次第.wav",
     "Female option 1": "Audio/Female option 1/263_東北きりたん（ノーマル）_終わり次第.wav"
   },
   "効果": {
     "Male option 2": "Audio/Male option 2/301_離途（ノーマル）_効果.wav",
-    "Female option 2": "Audio/Female option 2/301_東北ずん子（ノーマル）_効果.wav",
+    "Female option 2": "Audio/Female option 2/301_東北ずん子（ノーマル）_効果.wav",
     "Male option 1": "Audio/Male option 1/301_雀松朱司（ノーマル）_効果.wav",
     "Female option 1": "Audio/Female option 1/301_東北きりたん（ノーマル）_効果.wav"
   },
   "時": {
     "Male option 2": "Audio/Male option 2/054_離途（ノーマル）_時.wav",
-    "Female option 2": "Audio/Female option 2/054_東北ずん子（ノーマル）_時.wav",
+    "Female option 2": "Audio/Female option 2/054_東北ずん子（ノーマル）_時.wav",
     "Male option 1": "Audio/Male option 1/054_雀松朱司（ノーマル）_時.wav",
     "Female option 1": "Audio/Female option 1/054_東北きりたん（ノーマル）_時.wav"
   },
@@ -1740,13 +1740,13 @@
   },
   "そう": {
     "Male option 2": "Audio/Male option 2/071_離途（ノーマル）_そう.wav",
-    "Female option 2": "Audio/Female option 2/071_東北ずん子（ノーマル）_そう.wav",
+    "Female option 2": "Audio/Female option 2/071_東北ずん子（ノーマル）_そう.wav",
     "Male option 1": "Audio/Male option 1/071_雀松朱司（ノーマル）_そう.wav",
     "Female option 1": "Audio/Female option 1/071_東北きりたん（ノーマル）_そう.wav"
   },
   "多い": {
     "Male option 2": "Audio/Male option 2/257_離途（ノーマル）_多い.wav",
-    "Female option 2": "Audio/Female option 2/257_東北ずん子（ノーマル）_多い.wav",
+    "Female option 2": "Audio/Female option 2/257_東北ずん子（ノーマル）_多い.wav",
     "Male option 1": "Audio/Male option 1/257_雀松朱司（ノーマル）_多い.wav",
     "Female option 1": "Audio/Female option 1/257_東北きりたん（ノーマル）_多い.wav"
   },
@@ -1757,10 +1757,10 @@
     "Female option 1": "Audio/Female option 1/071_東北きりたん（ノーマル）_はっぴゃく.wav"
   },
   "プレゼント": {
-    "Male option 2": "Audio/Male option 2/083_離途（ノーマル）_プレゼント.wav",
-    "Female option 2": "Audio/Female option 2/083_東北ずん子（ノーマル）_プレゼント.wav",
-    "Male option 1": "Audio/Male option 1/083_雀松朱司（ノーマル）_プレゼント.wav",
-    "Female option 1": "Audio/Female option 1/083_東北きりたん（ノーマル）_プレゼント.wav"
+    "Male option 2": "Audio/Male option 2/083_離途（ノーマル）_プレゼント.wav",
+    "Female option 2": "Audio/Female option 2/083_東北ずん子（ノーマル）_プレゼント.wav",
+    "Male option 1": "Audio/Male option 1/083_雀松朱司（ノーマル）_プレゼント.wav",
+    "Female option 1": "Audio/Female option 1/083_東北きりたん（ノーマル）_プレゼント.wav"
   },
   "ただいま": {
     "Male option 2": "Audio/Male option 2/020_離途（ノーマル）_ただいま.wav",
@@ -1770,13 +1770,13 @@
   },
   "飲みたい": {
     "Male option 2": "Audio/Male option 2/097_離途（ノーマル）_飲みたい.wav",
-    "Female option 2": "Audio/Female option 2/097_東北ずん子（ノーマル）_飲みたい.wav",
+    "Female option 2": "Audio/Female option 2/097_東北ずん子（ノーマル）_飲みたい.wav",
     "Male option 1": "Audio/Male option 1/097_雀松朱司（ノーマル）_飲みたい.wav",
     "Female option 1": "Audio/Female option 1/097_東北きりたん（ノーマル）_飲みたい.wav"
   },
   "体験": {
     "Male option 2": "Audio/Male option 2/356_離途（ノーマル）_体験.wav",
-    "Female option 2": "Audio/Female option 2/356_東北ずん子（ノーマル）_体験.wav",
+    "Female option 2": "Audio/Female option 2/356_東北ずん子（ノーマル）_体験.wav",
     "Male option 1": "Audio/Male option 1/356_雀松朱司（ノーマル）_体験.wav",
     "Female option 1": "Audio/Female option 1/356_東北きりたん（ノーマル）_体験.wav"
   },
@@ -1794,27 +1794,27 @@
   },
   "不満": {
     "Male option 2": "Audio/Male option 2/230_離途（ノーマル）_不満.wav",
-    "Female option 2": "Audio/Female option 2/230_東北ずん子（ノーマル）_不満.wav",
+    "Female option 2": "Audio/Female option 2/230_東北ずん子（ノーマル）_不満.wav",
     "Male option 1": "Audio/Male option 1/230_雀松朱司（ノーマル）_不満.wav",
     "Female option 1": "Audio/Female option 1/230_東北きりたん（ノーマル）_不満.wav"
   },
   "長所": {
     "Male option 2": "Audio/Male option 2/354_離途（ノーマル）_長所.wav",
-    "Female option 2": "Audio/Female option 2/354_東北ずん子（ノーマル）_長所.wav",
+    "Female option 2": "Audio/Female option 2/354_東北ずん子（ノーマル）_長所.wav",
     "Male option 1": "Audio/Male option 1/354_雀松朱司（ノーマル）_長所.wav",
     "Female option 1": "Audio/Female option 1/354_東北きりたん（ノーマル）_長所.wav"
   },
   "記憶": {
     "Male option 2": "Audio/Male option 2/365_離途（ノーマル）_記憶.wav",
-    "Female option 2": "Audio/Female option 2/365_東北ずん子（ノーマル）_記憶.wav",
+    "Female option 2": "Audio/Female option 2/365_東北ずん子（ノーマル）_記憶.wav",
     "Male option 1": "Audio/Male option 1/365_雀松朱司（ノーマル）_記憶.wav",
     "Female option 1": "Audio/Female option 1/365_東北きりたん（ノーマル）_記憶.wav"
   },
   "だめ": {
-    "Male option 2": "Audio/Male option 2/072_離途（ノーマル）_だめ.wav",
-    "Female option 2": "Audio/Female option 2/072_東北ずん子（ノーマル）_だめ.wav",
-    "Male option 1": "Audio/Male option 1/072_雀松朱司（ノーマル）_だめ.wav",
-    "Female option 1": "Audio/Female option 1/072_東北きりたん（ノーマル）_だめ.wav"
+    "Male option 2": "Audio/Male option 2/072_離途（ノーマル）_だめ.wav",
+    "Female option 2": "Audio/Female option 2/072_東北ずん子（ノーマル）_だめ.wav",
+    "Male option 1": "Audio/Male option 1/072_雀松朱司（ノーマル）_だめ.wav",
+    "Female option 1": "Audio/Female option 1/072_東北きりたん（ノーマル）_だめ.wav"
   },
   "あの": {
     "Male option 2": "Audio/Male option 2/084_離途（ノーマル）_あの.wav",
@@ -1824,67 +1824,67 @@
   },
   "楽しい": {
     "Male option 2": "Audio/Male option 2/275_離途（ノーマル）_楽しい.wav",
-    "Female option 2": "Audio/Female option 2/275_東北ずん子（ノーマル）_楽しい.wav",
+    "Female option 2": "Audio/Female option 2/275_東北ずん子（ノーマル）_楽しい.wav",
     "Male option 1": "Audio/Male option 1/275_雀松朱司（ノーマル）_楽しい.wav",
     "Female option 1": "Audio/Female option 1/275_東北きりたん（ノーマル）_楽しい.wav"
   },
   "朝": {
     "Male option 2": "Audio/Male option 2/159_離途（ノーマル）_朝.wav",
-    "Female option 2": "Audio/Female option 2/159_東北ずん子（ノーマル）_朝.wav",
+    "Female option 2": "Audio/Female option 2/159_東北ずん子（ノーマル）_朝.wav",
     "Male option 1": "Audio/Male option 1/159_雀松朱司（ノーマル）_朝.wav",
     "Female option 1": "Audio/Female option 1/159_東北きりたん（ノーマル）_朝.wav"
   },
   "学校へ行く": {
     "Male option 2": "Audio/Male option 2/080_離途（ノーマル）_学校へ行く.wav",
-    "Female option 2": "Audio/Female option 2/080_東北ずん子（ノーマル）_学校へ行く.wav",
+    "Female option 2": "Audio/Female option 2/080_東北ずん子（ノーマル）_学校へ行く.wav",
     "Male option 1": "Audio/Male option 1/080_雀松朱司（ノーマル）_学校へ行く.wav",
     "Female option 1": "Audio/Female option 1/080_東北きりたん（ノーマル）_学校へ行く.wav"
   },
   "話題": {
     "Male option 2": "Audio/Male option 2/373_離途（ノーマル）_話題.wav",
-    "Female option 2": "Audio/Female option 2/373_東北ずん子（ノーマル）_話題.wav",
+    "Female option 2": "Audio/Female option 2/373_東北ずん子（ノーマル）_話題.wav",
     "Male option 1": "Audio/Male option 1/373_雀松朱司（ノーマル）_話題.wav",
     "Female option 1": "Audio/Female option 1/373_東北きりたん（ノーマル）_話題.wav"
   },
   "仮定": {
     "Male option 2": "Audio/Male option 2/292_離途（ノーマル）_仮定.wav",
-    "Female option 2": "Audio/Female option 2/292_東北ずん子（ノーマル）_仮定.wav",
+    "Female option 2": "Audio/Female option 2/292_東北ずん子（ノーマル）_仮定.wav",
     "Male option 1": "Audio/Male option 1/292_雀松朱司（ノーマル）_仮定.wav",
     "Female option 1": "Audio/Female option 1/292_東北きりたん（ノーマル）_仮定.wav"
   },
   "しずか": {
-    "Male option 2": "Audio/Male option 2/045_離途（ノーマル）_しずか.wav",
-    "Female option 2": "Audio/Female option 2/045_東北ずん子（ノーマル）_しずか.wav",
-    "Male option 1": "Audio/Male option 1/045_雀松朱司（ノーマル）_しずか.wav",
-    "Female option 1": "Audio/Female option 1/045_東北きりたん（ノーマル）_しずか.wav"
+    "Male option 2": "Audio/Male option 2/045_離途（ノーマル）_しずか.wav",
+    "Female option 2": "Audio/Female option 2/045_東北ずん子（ノーマル）_しずか.wav",
+    "Male option 1": "Audio/Male option 1/045_雀松朱司（ノーマル）_しずか.wav",
+    "Female option 1": "Audio/Female option 1/045_東北きりたん（ノーマル）_しずか.wav"
   },
   "利点": {
     "Male option 2": "Audio/Male option 2/302_離途（ノーマル）_利点.wav",
-    "Female option 2": "Audio/Female option 2/302_東北ずん子（ノーマル）_利点.wav",
+    "Female option 2": "Audio/Female option 2/302_東北ずん子（ノーマル）_利点.wav",
     "Male option 1": "Audio/Male option 1/302_雀松朱司（ノーマル）_利点.wav",
     "Female option 1": "Audio/Female option 1/302_東北きりたん（ノーマル）_利点.wav"
   },
   "来る": {
     "Male option 2": "Audio/Male option 2/027_離途（ノーマル）_来る.wav",
-    "Female option 2": "Audio/Female option 2/027_東北ずん子（ノーマル）_来る.wav",
+    "Female option 2": "Audio/Female option 2/027_東北ずん子（ノーマル）_来る.wav",
     "Male option 1": "Audio/Male option 1/027_雀松朱司（ノーマル）_来る.wav",
     "Female option 1": "Audio/Female option 1/027_東北きりたん（ノーマル）_来る.wav"
   },
   "わすれる": {
     "Male option 2": "Audio/Male option 2/125_離途（ノーマル）_わすれる.wav",
-    "Female option 2": "Audio/Female option 2/125_東北ずん子（ノーマル）_わすれる.wav",
+    "Female option 2": "Audio/Female option 2/125_東北ずん子（ノーマル）_わすれる.wav",
     "Male option 1": "Audio/Male option 1/125_雀松朱司（ノーマル）_わすれる.wav",
     "Female option 1": "Audio/Female option 1/125_東北きりたん（ノーマル）_わすれる.wav"
   },
   "間に合う": {
     "Male option 2": "Audio/Male option 2/225_離途（ノーマル）_間に合う.wav",
-    "Female option 2": "Audio/Female option 2/225_東北ずん子（ノーマル）_間に合う.wav",
+    "Female option 2": "Audio/Female option 2/225_東北ずん子（ノーマル）_間に合う.wav",
     "Male option 1": "Audio/Male option 1/225_雀松朱司（ノーマル）_間に合う.wav",
     "Female option 1": "Audio/Female option 1/225_東北きりたん（ノーマル）_間に合う.wav"
   },
   "六": {
     "Male option 2": "Audio/Male option 2/066_離途（ノーマル）_六.wav",
-    "Female option 2": "Audio/Female option 2/066_東北ずん子（ノーマル）_六.wav",
+    "Female option 2": "Audio/Female option 2/066_東北ずん子（ノーマル）_六.wav",
     "Male option 1": "Audio/Male option 1/066_雀松朱司（ノーマル）_六.wav",
     "Female option 1": "Audio/Female option 1/066_東北きりたん（ノーマル）_六.wav"
   },
@@ -1896,79 +1896,79 @@
   },
   "状況": {
     "Male option 2": "Audio/Male option 2/293_離途（ノーマル）_状況.wav",
-    "Female option 2": "Audio/Female option 2/293_東北ずん子（ノーマル）_状況.wav",
+    "Female option 2": "Audio/Female option 2/293_東北ずん子（ノーマル）_状況.wav",
     "Male option 1": "Audio/Male option 1/293_雀松朱司（ノーマル）_状況.wav",
     "Female option 1": "Audio/Female option 1/293_東北きりたん（ノーマル）_状況.wav"
   },
   "現実": {
     "Male option 2": "Audio/Male option 2/344_離途（ノーマル）_現実.wav",
-    "Female option 2": "Audio/Female option 2/344_東北ずん子（ノーマル）_現実.wav",
+    "Female option 2": "Audio/Female option 2/344_東北ずん子（ノーマル）_現実.wav",
     "Male option 1": "Audio/Male option 1/344_雀松朱司（ノーマル）_現実.wav",
     "Female option 1": "Audio/Female option 1/344_東北きりたん（ノーマル）_現実.wav"
   },
   "部分": {
     "Male option 2": "Audio/Male option 2/314_離途（ノーマル）_部分.wav",
-    "Female option 2": "Audio/Female option 2/314_東北ずん子（ノーマル）_部分.wav",
+    "Female option 2": "Audio/Female option 2/314_東北ずん子（ノーマル）_部分.wav",
     "Male option 1": "Audio/Male option 1/314_雀松朱司（ノーマル）_部分.wav",
     "Female option 1": "Audio/Female option 1/314_東北きりたん（ノーマル）_部分.wav"
   },
   "先生": {
     "Male option 2": "Audio/Male option 2/004_離途（ノーマル）_先生.wav",
-    "Female option 2": "Audio/Female option 2/004_東北ずん子（ノーマル）_先生.wav",
+    "Female option 2": "Audio/Female option 2/004_東北ずん子（ノーマル）_先生.wav",
     "Male option 1": "Audio/Male option 1/004_雀松朱司（ノーマル）_先生.wav",
     "Female option 1": "Audio/Female option 1/004_東北きりたん（ノーマル）_先生.wav"
   },
   "八": {
     "Male option 2": "Audio/Male option 2/068_離途（ノーマル）_八.wav",
-    "Female option 2": "Audio/Female option 2/068_東北ずん子（ノーマル）_八.wav",
+    "Female option 2": "Audio/Female option 2/068_東北ずん子（ノーマル）_八.wav",
     "Male option 1": "Audio/Male option 1/068_雀松朱司（ノーマル）_八.wav",
     "Female option 1": "Audio/Female option 1/068_東北きりたん（ノーマル）_八.wav"
   },
   "ある": {
     "Male option 2": "Audio/Male option 2/127_離途（ノーマル）_ある.wav",
-    "Female option 2": "Audio/Female option 2/127_東北ずん子（ノーマル）_ある.wav",
+    "Female option 2": "Audio/Female option 2/127_東北ずん子（ノーマル）_ある.wav",
     "Male option 1": "Audio/Male option 1/127_雀松朱司（ノーマル）_ある.wav",
     "Female option 1": "Audio/Female option 1/127_東北きりたん（ノーマル）_ある.wav"
   },
   "机": {
     "Male option 2": "Audio/Male option 2/042_離途（ノーマル）_机.wav",
-    "Female option 2": "Audio/Female option 2/042_東北ずん子（ノーマル）_机.wav",
+    "Female option 2": "Audio/Female option 2/042_東北ずん子（ノーマル）_机.wav",
     "Male option 1": "Audio/Male option 1/042_雀松朱司（ノーマル）_机.wav",
     "Female option 1": "Audio/Female option 1/042_東北きりたん（ノーマル）_机.wav"
   },
   "予想": {
     "Male option 2": "Audio/Male option 2/308_離途（ノーマル）_予想.wav",
-    "Female option 2": "Audio/Female option 2/308_東北ずん子（ノーマル）_予想.wav",
+    "Female option 2": "Audio/Female option 2/308_東北ずん子（ノーマル）_予想.wav",
     "Male option 1": "Audio/Male option 1/308_雀松朱司（ノーマル）_予想.wav",
     "Female option 1": "Audio/Female option 1/308_東北きりたん（ノーマル）_予想.wav"
   },
   "見た映画": {
     "Male option 2": "Audio/Male option 2/206_離途（ノーマル）_見た映画.wav",
-    "Female option 2": "Audio/Female option 2/206_東北ずん子（ノーマル）_見た映画.wav",
+    "Female option 2": "Audio/Female option 2/206_東北ずん子（ノーマル）_見た映画.wav",
     "Male option 1": "Audio/Male option 1/206_雀松朱司（ノーマル）_見た映画.wav",
     "Female option 1": "Audio/Female option 1/206_東北きりたん（ノーマル）_見た映画.wav"
   },
   "練習": {
     "Male option 2": "Audio/Male option 2/221_離途（ノーマル）_練習.wav",
-    "Female option 2": "Audio/Female option 2/221_東北ずん子（ノーマル）_練習.wav",
+    "Female option 2": "Audio/Female option 2/221_東北ずん子（ノーマル）_練習.wav",
     "Male option 1": "Audio/Male option 1/221_雀松朱司（ノーマル）_練習.wav",
     "Female option 1": "Audio/Female option 1/221_東北きりたん（ノーマル）_練習.wav"
   },
   "年齢": {
     "Male option 2": "Audio/Male option 2/306_離途（ノーマル）_年齢.wav",
-    "Female option 2": "Audio/Female option 2/306_東北ずん子（ノーマル）_年齢.wav",
+    "Female option 2": "Audio/Female option 2/306_東北ずん子（ノーマル）_年齢.wav",
     "Male option 1": "Audio/Male option 1/306_雀松朱司（ノーマル）_年齢.wav",
     "Female option 1": "Audio/Female option 1/306_東北きりたん（ノーマル）_年齢.wav"
   },
   "政治": {
     "Male option 2": "Audio/Male option 2/324_離途（ノーマル）_政治.wav",
-    "Female option 2": "Audio/Female option 2/324_東北ずん子（ノーマル）_政治.wav",
+    "Female option 2": "Audio/Female option 2/324_東北ずん子（ノーマル）_政治.wav",
     "Male option 1": "Audio/Male option 1/324_雀松朱司（ノーマル）_政治.wav",
     "Female option 1": "Audio/Female option 1/324_東北きりたん（ノーマル）_政治.wav"
   },
   "会社": {
     "Male option 2": "Audio/Male option 2/037_離途（ノーマル）_会社.wav",
-    "Female option 2": "Audio/Female option 2/037_東北ずん子（ノーマル）_会社.wav",
+    "Female option 2": "Audio/Female option 2/037_東北ずん子（ノーマル）_会社.wav",
     "Male option 1": "Audio/Male option 1/037_雀松朱司（ノーマル）_会社.wav",
     "Female option 1": "Audio/Female option 1/037_東北きりたん（ノーマル）_会社.wav"
   },
@@ -1979,38 +1979,38 @@
     "Female option 1": "Audio/Female option 1/143_東北きりたん（ノーマル）_たいてい.wav"
   },
   "そうなんです": {
-    "Male option 2": "Audio/Male option 2/198_離途（ノーマル）_そうなんです.wav",
-    "Female option 2": "Audio/Female option 2/198_東北ずん子（ノーマル）_そうなんです.wav",
-    "Male option 1": "Audio/Male option 1/198_雀松朱司（ノーマル）_そうなんです.wav",
-    "Female option 1": "Audio/Female option 1/198_東北きりたん（ノーマル）_そうなんです.wav"
+    "Male option 2": "Audio/Male option 2/198_離途（ノーマル）_そうなんです.wav",
+    "Female option 2": "Audio/Female option 2/198_東北ずん子（ノーマル）_そうなんです.wav",
+    "Male option 1": "Audio/Male option 1/198_雀松朱司（ノーマル）_そうなんです.wav",
+    "Female option 1": "Audio/Female option 1/198_東北きりたん（ノーマル）_そうなんです.wav"
   },
   "困られる": {
     "Male option 2": "Audio/Male option 2/203_離途（ノーマル）_困られる.wav",
-    "Female option 2": "Audio/Female option 2/203_東北ずん子（ノーマル）_困られる.wav",
+    "Female option 2": "Audio/Female option 2/203_東北ずん子（ノーマル）_困られる.wav",
     "Male option 1": "Audio/Male option 1/203_雀松朱司（ノーマル）_困られる.wav",
     "Female option 1": "Audio/Female option 1/203_東北きりたん（ノーマル）_困られる.wav"
   },
   "限界": {
     "Male option 2": "Audio/Male option 2/371_離途（ノーマル）_限界.wav",
-    "Female option 2": "Audio/Female option 2/371_東北ずん子（ノーマル）_限界.wav",
+    "Female option 2": "Audio/Female option 2/371_東北ずん子（ノーマル）_限界.wav",
     "Male option 1": "Audio/Male option 1/371_雀松朱司（ノーマル）_限界.wav",
     "Female option 1": "Audio/Female option 1/371_東北きりたん（ノーマル）_限界.wav"
   },
   "諦める": {
     "Male option 2": "Audio/Male option 2/273_離途（ノーマル）_諦める.wav",
-    "Female option 2": "Audio/Female option 2/273_東北ずん子（ノーマル）_諦める.wav",
+    "Female option 2": "Audio/Female option 2/273_東北ずん子（ノーマル）_諦める.wav",
     "Male option 1": "Audio/Male option 1/273_雀松朱司（ノーマル）_諦める.wav",
     "Female option 1": "Audio/Female option 1/273_東北きりたん（ノーマル）_諦める.wav"
   },
   "必要": {
     "Male option 2": "Audio/Male option 2/240_離途（ノーマル）_必要.wav",
-    "Female option 2": "Audio/Female option 2/240_東北ずん子（ノーマル）_必要.wav",
+    "Female option 2": "Audio/Female option 2/240_東北ずん子（ノーマル）_必要.wav",
     "Male option 1": "Audio/Male option 1/240_雀松朱司（ノーマル）_必要.wav",
     "Female option 1": "Audio/Female option 1/240_東北きりたん（ノーマル）_必要.wav"
   },
   "午後": {
     "Male option 2": "Audio/Male option 2/057_離途（ノーマル）_午後.wav",
-    "Female option 2": "Audio/Female option 2/057_東北ずん子（ノーマル）_午後.wav",
+    "Female option 2": "Audio/Female option 2/057_東北ずん子（ノーマル）_午後.wav",
     "Male option 1": "Audio/Male option 1/057_雀松朱司（ノーマル）_午後.wav",
     "Female option 1": "Audio/Female option 1/057_東北きりたん（ノーマル）_午後.wav"
   },
@@ -2034,13 +2034,13 @@
   },
   "行きました": {
     "Male option 2": "Audio/Male option 2/087_離途（ノーマル）_行きました.wav",
-    "Female option 2": "Audio/Female option 2/087_東北ずん子（ノーマル）_行きました.wav",
+    "Female option 2": "Audio/Female option 2/087_東北ずん子（ノーマル）_行きました.wav",
     "Male option 1": "Audio/Male option 1/087_雀松朱司（ノーマル）_行きました.wav",
     "Female option 1": "Audio/Female option 1/087_東北きりたん（ノーマル）_行きました.wav"
   },
   "待つ": {
     "Male option 2": "Audio/Male option 2/186_離途（ノーマル）_待つ.wav",
-    "Female option 2": "Audio/Female option 2/186_東北ずん子（ノーマル）_待つ.wav",
+    "Female option 2": "Audio/Female option 2/186_東北ずん子（ノーマル）_待つ.wav",
     "Male option 1": "Audio/Male option 1/186_雀松朱司（ノーマル）_待つ.wav",
     "Female option 1": "Audio/Female option 1/186_東北きりたん（ノーマル）_待つ.wav"
   },
@@ -2051,10 +2051,10 @@
     "Female option 1": "Audio/Female option 1/124_東北きりたん（ノーマル）_アイスクリーム.wav"
   },
   "勉強するでしょう": {
-    "Male option 2": "Audio/Male option 2/116_離途（ノーマル）_勉強するでしょう.wav",
-    "Female option 2": "Audio/Female option 2/116_東北ずん子（ノーマル）_勉強するでしょう.wav",
-    "Male option 1": "Audio/Male option 1/116_雀松朱司（ノーマル）_勉強するでしょう.wav",
-    "Female option 1": "Audio/Female option 1/116_東北きりたん（ノーマル）_勉強するでしょう.wav"
+    "Male option 2": "Audio/Male option 2/116_離途（ノーマル）_勉強するでしょう.wav",
+    "Female option 2": "Audio/Female option 2/116_東北ずん子（ノーマル）_勉強するでしょう.wav",
+    "Male option 1": "Audio/Male option 1/116_雀松朱司（ノーマル）_勉強するでしょう.wav",
+    "Female option 1": "Audio/Female option 1/116_東北きりたん（ノーマル）_勉強するでしょう.wav"
   },
   "ぼうし": {
     "Male option 2": "Audio/Male option 2/065_離途（ノーマル）_ぼうし.wav",
@@ -2064,7 +2064,7 @@
   },
   "欠点": {
     "Male option 2": "Audio/Male option 2/303_離途（ノーマル）_欠点.wav",
-    "Female option 2": "Audio/Female option 2/303_東北ずん子（ノーマル）_欠点.wav",
+    "Female option 2": "Audio/Female option 2/303_東北ずん子（ノーマル）_欠点.wav",
     "Male option 1": "Audio/Male option 1/303_雀松朱司（ノーマル）_欠点.wav",
     "Female option 1": "Audio/Female option 1/303_東北きりたん（ノーマル）_欠点.wav"
   },
@@ -2076,21 +2076,21 @@
   },
   "残念": {
     "Male option 2": "Audio/Male option 2/227_離途（ノーマル）_残念.wav",
-    "Female option 2": "Audio/Female option 2/227_東北ずん子（ノーマル）_残念.wav",
+    "Female option 2": "Audio/Female option 2/227_東北ずん子（ノーマル）_残念.wav",
     "Male option 1": "Audio/Male option 1/227_雀松朱司（ノーマル）_残念.wav",
     "Female option 1": "Audio/Female option 1/227_東北きりたん（ノーマル）_残念.wav"
   },
   "ぜんぜん": {
-    "Male option 2": "Audio/Male option 2/102_離途（ノーマル）_ぜんぜん.wav",
-    "Female option 2": "Audio/Female option 2/102_東北ずん子（ノーマル）_ぜんぜん.wav",
-    "Male option 1": "Audio/Male option 1/102_雀松朱司（ノーマル）_ぜんぜん.wav",
-    "Female option 1": "Audio/Female option 1/102_東北きりたん（ノーマル）_ぜんぜん.wav"
+    "Male option 2": "Audio/Male option 2/102_離途（ノーマル）_ぜんぜん.wav",
+    "Female option 2": "Audio/Female option 2/102_東北ずん子（ノーマル）_ぜんぜん.wav",
+    "Male option 1": "Audio/Male option 1/102_雀松朱司（ノーマル）_ぜんぜん.wav",
+    "Female option 1": "Audio/Female option 1/102_東北きりたん（ノーマル）_ぜんぜん.wav"
   },
   "おぼえる": {
-    "Male option 2": "Audio/Male option 2/124_離途（ノーマル）_おぼえる.wav",
-    "Female option 2": "Audio/Female option 2/124_東北ずん子（ノーマル）_おぼえる.wav",
-    "Male option 1": "Audio/Male option 1/124_雀松朱司（ノーマル）_おぼえる.wav",
-    "Female option 1": "Audio/Female option 1/124_東北きりたん（ノーマル）_おぼえる.wav"
+    "Male option 2": "Audio/Male option 2/124_離途（ノーマル）_おぼえる.wav",
+    "Female option 2": "Audio/Female option 2/124_東北ずん子（ノーマル）_おぼえる.wav",
+    "Male option 1": "Audio/Male option 1/124_雀松朱司（ノーマル）_おぼえる.wav",
+    "Female option 1": "Audio/Female option 1/124_東北きりたん（ノーマル）_おぼえる.wav"
   },
   "ごふん": {
     "Male option 2": "Audio/Male option 2/033_離途（ノーマル）_ごふん.wav",
@@ -2099,32 +2099,32 @@
     "Female option 1": "Audio/Female option 1/033_東北きりたん（ノーマル）_ごふん.wav"
   },
   "ペン": {
-    "Male option 2": "Audio/Male option 2/020_離途（ノーマル）_ペン.wav",
-    "Female option 2": "Audio/Female option 2/020_東北ずん子（ノーマル）_ペン.wav",
-    "Male option 1": "Audio/Male option 1/020_雀松朱司（ノーマル）_ペン.wav",
-    "Female option 1": "Audio/Female option 1/020_東北きりたん（ノーマル）_ペン.wav"
+    "Male option 2": "Audio/Male option 2/020_離途（ノーマル）_ペン.wav",
+    "Female option 2": "Audio/Female option 2/020_東北ずん子（ノーマル）_ペン.wav",
+    "Male option 1": "Audio/Male option 1/020_雀松朱司（ノーマル）_ペン.wav",
+    "Female option 1": "Audio/Female option 1/020_東北きりたん（ノーマル）_ペン.wav"
   },
   "例": {
     "Male option 2": "Audio/Male option 2/311_離途（ノーマル）_例.wav",
-    "Female option 2": "Audio/Female option 2/311_東北ずん子（ノーマル）_例.wav",
+    "Female option 2": "Audio/Female option 2/311_東北ずん子（ノーマル）_例.wav",
     "Male option 1": "Audio/Male option 1/311_雀松朱司（ノーマル）_例.wav",
     "Female option 1": "Audio/Female option 1/311_東北きりたん（ノーマル）_例.wav"
   },
   "そして": {
     "Male option 2": "Audio/Male option 2/091_離途（ノーマル）_そして.wav",
-    "Female option 2": "Audio/Female option 2/091_東北ずん子（ノーマル）_そして.wav",
+    "Female option 2": "Audio/Female option 2/091_東北ずん子（ノーマル）_そして.wav",
     "Male option 1": "Audio/Male option 1/091_雀松朱司（ノーマル）_そして.wav",
     "Female option 1": "Audio/Female option 1/091_東北きりたん（ノーマル）_そして.wav"
   },
   "範囲": {
     "Male option 2": "Audio/Male option 2/315_離途（ノーマル）_範囲.wav",
-    "Female option 2": "Audio/Female option 2/315_東北ずん子（ノーマル）_範囲.wav",
+    "Female option 2": "Audio/Female option 2/315_東北ずん子（ノーマル）_範囲.wav",
     "Male option 1": "Audio/Male option 1/315_雀松朱司（ノーマル）_範囲.wav",
     "Female option 1": "Audio/Female option 1/315_東北きりたん（ノーマル）_範囲.wav"
   },
   "夜": {
     "Male option 2": "Audio/Male option 2/161_離途（ノーマル）_夜.wav",
-    "Female option 2": "Audio/Female option 2/161_東北ずん子（ノーマル）_夜.wav",
+    "Female option 2": "Audio/Female option 2/161_東北ずん子（ノーマル）_夜.wav",
     "Male option 1": "Audio/Male option 1/161_雀松朱司（ノーマル）_夜.wav",
     "Female option 1": "Audio/Female option 1/161_東北きりたん（ノーマル）_夜.wav"
   },
@@ -2136,25 +2136,25 @@
   },
   "日本": {
     "Male option 2": "Audio/Male option 2/005_離途（ノーマル）_日本.wav",
-    "Female option 2": "Audio/Female option 2/005_東北ずん子（ノーマル）_日本.wav",
+    "Female option 2": "Audio/Female option 2/005_東北ずん子（ノーマル）_日本.wav",
     "Male option 1": "Audio/Male option 1/005_雀松朱司（ノーマル）_日本.wav",
     "Female option 1": "Audio/Female option 1/005_東北きりたん（ノーマル）_日本.wav"
   },
   "難しいかな": {
     "Male option 2": "Audio/Male option 2/270_離途（ノーマル）_難しいかな.wav",
-    "Female option 2": "Audio/Female option 2/270_東北ずん子（ノーマル）_難しいかな.wav",
+    "Female option 2": "Audio/Female option 2/270_東北ずん子（ノーマル）_難しいかな.wav",
     "Male option 1": "Audio/Male option 1/270_雀松朱司（ノーマル）_難しいかな.wav",
     "Female option 1": "Audio/Female option 1/270_東北きりたん（ノーマル）_難しいかな.wav"
   },
   "答える": {
     "Male option 2": "Audio/Male option 2/146_離途（ノーマル）_答える.wav",
-    "Female option 2": "Audio/Female option 2/146_東北ずん子（ノーマル）_答える.wav",
+    "Female option 2": "Audio/Female option 2/146_東北ずん子（ノーマル）_答える.wav",
     "Male option 1": "Audio/Male option 1/146_雀松朱司（ノーマル）_答える.wav",
     "Female option 1": "Audio/Female option 1/146_東北きりたん（ノーマル）_答える.wav"
   },
   "いる": {
     "Male option 2": "Audio/Male option 2/126_離途（ノーマル）_いる.wav",
-    "Female option 2": "Audio/Female option 2/126_東北ずん子（ノーマル）_いる.wav",
+    "Female option 2": "Audio/Female option 2/126_東北ずん子（ノーマル）_いる.wav",
     "Male option 1": "Audio/Male option 1/126_雀松朱司（ノーマル）_いる.wav",
     "Female option 1": "Audio/Female option 1/043_東北きりたん（ノーマル）_いる.wav"
   },
@@ -2166,39 +2166,39 @@
   },
   "続ける": {
     "Male option 2": "Audio/Male option 2/212_離途（ノーマル）_続ける.wav",
-    "Female option 2": "Audio/Female option 2/212_東北ずん子（ノーマル）_続ける.wav",
+    "Female option 2": "Audio/Female option 2/212_東北ずん子（ノーマル）_続ける.wav",
     "Male option 1": "Audio/Male option 1/212_雀松朱司（ノーマル）_続ける.wav",
     "Female option 1": "Audio/Female option 1/212_東北きりたん（ノーマル）_続ける.wav"
   },
   "食べてみる": {
-    "Male option 2": "Audio/Male option 2/187_離途（ノーマル）_食べてみる.wav",
-    "Female option 2": "Audio/Female option 2/187_東北ずん子（ノーマル）_食べてみる.wav",
-    "Male option 1": "Audio/Male option 1/187_雀松朱司（ノーマル）_食べてみる.wav",
-    "Female option 1": "Audio/Female option 1/187_東北きりたん（ノーマル）_食べてみる.wav"
+    "Male option 2": "Audio/Male option 2/187_離途（ノーマル）_食べてみる.wav",
+    "Female option 2": "Audio/Female option 2/187_東北ずん子（ノーマル）_食べてみる.wav",
+    "Male option 1": "Audio/Male option 1/187_雀松朱司（ノーマル）_食べてみる.wav",
+    "Female option 1": "Audio/Female option 1/187_東北きりたん（ノーマル）_食べてみる.wav"
   },
   "思う": {
     "Male option 2": "Audio/Male option 2/144_離途（ノーマル）_思う.wav",
-    "Female option 2": "Audio/Female option 2/144_東北ずん子（ノーマル）_思う.wav",
+    "Female option 2": "Audio/Female option 2/144_東北ずん子（ノーマル）_思う.wav",
     "Male option 1": "Audio/Male option 1/144_雀松朱司（ノーマル）_思う.wav",
     "Female option 1": "Audio/Female option 1/144_東北きりたん（ノーマル）_思う.wav"
   },
   "宿題": {
     "Male option 2": "Audio/Male option 2/147_離途（ノーマル）_宿題.wav",
-    "Female option 2": "Audio/Female option 2/147_東北ずん子（ノーマル）_宿題.wav",
+    "Female option 2": "Audio/Female option 2/147_東北ずん子（ノーマル）_宿題.wav",
     "Male option 1": "Audio/Male option 1/147_雀松朱司（ノーマル）_宿題.wav",
     "Female option 1": "Audio/Female option 1/147_東北きりたん（ノーマル）_宿題.wav"
   },
   "確信": {
     "Male option 2": "Audio/Male option 2/346_離途（ノーマル）_確信.wav",
-    "Female option 2": "Audio/Female option 2/346_東北ずん子（ノーマル）_確信.wav",
+    "Female option 2": "Audio/Female option 2/346_東北ずん子（ノーマル）_確信.wav",
     "Male option 1": "Audio/Male option 1/346_雀松朱司（ノーマル）_確信.wav",
     "Female option 1": "Audio/Female option 1/346_東北きりたん（ノーマル）_確信.wav"
   },
   "音楽が好きです": {
-    "Male option 2": "Audio/Male option 2/106_離途（ノーマル）_音楽が好きです.wav",
-    "Female option 2": "Audio/Female option 2/106_東北ずん子（ノーマル）_音楽が好きです.wav",
-    "Male option 1": "Audio/Male option 1/106_雀松朱司（ノーマル）_音楽が好きです.wav",
-    "Female option 1": "Audio/Female option 1/106_東北きりたん（ノーマル）_音楽が好きです.wav"
+    "Male option 2": "Audio/Male option 2/106_離途（ノーマル）_音楽が好きです.wav",
+    "Female option 2": "Audio/Female option 2/106_東北ずん子（ノーマル）_音楽が好きです.wav",
+    "Male option 1": "Audio/Male option 1/106_雀松朱司（ノーマル）_音楽が好きです.wav",
+    "Female option 1": "Audio/Female option 1/106_東北きりたん（ノーマル）_音楽が好きです.wav"
   },
   "ろっぴゃく": {
     "Male option 2": "Audio/Male option 2/070_離途（ノーマル）_ろっぴゃく.wav",
@@ -2208,19 +2208,19 @@
   },
   "開会": {
     "Male option 2": "Audio/Male option 2/339_離途（ノーマル）_開会.wav",
-    "Female option 2": "Audio/Female option 2/339_東北ずん子（ノーマル）_開会.wav",
+    "Female option 2": "Audio/Female option 2/339_東北ずん子（ノーマル）_開会.wav",
     "Male option 1": "Audio/Male option 1/339_雀松朱司（ノーマル）_開会.wav",
     "Female option 1": "Audio/Female option 1/339_東北きりたん（ノーマル）_開会.wav"
   },
   "たまに": {
     "Male option 2": "Audio/Male option 2/103_離途（ノーマル）_たまに.wav",
-    "Female option 2": "Audio/Female option 2/103_東北ずん子（ノーマル）_たまに.wav",
+    "Female option 2": "Audio/Female option 2/103_東北ずん子（ノーマル）_たまに.wav",
     "Male option 1": "Audio/Male option 1/103_雀松朱司（ノーマル）_たまに.wav",
     "Female option 1": "Audio/Female option 1/103_東北きりたん（ノーマル）_たまに.wav"
   },
   "方法": {
     "Male option 2": "Audio/Male option 2/284_離途（ノーマル）_方法.wav",
-    "Female option 2": "Audio/Female option 2/284_東北ずん子（ノーマル）_方法.wav",
+    "Female option 2": "Audio/Female option 2/284_東北ずん子（ノーマル）_方法.wav",
     "Male option 1": "Audio/Male option 1/284_雀松朱司（ノーマル）_方法.wav",
     "Female option 1": "Audio/Female option 1/284_東北きりたん（ノーマル）_方法.wav"
   },
@@ -2232,25 +2232,25 @@
   },
   "結果": {
     "Male option 2": "Audio/Male option 2/218_離途（ノーマル）_結果.wav",
-    "Female option 2": "Audio/Female option 2/218_東北ずん子（ノーマル）_結果.wav",
+    "Female option 2": "Audio/Female option 2/218_東北ずん子（ノーマル）_結果.wav",
     "Male option 1": "Audio/Male option 1/218_雀松朱司（ノーマル）_結果.wav",
     "Female option 1": "Audio/Female option 1/218_東北きりたん（ノーマル）_結果.wav"
   },
   "感謝": {
     "Male option 2": "Audio/Male option 2/372_離途（ノーマル）_感謝.wav",
-    "Female option 2": "Audio/Female option 2/372_東北ずん子（ノーマル）_感謝.wav",
+    "Female option 2": "Audio/Female option 2/372_東北ずん子（ノーマル）_感謝.wav",
     "Male option 1": "Audio/Male option 1/372_雀松朱司（ノーマル）_感謝.wav",
     "Female option 1": "Audio/Female option 1/372_東北きりたん（ノーマル）_感謝.wav"
   },
   "もらう": {
     "Male option 2": "Audio/Male option 2/085_離途（ノーマル）_もらう.wav",
-    "Female option 2": "Audio/Female option 2/085_東北ずん子（ノーマル）_もらう.wav",
+    "Female option 2": "Audio/Female option 2/085_東北ずん子（ノーマル）_もらう.wav",
     "Male option 1": "Audio/Male option 1/085_雀松朱司（ノーマル）_もらう.wav",
     "Female option 1": "Audio/Female option 1/085_東北きりたん（ノーマル）_もらう.wav"
   },
   "いつも": {
     "Male option 2": "Audio/Male option 2/100_離途（ノーマル）_いつも.wav",
-    "Female option 2": "Audio/Female option 2/100_東北ずん子（ノーマル）_いつも.wav",
+    "Female option 2": "Audio/Female option 2/100_東北ずん子（ノーマル）_いつも.wav",
     "Male option 1": "Audio/Male option 1/100_雀松朱司（ノーマル）_いつも.wav",
     "Female option 1": "Audio/Female option 1/100_東北きりたん（ノーマル）_いつも.wav"
   },
@@ -2268,7 +2268,7 @@
   },
   "助言": {
     "Male option 2": "Audio/Male option 2/283_離途（ノーマル）_助言.wav",
-    "Female option 2": "Audio/Female option 2/283_東北ずん子（ノーマル）_助言.wav",
+    "Female option 2": "Audio/Female option 2/283_東北ずん子（ノーマル）_助言.wav",
     "Male option 1": "Audio/Male option 1/283_雀松朱司（ノーマル）_助言.wav",
     "Female option 1": "Audio/Female option 1/283_東北きりたん（ノーマル）_助言.wav"
   },
@@ -2286,31 +2286,31 @@
   },
   "開ける": {
     "Male option 2": "Audio/Male option 2/184_離途（ノーマル）_開ける.wav",
-    "Female option 2": "Audio/Female option 2/184_東北ずん子（ノーマル）_開ける.wav",
+    "Female option 2": "Audio/Female option 2/184_東北ずん子（ノーマル）_開ける.wav",
     "Male option 1": "Audio/Male option 1/184_雀松朱司（ノーマル）_開ける.wav",
     "Female option 1": "Audio/Female option 1/184_東北きりたん（ノーマル）_開ける.wav"
   },
   "雨が降るそうです": {
-    "Male option 2": "Audio/Male option 2/200_離途（ノーマル）_雨が降るそうです.wav",
-    "Female option 2": "Audio/Female option 2/200_東北ずん子（ノーマル）_雨が降るそうです.wav",
-    "Male option 1": "Audio/Male option 1/200_雀松朱司（ノーマル）_雨が降るそうです.wav",
-    "Female option 1": "Audio/Female option 1/200_東北きりたん（ノーマル）_雨が降るそうです.wav"
+    "Male option 2": "Audio/Male option 2/200_離途（ノーマル）_雨が降るそうです.wav",
+    "Female option 2": "Audio/Female option 2/200_東北ずん子（ノーマル）_雨が降るそうです.wav",
+    "Male option 1": "Audio/Male option 1/200_雀松朱司（ノーマル）_雨が降るそうです.wav",
+    "Female option 1": "Audio/Female option 1/200_東北きりたん（ノーマル）_雨が降るそうです.wav"
   },
   "注意": {
     "Male option 2": "Audio/Male option 2/327_離途（ノーマル）_注意.wav",
-    "Female option 2": "Audio/Female option 2/327_東北ずん子（ノーマル）_注意.wav",
+    "Female option 2": "Audio/Female option 2/327_東北ずん子（ノーマル）_注意.wav",
     "Male option 1": "Audio/Male option 1/327_雀松朱司（ノーマル）_注意.wav",
     "Female option 1": "Audio/Female option 1/327_東北きりたん（ノーマル）_注意.wav"
   },
   "昼": {
     "Male option 2": "Audio/Male option 2/160_離途（ノーマル）_昼.wav",
-    "Female option 2": "Audio/Female option 2/160_東北ずん子（ノーマル）_昼.wav",
+    "Female option 2": "Audio/Female option 2/160_東北ずん子（ノーマル）_昼.wav",
     "Male option 1": "Audio/Male option 1/160_雀松朱司（ノーマル）_昼.wav",
     "Female option 1": "Audio/Female option 1/160_東北きりたん（ノーマル）_昼.wav"
   },
   "今日": {
     "Male option 2": "Audio/Male option 2/058_離途（ノーマル）_今日.wav",
-    "Female option 2": "Audio/Female option 2/058_東北ずん子（ノーマル）_今日.wav",
+    "Female option 2": "Audio/Female option 2/058_東北ずん子（ノーマル）_今日.wav",
     "Male option 1": "Audio/Male option 1/058_雀松朱司（ノーマル）_今日.wav",
     "Female option 1": "Audio/Female option 1/058_東北きりたん（ノーマル）_今日.wav"
   },
@@ -2333,10 +2333,10 @@
     "Female option 1": "Audio/Female option 1/117_東北きりたん（ノーマル）_よむ.wav"
   },
   "あげる": {
-    "Male option 2": "Audio/Male option 2/084_離途（ノーマル）_あげる.wav",
-    "Female option 2": "Audio/Female option 2/084_東北ずん子（ノーマル）_あげる.wav",
-    "Male option 1": "Audio/Male option 1/084_雀松朱司（ノーマル）_あげる.wav",
-    "Female option 1": "Audio/Female option 1/084_東北きりたん（ノーマル）_あげる.wav"
+    "Male option 2": "Audio/Male option 2/084_離途（ノーマル）_あげる.wav",
+    "Female option 2": "Audio/Female option 2/084_東北ずん子（ノーマル）_あげる.wav",
+    "Male option 1": "Audio/Male option 1/084_雀松朱司（ノーマル）_あげる.wav",
+    "Female option 1": "Audio/Female option 1/084_東北きりたん（ノーマル）_あげる.wav"
   },
   "そこ": {
     "Male option 2": "Audio/Male option 2/097_離途（ノーマル）_そこ.wav",
@@ -2346,15 +2346,15 @@
   },
   "学生": {
     "Male option 2": "Audio/Male option 2/003_離途（ノーマル）_学生.wav",
-    "Female option 2": "Audio/Female option 2/003_東北ずん子（ノーマル）_学生.wav",
+    "Female option 2": "Audio/Female option 2/003_東北ずん子（ノーマル）_学生.wav",
     "Male option 1": "Audio/Male option 1/003_雀松朱司（ノーマル）_学生.wav",
     "Female option 1": "Audio/Female option 1/003_東北きりたん（ノーマル）_学生.wav"
   },
   "差し上げる": {
-    "Male option 2": "Audio/Male option 2/191_離途（ノーマル）_差し上げる.wav",
-    "Female option 2": "Audio/Female option 2/191_東北ずん子（ノーマル）_差し上げる.wav",
-    "Male option 1": "Audio/Male option 1/191_雀松朱司（ノーマル）_差し上げる.wav",
-    "Female option 1": "Audio/Female option 1/191_東北きりたん（ノーマル）_差し上げる.wav"
+    "Male option 2": "Audio/Male option 2/191_離途（ノーマル）_差し上げる.wav",
+    "Female option 2": "Audio/Female option 2/191_東北ずん子（ノーマル）_差し上げる.wav",
+    "Male option 1": "Audio/Male option 1/191_雀松朱司（ノーマル）_差し上げる.wav",
+    "Female option 1": "Audio/Female option 1/191_東北きりたん（ノーマル）_差し上げる.wav"
   },
   "ばんごう": {
     "Male option 2": "Audio/Male option 2/023_離途（ノーマル）_ばんごう.wav",
@@ -2364,7 +2364,7 @@
   },
   "社会的": {
     "Male option 2": "Audio/Male option 2/325_離途（ノーマル）_社会的.wav",
-    "Female option 2": "Audio/Female option 2/325_東北ずん子（ノーマル）_社会的.wav",
+    "Female option 2": "Audio/Female option 2/325_東北ずん子（ノーマル）_社会的.wav",
     "Male option 1": "Audio/Male option 1/325_雀松朱司（ノーマル）_社会的.wav",
     "Female option 1": "Audio/Female option 1/325_東北きりたん（ノーマル）_社会的.wav"
   },
@@ -2376,13 +2376,13 @@
   },
   "時間": {
     "Male option 2": "Audio/Male option 2/322_離途（ノーマル）_時間.wav",
-    "Female option 2": "Audio/Female option 2/322_東北ずん子（ノーマル）_時間.wav",
+    "Female option 2": "Audio/Female option 2/322_東北ずん子（ノーマル）_時間.wav",
     "Male option 1": "Audio/Male option 1/322_雀松朱司（ノーマル）_時間.wav",
     "Female option 1": "Audio/Female option 1/322_東北きりたん（ノーマル）_時間.wav"
   },
   "高い": {
     "Male option 2": "Audio/Male option 2/173_離途（ノーマル）_高い.wav",
-    "Female option 2": "Audio/Female option 2/173_東北ずん子（ノーマル）_高い.wav",
+    "Female option 2": "Audio/Female option 2/173_東北ずん子（ノーマル）_高い.wav",
     "Male option 1": "Audio/Male option 1/173_雀松朱司（ノーマル）_高い.wav",
     "Female option 1": "Audio/Female option 1/173_東北きりたん（ノーマル）_高い.wav"
   },
@@ -2394,73 +2394,73 @@
   },
   "ということ": {
     "Male option 2": "Audio/Male option 2/210_離途（ノーマル）_ということ.wav",
-    "Female option 2": "Audio/Female option 2/210_東北ずん子（ノーマル）_ということ.wav",
+    "Female option 2": "Audio/Female option 2/210_東北ずん子（ノーマル）_ということ.wav",
     "Male option 1": "Audio/Male option 1/210_雀松朱司（ノーマル）_ということ.wav",
     "Female option 1": "Audio/Female option 1/210_東北きりたん（ノーマル）_ということ.wav"
   },
   "成功": {
     "Male option 2": "Audio/Male option 2/215_離途（ノーマル）_成功.wav",
-    "Female option 2": "Audio/Female option 2/215_東北ずん子（ノーマル）_成功.wav",
+    "Female option 2": "Audio/Female option 2/215_東北ずん子（ノーマル）_成功.wav",
     "Male option 1": "Audio/Male option 1/215_雀松朱司（ノーマル）_成功.wav",
     "Female option 1": "Audio/Female option 1/215_東北きりたん（ノーマル）_成功.wav"
   },
   "ニュースによると": {
     "Male option 2": "Audio/Male option 2/199_離途（ノーマル）_ニュースによると.wav",
-    "Female option 2": "Audio/Female option 2/199_東北ずん子（ノーマル）_ニュースによると.wav",
+    "Female option 2": "Audio/Female option 2/199_東北ずん子（ノーマル）_ニュースによると.wav",
     "Male option 1": "Audio/Male option 1/199_雀松朱司（ノーマル）_ニュースによると.wav",
     "Female option 1": "Audio/Female option 1/199_東北きりたん（ノーマル）_ニュースによると.wav"
   },
   "ちいさい": {
     "Male option 2": "Audio/Male option 2/048_離途（ノーマル）_ちいさい.wav",
-    "Female option 2": "Audio/Female option 2/048_東北ずん子（ノーマル）_ちいさい.wav",
+    "Female option 2": "Audio/Female option 2/048_東北ずん子（ノーマル）_ちいさい.wav",
     "Male option 1": "Audio/Male option 1/048_雀松朱司（ノーマル）_ちいさい.wav",
     "Female option 1": "Audio/Female option 1/048_東北きりたん（ノーマル）_ちいさい.wav"
   },
   "雨なら行きません": {
     "Male option 2": "Audio/Male option 2/207_離途（ノーマル）_雨なら行きません.wav",
-    "Female option 2": "Audio/Female option 2/207_東北ずん子（ノーマル）_雨なら行きません.wav",
+    "Female option 2": "Audio/Female option 2/207_東北ずん子（ノーマル）_雨なら行きません.wav",
     "Male option 1": "Audio/Male option 1/207_雀松朱司（ノーマル）_雨なら行きません.wav",
     "Female option 1": "Audio/Female option 1/207_東北きりたん（ノーマル）_雨なら行きません.wav"
   },
   "驚く": {
     "Male option 2": "Audio/Male option 2/331_離途（ノーマル）_驚く.wav",
-    "Female option 2": "Audio/Female option 2/331_東北ずん子（ノーマル）_驚く.wav",
+    "Female option 2": "Audio/Female option 2/331_東北ずん子（ノーマル）_驚く.wav",
     "Male option 1": "Audio/Male option 1/331_雀松朱司（ノーマル）_驚く.wav",
     "Female option 1": "Audio/Female option 1/331_東北きりたん（ノーマル）_驚く.wav"
   },
   "賛成": {
     "Male option 2": "Audio/Male option 2/255_離途（ノーマル）_賛成.wav",
-    "Female option 2": "Audio/Female option 2/255_東北ずん子（ノーマル）_賛成.wav",
+    "Female option 2": "Audio/Female option 2/255_東北ずん子（ノーマル）_賛成.wav",
     "Male option 1": "Audio/Male option 1/255_雀松朱司（ノーマル）_賛成.wav",
     "Female option 1": "Audio/Female option 1/255_東北きりたん（ノーマル）_賛成.wav"
   },
   "休みたい": {
     "Male option 2": "Audio/Male option 2/194_離途（ノーマル）_休みたい.wav",
-    "Female option 2": "Audio/Female option 2/194_東北ずん子（ノーマル）_休みたい.wav",
+    "Female option 2": "Audio/Female option 2/194_東北ずん子（ノーマル）_休みたい.wav",
     "Male option 1": "Audio/Male option 1/194_雀松朱司（ノーマル）_休みたい.wav",
     "Female option 1": "Audio/Female option 1/194_東北きりたん（ノーマル）_休みたい.wav"
   },
   "入ってください": {
-    "Male option 2": "Audio/Male option 2/109_離途（ノーマル）_入ってください.wav",
-    "Female option 2": "Audio/Female option 2/109_東北ずん子（ノーマル）_入ってください.wav",
-    "Male option 1": "Audio/Male option 1/109_雀松朱司（ノーマル）_入ってください.wav",
-    "Female option 1": "Audio/Female option 1/109_東北きりたん（ノーマル）_入ってください.wav"
+    "Male option 2": "Audio/Male option 2/109_離途（ノーマル）_入ってください.wav",
+    "Female option 2": "Audio/Female option 2/109_東北ずん子（ノーマル）_入ってください.wav",
+    "Male option 1": "Audio/Male option 1/109_雀松朱司（ノーマル）_入ってください.wav",
+    "Female option 1": "Audio/Female option 1/109_東北きりたん（ノーマル）_入ってください.wav"
   },
   "進行": {
     "Male option 2": "Audio/Male option 2/375_離途（ノーマル）_進行.wav",
-    "Female option 2": "Audio/Female option 2/375_東北ずん子（ノーマル）_進行.wav",
+    "Female option 2": "Audio/Female option 2/375_東北ずん子（ノーマル）_進行.wav",
     "Male option 1": "Audio/Male option 1/375_雀松朱司（ノーマル）_進行.wav",
     "Female option 1": "Audio/Female option 1/375_東北きりたん（ノーマル）_進行.wav"
   },
   "安い": {
     "Male option 2": "Audio/Male option 2/174_離途（ノーマル）_安い.wav",
-    "Female option 2": "Audio/Female option 2/174_東北ずん子（ノーマル）_安い.wav",
+    "Female option 2": "Audio/Female option 2/174_東北ずん子（ノーマル）_安い.wav",
     "Male option 1": "Audio/Male option 1/174_雀松朱司（ノーマル）_安い.wav",
     "Female option 1": "Audio/Female option 1/174_東北きりたん（ノーマル）_安い.wav"
   },
   "前": {
     "Male option 2": "Audio/Male option 2/120_離途（ノーマル）_前.wav",
-    "Female option 2": "Audio/Female option 2/120_東北ずん子（ノーマル）_前.wav",
+    "Female option 2": "Audio/Female option 2/120_東北ずん子（ノーマル）_前.wav",
     "Male option 1": "Audio/Male option 1/120_雀松朱司（ノーマル）_前.wav",
     "Female option 1": "Audio/Female option 1/120_東北きりたん（ノーマル）_前.wav"
   },
@@ -2472,87 +2472,87 @@
   },
   "言う": {
     "Male option 2": "Audio/Male option 2/143_離途（ノーマル）_言う.wav",
-    "Female option 2": "Audio/Female option 2/143_東北ずん子（ノーマル）_言う.wav",
+    "Female option 2": "Audio/Female option 2/143_東北ずん子（ノーマル）_言う.wav",
     "Male option 1": "Audio/Male option 1/143_雀松朱司（ノーマル）_言う.wav",
     "Female option 1": "Audio/Female option 1/143_東北きりたん（ノーマル）_言う.wav"
   },
   "貸す": {
     "Male option 2": "Audio/Male option 2/135_離途（ノーマル）_貸す.wav",
-    "Female option 2": "Audio/Female option 2/135_東北ずん子（ノーマル）_貸す.wav",
+    "Female option 2": "Audio/Female option 2/135_東北ずん子（ノーマル）_貸す.wav",
     "Male option 1": "Audio/Male option 1/135_雀松朱司（ノーマル）_貸す.wav",
     "Female option 1": "Audio/Female option 1/135_東北きりたん（ノーマル）_貸す.wav"
   },
   "右": {
     "Male option 2": "Audio/Male option 2/118_離途（ノーマル）_右.wav",
-    "Female option 2": "Audio/Female option 2/118_東北ずん子（ノーマル）_右.wav",
+    "Female option 2": "Audio/Female option 2/118_東北ずん子（ノーマル）_右.wav",
     "Male option 1": "Audio/Male option 1/118_雀松朱司（ノーマル）_右.wav",
     "Female option 1": "Audio/Female option 1/118_東北きりたん（ノーマル）_右.wav"
   },
   "見せる": {
     "Male option 2": "Audio/Male option 2/132_離途（ノーマル）_見せる.wav",
-    "Female option 2": "Audio/Female option 2/132_東北ずん子（ノーマル）_見せる.wav",
+    "Female option 2": "Audio/Female option 2/132_東北ずん子（ノーマル）_見せる.wav",
     "Male option 1": "Audio/Male option 1/132_雀松朱司（ノーマル）_見せる.wav",
     "Female option 1": "Audio/Female option 1/132_東北きりたん（ノーマル）_見せる.wav"
   },
   "私こそ": {
     "Male option 2": "Audio/Male option 2/279_離途（ノーマル）_私こそ.wav",
-    "Female option 2": "Audio/Female option 2/279_東北ずん子（ノーマル）_私こそ.wav",
+    "Female option 2": "Audio/Female option 2/279_東北ずん子（ノーマル）_私こそ.wav",
     "Male option 1": "Audio/Male option 1/279_雀松朱司（ノーマル）_私こそ.wav",
     "Female option 1": "Audio/Female option 1/279_東北きりたん（ノーマル）_私こそ.wav"
   },
   "目標": {
     "Male option 2": "Audio/Male option 2/377_離途（ノーマル）_目標.wav",
-    "Female option 2": "Audio/Female option 2/377_東北ずん子（ノーマル）_目標.wav",
+    "Female option 2": "Audio/Female option 2/377_東北ずん子（ノーマル）_目標.wav",
     "Male option 1": "Audio/Male option 1/377_雀松朱司（ノーマル）_目標.wav",
     "Female option 1": "Audio/Female option 1/377_東北きりたん（ノーマル）_目標.wav"
   },
   "複雑": {
     "Male option 2": "Audio/Male option 2/266_離途（ノーマル）_複雑.wav",
-    "Female option 2": "Audio/Female option 2/266_東北ずん子（ノーマル）_複雑.wav",
+    "Female option 2": "Audio/Female option 2/266_東北ずん子（ノーマル）_複雑.wav",
     "Male option 1": "Audio/Male option 1/266_雀松朱司（ノーマル）_複雑.wav",
     "Female option 1": "Audio/Female option 1/266_東北きりたん（ノーマル）_複雑.wav"
   },
   "食べました": {
-    "Male option 2": "Audio/Male option 2/088_離途（ノーマル）_食べました.wav",
-    "Female option 2": "Audio/Female option 2/088_東北ずん子（ノーマル）_食べました.wav",
-    "Male option 1": "Audio/Male option 1/088_雀松朱司（ノーマル）_食べました.wav",
-    "Female option 1": "Audio/Female option 1/088_東北きりたん（ノーマル）_食べました.wav"
+    "Male option 2": "Audio/Male option 2/088_離途（ノーマル）_食べました.wav",
+    "Female option 2": "Audio/Female option 2/088_東北ずん子（ノーマル）_食べました.wav",
+    "Male option 1": "Audio/Male option 1/088_雀松朱司（ノーマル）_食べました.wav",
+    "Female option 1": "Audio/Female option 1/088_東北きりたん（ノーマル）_食べました.wav"
   },
   "できる": {
-    "Male option 2": "Audio/Male option 2/139_離途（ノーマル）_できる.wav",
-    "Female option 2": "Audio/Female option 2/139_東北ずん子（ノーマル）_できる.wav",
-    "Male option 1": "Audio/Male option 1/139_雀松朱司（ノーマル）_できる.wav",
-    "Female option 1": "Audio/Female option 1/139_東北きりたん（ノーマル）_できる.wav"
+    "Male option 2": "Audio/Male option 2/139_離途（ノーマル）_できる.wav",
+    "Female option 2": "Audio/Female option 2/139_東北ずん子（ノーマル）_できる.wav",
+    "Male option 1": "Audio/Male option 1/139_雀松朱司（ノーマル）_できる.wav",
+    "Female option 1": "Audio/Female option 1/139_東北きりたん（ノーマル）_できる.wav"
   },
   "食べたい": {
-    "Male option 2": "Audio/Male option 2/095_離途（ノーマル）_食べたい.wav",
-    "Female option 2": "Audio/Female option 2/095_東北ずん子（ノーマル）_食べたい.wav",
-    "Male option 1": "Audio/Male option 1/095_雀松朱司（ノーマル）_食べたい.wav",
-    "Female option 1": "Audio/Female option 1/095_東北きりたん（ノーマル）_食べたい.wav"
+    "Male option 2": "Audio/Male option 2/095_離途（ノーマル）_食べたい.wav",
+    "Female option 2": "Audio/Female option 2/095_東北ずん子（ノーマル）_食べたい.wav",
+    "Male option 1": "Audio/Male option 1/095_雀松朱司（ノーマル）_食べたい.wav",
+    "Female option 1": "Audio/Female option 1/095_東北きりたん（ノーマル）_食べたい.wav"
   },
   "開発": {
     "Male option 2": "Audio/Male option 2/317_離途（ノーマル）_開発.wav",
-    "Female option 2": "Audio/Female option 2/317_東北ずん子（ノーマル）_開発.wav",
+    "Female option 2": "Audio/Female option 2/317_東北ずん子（ノーマル）_開発.wav",
     "Male option 1": "Audio/Male option 1/317_雀松朱司（ノーマル）_開発.wav",
     "Female option 1": "Audio/Female option 1/317_東北きりたん（ノーマル）_開発.wav"
   },
   "犬": {
     "Male option 2": "Audio/Male option 2/038_離途（ノーマル）_犬.wav",
-    "Female option 2": "Audio/Female option 2/038_東北ずん子（ノーマル）_犬.wav",
+    "Female option 2": "Audio/Female option 2/038_東北ずん子（ノーマル）_犬.wav",
     "Male option 1": "Audio/Male option 1/038_雀松朱司（ノーマル）_犬.wav",
     "Female option 1": "Audio/Female option 1/038_東北きりたん（ノーマル）_犬.wav"
   },
   "全体": {
     "Male option 2": "Audio/Male option 2/313_離途（ノーマル）_全体.wav",
-    "Female option 2": "Audio/Female option 2/313_東北ずん子（ノーマル）_全体.wav",
+    "Female option 2": "Audio/Female option 2/313_東北ずん子（ノーマル）_全体.wav",
     "Male option 1": "Audio/Male option 1/313_雀松朱司（ノーマル）_全体.wav",
     "Female option 1": "Audio/Female option 1/313_東北きりたん（ノーマル）_全体.wav"
   },
   "忙しいばかり": {
-    "Male option 2": "Audio/Male option 2/260_離途（ノーマル）_忙しいばかり.wav",
-    "Female option 2": "Audio/Female option 2/260_東北ずん子（ノーマル）_忙しいばかり.wav",
-    "Male option 1": "Audio/Male option 1/260_雀松朱司（ノーマル）_忙しいばかり.wav",
-    "Female option 1": "Audio/Female option 1/260_東北きりたん（ノーマル）_忙しいばかり.wav"
+    "Male option 2": "Audio/Male option 2/260_離途（ノーマル）_忙しいばかり.wav",
+    "Female option 2": "Audio/Female option 2/260_東北ずん子（ノーマル）_忙しいばかり.wav",
+    "Male option 1": "Audio/Male option 1/260_雀松朱司（ノーマル）_忙しいばかり.wav",
+    "Female option 1": "Audio/Female option 1/260_東北きりたん（ノーマル）_忙しいばかり.wav"
   },
   "そうですか": {
     "Male option 2": "Audio/Male option 2/051_離途（ノーマル）_そうですか.wav",
@@ -2562,19 +2562,19 @@
   },
   "聞く": {
     "Male option 2": "Audio/Male option 2/145_離途（ノーマル）_聞く.wav",
-    "Female option 2": "Audio/Female option 2/145_東北ずん子（ノーマル）_聞く.wav",
+    "Female option 2": "Audio/Female option 2/145_東北ずん子（ノーマル）_聞く.wav",
     "Male option 1": "Audio/Male option 1/145_雀松朱司（ノーマル）_聞く.wav",
     "Female option 1": "Audio/Female option 1/145_東北きりたん（ノーマル）_聞く.wav"
   },
   "健康": {
     "Male option 2": "Audio/Male option 2/219_離途（ノーマル）_健康.wav",
-    "Female option 2": "Audio/Female option 2/219_東北ずん子（ノーマル）_健康.wav",
+    "Female option 2": "Audio/Female option 2/219_東北ずん子（ノーマル）_健康.wav",
     "Male option 1": "Audio/Male option 1/219_雀松朱司（ノーマル）_健康.wav",
     "Female option 1": "Audio/Female option 1/219_東北きりたん（ノーマル）_健康.wav"
   },
   "暑いから": {
     "Male option 2": "Audio/Male option 2/113_離途（ノーマル）_暑いから.wav",
-    "Female option 2": "Audio/Female option 2/113_東北ずん子（ノーマル）_暑いから.wav",
+    "Female option 2": "Audio/Female option 2/113_東北ずん子（ノーマル）_暑いから.wav",
     "Male option 1": "Audio/Male option 1/113_雀松朱司（ノーマル）_暑いから.wav",
     "Female option 1": "Audio/Female option 1/113_東北きりたん（ノーマル）_暑いから.wav"
   },
@@ -2604,13 +2604,13 @@
   },
   "提案": {
     "Male option 2": "Audio/Male option 2/282_離途（ノーマル）_提案.wav",
-    "Female option 2": "Audio/Female option 2/282_東北ずん子（ノーマル）_提案.wav",
+    "Female option 2": "Audio/Female option 2/282_東北ずん子（ノーマル）_提案.wav",
     "Male option 1": "Audio/Male option 1/282_雀松朱司（ノーマル）_提案.wav",
     "Female option 1": "Audio/Female option 1/282_東北きりたん（ノーマル）_提案.wav"
   },
   "借りる": {
     "Male option 2": "Audio/Male option 2/134_離途（ノーマル）_借りる.wav",
-    "Female option 2": "Audio/Female option 2/134_東北ずん子（ノーマル）_借りる.wav",
+    "Female option 2": "Audio/Female option 2/134_東北ずん子（ノーマル）_借りる.wav",
     "Male option 1": "Audio/Male option 1/134_雀松朱司（ノーマル）_借りる.wav",
     "Female option 1": "Audio/Female option 1/134_東北きりたん（ノーマル）_借りる.wav"
   },
@@ -2622,13 +2622,13 @@
   },
   "少ない": {
     "Male option 2": "Audio/Male option 2/256_離途（ノーマル）_少ない.wav",
-    "Female option 2": "Audio/Female option 2/256_東北ずん子（ノーマル）_少ない.wav",
+    "Female option 2": "Audio/Female option 2/256_東北ずん子（ノーマル）_少ない.wav",
     "Male option 1": "Audio/Male option 1/256_雀松朱司（ノーマル）_少ない.wav",
     "Female option 1": "Audio/Female option 1/256_東北きりたん（ノーマル）_少ない.wav"
   },
   "車": {
     "Male option 2": "Audio/Male option 2/010_離途（ノーマル）_車.wav",
-    "Female option 2": "Audio/Female option 2/010_東北ずん子（ノーマル）_車.wav",
+    "Female option 2": "Audio/Female option 2/010_東北ずん子（ノーマル）_車.wav",
     "Male option 1": "Audio/Male option 1/010_雀松朱司（ノーマル）_車.wav",
     "Female option 1": "Audio/Female option 1/010_東北きりたん（ノーマル）_車.wav"
   },
@@ -2646,7 +2646,7 @@
   },
   "料理": {
     "Male option 2": "Audio/Male option 2/128_離途（ノーマル）_料理.wav",
-    "Female option 2": "Audio/Female option 2/128_東北ずん子（ノーマル）_料理.wav",
+    "Female option 2": "Audio/Female option 2/128_東北ずん子（ノーマル）_料理.wav",
     "Male option 1": "Audio/Male option 1/128_雀松朱司（ノーマル）_料理.wav",
     "Female option 1": "Audio/Female option 1/128_東北きりたん（ノーマル）_料理.wav"
   },
@@ -2670,13 +2670,13 @@
   },
   "性格": {
     "Male option 2": "Audio/Male option 2/366_離途（ノーマル）_性格.wav",
-    "Female option 2": "Audio/Female option 2/366_東北ずん子（ノーマル）_性格.wav",
+    "Female option 2": "Audio/Female option 2/366_東北ずん子（ノーマル）_性格.wav",
     "Male option 1": "Audio/Male option 1/366_雀松朱司（ノーマル）_性格.wav",
     "Female option 1": "Audio/Female option 1/366_東北きりたん（ノーマル）_性格.wav"
   },
   "木": {
     "Male option 2": "Audio/Male option 2/040_離途（ノーマル）_木.wav",
-    "Female option 2": "Audio/Female option 2/040_東北ずん子（ノーマル）_木.wav",
+    "Female option 2": "Audio/Female option 2/040_東北ずん子（ノーマル）_木.wav",
     "Male option 1": "Audio/Male option 1/040_雀松朱司（ノーマル）_木.wav",
     "Female option 1": "Audio/Female option 1/040_東北きりたん（ノーマル）_木.wav"
   },
@@ -2694,37 +2694,37 @@
   },
   "天気": {
     "Male option 2": "Audio/Male option 2/170_離途（ノーマル）_天気.wav",
-    "Female option 2": "Audio/Female option 2/170_東北ずん子（ノーマル）_天気.wav",
+    "Female option 2": "Audio/Female option 2/170_東北ずん子（ノーマル）_天気.wav",
     "Male option 1": "Audio/Male option 1/170_雀松朱司（ノーマル）_天気.wav",
     "Female option 1": "Audio/Female option 1/170_東北きりたん（ノーマル）_天気.wav"
   },
   "アメリカ": {
     "Male option 2": "Audio/Male option 2/006_離途（ノーマル）_アメリカ.wav",
-    "Female option 2": "Audio/Female option 2/006_東北ずん子（ノーマル）_アメリカ.wav",
+    "Female option 2": "Audio/Female option 2/006_東北ずん子（ノーマル）_アメリカ.wav",
     "Male option 1": "Audio/Male option 1/006_雀松朱司（ノーマル）_アメリカ.wav",
     "Female option 1": "Audio/Female option 1/006_東北きりたん（ノーマル）_アメリカ.wav"
   },
   "時代": {
     "Male option 2": "Audio/Male option 2/319_離途（ノーマル）_時代.wav",
-    "Female option 2": "Audio/Female option 2/319_東北ずん子（ノーマル）_時代.wav",
+    "Female option 2": "Audio/Female option 2/319_東北ずん子（ノーマル）_時代.wav",
     "Male option 1": "Audio/Male option 1/319_雀松朱司（ノーマル）_時代.wav",
     "Female option 1": "Audio/Female option 1/319_東北きりたん（ノーマル）_時代.wav"
   },
   "短所": {
     "Male option 2": "Audio/Male option 2/355_離途（ノーマル）_短所.wav",
-    "Female option 2": "Audio/Female option 2/355_東北ずん子（ノーマル）_短所.wav",
+    "Female option 2": "Audio/Female option 2/355_東北ずん子（ノーマル）_短所.wav",
     "Male option 1": "Audio/Male option 1/355_雀松朱司（ノーマル）_短所.wav",
     "Female option 1": "Audio/Female option 1/355_東北きりたん（ノーマル）_短所.wav"
   },
   "七": {
     "Male option 2": "Audio/Male option 2/067_離途（ノーマル）_七.wav",
-    "Female option 2": "Audio/Female option 2/067_東北ずん子（ノーマル）_七.wav",
+    "Female option 2": "Audio/Female option 2/067_東北ずん子（ノーマル）_七.wav",
     "Male option 1": "Audio/Male option 1/067_雀松朱司（ノーマル）_七.wav",
     "Female option 1": "Audio/Female option 1/067_東北きりたん（ノーマル）_七.wav"
   },
   "便利": {
     "Male option 2": "Audio/Male option 2/264_離途（ノーマル）_便利.wav",
-    "Female option 2": "Audio/Female option 2/264_東北ずん子（ノーマル）_便利.wav",
+    "Female option 2": "Audio/Female option 2/264_東北ずん子（ノーマル）_便利.wav",
     "Male option 1": "Audio/Male option 1/264_雀松朱司（ノーマル）_便利.wav",
     "Female option 1": "Audio/Female option 1/264_東北きりたん（ノーマル）_便利.wav"
   },
@@ -2736,31 +2736,31 @@
   },
   "幸せ": {
     "Male option 2": "Audio/Male option 2/233_離途（ノーマル）_幸せ.wav",
-    "Female option 2": "Audio/Female option 2/233_東北ずん子（ノーマル）_幸せ.wav",
+    "Female option 2": "Audio/Female option 2/233_東北ずん子（ノーマル）_幸せ.wav",
     "Male option 1": "Audio/Male option 1/233_雀松朱司（ノーマル）_幸せ.wav",
     "Female option 1": "Audio/Female option 1/233_東北きりたん（ノーマル）_幸せ.wav"
   },
   "子供らしい": {
     "Male option 2": "Audio/Male option 2/267_離途（ノーマル）_子供らしい.wav",
-    "Female option 2": "Audio/Female option 2/267_東北ずん子（ノーマル）_子供らしい.wav",
+    "Female option 2": "Audio/Female option 2/267_東北ずん子（ノーマル）_子供らしい.wav",
     "Male option 1": "Audio/Male option 1/267_雀松朱司（ノーマル）_子供らしい.wav",
     "Female option 1": "Audio/Female option 1/267_東北きりたん（ノーマル）_子供らしい.wav"
   },
   "きれい": {
     "Male option 2": "Audio/Male option 2/046_離途（ノーマル）_きれい.wav",
-    "Female option 2": "Audio/Female option 2/046_東北ずん子（ノーマル）_きれい.wav",
+    "Female option 2": "Audio/Female option 2/046_東北ずん子（ノーマル）_きれい.wav",
     "Male option 1": "Audio/Male option 1/046_雀松朱司（ノーマル）_きれい.wav",
     "Female option 1": "Audio/Female option 1/046_東北きりたん（ノーマル）_きれい.wav"
   },
   "逆": {
     "Male option 2": "Audio/Male option 2/343_離途（ノーマル）_逆.wav",
-    "Female option 2": "Audio/Female option 2/343_東北ずん子（ノーマル）_逆.wav",
+    "Female option 2": "Audio/Female option 2/343_東北ずん子（ノーマル）_逆.wav",
     "Male option 1": "Audio/Male option 1/343_雀松朱司（ノーマル）_逆.wav",
     "Female option 1": "Audio/Female option 1/343_東北きりたん（ノーマル）_逆.wav"
   },
   "つまらない": {
     "Male option 2": "Audio/Male option 2/051_離途（ノーマル）_つまらない.wav",
-    "Female option 2": "Audio/Female option 2/051_東北ずん子（ノーマル）_つまらない.wav",
+    "Female option 2": "Audio/Female option 2/051_東北ずん子（ノーマル）_つまらない.wav",
     "Male option 1": "Audio/Male option 1/051_雀松朱司（ノーマル）_つまらない.wav",
     "Female option 1": "Audio/Female option 1/051_東北きりたん（ノーマル）_つまらない.wav"
   },
@@ -2772,7 +2772,7 @@
   },
   "努力": {
     "Male option 2": "Audio/Male option 2/217_離途（ノーマル）_努力.wav",
-    "Female option 2": "Audio/Female option 2/217_東北ずん子（ノーマル）_努力.wav",
+    "Female option 2": "Audio/Female option 2/217_東北ずん子（ノーマル）_努力.wav",
     "Male option 1": "Audio/Male option 1/217_雀松朱司（ノーマル）_努力.wav",
     "Female option 1": "Audio/Female option 1/217_東北きりたん（ノーマル）_努力.wav"
   },
@@ -2784,31 +2784,31 @@
   },
   "論理": {
     "Male option 2": "Audio/Male option 2/380_離途（ノーマル）_論理.wav",
-    "Female option 2": "Audio/Female option 2/380_東北ずん子（ノーマル）_論理.wav",
+    "Female option 2": "Audio/Female option 2/380_東北ずん子（ノーマル）_論理.wav",
     "Male option 1": "Audio/Male option 1/380_雀松朱司（ノーマル）_論理.wav",
     "Female option 1": "Audio/Female option 1/380_東北きりたん（ノーマル）_論理.wav"
   },
   "私も": {
     "Male option 2": "Audio/Male option 2/079_離途（ノーマル）_私も.wav",
-    "Female option 2": "Audio/Female option 2/079_東北ずん子（ノーマル）_私も.wav",
+    "Female option 2": "Audio/Female option 2/079_東北ずん子（ノーマル）_私も.wav",
     "Male option 1": "Audio/Male option 1/079_雀松朱司（ノーマル）_私も.wav",
     "Female option 1": "Audio/Female option 1/079_東北きりたん（ノーマル）_私も.wav"
   },
   "しよう": {
     "Male option 2": "Audio/Male option 2/142_離途（ノーマル）_しよう.wav",
-    "Female option 2": "Audio/Female option 2/142_東北ずん子（ノーマル）_しよう.wav",
+    "Female option 2": "Audio/Female option 2/142_東北ずん子（ノーマル）_しよう.wav",
     "Male option 1": "Audio/Male option 1/142_雀松朱司（ノーマル）_しよう.wav",
     "Female option 1": "Audio/Female option 1/142_東北きりたん（ノーマル）_しよう.wav"
   },
   "水": {
     "Male option 2": "Audio/Male option 2/032_離途（ノーマル）_水.wav",
-    "Female option 2": "Audio/Female option 2/032_東北ずん子（ノーマル）_水.wav",
+    "Female option 2": "Audio/Female option 2/032_東北ずん子（ノーマル）_水.wav",
     "Male option 1": "Audio/Male option 1/032_雀松朱司（ノーマル）_水.wav",
     "Female option 1": "Audio/Female option 1/032_東北きりたん（ノーマル）_水.wav"
   },
   "意味": {
     "Male option 2": "Audio/Male option 2/261_離途（ノーマル）_意味.wav",
-    "Female option 2": "Audio/Female option 2/261_東北ずん子（ノーマル）_意味.wav",
+    "Female option 2": "Audio/Female option 2/261_東北ずん子（ノーマル）_意味.wav",
     "Male option 1": "Audio/Male option 1/261_雀松朱司（ノーマル）_意味.wav",
     "Female option 1": "Audio/Female option 1/261_東北きりたん（ノーマル）_意味.wav"
   },
@@ -2819,26 +2819,26 @@
     "Female option 1": "Audio/Female option 1/068_東北きりたん（ノーマル）_ひゃく.wav"
   },
   "食べよう": {
-    "Male option 2": "Audio/Male option 2/141_離途（ノーマル）_食べよう.wav",
-    "Female option 2": "Audio/Female option 2/141_東北ずん子（ノーマル）_食べよう.wav",
-    "Male option 1": "Audio/Male option 1/141_雀松朱司（ノーマル）_食べよう.wav",
-    "Female option 1": "Audio/Female option 1/141_東北きりたん（ノーマル）_食べよう.wav"
+    "Male option 2": "Audio/Male option 2/141_離途（ノーマル）_食べよう.wav",
+    "Female option 2": "Audio/Female option 2/141_東北ずん子（ノーマル）_食べよう.wav",
+    "Male option 1": "Audio/Male option 1/141_雀松朱司（ノーマル）_食べよう.wav",
+    "Female option 1": "Audio/Female option 1/141_東北きりたん（ノーマル）_食べよう.wav"
   },
   "教える": {
     "Male option 2": "Audio/Male option 2/133_離途（ノーマル）_教える.wav",
-    "Female option 2": "Audio/Female option 2/133_東北ずん子（ノーマル）_教える.wav",
+    "Female option 2": "Audio/Female option 2/133_東北ずん子（ノーマル）_教える.wav",
     "Male option 1": "Audio/Male option 1/133_雀松朱司（ノーマル）_教える.wav",
     "Female option 1": "Audio/Female option 1/133_東北きりたん（ノーマル）_教える.wav"
   },
   "未来": {
     "Male option 2": "Audio/Male option 2/158_離途（ノーマル）_未来.wav",
-    "Female option 2": "Audio/Female option 2/158_東北ずん子（ノーマル）_未来.wav",
+    "Female option 2": "Audio/Female option 2/158_東北ずん子（ノーマル）_未来.wav",
     "Male option 1": "Audio/Male option 1/158_雀松朱司（ノーマル）_未来.wav",
     "Female option 1": "Audio/Female option 1/158_東北きりたん（ノーマル）_未来.wav"
   },
   "分析": {
     "Male option 2": "Audio/Male option 2/342_離途（ノーマル）_分析.wav",
-    "Female option 2": "Audio/Female option 2/342_東北ずん子（ノーマル）_分析.wav",
+    "Female option 2": "Audio/Female option 2/342_東北ずん子（ノーマル）_分析.wav",
     "Male option 1": "Audio/Male option 1/342_雀松朱司（ノーマル）_分析.wav",
     "Female option 1": "Audio/Female option 1/342_東北きりたん（ノーマル）_分析.wav"
   },
@@ -2850,7 +2850,7 @@
   },
   "悔しい": {
     "Male option 2": "Audio/Male option 2/229_離途（ノーマル）_悔しい.wav",
-    "Female option 2": "Audio/Female option 2/229_東北ずん子（ノーマル）_悔しい.wav",
+    "Female option 2": "Audio/Female option 2/229_東北ずん子（ノーマル）_悔しい.wav",
     "Male option 1": "Audio/Male option 1/229_雀松朱司（ノーマル）_悔しい.wav",
     "Female option 1": "Audio/Female option 1/229_東北きりたん（ノーマル）_悔しい.wav"
   },
@@ -2862,7 +2862,7 @@
   },
   "それから": {
     "Male option 2": "Audio/Male option 2/094_離途（ノーマル）_それから.wav",
-    "Female option 2": "Audio/Female option 2/094_東北ずん子（ノーマル）_それから.wav",
+    "Female option 2": "Audio/Female option 2/094_東北ずん子（ノーマル）_それから.wav",
     "Male option 1": "Audio/Male option 1/094_雀松朱司（ノーマル）_それから.wav",
     "Female option 1": "Audio/Female option 1/046_東北きりたん（ノーマル）_それから.wav"
   },
@@ -2880,27 +2880,27 @@
   },
   "経験": {
     "Male option 2": "Audio/Male option 2/290_離途（ノーマル）_経験.wav",
-    "Female option 2": "Audio/Female option 2/290_東北ずん子（ノーマル）_経験.wav",
+    "Female option 2": "Audio/Female option 2/290_東北ずん子（ノーマル）_経験.wav",
     "Male option 1": "Audio/Male option 1/290_雀松朱司（ノーマル）_経験.wav",
     "Female option 1": "Audio/Female option 1/290_東北きりたん（ノーマル）_経験.wav"
   },
   "早い": {
     "Male option 2": "Audio/Male option 2/052_離途（ノーマル）_早い.wav",
-    "Female option 2": "Audio/Female option 2/052_東北ずん子（ノーマル）_早い.wav",
+    "Female option 2": "Audio/Female option 2/052_東北ずん子（ノーマル）_早い.wav",
     "Male option 1": "Audio/Male option 1/052_雀松朱司（ノーマル）_早い.wav",
     "Female option 1": "Audio/Female option 1/052_東北きりたん（ノーマル）_早い.wav"
   },
   "先生みたい": {
     "Male option 2": "Audio/Male option 2/268_離途（ノーマル）_先生みたい.wav",
-    "Female option 2": "Audio/Female option 2/268_東北ずん子（ノーマル）_先生みたい.wav",
+    "Female option 2": "Audio/Female option 2/268_東北ずん子（ノーマル）_先生みたい.wav",
     "Male option 1": "Audio/Male option 1/268_雀松朱司（ノーマル）_先生みたい.wav",
     "Female option 1": "Audio/Female option 1/268_東北きりたん（ノーマル）_先生みたい.wav"
   },
   "行くつもりです": {
-    "Male option 2": "Audio/Male option 2/115_離途（ノーマル）_行くつもりです.wav",
-    "Female option 2": "Audio/Female option 2/115_東北ずん子（ノーマル）_行くつもりです.wav",
-    "Male option 1": "Audio/Male option 1/115_雀松朱司（ノーマル）_行くつもりです.wav",
-    "Female option 1": "Audio/Female option 1/115_東北きりたん（ノーマル）_行くつもりです.wav"
+    "Male option 2": "Audio/Male option 2/115_離途（ノーマル）_行くつもりです.wav",
+    "Female option 2": "Audio/Female option 2/115_東北ずん子（ノーマル）_行くつもりです.wav",
+    "Male option 1": "Audio/Male option 1/115_雀松朱司（ノーマル）_行くつもりです.wav",
+    "Female option 1": "Audio/Female option 1/115_東北きりたん（ノーマル）_行くつもりです.wav"
   },
   "コンピューター": {
     "Male option 2": "Audio/Male option 2/094_離途（ノーマル）_コンピューター.wav",
@@ -2922,31 +2922,31 @@
   },
   "事実": {
     "Male option 2": "Audio/Male option 2/239_離途（ノーマル）_事実.wav",
-    "Female option 2": "Audio/Female option 2/239_東北ずん子（ノーマル）_事実.wav",
+    "Female option 2": "Audio/Female option 2/239_東北ずん子（ノーマル）_事実.wav",
     "Male option 1": "Audio/Male option 1/239_雀松朱司（ノーマル）_事実.wav",
     "Female option 1": "Audio/Female option 1/239_東北きりたん（ノーマル）_事実.wav"
   },
   "読み続ける": {
     "Male option 2": "Audio/Male option 2/245_離途（ノーマル）_読み続ける.wav",
-    "Female option 2": "Audio/Female option 2/245_東北ずん子（ノーマル）_読み続ける.wav",
+    "Female option 2": "Audio/Female option 2/245_東北ずん子（ノーマル）_読み続ける.wav",
     "Male option 1": "Audio/Male option 1/245_雀松朱司（ノーマル）_読み続ける.wav",
     "Female option 1": "Audio/Female option 1/245_東北きりたん（ノーマル）_読み続ける.wav"
   },
   "日本へ行ったことが…": {
-    "Male option 2": "Audio/Male option 2/117_離途（ノーマル）_日本へ行ったことが….wav",
-    "Female option 2": "Audio/Female option 2/117_東北ずん子（ノーマル）_日本へ行ったことが….wav",
-    "Male option 1": "Audio/Male option 1/117_雀松朱司（ノーマル）_日本へ行ったことが….wav",
-    "Female option 1": "Audio/Female option 1/117_東北きりたん（ノーマル）_日本へ行ったことが….wav"
+    "Male option 2": "Audio/Male option 2/117_離途（ノーマル）_日本へ行ったことが….wav",
+    "Female option 2": "Audio/Female option 2/117_東北ずん子（ノーマル）_日本へ行ったことが….wav",
+    "Male option 1": "Audio/Male option 1/117_雀松朱司（ノーマル）_日本へ行ったことが….wav",
+    "Female option 1": "Audio/Female option 1/117_東北きりたん（ノーマル）_日本へ行ったことが….wav"
   },
   "問題": {
     "Male option 2": "Audio/Male option 2/312_離途（ノーマル）_問題.wav",
-    "Female option 2": "Audio/Female option 2/312_東北ずん子（ノーマル）_問題.wav",
+    "Female option 2": "Audio/Female option 2/312_東北ずん子（ノーマル）_問題.wav",
     "Male option 1": "Audio/Male option 1/312_雀松朱司（ノーマル）_問題.wav",
     "Female option 1": "Audio/Female option 1/312_東北きりたん（ノーマル）_問題.wav"
   },
   "あまり": {
     "Male option 2": "Audio/Male option 2/101_離途（ノーマル）_あまり.wav",
-    "Female option 2": "Audio/Female option 2/101_東北ずん子（ノーマル）_あまり.wav",
+    "Female option 2": "Audio/Female option 2/101_東北ずん子（ノーマル）_あまり.wav",
     "Male option 1": "Audio/Male option 1/101_雀松朱司（ノーマル）_あまり.wav",
     "Female option 1": "Audio/Female option 1/101_東北きりたん（ノーマル）_あまり.wav"
   },
@@ -2970,31 +2970,31 @@
   },
   "やすい": {
     "Male option 2": "Audio/Male option 2/044_離途（ノーマル）_やすい.wav",
-    "Female option 2": "Audio/Female option 2/044_東北ずん子（ノーマル）_やすい.wav",
+    "Female option 2": "Audio/Female option 2/044_東北ずん子（ノーマル）_やすい.wav",
     "Male option 1": "Audio/Male option 1/044_雀松朱司（ノーマル）_やすい.wav",
     "Female option 1": "Audio/Female option 1/044_東北きりたん（ノーマル）_やすい.wav"
   },
   "怒る": {
     "Male option 2": "Audio/Male option 2/332_離途（ノーマル）_怒る.wav",
-    "Female option 2": "Audio/Female option 2/332_東北ずん子（ノーマル）_怒る.wav",
+    "Female option 2": "Audio/Female option 2/332_東北ずん子（ノーマル）_怒る.wav",
     "Male option 1": "Audio/Male option 1/332_雀松朱司（ノーマル）_怒る.wav",
     "Female option 1": "Audio/Female option 1/332_東北きりたん（ノーマル）_怒る.wav"
   },
   "一": {
     "Male option 2": "Audio/Male option 2/061_離途（ノーマル）_一.wav",
-    "Female option 2": "Audio/Female option 2/061_東北ずん子（ノーマル）_一.wav",
+    "Female option 2": "Audio/Female option 2/061_東北ずん子（ノーマル）_一.wav",
     "Male option 1": "Audio/Male option 1/061_雀松朱司（ノーマル）_一.wav",
     "Female option 1": "Audio/Female option 1/061_東北きりたん（ノーマル）_一.wav"
   },
   "家": {
     "Male option 2": "Audio/Male option 2/009_離途（ノーマル）_家.wav",
-    "Female option 2": "Audio/Female option 2/009_東北ずん子（ノーマル）_家.wav",
+    "Female option 2": "Audio/Female option 2/009_東北ずん子（ノーマル）_家.wav",
     "Male option 1": "Audio/Male option 1/009_雀松朱司（ノーマル）_家.wav",
     "Female option 1": "Audio/Female option 1/009_東北きりたん（ノーマル）_家.wav"
   },
   "着くとたん": {
     "Male option 2": "Audio/Male option 2/262_離途（ノーマル）_着くとたん.wav",
-    "Female option 2": "Audio/Female option 2/262_東北ずん子（ノーマル）_着くとたん.wav",
+    "Female option 2": "Audio/Female option 2/262_東北ずん子（ノーマル）_着くとたん.wav",
     "Male option 1": "Audio/Male option 1/262_雀松朱司（ノーマル）_着くとたん.wav",
     "Female option 1": "Audio/Female option 1/262_東北きりたん（ノーマル）_着くとたん.wav"
   },
@@ -3012,13 +3012,13 @@
   },
   "安全": {
     "Male option 2": "Audio/Male option 2/326_離途（ノーマル）_安全.wav",
-    "Female option 2": "Audio/Female option 2/326_東北ずん子（ノーマル）_安全.wav",
+    "Female option 2": "Audio/Female option 2/326_東北ずん子（ノーマル）_安全.wav",
     "Male option 1": "Audio/Male option 1/326_雀松朱司（ノーマル）_安全.wav",
     "Female option 1": "Audio/Female option 1/326_東北きりたん（ノーマル）_安全.wav"
   },
   "合格": {
     "Male option 2": "Audio/Male option 2/172_離途（ノーマル）_合格.wav",
-    "Female option 2": "Audio/Female option 2/172_東北ずん子（ノーマル）_合格.wav",
+    "Female option 2": "Audio/Female option 2/172_東北ずん子（ノーマル）_合格.wav",
     "Male option 1": "Audio/Male option 1/172_雀松朱司（ノーマル）_合格.wav",
     "Female option 1": "Audio/Female option 1/172_東北きりたん（ノーマル）_合格.wav"
   },
@@ -3030,7 +3030,7 @@
   },
   "相談": {
     "Male option 2": "Audio/Male option 2/281_離途（ノーマル）_相談.wav",
-    "Female option 2": "Audio/Female option 2/281_東北ずん子（ノーマル）_相談.wav",
+    "Female option 2": "Audio/Female option 2/281_東北ずん子（ノーマル）_相談.wav",
     "Male option 1": "Audio/Male option 1/281_雀松朱司（ノーマル）_相談.wav",
     "Female option 1": "Audio/Female option 1/281_東北きりたん（ノーマル）_相談.wav"
   },
@@ -3042,19 +3042,19 @@
   },
   "予定": {
     "Male option 2": "Audio/Male option 2/156_離途（ノーマル）_予定.wav",
-    "Female option 2": "Audio/Female option 2/156_東北ずん子（ノーマル）_予定.wav",
+    "Female option 2": "Audio/Female option 2/156_東北ずん子（ノーマル）_予定.wav",
     "Male option 1": "Audio/Male option 1/156_雀松朱司（ノーマル）_予定.wav",
     "Female option 1": "Audio/Female option 1/156_東北きりたん（ノーマル）_予定.wav"
   },
   "大きい": {
     "Male option 2": "Audio/Male option 2/175_離途（ノーマル）_大きい.wav",
-    "Female option 2": "Audio/Female option 2/175_東北ずん子（ノーマル）_大きい.wav",
+    "Female option 2": "Audio/Female option 2/175_東北ずん子（ノーマル）_大きい.wav",
     "Male option 1": "Audio/Male option 1/175_雀松朱司（ノーマル）_大きい.wav",
     "Female option 1": "Audio/Female option 1/175_東北きりたん（ノーマル）_大きい.wav"
   },
   "食事": {
     "Male option 2": "Audio/Male option 2/162_離途（ノーマル）_食事.wav",
-    "Female option 2": "Audio/Female option 2/162_東北ずん子（ノーマル）_食事.wav",
+    "Female option 2": "Audio/Female option 2/162_東北ずん子（ノーマル）_食事.wav",
     "Male option 1": "Audio/Male option 1/162_雀松朱司（ノーマル）_食事.wav",
     "Female option 1": "Audio/Female option 1/162_東北きりたん（ノーマル）_食事.wav"
   },
@@ -3078,25 +3078,25 @@
   },
   "説明": {
     "Male option 2": "Audio/Male option 2/285_離途（ノーマル）_説明.wav",
-    "Female option 2": "Audio/Female option 2/285_東北ずん子（ノーマル）_説明.wav",
+    "Female option 2": "Audio/Female option 2/285_東北ずん子（ノーマル）_説明.wav",
     "Male option 1": "Audio/Male option 1/285_雀松朱司（ノーマル）_説明.wav",
     "Female option 1": "Audio/Female option 1/285_東北きりたん（ノーマル）_説明.wav"
   },
   "どうしたんですか": {
-    "Male option 2": "Audio/Male option 2/197_離途（ノーマル）_どうしたんですか.wav",
-    "Female option 2": "Audio/Female option 2/197_東北ずん子（ノーマル）_どうしたんですか.wav",
-    "Male option 1": "Audio/Male option 1/197_雀松朱司（ノーマル）_どうしたんですか.wav",
-    "Female option 1": "Audio/Female option 1/197_東北きりたん（ノーマル）_どうしたんですか.wav"
+    "Male option 2": "Audio/Male option 2/197_離途（ノーマル）_どうしたんですか.wav",
+    "Female option 2": "Audio/Female option 2/197_東北ずん子（ノーマル）_どうしたんですか.wav",
+    "Male option 1": "Audio/Male option 1/197_雀松朱司（ノーマル）_どうしたんですか.wav",
+    "Female option 1": "Audio/Female option 1/197_東北きりたん（ノーマル）_どうしたんですか.wav"
   },
   "実力": {
     "Male option 2": "Audio/Male option 2/350_離途（ノーマル）_実力.wav",
-    "Female option 2": "Audio/Female option 2/350_東北ずん子（ノーマル）_実力.wav",
+    "Female option 2": "Audio/Female option 2/350_東北ずん子（ノーマル）_実力.wav",
     "Male option 1": "Audio/Male option 1/350_雀松朱司（ノーマル）_実力.wav",
     "Female option 1": "Audio/Female option 1/350_東北きりたん（ノーマル）_実力.wav"
   },
   "一番": {
     "Male option 2": "Audio/Male option 2/177_離途（ノーマル）_一番.wav",
-    "Female option 2": "Audio/Female option 2/177_東北ずん子（ノーマル）_一番.wav",
+    "Female option 2": "Audio/Female option 2/177_東北ずん子（ノーマル）_一番.wav",
     "Male option 1": "Audio/Male option 1/177_雀松朱司（ノーマル）_一番.wav",
     "Female option 1": "Audio/Female option 1/177_東北きりたん（ノーマル）_一番.wav"
   },
@@ -3108,43 +3108,43 @@
   },
   "影響": {
     "Male option 2": "Audio/Male option 2/328_離途（ノーマル）_影響.wav",
-    "Female option 2": "Audio/Female option 2/328_東北ずん子（ノーマル）_影響.wav",
+    "Female option 2": "Audio/Female option 2/328_東北ずん子（ノーマル）_影響.wav",
     "Male option 1": "Audio/Male option 1/328_雀松朱司（ノーマル）_影響.wav",
     "Female option 1": "Audio/Female option 1/328_東北きりたん（ノーマル）_影響.wav"
   },
   "ゴミだらけ": {
-    "Male option 2": "Audio/Male option 2/259_離途（ノーマル）_ゴミだらけ.wav",
-    "Female option 2": "Audio/Female option 2/259_東北ずん子（ノーマル）_ゴミだらけ.wav",
-    "Male option 1": "Audio/Male option 1/259_雀松朱司（ノーマル）_ゴミだらけ.wav",
-    "Female option 1": "Audio/Female option 1/259_東北きりたん（ノーマル）_ゴミだらけ.wav"
+    "Male option 2": "Audio/Male option 2/259_離途（ノーマル）_ゴミだらけ.wav",
+    "Female option 2": "Audio/Female option 2/259_東北ずん子（ノーマル）_ゴミだらけ.wav",
+    "Male option 1": "Audio/Male option 1/259_雀松朱司（ノーマル）_ゴミだらけ.wav",
+    "Female option 1": "Audio/Female option 1/259_東北きりたん（ノーマル）_ゴミだらけ.wav"
   },
   "社会": {
     "Male option 2": "Audio/Male option 2/309_離途（ノーマル）_社会.wav",
-    "Female option 2": "Audio/Female option 2/309_東北ずん子（ノーマル）_社会.wav",
+    "Female option 2": "Audio/Female option 2/309_東北ずん子（ノーマル）_社会.wav",
     "Male option 1": "Audio/Male option 1/309_雀松朱司（ノーマル）_社会.wav",
     "Female option 1": "Audio/Female option 1/309_東北きりたん（ノーマル）_社会.wav"
   },
   "祈る": {
     "Male option 2": "Audio/Male option 2/232_離途（ノーマル）_祈る.wav",
-    "Female option 2": "Audio/Female option 2/232_東北ずん子（ノーマル）_祈る.wav",
+    "Female option 2": "Audio/Female option 2/232_東北ずん子（ノーマル）_祈る.wav",
     "Male option 1": "Audio/Male option 1/232_雀松朱司（ノーマル）_祈る.wav",
     "Female option 1": "Audio/Female option 1/232_東北きりたん（ノーマル）_祈る.wav"
   },
   "旅行": {
     "Male option 2": "Audio/Male option 2/155_離途（ノーマル）_旅行.wav",
-    "Female option 2": "Audio/Female option 2/155_東北ずん子（ノーマル）_旅行.wav",
+    "Female option 2": "Audio/Female option 2/155_東北ずん子（ノーマル）_旅行.wav",
     "Male option 1": "Audio/Male option 1/155_雀松朱司（ノーマル）_旅行.wav",
     "Female option 1": "Audio/Female option 1/155_東北きりたん（ノーマル）_旅行.wav"
   },
   "二": {
     "Male option 2": "Audio/Male option 2/062_離途（ノーマル）_二.wav",
-    "Female option 2": "Audio/Female option 2/062_東北ずん子（ノーマル）_二.wav",
+    "Female option 2": "Audio/Female option 2/062_東北ずん子（ノーマル）_二.wav",
     "Male option 1": "Audio/Male option 1/062_雀松朱司（ノーマル）_二.wav",
     "Female option 1": "Audio/Female option 1/062_東北きりたん（ノーマル）_二.wav"
   },
   "話せる": {
     "Male option 2": "Audio/Male option 2/136_離途（ノーマル）_話せる.wav",
-    "Female option 2": "Audio/Female option 2/136_東北ずん子（ノーマル）_話せる.wav",
+    "Female option 2": "Audio/Female option 2/136_東北ずん子（ノーマル）_話せる.wav",
     "Male option 1": "Audio/Male option 1/136_雀松朱司（ノーマル）_話せる.wav",
     "Female option 1": "Audio/Female option 1/136_東北きりたん（ノーマル）_話せる.wav"
   },
@@ -3155,14 +3155,14 @@
     "Female option 1": "Audio/Female option 1/083_東北きりたん（ノーマル）_その.wav"
   },
   "野菜がきらいです": {
-    "Male option 2": "Audio/Male option 2/107_離途（ノーマル）_野菜がきらいです.wav",
-    "Female option 2": "Audio/Female option 2/107_東北ずん子（ノーマル）_野菜がきらいです.wav",
-    "Male option 1": "Audio/Male option 1/107_雀松朱司（ノーマル）_野菜がきらいです.wav",
-    "Female option 1": "Audio/Female option 1/107_東北きりたん（ノーマル）_野菜がきらいです.wav"
+    "Male option 2": "Audio/Male option 2/107_離途（ノーマル）_野菜がきらいです.wav",
+    "Female option 2": "Audio/Female option 2/107_東北ずん子（ノーマル）_野菜がきらいです.wav",
+    "Male option 1": "Audio/Male option 1/107_雀松朱司（ノーマル）_野菜がきらいです.wav",
+    "Female option 1": "Audio/Female option 1/107_東北きりたん（ノーマル）_野菜がきらいです.wav"
   },
   "自由": {
     "Male option 2": "Audio/Male option 2/241_離途（ノーマル）_自由.wav",
-    "Female option 2": "Audio/Female option 2/241_東北ずん子（ノーマル）_自由.wav",
+    "Female option 2": "Audio/Female option 2/241_東北ずん子（ノーマル）_自由.wav",
     "Male option 1": "Audio/Male option 1/241_雀松朱司（ノーマル）_自由.wav",
     "Female option 1": "Audio/Female option 1/241_東北きりたん（ノーマル）_自由.wav"
   },
@@ -3182,7 +3182,7 @@
     "Female option 1": "Audio/Female option 1/022_東北きりたん（ノーマル）_かばん.wav"
   },
   "よろしくおねがいします": {
-    "Female option 1": "Audio/Female option 1/015_東北きりたん（ノーマル）_よろしくおねがいします.wav"
+    "Female option 1": "Audio/Female option 1/015_東北きりたん（ノーマル）_よろしくおねがいします.wav"
   },
   "ごぜん": {
     "Female option 1": "Audio/Female option 1/032_東北きりたん（ノーマル）_ごぜん.wav"
