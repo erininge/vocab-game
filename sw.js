@@ -1,9 +1,9 @@
-const CACHE_NAME = "vocab-garden-cache-v0.3.38";
+const CACHE_NAME = "vocab-garden-cache-v0.3.39";
 const CORE_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=052",
-  "./app.js?v=052",
+  "./styles.css?v=053",
+  "./app.js?v=053",
   "./config.json",
   "./manifest.webmanifest",
   "./Vocabulary/vocab-manifest.json",
