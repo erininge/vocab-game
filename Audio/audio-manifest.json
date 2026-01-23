@@ -3166,23 +3166,80 @@
     "Male option 1": "Audio/Male option 1/241_雀松朱司（ノーマル）_自由.wav",
     "Female option 1": "Audio/Female option 1/241_東北きりたん（ノーマル）_自由.wav"
   },
+  "くる": {
+    "Female option 1": "Audio/Female option 1/028_東北きりたん（ノーマル）_くる.wav"
+  },
+  "たべたい": {
+    "Female option 1": "Audio/Female option 1/038_東北きりたん（ノーマル）_たべたい.wav"
+  },
+  "はち": {
+    "Female option 1": "Audio/Female option 1/056_東北きりたん（ノーマル）_はち.wav"
+  },
   "つくえ": {
     "Female option 1": "Audio/Female option 1/011_東北きりたん（ノーマル）_つくえ.wav"
+  },
+  "かばん": {
+    "Female option 1": "Audio/Female option 1/022_東北きりたん（ノーマル）_かばん.wav"
   },
   "よろしくおねがいします": {
     "Female option 1": "Audio/Female option 1/015_東北きりたん（ノーマル）_よろしくおねがいします.wav"
   },
+  "ごぜん": {
+    "Female option 1": "Audio/Female option 1/032_東北きりたん（ノーマル）_ごぜん.wav"
+  },
+  "のみたい": {
+    "Female option 1": "Audio/Female option 1/053_東北きりたん（ノーマル）_のみたい.wav"
+  },
   "とき": {
     "Female option 1": "Audio/Female option 1/030_東北きりたん（ノーマル）_とき.wav"
   },
+  "べんきょうするでし…": {
+    "Female option 1": "Audio/Female option 1/061_東北きりたん（ノーマル）_べんきょうするでし….wav"
+  },
+  "いくつもりです": {
+    "Female option 1": "Audio/Female option 1/008_東北きりたん（ノーマル）_いくつもりです.wav"
+  },
   "まえ": {
     "Female option 1": "Audio/Female option 1/055_東北きりたん（ノーマル）_まえ.wav"
+  },
+  "さん": {
+    "Female option 1": "Audio/Female option 1/033_東北きりたん（ノーマル）_さん.wav"
+  },
+  "ともだち": {
+    "Female option 1": "Audio/Female option 1/044_東北きりたん（ノーマル）_ともだち.wav"
+  },
+  "とけい": {
+    "Female option 1": "Audio/Female option 1/043_東北きりたん（ノーマル）_とけい.wav"
+  },
+  "にほん": {
+    "Female option 1": "Audio/Female option 1/048_東北きりたん（ノーマル）_にほん.wav"
+  },
+  "なに": {
+    "Female option 1": "Audio/Female option 1/046_東北きりたん（ノーマル）_なに.wav"
+  },
+  "いく": {
+    "Female option 1": "Audio/Female option 1/007_東北きりたん（ノーマル）_いく.wav"
+  },
+  "べんきょうしています": {
+    "Female option 1": "Audio/Female option 1/059_東北きりたん（ノーマル）_べんきょうしています.wav"
+  },
+  "いえ": {
+    "Female option 1": "Audio/Female option 1/003_東北きりたん（ノーマル）_いえ.wav"
+  },
+  "しち": {
+    "Female option 1": "Audio/Female option 1/035_東北きりたん（ノーマル）_しち.wav"
+  },
+  "にほんへいったこと…": {
+    "Female option 1": "Audio/Female option 1/052_東北きりたん（ノーマル）_にほんへいったこと….wav"
   },
   "なか": {
     "Female option 1": "Audio/Female option 1/057_東北きりたん（ノーマル）_なか.wav"
   },
   "こども": {
     "Female option 1": "Audio/Female option 1/008_東北きりたん（ノーマル）_こども.wav"
+  },
+  "くるま": {
+    "Female option 1": "Audio/Female option 1/029_東北きりたん（ノーマル）_くるま.wav"
   },
   "まち": {
     "Female option 1": "Audio/Female option 1/024_東北きりたん（ノーマル）_まち.wav"
@@ -3193,8 +3250,23 @@
   "とる": {
     "Female option 1": "Audio/Female option 1/040_東北きりたん（ノーマル）_とる.wav"
   },
+  "はいってください": {
+    "Female option 1": "Audio/Female option 1/055_東北きりたん（ノーマル）_はいってください.wav"
+  },
   "もしもし": {
     "Female option 1": "Audio/Female option 1/052_東北きりたん（ノーマル）_もしもし.wav"
+  },
+  "がっこうへいく": {
+    "Female option 1": "Audio/Female option 1/021_東北きりたん（ノーマル）_がっこうへいく.wav"
+  },
+  "ほん": {
+    "Female option 1": "Audio/Female option 1/062_東北きりたん（ノーマル）_ほん.wav"
+  },
+  "なな": {
+    "Female option 1": "Audio/Female option 1/045_東北きりたん（ノーマル）_なな.wav"
+  },
+  "みず": {
+    "Female option 1": "Audio/Female option 1/063_東北きりたん（ノーマル）_みず.wav"
   },
   "した": {
     "Female option 1": "Audio/Female option 1/059_東北きりたん（ノーマル）_した.wav"
@@ -3202,11 +3274,20 @@
   "パン": {
     "Female option 1": "Audio/Female option 1/016_東北きりたん（ノーマル）_パン.wav"
   },
+  "あついから": {
+    "Female option 1": "Audio/Female option 1/002_東北きりたん（ノーマル）_あついから.wav"
+  },
   "かようび": {
     "Female option 1": "Audio/Female option 1/032_東北きりたん（ノーマル）_かようび.wav"
   },
+  "だれ": {
+    "Female option 1": "Audio/Female option 1/042_東北きりたん（ノーマル）_だれ.wav"
+  },
   "あう": {
     "Female option 1": "Audio/Female option 1/036_東北きりたん（ノーマル）_あう.wav"
+  },
+  "ふん": {
+    "Female option 1": "Audio/Female option 1/058_東北きりたん（ノーマル）_ふん.wav"
   },
   "ひと": {
     "Female option 1": "Audio/Female option 1/007_東北きりたん（ノーマル）_ひと.wav"
@@ -3244,8 +3325,17 @@
   "いちじかん": {
     "Female option 1": "Audio/Female option 1/028_東北きりたん（ノーマル）_いちじかん.wav"
   },
+  "えいご": {
+    "Female option 1": "Audio/Female option 1/011_東北きりたん（ノーマル）_えいご.wav"
+  },
+  "えき": {
+    "Female option 1": "Audio/Female option 1/012_東北きりたん（ノーマル）_えき.wav"
+  },
   "ゲーム": {
     "Female option 1": "Audio/Female option 1/001_東北きりたん（ノーマル）_ゲーム.wav"
+  },
+  "いきました": {
+    "Female option 1": "Audio/Female option 1/006_東北きりたん（ノーマル）_いきました.wav"
   },
   "こうえん": {
     "Female option 1": "Audio/Female option 1/018_東北きりたん（ノーマル）_こうえん.wav"
@@ -3253,20 +3343,56 @@
   "ちかく": {
     "Female option 1": "Audio/Female option 1/060_東北きりたん（ノーマル）_ちかく.wav"
   },
+  "きょう": {
+    "Female option 1": "Audio/Female option 1/025_東北きりたん（ノーマル）_きょう.wav"
+  },
+  "ろく": {
+    "Female option 1": "Audio/Female option 1/070_東北きりたん（ノーマル）_ろく.wav"
+  },
+  "に": {
+    "Female option 1": "Audio/Female option 1/047_東北きりたん（ノーマル）_に.wav"
+  },
   "ごめんなさい": {
     "Female option 1": "Audio/Female option 1/045_東北きりたん（ノーマル）_ごめんなさい.wav"
+  },
+  "にほんご": {
+    "Female option 1": "Audio/Female option 1/050_東北きりたん（ノーマル）_にほんご.wav"
+  },
+  "かいしゃ": {
+    "Female option 1": "Audio/Female option 1/016_東北きりたん（ノーマル）_かいしゃ.wav"
   },
   "いぬ": {
     "Female option 1": "Audio/Female option 1/005_東北きりたん（ノーマル）_いぬ.wav"
   },
+  "くじからごじまで": {
+    "Female option 1": "Audio/Female option 1/027_東北きりたん（ノーマル）_くじからごじまで.wav"
+  },
+  "いきたい": {
+    "Female option 1": "Audio/Female option 1/005_東北きりたん（ノーマル）_いきたい.wav"
+  },
+  "ご": {
+    "Female option 1": "Audio/Female option 1/030_東北きりたん（ノーマル）_ご.wav"
+  },
+  "あした": {
+    "Female option 1": "Audio/Female option 1/001_東北きりたん（ノーマル）_あした.wav"
+  },
   "バスてい": {
     "Female option 1": "Audio/Female option 1/020_東北きりたん（ノーマル）_バスてい.wav"
+  },
+  "き": {
+    "Female option 1": "Audio/Female option 1/023_東北きりたん（ノーマル）_き.wav"
+  },
+  "やさいがきらいです": {
+    "Female option 1": "Audio/Female option 1/068_東北きりたん（ノーマル）_やさいがきらいです.wav"
   },
   "かう": {
     "Female option 1": "Audio/Female option 1/038_東北きりたん（ノーマル）_かう.wav"
   },
   "クラス": {
     "Female option 1": "Audio/Female option 1/004_東北きりたん（ノーマル）_クラス.wav"
+  },
+  "にほんからきました": {
+    "Female option 1": "Audio/Female option 1/049_東北きりたん（ノーマル）_にほんからきました.wav"
   },
   "～じかん": {
     "Female option 1": "Audio/Female option 1/027_東北きりたん（ノーマル）_～じかん.wav"
@@ -3280,11 +3406,20 @@
   "きのう": {
     "Female option 1": "Audio/Female option 1/026_東北きりたん（ノーマル）_きのう.wav"
   },
+  "よん": {
+    "Female option 1": "Audio/Female option 1/069_東北きりたん（ノーマル）_よん.wav"
+  },
   "ねこ": {
     "Female option 1": "Audio/Female option 1/006_東北きりたん（ノーマル）_ねこ.wav"
   },
+  "じゅう": {
+    "Female option 1": "Audio/Female option 1/036_東北きりたん（ノーマル）_じゅう.wav"
+  },
   "だから": {
     "Female option 1": "Audio/Female option 1/047_東北きりたん（ノーマル）_だから.wav"
+  },
+  "おんがくがすきです": {
+    "Female option 1": "Audio/Female option 1/015_東北きりたん（ノーマル）_おんがくがすきです.wav"
   },
   "ほんや": {
     "Female option 1": "Audio/Female option 1/023_東北きりたん（ノーマル）_ほんや.wav"
@@ -3301,20 +3436,56 @@
   "かいもの": {
     "Female option 1": "Audio/Female option 1/003_東北きりたん（ノーマル）_かいもの.wav"
   },
+  "がっこう": {
+    "Female option 1": "Audio/Female option 1/019_東北きりたん（ノーマル）_がっこう.wav"
+  },
+  "みました": {
+    "Female option 1": "Audio/Female option 1/067_東北きりたん（ノーマル）_みました.wav"
+  },
+  "く": {
+    "Female option 1": "Audio/Female option 1/026_東北きりたん（ノーマル）_く.wav"
+  },
   "びょういん": {
     "Female option 1": "Audio/Female option 1/021_東北きりたん（ノーマル）_びょういん.wav"
   },
   "まつ": {
     "Female option 1": "Audio/Female option 1/041_東北きりたん（ノーマル）_まつ.wav"
   },
+  "わたし": {
+    "Female option 1": "Audio/Female option 1/071_東北きりたん（ノーマル）_わたし.wav"
+  },
+  "べんきょうしました": {
+    "Female option 1": "Audio/Female option 1/060_東北きりたん（ノーマル）_べんきょうしました.wav"
+  },
+  "たべています": {
+    "Female option 1": "Audio/Female option 1/039_東北きりたん（ノーマル）_たべています.wav"
+  },
+  "おそい": {
+    "Female option 1": "Audio/Female option 1/013_東北きりたん（ノーマル）_おそい.wav"
+  },
   "わかる": {
     "Female option 1": "Audio/Female option 1/042_東北きりたん（ノーマル）_わかる.wav"
+  },
+  "いえにかえる": {
+    "Female option 1": "Audio/Female option 1/004_東北きりたん（ノーマル）_いえにかえる.wav"
+  },
+  "みてください": {
+    "Female option 1": "Audio/Female option 1/066_東北きりたん（ノーマル）_みてください.wav"
   },
   "もくようび": {
     "Female option 1": "Audio/Female option 1/034_東北きりたん（ノーマル）_もくようび.wav"
   },
+  "にほんごをはなすこ…": {
+    "Female option 1": "Audio/Female option 1/051_東北きりたん（ノーマル）_にほんごをはなすこ….wav"
+  },
+  "たべる": {
+    "Female option 1": "Audio/Female option 1/041_東北きりたん（ノーマル）_たべる.wav"
+  },
   "ひとりで": {
     "Female option 1": "Audio/Female option 1/051_東北きりたん（ノーマル）_ひとりで.wav"
+  },
+  "ごご": {
+    "Female option 1": "Audio/Female option 1/031_東北きりたん（ノーマル）_ごご.wav"
   },
   "すいようび": {
     "Female option 1": "Audio/Female option 1/033_東北きりたん（ノーマル）_すいようび.wav"
@@ -3325,11 +3496,38 @@
   "げつようび": {
     "Female option 1": "Audio/Female option 1/031_東北きりたん（ノーマル）_げつようび.wav"
   },
+  "がっこうからいえまで": {
+    "Female option 1": "Audio/Female option 1/020_東北きりたん（ノーマル）_がっこうからいえまで.wav"
+  },
+  "はやい": {
+    "Female option 1": "Audio/Female option 1/057_東北きりたん（ノーマル）_はやい.wav"
+  },
+  "のむ": {
+    "Female option 1": "Audio/Female option 1/054_東北きりたん（ノーマル）_のむ.wav"
+  },
   "アルバイト": {
     "Female option 1": "Audio/Female option 1/002_東北きりたん（ノーマル）_アルバイト.wav"
   },
+  "せんせい": {
+    "Female option 1": "Audio/Female option 1/037_東北きりたん（ノーマル）_せんせい.wav"
+  },
   "ホテル": {
     "Female option 1": "Audio/Female option 1/022_東北きりたん（ノーマル）_ホテル.wav"
+  },
+  "みせ": {
+    "Female option 1": "Audio/Female option 1/064_東北きりたん（ノーマル）_みせ.wav"
+  },
+  "みたい": {
+    "Female option 1": "Audio/Female option 1/065_東北きりたん（ノーマル）_みたい.wav"
+  },
+  "きゅう": {
+    "Female option 1": "Audio/Female option 1/024_東北きりたん（ノーマル）_きゅう.wav"
+  },
+  "おんがく": {
+    "Female option 1": "Audio/Female option 1/014_東北きりたん（ノーマル）_おんがく.wav"
+  },
+  "えいが": {
+    "Female option 1": "Audio/Female option 1/010_東北きりたん（ノーマル）_えいが.wav"
   },
   "スーパー": {
     "Female option 1": "Audio/Female option 1/019_東北きりたん（ノーマル）_スーパー.wav"
@@ -3337,10 +3535,28 @@
   "となり": {
     "Female option 1": "Audio/Female option 1/061_東北きりたん（ノーマル）_となり.wav"
   },
+  "がくせい": {
+    "Female option 1": "Audio/Female option 1/017_東北きりたん（ノーマル）_がくせい.wav"
+  },
+  "いち": {
+    "Female option 1": "Audio/Female option 1/009_東北きりたん（ノーマル）_いち.wav"
+  },
   "おてら": {
     "Female option 1": "Audio/Female option 1/017_東北きりたん（ノーマル）_おてら.wav"
   },
+  "かぞく": {
+    "Female option 1": "Audio/Female option 1/018_東北きりたん（ノーマル）_かぞく.wav"
+  },
   "ひだり": {
     "Female option 1": "Audio/Female option 1/054_東北きりたん（ノーマル）_ひだり.wav"
+  },
+  "たべました": {
+    "Female option 1": "Audio/Female option 1/040_東北きりたん（ノーマル）_たべました.wav"
+  },
+  "し": {
+    "Female option 1": "Audio/Female option 1/034_東北きりたん（ノーマル）_し.wav"
+  },
+  "わたしも": {
+    "Female option 1": "Audio/Female option 1/072_東北きりたん（ノーマル）_わたしも.wav"
   }
 }

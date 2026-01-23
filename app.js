@@ -4,10 +4,11 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.26";
+const APP_VERSION = "v0.3.37";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
-const AUDIO_VOICE_FOLDER = "Female option 1";
+const AUDIO_VOICE_DEFAULT = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
+const SILENT_AUDIO_URI = "data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQIAAAAAAA==";
 
 const els = {
   versionLine: document.getElementById("versionLine"),
@@ -16,6 +17,8 @@ const els = {
   installBtn: document.getElementById("installBtn"),
 
   screenHome: document.getElementById("screenHome"),
+  screenVocab: document.getElementById("screenVocab"),
+  screenExport: document.getElementById("screenExport"),
   screenQuiz: document.getElementById("screenQuiz"),
   screenDone: document.getElementById("screenDone"),
 
@@ -26,6 +29,7 @@ const els = {
   displayMode: document.getElementById("displayMode"),
   qCount: document.getElementById("qCount"),
   audioEnabled: document.getElementById("audioEnabled"),
+  audioVoice: document.getElementById("audioVoice"),
   testAudioBtn: document.getElementById("testAudioBtn"),
   practiceHelp: document.getElementById("practiceHelp"),
 
@@ -33,6 +37,7 @@ const els = {
   lessonBox: document.getElementById("lessonBox"),
 
   startBtn: document.getElementById("startBtn"),
+  viewVocabBtn: document.getElementById("viewVocabBtn"),
 
   quizMeta: document.getElementById("quizMeta"),
   promptLine: document.getElementById("promptLine"),
@@ -47,6 +52,19 @@ const els = {
 
   scoreLine: document.getElementById("scoreLine"),
   backHomeBtn: document.getElementById("backHomeBtn"),
+
+  vocabMeta: document.getElementById("vocabMeta"),
+  vocabList: document.getElementById("vocabList"),
+  vocabHelp: document.getElementById("vocabHelp"),
+  backFromVocabBtn: document.getElementById("backFromVocabBtn"),
+
+  exportMissingAudioBtn: document.getElementById("exportMissingAudioBtn"),
+  exportVoice: document.getElementById("exportVoice"),
+  exportList: document.getElementById("exportList"),
+  exportMeta: document.getElementById("exportMeta"),
+  exportHelp: document.getElementById("exportHelp"),
+  downloadExportBtn: document.getElementById("downloadExportBtn"),
+  backFromExportBtn: document.getElementById("backFromExportBtn"),
 };
 
 let deferredInstallPrompt = null;
@@ -62,6 +80,8 @@ function setSelectionCount(text) {
 
 function show(screen) {
   els.screenHome.hidden = screen !== "home";
+  els.screenVocab.hidden = screen !== "vocab";
+  if (els.screenExport) els.screenExport.hidden = screen !== "export";
   els.screenQuiz.hidden = screen !== "quiz";
   els.screenDone.hidden = screen !== "done";
 }
@@ -95,6 +115,7 @@ let audioPlayer = null;
 let audioNodes = null;
 let audioContext = null;
 let audioPlayToken = 0;
+let audioPrimed = false;
 async function loadAudioManifest() {
   if (AUDIO_MANIFEST) return AUDIO_MANIFEST;
   try {
@@ -125,6 +146,24 @@ function resolveVoiceFolder(manifest, preferred) {
     console.warn(`Audio voice "${preferred}" not found, using "${fallback}" instead.`);
   }
   return fallback || preferred;
+}
+
+function getPreferredAudioVoice() {
+  if (state.settings && state.settings.audioVoice) return state.settings.audioVoice;
+  if (els.audioVoice && els.audioVoice.value) return els.audioVoice.value;
+  return AUDIO_VOICE_DEFAULT;
+}
+
+function listAvailableVoices(manifest) {
+  const available = new Set();
+  if (!manifest) return [];
+  for (const entry of Object.values(manifest)) {
+    if (!entry || typeof entry !== "object") continue;
+    for (const key of Object.keys(entry)) {
+      if (key) available.add(key);
+    }
+  }
+  return [...available].sort((a, b) => a.localeCompare(b));
 }
 
 async function configureAudioSession() {
@@ -194,6 +233,43 @@ async function primeAudioPlayback() {
     await ensureAudioNodes();
   } else {
     await ensureAudioContext();
+  }
+  await warmAudioPlayer();
+}
+
+async function warmAudioPlayer() {
+  if (audioPrimed) return;
+  const player = getAudioPlayer();
+  const previousSrc = player.src;
+  const previousMuted = player.muted;
+  const previousVolume = player.volume;
+  player.muted = true;
+  player.volume = 0;
+  player.src = SILENT_AUDIO_URI;
+  player.load();
+  let played = false;
+  try {
+    await player.play();
+    played = true;
+  } catch (e) {
+    // Some platforms still block; we'll try again on next gesture.
+  }
+  try {
+    player.pause();
+  } catch (e) {}
+  try {
+    player.currentTime = 0;
+  } catch (e) {}
+  player.muted = previousMuted;
+  player.volume = previousVolume;
+  if (previousSrc) {
+    player.src = previousSrc;
+    player.load();
+  } else {
+    player.removeAttribute("src");
+  }
+  if (played) {
+    audioPrimed = true;
   }
 }
 
@@ -377,7 +453,12 @@ function categoryLabel(filename) {
   return filename.replace(/\.json$/i, "");
 }
 
-function renderLessonPills(lessonKeys) {
+function lessonLabel(vocabData, key) {
+  const names = vocabData?.lessonNames || {};
+  return names[String(key)] || `Lesson ${key}`;
+}
+
+function renderLessonPills(vocabData, lessonKeys) {
   els.lessonBox.innerHTML = "";
   const sorted = [...lessonKeys].sort((a,b) => Number(a) - Number(b));
   for (const k of sorted) {
@@ -391,7 +472,7 @@ function renderLessonPills(lessonKeys) {
     cb.value = k;
     cb.checked = true;
     const span = document.createElement("span");
-    span.textContent = `Lesson ${k}`;
+    span.textContent = lessonLabel(vocabData, k);
     label.appendChild(cb);
     label.appendChild(span);
     els.lessonBox.appendChild(label);
@@ -427,6 +508,102 @@ function getDisplayJP(card, mode) {
   // both
   if (kana && kanji && kana !== kanji) return `${kana}  (${kanji})`;
   return kana || kanji || "";
+}
+
+function getDisplayEN(card) {
+  const enList = Array.isArray(card.en) ? card.en.filter(Boolean) : [];
+  return enList.length ? enList.join(", ") : "(no English provided)";
+}
+
+function renderVocabList(pool, file, vocabData) {
+  if (!els.vocabList) return;
+  els.vocabList.innerHTML = "";
+  const sorted = [...pool].sort((a, b) => {
+    const lessonDiff = Number(a._lesson) - Number(b._lesson);
+    if (lessonDiff !== 0) return lessonDiff;
+    const jpA = `${a.kana || ""}${a.kanji || ""}`;
+    const jpB = `${b.kana || ""}${b.kanji || ""}`;
+    const jpDiff = jpA.localeCompare(jpB, "ja");
+    if (jpDiff !== 0) return jpDiff;
+    return getDisplayEN(a).localeCompare(getDisplayEN(b));
+  });
+
+  for (const card of sorted) {
+    const row = document.createElement("div");
+    row.className = "vocabRow";
+
+    const star = document.createElement("span");
+    const starred = isStarred(card, file);
+    star.className = "vocabStar";
+    star.textContent = starred ? "⭐" : "☆";
+    star.title = starred ? "Starred" : "Not starred";
+
+    const info = document.createElement("div");
+    info.className = "vocabInfo";
+
+    const term = document.createElement("div");
+    term.className = "vocabTerm";
+    term.textContent = getDisplayJP(card, "both") || "(no JP provided)";
+
+    const meaning = document.createElement("div");
+    meaning.className = "vocabMeaning";
+    meaning.textContent = getDisplayEN(card);
+
+    info.appendChild(term);
+    info.appendChild(meaning);
+
+    const lesson = document.createElement("div");
+    lesson.className = "vocabLesson";
+    lesson.textContent = lessonLabel(vocabData, card._lesson);
+
+    row.appendChild(star);
+    row.appendChild(info);
+    row.appendChild(lesson);
+    els.vocabList.appendChild(row);
+  }
+}
+
+async function openVocabPreview() {
+  if (!els.vocabMeta || !els.vocabHelp) return;
+  els.vocabHelp.textContent = "";
+  els.vocabMeta.textContent = "";
+  if (els.vocabList) {
+    els.vocabList.innerHTML = "";
+  }
+
+  const file = els.levelSelect.value;
+  const lessonList = selectedLessons();
+  if (!lessonList.length) {
+    els.vocabHelp.textContent = "Select at least one lesson to view vocab.";
+    show("vocab");
+    return;
+  }
+
+  try {
+    let vocabData = state.vocabData;
+    if (!vocabData || file !== state.currentFile) {
+      vocabData = await loadVocabFile(file);
+    }
+    state.currentFile = file;
+    state.vocabData = vocabData;
+
+    const pool = buildPool(vocabData, lessonList, file);
+    const lessonLabelCount = lessonList.length === 1 ? "lesson" : "lessons";
+    const wordLabel = pool.length === 1 ? "word" : "words";
+    els.vocabMeta.textContent = `${categoryLabel(file)} • ${lessonList.length} ${lessonLabelCount} • ${pool.length} ${wordLabel}`;
+
+    if (!pool.length) {
+      els.vocabHelp.textContent = "No vocab found for the selected lessons.";
+      show("vocab");
+      return;
+    }
+
+    renderVocabList(pool, file, vocabData);
+    show("vocab");
+  } catch (e) {
+    els.vocabHelp.textContent = "Could not load vocab for that category.";
+    show("vocab");
+  }
 }
 
 // --- Quiz engine ---
@@ -645,7 +822,8 @@ function renderQuestion() {
 
   // header meta
   const cat = categoryLabel(state.currentFile);
-  els.quizMeta.textContent = `${cat} • Lesson ${card._lesson} • ${state.idx + 1}/${state.questions.length}`;
+  const lessonName = lessonLabel(state.vocabData, card._lesson);
+  els.quizMeta.textContent = `${cat} • ${lessonName} • ${state.idx + 1}/${state.questions.length}`;
 
   clearFeedback();
   els.nextBtn.disabled = true;
@@ -751,7 +929,7 @@ async function tryPlayAudio(question) {
 
   const tried = new Set();
   const manifest = await loadAudioManifest();
-  const voiceFolder = resolveVoiceFolder(manifest, AUDIO_VOICE_FOLDER);
+  const voiceFolder = resolveVoiceFolder(manifest, getPreferredAudioVoice());
   for (const c of candidates) {
     const n = norm(c);
     if (!n || tried.has(n)) continue;
@@ -788,8 +966,10 @@ async function playRandomSampleAudio() {
     return;
   }
   const manifest = await loadAudioManifest();
-  const voiceFolder = resolveVoiceFolder(manifest, AUDIO_VOICE_FOLDER);
-  const keys = manifest ? Object.keys(manifest) : [];
+  const voiceFolder = resolveVoiceFolder(manifest, getPreferredAudioVoice());
+  const keys = manifest
+    ? Object.keys(manifest).filter((key) => manifest[key] && manifest[key][voiceFolder])
+    : [];
   if (!keys.length) {
     setFooter("No audio samples found.");
     return;
@@ -805,6 +985,134 @@ async function playRandomSampleAudio() {
   } catch (e) {
     setFooter("Audio sample failed to play.");
   }
+}
+
+async function populateAudioVoices(preferred) {
+  if (!els.audioVoice) return;
+  await populateVoiceSelect(els.audioVoice, preferred);
+}
+
+async function populateVoiceSelect(select, preferred) {
+  if (!select) return;
+  const manifest = await loadAudioManifest();
+  const voices = listAvailableVoices(manifest);
+  if (!voices.length) {
+    voices.push(AUDIO_VOICE_DEFAULT);
+  }
+  select.innerHTML = "";
+  for (const voice of voices) {
+    const option = document.createElement("option");
+    option.value = voice;
+    option.textContent = voice;
+    select.appendChild(option);
+  }
+  const resolved = resolveVoiceFolder(manifest, preferred || AUDIO_VOICE_DEFAULT);
+  if (resolved && voices.includes(resolved)) {
+    select.value = resolved;
+  } else {
+    select.value = voices[0];
+  }
+}
+
+async function populateExportVoices(preferred) {
+  if (!els.exportVoice) return;
+  await populateVoiceSelect(els.exportVoice, preferred);
+}
+
+function getAudioCandidates(card) {
+  const terms = new Set();
+  if (card.kana) terms.add(card.kana);
+  if (Array.isArray(card.kana_variants)) {
+    for (const variant of card.kana_variants) {
+      if (variant) terms.add(variant);
+    }
+  }
+  if (!terms.size && card.kanji) terms.add(card.kanji);
+  return [...terms].map(t => String(t).trim()).filter(Boolean);
+}
+
+function listMissingAudioTerms(pool, manifest, voiceFolder) {
+  const missing = new Set();
+  if (!Array.isArray(pool)) return [];
+  for (const card of pool) {
+    const terms = getAudioCandidates(card);
+    for (const term of terms) {
+      if (!manifest || !manifest[term] || !manifest[term][voiceFolder]) {
+        missing.add(term);
+      }
+    }
+  }
+  return [...missing].sort((a, b) => a.localeCompare(b, "ja"));
+}
+
+async function updateMissingAudioExport() {
+  if (!els.exportList || !els.exportHelp || !els.exportMeta) return;
+  els.exportHelp.textContent = "";
+  els.exportMeta.textContent = "";
+  els.exportList.value = "";
+
+  const file = els.levelSelect.value;
+  const lessonList = selectedLessons();
+  if (!lessonList.length) {
+    els.exportHelp.textContent = "Select at least one lesson to export missing audio.";
+    return;
+  }
+
+  try {
+    let vocabData = state.vocabData;
+    if (!vocabData || file !== state.currentFile) {
+      vocabData = await loadVocabFile(file);
+    }
+    state.currentFile = file;
+    state.vocabData = vocabData;
+
+    const manifest = await loadAudioManifest();
+    const voice = resolveVoiceFolder(manifest, els.exportVoice?.value || getPreferredAudioVoice());
+    if (els.exportVoice) els.exportVoice.value = voice;
+
+    const pool = buildPool(vocabData, lessonList, file);
+    const missing = listMissingAudioTerms(pool, manifest, voice);
+
+    const lessonLabelCount = lessonList.length === 1 ? "lesson" : "lessons";
+    const itemLabel = missing.length === 1 ? "item" : "items";
+    els.exportMeta.textContent = `${categoryLabel(file)} • ${lessonList.length} ${lessonLabelCount} • ${missing.length} ${itemLabel} missing (${voice})`;
+
+    if (!missing.length) {
+      els.exportHelp.textContent = "Nice! No missing audio found for the selected voice.";
+    }
+
+    els.exportList.value = missing.join("\n");
+  } catch (e) {
+    els.exportHelp.textContent = "Could not load vocab or audio manifest.";
+  }
+}
+
+async function openMissingAudioExport() {
+  await updateMissingAudioExport();
+  show("export");
+}
+
+function downloadMissingAudioList() {
+  if (!els.exportList) return;
+  const text = els.exportList.value || "";
+  if (!text.trim()) {
+    setFooter("No missing audio to download.");
+    return;
+  }
+  const file = els.levelSelect.value || "vocab";
+  const voice = els.exportVoice ? els.exportVoice.value : "voice";
+  const safeCategory = categoryLabel(file).replace(/[^\w.-]+/g, "-");
+  const safeVoice = String(voice).replace(/[^\w.-]+/g, "-");
+  const filename = `missing-audio-${safeCategory}-${safeVoice}.txt`;
+  const blob = new Blob([text.trim() + "\n"], { type: "text/plain;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 function finishQuiz() {
@@ -861,11 +1169,15 @@ async function bootstrap() {
   await registerSW();
   wireInstall();
   state.starred = loadStarred();
+  let preferredAudioVoice = AUDIO_VOICE_DEFAULT;
 
   const syncAudioControls = () => {
     const enabled = els.audioEnabled.checked;
     if (els.testAudioBtn) {
       els.testAudioBtn.disabled = !enabled;
+    }
+    if (els.audioVoice) {
+      els.audioVoice.disabled = !enabled;
     }
   };
 
@@ -879,9 +1191,12 @@ async function bootstrap() {
       if (cfg.displayMode) els.displayMode.value = cfg.displayMode;
       if (typeof cfg.questionsPerQuiz === "number") els.qCount.value = String(cfg.questionsPerQuiz);
       if (typeof cfg.audioEnabled === "boolean") els.audioEnabled.checked = cfg.audioEnabled;
+      if (cfg.audioVoice) preferredAudioVoice = cfg.audioVoice;
     }
   } catch (e) {}
 
+  await populateAudioVoices(preferredAudioVoice);
+  await populateExportVoices(preferredAudioVoice);
   syncAudioControls();
 
   // Discover vocab files
@@ -909,7 +1224,18 @@ async function bootstrap() {
   await onCategoryChange();
 
   els.levelSelect.addEventListener("change", onCategoryChange);
-  els.lessonBox.addEventListener("change", updateSelectionFooter);
+  els.lessonBox.addEventListener("change", () => {
+    updateSelectionFooter();
+    if (els.screenExport && !els.screenExport.hidden) {
+      updateMissingAudioExport();
+    }
+  });
+  if (els.viewVocabBtn) {
+    els.viewVocabBtn.addEventListener("click", openVocabPreview);
+  }
+  if (els.exportMissingAudioBtn) {
+    els.exportMissingAudioBtn.addEventListener("click", openMissingAudioExport);
+  }
 
   els.startBtn.addEventListener("click", async () => {
     await primeAudioPlayback();
@@ -944,6 +1270,7 @@ async function bootstrap() {
       displayMode: els.displayMode.value,
       qCount,
       audioEnabled: els.audioEnabled.checked,
+      audioVoice: els.audioVoice ? els.audioVoice.value : AUDIO_VOICE_DEFAULT,
     };
 
     state.currentFile = file;
@@ -970,6 +1297,26 @@ async function bootstrap() {
     show("home");
     setFooter(`Ready • ${APP_VERSION}`);
   });
+  if (els.backFromVocabBtn) {
+    els.backFromVocabBtn.addEventListener("click", () => {
+      show("home");
+    });
+  }
+  if (els.backFromExportBtn) {
+    els.backFromExportBtn.addEventListener("click", () => {
+      show("home");
+    });
+  }
+  if (els.downloadExportBtn) {
+    els.downloadExportBtn.addEventListener("click", downloadMissingAudioList);
+  }
+  if (els.exportVoice) {
+    els.exportVoice.addEventListener("change", () => {
+      if (els.screenExport && !els.screenExport.hidden) {
+        updateMissingAudioExport();
+      }
+    });
+  }
 
   els.playBtn.addEventListener("click", async () => {
     try {
@@ -1018,14 +1365,20 @@ async function onCategoryChange() {
       return;
     }
 
-    renderLessonPills(lessonKeys);
+    renderLessonPills(vocabData, lessonKeys);
     els.lessonHelp.textContent = "Select lessons (default: all).";
     els.startBtn.disabled = false;
     updateSelectionFooter();
+    if (els.screenExport && !els.screenExport.hidden) {
+      updateMissingAudioExport();
+    }
   } catch (e) {
     els.lessonHelp.textContent = "Could not load that vocab file.";
     els.lessonBox.innerHTML = "";
     setSelectionCount("Selected: 0 words");
+    if (els.screenExport && !els.screenExport.hidden) {
+      updateMissingAudioExport();
+    }
   }
 }
 
