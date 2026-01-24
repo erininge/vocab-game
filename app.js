@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.46";
+const APP_VERSION = "v0.3.47";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_DEFAULT = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
@@ -106,6 +106,56 @@ function normalizeJapanese(s) {
     .replace(/\(.*?\)/g, "")
     .replace(/[\s、。・，．!！?？「」『』【】\[\]{}（）()"'’“”\-–—]/g, "")
     .trim();
+}
+
+function levenshteinDistance(a, b) {
+  const aLen = a.length;
+  const bLen = b.length;
+  if (!aLen) return bLen;
+  if (!bLen) return aLen;
+  const rows = Array.from({ length: aLen + 1 }, () => new Array(bLen + 1).fill(0));
+  for (let i = 0; i <= aLen; i += 1) rows[i][0] = i;
+  for (let j = 0; j <= bLen; j += 1) rows[0][j] = j;
+  for (let i = 1; i <= aLen; i += 1) {
+    for (let j = 1; j <= bLen; j += 1) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      rows[i][j] = Math.min(
+        rows[i - 1][j] + 1,
+        rows[i][j - 1] + 1,
+        rows[i - 1][j - 1] + cost,
+      );
+    }
+  }
+  return rows[aLen][bLen];
+}
+
+function typoThreshold(len) {
+  if (len <= 4) return 1;
+  if (len <= 7) return 2;
+  return 3;
+}
+
+function findTypoHint(userRaw, expectedRawList, normalizeFn) {
+  const user = normalizeFn(userRaw || "");
+  if (!user) return null;
+  let best = null;
+  for (const expectedRaw of expectedRawList) {
+    if (!expectedRaw) continue;
+    const expected = normalizeFn(expectedRaw);
+    if (!expected) continue;
+    const dist = levenshteinDistance(user, expected);
+    if (dist === 0) return null;
+    const threshold = typoThreshold(expected.length);
+    if (dist > threshold) continue;
+    if (!best || dist < best.distance) {
+      best = {
+        userRaw: String(userRaw),
+        expectedRaw: String(expectedRaw),
+        distance: dist,
+      };
+    }
+  }
+  return best;
 }
 
 let AUDIO_MANIFEST = null;
@@ -788,7 +838,8 @@ function gradeTyping(question, userRaw) {
     const user = normalizeEnglish(userRaw);
     const expected = (card.en || []).map(normalizeEnglish).filter(Boolean);
     const ok = expected.includes(user);
-    return { ok, expectedDisplay: (card.en || []).join(", ") };
+    const typoHint = ok ? null : findTypoHint(userRaw, card.en || [], normalizeEnglish);
+    return { ok, expectedDisplay: (card.en || []).join(", "), typoHint };
   }
 
   const user = normalizeJapanese(userRaw);
@@ -801,14 +852,21 @@ function gradeTyping(question, userRaw) {
   }
   const exp = expected.filter(Boolean);
   const ok = exp.includes(user);
-  return { ok, expectedDisplay: getDisplayJP(card, "both") };
+  const expectedRaw = [card.kana, card.kanji, ...(card.kana_variants || [])].filter(Boolean);
+  const typoHint = ok ? null : findTypoHint(userRaw, expectedRaw, normalizeJapanese);
+  return { ok, expectedDisplay: getDisplayJP(card, "both"), typoHint };
 }
 
-function setFeedback(ok, expectedDisplay) {
+function setFeedback(ok, expectedDisplay, typoHint) {
   els.feedback.hidden = false;
   els.feedback.innerHTML = ok
     ? `<strong>✅ Correct</strong>`
     : `<strong>❌ Not quite</strong><div class="muted" style="margin-top:6px">Correct answer: <b>${escapeHtml(expectedDisplay)}</b></div>`;
+  if (!ok && typoHint) {
+    const user = escapeHtml(typoHint.userRaw);
+    const expected = escapeHtml(typoHint.expectedRaw);
+    els.feedback.innerHTML += `<div class="muted" style="margin-top:6px">Possible typo? “${user}” is close to “${expected}”.</div>`;
+  }
 }
 
 function clearFeedback() {
@@ -1173,12 +1231,12 @@ function checkAnswer() {
     }
     state.lastCheckOk = ok;
 
-    setFeedback(ok, correctText);
+    setFeedback(ok, correctText, null);
     els.nextBtn.disabled = false;
     return;
   }
 
-  const { ok, expectedDisplay } = gradeTyping(q, userRaw);
+  const { ok, expectedDisplay, typoHint } = gradeTyping(q, userRaw);
 
   if (!q._firstCheckDone) {
     q._firstCheckDone = true;
@@ -1188,7 +1246,7 @@ function checkAnswer() {
   }
   state.lastCheckOk = ok;
 
-  setFeedback(ok, expectedDisplay);
+  setFeedback(ok, expectedDisplay, typoHint);
   els.nextBtn.disabled = false;
 }
 
