@@ -241,6 +241,11 @@ option{
 .vocabStar{
   font-size:18px;
   line-height:1;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
 }
 
 .vocabInfo{
