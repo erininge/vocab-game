@@ -4,7 +4,9 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.51";
+// v0.3.48: Fix audio lookup for NFC/NFD normalization; improved manifest matching; cache bump.
+
+const APP_VERSION = "v0.3.48";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_DEFAULT = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
@@ -108,6 +110,33 @@ function normalizeJapanese(s) {
     .trim();
 }
 
+function jpClean(s) {
+  return (s || "")
+    .replace(/\(.*?\)/g, "")
+    .replace(/[\s、。・，．!！?？「」『』【】\[\]{}（）()"'’“”\-–—]/g, "")
+    .trim();
+}
+
+function jpVariants(s) {
+  const cleaned = jpClean(s);
+  const candidates = [
+    s,
+    cleaned,
+    cleaned ? cleaned.normalize("NFC") : "",
+    cleaned ? cleaned.normalize("NFD") : "",
+    cleaned ? cleaned.normalize("NFKC") : "",
+  ];
+  const seen = new Set();
+  const result = [];
+  for (const candidate of candidates) {
+    if (!candidate) continue;
+    if (seen.has(candidate)) continue;
+    seen.add(candidate);
+    result.push(candidate);
+  }
+  return result;
+}
+
 function levenshteinDistance(a, b) {
   const aLen = a.length;
   const bLen = b.length;
@@ -159,6 +188,7 @@ function findTypoHint(userRaw, expectedRawList, normalizeFn) {
 }
 
 let AUDIO_MANIFEST = null;
+let AUDIO_MANIFEST_INDEX = new Map();
 let audioSessionConfigured = false;
 let activeAudio = null;
 let audioPlayer = null;
@@ -183,6 +213,20 @@ function normalizeAudioManifest(manifest) {
   return normalized;
 }
 
+function buildAudioManifestIndex(manifest) {
+  const index = new Map();
+  if (!manifest || typeof manifest !== "object") return index;
+  for (const manifestKey of Object.keys(manifest)) {
+    const clean = jpClean(manifestKey);
+    if (!clean) continue;
+    const nfc = clean.normalize("NFC");
+    const nfd = clean.normalize("NFD");
+    if (nfc && !index.has(nfc)) index.set(nfc, manifestKey);
+    if (nfd && !index.has(nfd)) index.set(nfd, manifestKey);
+  }
+  return index;
+}
+
 async function loadAudioManifest(force = false) {
   if (AUDIO_MANIFEST && !force) return AUDIO_MANIFEST;
   try {
@@ -193,8 +237,10 @@ async function loadAudioManifest(force = false) {
     if (!res.ok) throw new Error("missing");
     const manifest = await res.json();
     AUDIO_MANIFEST = normalizeAudioManifest(manifest);
+    AUDIO_MANIFEST_INDEX = buildAudioManifestIndex(AUDIO_MANIFEST);
   } catch (e) {
     AUDIO_MANIFEST = {}; // graceful fallback
+    AUDIO_MANIFEST_INDEX = new Map();
   }
   return AUDIO_MANIFEST;
 }
@@ -419,7 +465,15 @@ function normalizeAudioUrl(rel) {
 
 function manifestLookup(manifest, key, voiceFolder) {
   if (!manifest) return null;
-  const entry = manifest[key];
+  let entry = manifest[key];
+  if (!entry || typeof entry !== "object") {
+    const cleaned = jpClean(key);
+    if (cleaned && AUDIO_MANIFEST_INDEX) {
+      const resolvedKey = AUDIO_MANIFEST_INDEX.get(cleaned.normalize("NFC"))
+        || AUDIO_MANIFEST_INDEX.get(cleaned.normalize("NFD"));
+      if (resolvedKey) entry = manifest[resolvedKey];
+    }
+  }
   if (!entry || typeof entry !== "object") return null;
   if (voiceFolder && entry[voiceFolder]) {
     return normalizeAudioUrl(entry[voiceFolder]);
@@ -1035,34 +1089,37 @@ async function tryPlayAudio(question, options = {}) {
   if (card.kanji) candidates.push(card.kanji);
   if (Array.isArray(card.kana_variants)) candidates.push(...card.kana_variants);
 
-  const norm = (s) => normalizeJapanese(s);
-
   const tried = new Set();
   const attemptPlayback = async (manifest, voiceFolder) => {
     for (const c of candidates) {
-      const n = norm(c);
-      if (!n || tried.has(n)) continue;
-      tried.add(n);
+      for (const variant of jpVariants(c)) {
+        if (tried.has(variant)) continue;
+        tried.add(variant);
 
-      // Official pack
-      // Prefer User recordings (optional), then manifest-mapped official audio, then legacy guessed path
-      const user = normalizeAudioUrl(
-        `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(n)}.wav`,
-      );
+        const manifestUrl = manifestLookup(manifest, variant, voiceFolder);
+        const nfc = variant.normalize("NFC");
+        const nfd = variant.normalize("NFD");
+        const legacyNfc = normalizeAudioUrl(
+          `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nfc)}.wav`,
+        );
+        const legacyNfd = normalizeAudioUrl(
+          `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nfd)}.wav`,
+        );
+        const userNfc = normalizeAudioUrl(
+          `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nfc)}.wav`,
+        );
+        const userNfd = normalizeAudioUrl(
+          `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nfd)}.wav`,
+        );
+        const urls = [userNfc, userNfd, manifestUrl, legacyNfc, legacyNfd].filter(Boolean);
 
-      const byRaw = manifestLookup(manifest, c, voiceFolder);
-      const byNorm = manifestLookup(manifest, n, voiceFolder);
-      const legacy = normalizeAudioUrl(
-        `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(n)}.wav`,
-      );
-      const official = byRaw || byNorm || legacy;
-
-      for (const url of [user, official]) {
-        try {
-          await playAudioFromUrl(url, normalizedVolume);
-          return true;
-        } catch (e) {
-          // try next candidate
+        for (const url of urls) {
+          try {
+            await playAudioFromUrl(url, normalizedVolume);
+            return true;
+          } catch (e) {
+            // try next candidate
+          }
         }
       }
     }
@@ -1081,9 +1138,8 @@ async function tryPlayAudio(question, options = {}) {
   }
 
   if (announceMissing) {
-    setFooter(
-      "No audio found for this term/voice. Reloaded the audio list; if it still fails, the file name may not match the vocab entry.",
-    );
+    const label = card.kana || card.kanji || "this term";
+    setFooter(`Audio not found for: ${label}`);
   }
 }
 
