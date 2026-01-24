@@ -386,6 +386,7 @@
         "kanji": "右",
         "en": [
           "right",
+          "to the right of",
           "(~の)"
         ]
       },
@@ -394,6 +395,7 @@
         "kanji": "左",
         "en": [
           "left",
+          "to the left of",
           "(~の)"
         ]
       },
@@ -402,6 +404,7 @@
         "kanji": "前",
         "en": [
           "front",
+          "in front of",
           "(~の)"
         ]
       },
@@ -410,6 +413,7 @@
         "kanji": "後ろ",
         "en": [
           "back",
+          "behind",
           "(~の)"
         ]
       },
@@ -418,6 +422,7 @@
         "kanji": "中",
         "en": [
           "inside",
+          "in",
           "(~の)"
         ]
       },
@@ -425,6 +430,8 @@
         "kana": "うえ",
         "kanji": "上",
         "en": [
+          "up",
+          "above",
           "on",
           "(~の)"
         ]
@@ -433,6 +440,8 @@
         "kana": "した",
         "kanji": "下",
         "en": [
+          "down",
+          "below",
           "under",
           "(~の)"
         ]
@@ -443,6 +452,7 @@
         "en": [
           "near",
           "nearby",
+          "near to",
           "(~の)"
         ]
       },
@@ -451,6 +461,7 @@
         "kanji": "隣",
         "en": [
           "next",
+          "next to",
           "(~の)"
         ]
       },
