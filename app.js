@@ -4,9 +4,9 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-// v0.3.48: Fix audio lookup for NFC/NFD normalization; improved manifest matching; cache bump.
+// v0.3.50: Fix audio lookup for NFC/NFD normalization; improved manifest matching; cache bump.
 
-const APP_VERSION = "v0.3.48";
+const APP_VERSION = "v0.3.50";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_DEFAULT = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
@@ -461,6 +461,14 @@ function normalizeAudioUrl(rel) {
   if (!rel) return null;
   const normalized = rel.startsWith("./") ? rel : ("./" + rel.replace(/^\/+/, ""));
   return encodeURI(normalized);
+}
+
+function audioUrlVariants(url) {
+  if (!url) return [];
+  const decoded = decodeURI(url);
+  const nfc = encodeURI(decoded.normalize("NFC"));
+  const nfd = encodeURI(decoded.normalize("NFD"));
+  return [...new Set([url, nfc, nfd])];
 }
 
 function manifestLookup(manifest, key, voiceFolder) {
@@ -1096,22 +1104,30 @@ async function tryPlayAudio(question, options = {}) {
         if (tried.has(variant)) continue;
         tried.add(variant);
 
-        const manifestUrl = manifestLookup(manifest, variant, voiceFolder);
-        const nfc = variant.normalize("NFC");
-        const nfd = variant.normalize("NFD");
-        const legacyNfc = normalizeAudioUrl(
-          `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nfc)}.wav`,
-        );
-        const legacyNfd = normalizeAudioUrl(
-          `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nfd)}.wav`,
-        );
-        const userNfc = normalizeAudioUrl(
-          `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nfc)}.wav`,
-        );
-        const userNfd = normalizeAudioUrl(
-          `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nfd)}.wav`,
-        );
-        const urls = [userNfc, userNfd, manifestUrl, legacyNfc, legacyNfd].filter(Boolean);
+        const byRaw = manifestLookup(manifest, variant, voiceFolder);
+        const cleaned = jpClean(variant);
+        const byNorm = cleaned ? manifestLookup(manifest, cleaned, voiceFolder) : null;
+        const officialUrl = byRaw || byNorm || null;
+        const nNFC = variant.normalize("NFC");
+        const nNFD = variant.normalize("NFD");
+        const userUrls = [
+          normalizeAudioUrl(
+            `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nNFC)}.wav`,
+          ),
+          normalizeAudioUrl(
+            `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nNFD)}.wav`,
+          ),
+        ];
+        const legacyUrls = [
+          normalizeAudioUrl(
+            `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nNFC)}.wav`,
+          ),
+          normalizeAudioUrl(
+            `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nNFD)}.wav`,
+          ),
+        ];
+        const officialUrls = officialUrl ? audioUrlVariants(officialUrl) : [];
+        const urls = [...userUrls, ...officialUrls, ...legacyUrls].filter(Boolean);
 
         for (const url of urls) {
           try {
@@ -1162,11 +1178,15 @@ async function playRandomSampleAudio() {
     setFooter("No audio sample found for this voice.");
     return;
   }
-  try {
-    await playAudioFromUrl(url, normalizedVolume);
-  } catch (e) {
-    setFooter("Audio sample failed to play.");
+  for (const candidate of audioUrlVariants(url)) {
+    try {
+      await playAudioFromUrl(candidate, normalizedVolume);
+      return;
+    } catch (e) {
+      // try next candidate
+    }
   }
+  setFooter("Audio sample failed to play.");
 }
 
 async function populateAudioVoices(preferred) {
