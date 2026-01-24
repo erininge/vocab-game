@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.47";
+const APP_VERSION = "v0.3.49";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_DEFAULT = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
@@ -166,12 +166,30 @@ let audioNodes = null;
 let audioContext = null;
 let audioPlayToken = 0;
 let audioPrimed = false;
+function normalizeAudioManifest(manifest) {
+  if (!manifest || typeof manifest !== "object") return {};
+  const normalized = {};
+  for (const [key, entry] of Object.entries(manifest)) {
+    if (!entry || typeof entry !== "object") continue;
+    const normKey = normalizeJapanese(key);
+    const targetKey = normKey || key;
+    if (!normalized[targetKey]) normalized[targetKey] = {};
+    Object.assign(normalized[targetKey], entry);
+    if (targetKey !== key) {
+      if (!normalized[key]) normalized[key] = {};
+      Object.assign(normalized[key], entry);
+    }
+  }
+  return normalized;
+}
+
 async function loadAudioManifest() {
   if (AUDIO_MANIFEST) return AUDIO_MANIFEST;
   try {
     const res = await fetch("./Audio/audio-manifest.json", { cache: "no-store" });
     if (!res.ok) throw new Error("missing");
-    AUDIO_MANIFEST = await res.json();
+    const manifest = await res.json();
+    AUDIO_MANIFEST = normalizeAudioManifest(manifest);
   } catch (e) {
     AUDIO_MANIFEST = {}; // graceful fallback
   }
@@ -1121,12 +1139,22 @@ function listMissingAudioTerms(pool, manifest, voiceFolder) {
   const missing = new Set();
   if (!Array.isArray(pool)) return [];
   for (const card of pool) {
-    const terms = getAudioCandidates(card);
-    for (const term of terms) {
-      const entry = manifest ? manifest[term] : null;
+    const terms = new Set(getAudioCandidates(card));
+    if (card.kanji) terms.add(card.kanji);
+    const candidates = [...terms].map(term => String(term).trim()).filter(Boolean);
+    let hasAudio = false;
+    for (const term of candidates) {
+      const normalized = normalizeJapanese(term);
+      const entry = manifest ? (manifest[term] || manifest[normalized]) : null;
       const hasSelected = entry && voiceFolder && entry[voiceFolder];
       const hasAny = entry && Object.keys(entry).length > 0;
-      if (!hasSelected && !hasAny) {
+      if (hasSelected || hasAny) {
+        hasAudio = true;
+        break;
+      }
+    }
+    if (!hasAudio) {
+      for (const term of candidates) {
         missing.add(term);
       }
     }
