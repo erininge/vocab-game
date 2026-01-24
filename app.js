@@ -4,9 +4,9 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-// v0.3.51: Rebuild audio manifest after VOICEVOX re-export; cache bump.
+// v0.3.52: Rename audio files to spoken text and rebuild manifest.
 
-const APP_VERSION = "v0.3.51";
+const APP_VERSION = "v0.3.52";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_DEFAULT = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
@@ -188,7 +188,6 @@ function findTypoHint(userRaw, expectedRawList, normalizeFn) {
 }
 
 let AUDIO_MANIFEST = null;
-let AUDIO_MANIFEST_INDEX = new Map();
 let audioSessionConfigured = false;
 let activeAudio = null;
 let audioPlayer = null;
@@ -196,37 +195,6 @@ let audioNodes = null;
 let audioContext = null;
 let audioPlayToken = 0;
 let audioPrimed = false;
-function normalizeAudioManifest(manifest) {
-  if (!manifest || typeof manifest !== "object") return {};
-  const normalized = {};
-  for (const [key, entry] of Object.entries(manifest)) {
-    if (!entry || typeof entry !== "object") continue;
-    const normKey = normalizeJapanese(key);
-    const targetKey = normKey || key;
-    if (!normalized[targetKey]) normalized[targetKey] = {};
-    Object.assign(normalized[targetKey], entry);
-    if (targetKey !== key) {
-      if (!normalized[key]) normalized[key] = {};
-      Object.assign(normalized[key], entry);
-    }
-  }
-  return normalized;
-}
-
-function buildAudioManifestIndex(manifest) {
-  const index = new Map();
-  if (!manifest || typeof manifest !== "object") return index;
-  for (const manifestKey of Object.keys(manifest)) {
-    const clean = jpClean(manifestKey);
-    if (!clean) continue;
-    const nfc = clean.normalize("NFC");
-    const nfd = clean.normalize("NFD");
-    if (nfc && !index.has(nfc)) index.set(nfc, manifestKey);
-    if (nfd && !index.has(nfd)) index.set(nfd, manifestKey);
-  }
-  return index;
-}
-
 async function loadAudioManifest(force = false) {
   if (AUDIO_MANIFEST && !force) return AUDIO_MANIFEST;
   try {
@@ -235,12 +203,9 @@ async function loadAudioManifest(force = false) {
       : "./Audio/audio-manifest.json";
     const res = await fetch(manifestUrl, { cache: "no-store" });
     if (!res.ok) throw new Error("missing");
-    const manifest = await res.json();
-    AUDIO_MANIFEST = normalizeAudioManifest(manifest);
-    AUDIO_MANIFEST_INDEX = buildAudioManifestIndex(AUDIO_MANIFEST);
+    AUDIO_MANIFEST = await res.json();
   } catch (e) {
     AUDIO_MANIFEST = {}; // graceful fallback
-    AUDIO_MANIFEST_INDEX = new Map();
   }
   return AUDIO_MANIFEST;
 }
@@ -473,15 +438,7 @@ function audioUrlVariants(url) {
 
 function manifestLookup(manifest, key, voiceFolder) {
   if (!manifest) return null;
-  let entry = manifest[key];
-  if (!entry || typeof entry !== "object") {
-    const cleaned = jpClean(key);
-    if (cleaned && AUDIO_MANIFEST_INDEX) {
-      const resolvedKey = AUDIO_MANIFEST_INDEX.get(cleaned.normalize("NFC"))
-        || AUDIO_MANIFEST_INDEX.get(cleaned.normalize("NFD"));
-      if (resolvedKey) entry = manifest[resolvedKey];
-    }
-  }
+  const entry = manifest[key];
   if (!entry || typeof entry !== "object") return null;
   if (voiceFolder && entry[voiceFolder]) {
     return normalizeAudioUrl(entry[voiceFolder]);
@@ -1091,51 +1048,44 @@ async function tryPlayAudio(question, options = {}) {
   const normalizedVolume = Math.max(0, FIXED_AUDIO_VOLUME);
   if (normalizedVolume === 0) return;
 
-  // mimic python resolver: try kana, kanji, variants
+  // resolve via manifest: try kana, then kanji, then jpVariants
   const candidates = [];
   if (card.kana) candidates.push(card.kana);
   if (card.kanji) candidates.push(card.kanji);
-  if (Array.isArray(card.kana_variants)) candidates.push(...card.kana_variants);
+  const variantCandidates = [];
+  if (card.kana) variantCandidates.push(...jpVariants(card.kana));
+  if (card.kanji) variantCandidates.push(...jpVariants(card.kanji));
+  if (Array.isArray(card.kana_variants)) variantCandidates.push(...card.kana_variants);
 
   const tried = new Set();
   const attemptPlayback = async (manifest, voiceFolder) => {
     for (const c of candidates) {
-      for (const variant of jpVariants(c)) {
-        if (tried.has(variant)) continue;
-        tried.add(variant);
-
-        const byRaw = manifestLookup(manifest, variant, voiceFolder);
-        const cleaned = jpClean(variant);
-        const byNorm = cleaned ? manifestLookup(manifest, cleaned, voiceFolder) : null;
-        const officialUrl = byRaw || byNorm || null;
-        const nNFC = variant.normalize("NFC");
-        const nNFD = variant.normalize("NFD");
-        const userUrls = [
-          normalizeAudioUrl(
-            `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nNFC)}.wav`,
-          ),
-          normalizeAudioUrl(
-            `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nNFD)}.wav`,
-          ),
-        ];
-        const legacyUrls = [
-          normalizeAudioUrl(
-            `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nNFC)}.wav`,
-          ),
-          normalizeAudioUrl(
-            `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(nNFD)}.wav`,
-          ),
-        ];
-        const officialUrls = officialUrl ? audioUrlVariants(officialUrl) : [];
-        const urls = [...userUrls, ...officialUrls, ...legacyUrls].filter(Boolean);
-
-        for (const url of urls) {
-          try {
-            await playAudioFromUrl(url, normalizedVolume);
-            return true;
-          } catch (e) {
-            // try next candidate
-          }
+      const normalized = c.normalize("NFC");
+      if (tried.has(normalized)) continue;
+      tried.add(normalized);
+      const officialUrl = manifestLookup(manifest, normalized, voiceFolder);
+      if (!officialUrl) continue;
+      for (const url of audioUrlVariants(officialUrl)) {
+        try {
+          await playAudioFromUrl(url, normalizedVolume);
+          return true;
+        } catch (e) {
+          // try next candidate
+        }
+      }
+    }
+    for (const variant of variantCandidates) {
+      const normalized = (variant || "").normalize("NFC");
+      if (!normalized || tried.has(normalized)) continue;
+      tried.add(normalized);
+      const officialUrl = manifestLookup(manifest, normalized, voiceFolder);
+      if (!officialUrl) continue;
+      for (const url of audioUrlVariants(officialUrl)) {
+        try {
+          await playAudioFromUrl(url, normalizedVolume);
+          return true;
+        } catch (e) {
+          // try next candidate
         }
       }
     }

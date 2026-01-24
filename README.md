@@ -16,6 +16,9 @@ This matches the python game's behavior.
 If you're using the `USER` vocab file, you can also add user recordings here:
 - `UserAudio/<voice folder>/<normalized>.wav`
 
+To rename audio files to spoken text and rebuild the manifest, run:
+`node tools/rename_audio_and_rebuild_manifest.js`
+
 ## Adding more vocab later (no code edits)
 1. Add a new JSON file into `Vocabulary/` (any name, like `Food_vocab.json`).
 2. Push to GitHub.
