@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.49";
+const APP_VERSION = "v0.3.50";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_DEFAULT = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
@@ -1325,6 +1325,34 @@ async function bootstrap() {
   await populateAudioVoices(preferredAudioVoice);
   await populateExportVoices(preferredAudioVoice);
   syncAudioControls();
+
+  const isTypingKey = (event) => {
+    if (event.key === "=") return false;
+    if (event.ctrlKey || event.metaKey || event.altKey) return false;
+    if (event.key.length === 1) return true;
+    return event.key === "Backspace";
+  };
+
+  document.addEventListener("keydown", async (event) => {
+    if (event.defaultPrevented || !els.screenQuiz || els.screenQuiz.hidden) return;
+    if (event.key === "=") {
+      event.preventDefault();
+      if (!state.settings?.audioEnabled) return;
+      try {
+        await primeAudioPlayback();
+        const q = state.questions[state.idx];
+        if (q) await tryPlayAudio(q);
+      } catch (e) {}
+      return;
+    }
+    if (!isTypingKey(event)) return;
+    if (state.settings?.answerMode === "multiple_choice") return;
+    const input = els.answerArea.querySelector("input");
+    if (!input) return;
+    if (document.activeElement !== input) {
+      input.focus();
+    }
+  });
 
   // Discover vocab files
   els.levelSelect.innerHTML = "";
