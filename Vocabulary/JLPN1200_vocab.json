@@ -10,20 +10,6 @@
   "lessons": {
     "1": [
       {
-        "kana": "アルバイト",
-        "kanji": "",
-        "en": [
-          "part-time job"
-        ]
-      },
-      {
-        "kana": "クラス",
-        "kanji": "",
-        "en": [
-          "class"
-        ]
-      },
-      {
         "kana": "サークル",
         "kanji": "",
         "en": [
@@ -42,41 +28,6 @@
         "kanji": "",
         "en": [
           "test"
-        ]
-      },
-      {
-        "kana": "げつようび",
-        "kanji": "",
-        "en": [
-          "Monday"
-        ]
-      },
-      {
-        "kana": "かようび",
-        "kanji": "",
-        "en": [
-          "Tuesday"
-        ]
-      },
-      {
-        "kana": "すいようび",
-        "kanji": "",
-        "en": [
-          "Wednesday"
-        ]
-      },
-      {
-        "kana": "もくようび",
-        "kanji": "",
-        "en": [
-          "Thursday"
-        ]
-      },
-      {
-        "kana": "きんようび",
-        "kanji": "",
-        "en": [
-          "Friday"
         ]
       }
     ],
@@ -295,41 +246,6 @@
         "en": [
           "when ...",
           "at the time of ... (～の)"
-        ]
-      },
-      {
-        "kana": "げつようび",
-        "kanji": "月曜日",
-        "en": [
-          "Monday"
-        ]
-      },
-      {
-        "kana": "かようび",
-        "kanji": "火曜日",
-        "en": [
-          "Tuesday"
-        ]
-      },
-      {
-        "kana": "すいようび",
-        "kanji": "水曜日",
-        "en": [
-          "Wednesday"
-        ]
-      },
-      {
-        "kana": "もくようび",
-        "kanji": "木曜日",
-        "en": [
-          "Thursday"
-        ]
-      },
-      {
-        "kana": "きんようび",
-        "kanji": "金曜日",
-        "en": [
-          "Friday"
         ]
       },
       {
@@ -572,89 +488,10 @@
         ]
       },
       {
-        "kana": "みぎ",
-        "kanji": "右",
-        "en": [
-          "right"
-        ]
-      },
-      {
-        "kana": "ひだり",
-        "kanji": "左",
-        "en": [
-          "left"
-        ]
-      },
-      {
-        "kana": "まえ",
-        "kanji": "前",
-        "en": [
-          "front"
-        ]
-      },
-      {
-        "kana": "うしろ",
-        "kanji": "後ろ",
-        "en": [
-          "back"
-        ]
-      },
-      {
-        "kana": "うえ",
-        "kanji": "上",
-        "en": [
-          "on",
-          "above"
-        ]
-      },
-      {
-        "kana": "した",
-        "kanji": "下",
-        "en": [
-          "under",
-          "below"
-        ]
-      },
-      {
-        "kana": "なか",
-        "kanji": "中",
-        "en": [
-          "inside"
-        ]
-      },
-      {
-        "kana": "ちかく",
-        "kanji": "近く",
-        "en": [
-          "near"
-        ]
-      },
-      {
-        "kana": "となり",
-        "kanji": "隣",
-        "en": [
-          "next to"
-        ]
-      },
-      {
         "kana": "むかい",
         "kanji": "向かい",
         "en": [
           "across from"
-        ]
-      },
-      {
-        "kana": "あいだ",
-        "kanji": "間",
-        "en": [
-          "between"
-        ]
-      },
-      {
-        "kana": "つくえ",
-        "kanji": "机",
-        "en": [
-          "desk"
         ]
       },
       {
@@ -752,63 +589,6 @@
     ],
     "4": [
       {
-        "kana": "こうえん",
-        "kanji": "公園",
-        "en": [
-          "park"
-        ]
-      },
-      {
-        "kana": "スーパー",
-        "kanji": "",
-        "en": [
-          "supermarket"
-        ]
-      },
-      {
-        "kana": "バスてい",
-        "kanji": "バス停",
-        "en": [
-          "bus stop"
-        ]
-      },
-      {
-        "kana": "びょういん",
-        "kanji": "病院",
-        "en": [
-          "hospital",
-          "clinic"
-        ]
-      },
-      {
-        "kana": "ホテル",
-        "kanji": "",
-        "en": [
-          "hotel"
-        ]
-      },
-      {
-        "kana": "ほんや",
-        "kanji": "本屋",
-        "en": [
-          "bookstore"
-        ]
-      },
-      {
-        "kana": "としょかん",
-        "kanji": "図書館",
-        "en": [
-          "library"
-        ]
-      },
-      {
-        "kana": "ぎんこう",
-        "kanji": "銀行",
-        "en": [
-          "bank"
-        ]
-      },
-      {
         "kana": "コンビニ",
         "kanji": "",
         "en": [
@@ -823,20 +603,6 @@
         ]
       },
       {
-        "kana": "レストラン",
-        "kanji": "",
-        "en": [
-          "restaurant"
-        ]
-      },
-      {
-        "kana": "だいがく",
-        "kanji": "大学",
-        "en": [
-          "university"
-        ]
-      },
-      {
         "kana": "こうこう",
         "kanji": "高校",
         "en": [
@@ -848,69 +614,6 @@
         "kanji": "郵便局",
         "en": [
           "post office"
-        ]
-      },
-      {
-        "kana": "みぎ",
-        "kanji": "右",
-        "en": [
-          "right"
-        ]
-      },
-      {
-        "kana": "ひだり",
-        "kanji": "左",
-        "en": [
-          "left"
-        ]
-      },
-      {
-        "kana": "まえ",
-        "kanji": "前",
-        "en": [
-          "front"
-        ]
-      },
-      {
-        "kana": "うしろ",
-        "kanji": "後ろ",
-        "en": [
-          "back"
-        ]
-      },
-      {
-        "kana": "なか",
-        "kanji": "中",
-        "en": [
-          "inside"
-        ]
-      },
-      {
-        "kana": "ちかく",
-        "kanji": "近く",
-        "en": [
-          "near"
-        ]
-      },
-      {
-        "kana": "となり",
-        "kanji": "隣",
-        "en": [
-          "next to"
-        ]
-      },
-      {
-        "kana": "あいだ",
-        "kanji": "間",
-        "en": [
-          "between"
-        ]
-      },
-      {
-        "kana": "むかい",
-        "kanji": "向かい",
-        "en": [
-          "across (the street)"
         ]
       }
     ],
