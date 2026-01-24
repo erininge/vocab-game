@@ -4,7 +4,7 @@
    - Lessons follow the python structure: { level, lessons: { "1": [ {kana, kanji, en:[...], ...}, ... ] } }
 */
 
-const APP_VERSION = "v0.3.42";
+const APP_VERSION = "v0.3.46";
 const STAR_STORAGE_KEY = "vocabGardenStarred";
 const AUDIO_VOICE_DEFAULT = "Female option 1";
 const FIXED_AUDIO_VOLUME = 2.5;
@@ -349,10 +349,13 @@ function normalizeAudioUrl(rel) {
 function manifestLookup(manifest, key, voiceFolder) {
   if (!manifest) return null;
   const entry = manifest[key];
-  if (!entry) return null;
-  const rel = entry[voiceFolder];
-  if (!rel) return null;
-  return normalizeAudioUrl(rel);
+  if (!entry || typeof entry !== "object") return null;
+  if (voiceFolder && entry[voiceFolder]) {
+    return normalizeAudioUrl(entry[voiceFolder]);
+  }
+  const fallbackVoice = Object.keys(entry).sort((a, b) => a.localeCompare(b))[0];
+  if (!fallbackVoice) return null;
+  return normalizeAudioUrl(entry[fallbackVoice]);
 }
 
 
@@ -532,11 +535,20 @@ function renderVocabList(pool, file, vocabData) {
     const row = document.createElement("div");
     row.className = "vocabRow";
 
-    const star = document.createElement("span");
-    const starred = isStarred(card, file);
+    const star = document.createElement("button");
+    let starred = isStarred(card, file);
+    star.type = "button";
     star.className = "vocabStar";
     star.textContent = starred ? "⭐" : "☆";
     star.title = starred ? "Starred" : "Not starred";
+    star.setAttribute("aria-pressed", starred ? "true" : "false");
+    star.addEventListener("click", () => {
+      starred = !starred;
+      setStarred(card, starred, file);
+      star.textContent = starred ? "⭐" : "☆";
+      star.title = starred ? "Starred" : "Not starred";
+      star.setAttribute("aria-pressed", starred ? "true" : "false");
+    });
 
     const info = document.createElement("div");
     info.className = "vocabInfo";
@@ -617,6 +629,7 @@ let state = {
   correct: 0,
   wrong: 0,
   lastAnswer: null,
+  lastCheckOk: null,
   settings: null,
   starred: new Set(),
 };
@@ -828,6 +841,9 @@ function renderQuestion() {
   clearFeedback();
   els.nextBtn.disabled = true;
   els.submitBtn.disabled = false;
+  state.lastCheckOk = null;
+  q._firstCheckDone = false;
+  q._firstCheckOk = null;
 
   // prompt + subprompt
   if (dir === "jp2en") {
@@ -886,7 +902,21 @@ function renderQuestion() {
     input.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
-        els.submitBtn.click();
+        if (!els.submitBtn.disabled) {
+          checkAnswer();
+          return;
+        }
+        if (state.lastCheckOk && !els.nextBtn.disabled) {
+          els.nextBtn.click();
+          return;
+        }
+        els.submitBtn.disabled = false;
+        checkAnswer();
+      }
+    });
+    input.addEventListener("input", () => {
+      if (state.lastCheckOk === false) {
+        els.submitBtn.disabled = false;
       }
     });
     els.answerArea.appendChild(input);
@@ -967,9 +997,7 @@ async function playRandomSampleAudio() {
   }
   const manifest = await loadAudioManifest();
   const voiceFolder = resolveVoiceFolder(manifest, getPreferredAudioVoice());
-  const keys = manifest
-    ? Object.keys(manifest).filter((key) => manifest[key] && manifest[key][voiceFolder])
-    : [];
+  const keys = manifest ? Object.keys(manifest) : [];
   if (!keys.length) {
     setFooter("No audio samples found.");
     return;
@@ -1037,7 +1065,10 @@ function listMissingAudioTerms(pool, manifest, voiceFolder) {
   for (const card of pool) {
     const terms = getAudioCandidates(card);
     for (const term of terms) {
-      if (!manifest || !manifest[term] || !manifest[term][voiceFolder]) {
+      const entry = manifest ? manifest[term] : null;
+      const hasSelected = entry && voiceFolder && entry[voiceFolder];
+      const hasAny = entry && Object.keys(entry).length > 0;
+      if (!hasSelected && !hasAny) {
         missing.add(term);
       }
     }
@@ -1134,8 +1165,13 @@ function checkAnswer() {
     const correctText = q.correctText || makeChoices(q, state.pool).correctText;
     const ok = String(userRaw) === String(correctText);
 
-    if (ok) state.correct += 1;
-    else state.wrong += 1;
+    if (!q._firstCheckDone) {
+      q._firstCheckDone = true;
+      q._firstCheckOk = ok;
+      if (ok) state.correct += 1;
+      else state.wrong += 1;
+    }
+    state.lastCheckOk = ok;
 
     setFeedback(ok, correctText);
     els.nextBtn.disabled = false;
@@ -1144,8 +1180,13 @@ function checkAnswer() {
 
   const { ok, expectedDisplay } = gradeTyping(q, userRaw);
 
-  if (ok) state.correct += 1;
-  else state.wrong += 1;
+  if (!q._firstCheckDone) {
+    q._firstCheckDone = true;
+    q._firstCheckOk = ok;
+    if (ok) state.correct += 1;
+    else state.wrong += 1;
+  }
+  state.lastCheckOk = ok;
 
   setFeedback(ok, expectedDisplay);
   els.nextBtn.disabled = false;
