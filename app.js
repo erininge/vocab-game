@@ -183,10 +183,13 @@ function normalizeAudioManifest(manifest) {
   return normalized;
 }
 
-async function loadAudioManifest() {
-  if (AUDIO_MANIFEST) return AUDIO_MANIFEST;
+async function loadAudioManifest(force = false) {
+  if (AUDIO_MANIFEST && !force) return AUDIO_MANIFEST;
   try {
-    const res = await fetch("./Audio/audio-manifest.json", { cache: "no-store" });
+    const manifestUrl = force
+      ? `./Audio/audio-manifest.json?ts=${Date.now()}`
+      : "./Audio/audio-manifest.json";
+    const res = await fetch(manifestUrl, { cache: "no-store" });
     if (!res.ok) throw new Error("missing");
     const manifest = await res.json();
     AUDIO_MANIFEST = normalizeAudioManifest(manifest);
@@ -1017,9 +1020,10 @@ function currentAnswerValue(question) {
   return input ? input.value : "";
 }
 
-async function tryPlayAudio(question) {
+async function tryPlayAudio(question, options = {}) {
   if (!state.settings.audioEnabled) return;
   await configureAudioSession();
+  const { announceMissing = false, refreshOnMissing = true } = options;
 
   const { card } = question;
   const normalizedVolume = Math.max(0, FIXED_AUDIO_VOLUME);
@@ -1034,34 +1038,52 @@ async function tryPlayAudio(question) {
   const norm = (s) => normalizeJapanese(s);
 
   const tried = new Set();
-  const manifest = await loadAudioManifest();
-  const voiceFolder = resolveVoiceFolder(manifest, getPreferredAudioVoice());
-  for (const c of candidates) {
-    const n = norm(c);
-    if (!n || tried.has(n)) continue;
-    tried.add(n);
+  const attemptPlayback = async (manifest, voiceFolder) => {
+    for (const c of candidates) {
+      const n = norm(c);
+      if (!n || tried.has(n)) continue;
+      tried.add(n);
 
-    // Official pack
-    // Prefer User recordings (optional), then manifest-mapped official audio, then legacy guessed path
-    const user = normalizeAudioUrl(
-      `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(n)}.wav`,
-    );
+      // Official pack
+      // Prefer User recordings (optional), then manifest-mapped official audio, then legacy guessed path
+      const user = normalizeAudioUrl(
+        `./UserAudio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(n)}.wav`,
+      );
 
-    const byRaw = manifestLookup(manifest, c, voiceFolder);
-    const byNorm = manifestLookup(manifest, n, voiceFolder);
-    const legacy = normalizeAudioUrl(
-      `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(n)}.wav`,
-    );
-    const official = byRaw || byNorm || legacy;
+      const byRaw = manifestLookup(manifest, c, voiceFolder);
+      const byNorm = manifestLookup(manifest, n, voiceFolder);
+      const legacy = normalizeAudioUrl(
+        `./Audio/${encodeURIComponent(voiceFolder)}/${encodeURIComponent(n)}.wav`,
+      );
+      const official = byRaw || byNorm || legacy;
 
-    for (const url of [user, official]) {
-      try {
-        await playAudioFromUrl(url, normalizedVolume);
-        return;
-      } catch (e) {
-        // try next candidate
+      for (const url of [user, official]) {
+        try {
+          await playAudioFromUrl(url, normalizedVolume);
+          return true;
+        } catch (e) {
+          // try next candidate
+        }
       }
     }
+    return false;
+  };
+
+  let manifest = await loadAudioManifest();
+  let voiceFolder = resolveVoiceFolder(manifest, getPreferredAudioVoice());
+  if (await attemptPlayback(manifest, voiceFolder)) return;
+
+  if (refreshOnMissing) {
+    tried.clear();
+    manifest = await loadAudioManifest(true);
+    voiceFolder = resolveVoiceFolder(manifest, getPreferredAudioVoice());
+    if (await attemptPlayback(manifest, voiceFolder)) return;
+  }
+
+  if (announceMissing) {
+    setFooter(
+      "No audio found for this term/voice. Reloaded the audio list; if it still fails, the file name may not match the vocab entry.",
+    );
   }
 }
 
@@ -1341,7 +1363,7 @@ async function bootstrap() {
       try {
         await primeAudioPlayback();
         const q = state.questions[state.idx];
-        if (q) await tryPlayAudio(q);
+        if (q) await tryPlayAudio(q, { announceMissing: true });
       } catch (e) {}
       return;
     }
@@ -1477,7 +1499,7 @@ async function bootstrap() {
     try {
       await primeAudioPlayback();
       const q = state.questions[state.idx];
-      await tryPlayAudio(q);
+      await tryPlayAudio(q, { announceMissing: true });
     } catch (e) {}
   });
 
